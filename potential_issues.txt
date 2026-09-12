@@ -1,0 +1,28 @@
+Obvious issues
+1. The standalone scripts have broken working-directory assumptions.
+   Both root-level scripts use paths such as ../data/processed/.... Those paths work when the working directory is notebooks/, but running python script_base_model.py from the project root looks for data outside the project. Their output paths have the same problem.
+2. Most of the stated research scope is still only a plan.
+   There are currently no formal fairness metrics, SAFE evaluation, SHAP analysis, robustness tests, stability/PSI analysis, mitigation methods, or intersectional analysis. Retaining SEX in prediction files prepares for a fairness audit, but it is not itself an audit.
+3. Fairness through unawareness is insufficient.
+   Excluding SEX prevents direct use of the attribute, but variables such as education, marriage, credit limit, and repayment history can still act as proxies. The current project does not measure this.
+   The saved test predictions already show some group differences. With SEX=1 labelled male and SEX=2 female in the EDA:
+   - Actual test default rates are 23.36% for men and 21.29% for women.
+   - Logistic default recall is 34.05% for men and 35.90% for women.
+   - Boosting default recall is 32.62% for men and 36.29% for women.
+   These are preliminary diagnostics, not enough to conclude that either model is fair or unfair.
+4. The split is stratified only by the target.
+   This preserves the overall default rate but does not explicitly preserve joint default × SEX groups. Fairness estimates should also include uncertainty or repeated splits because subgroup differences can depend on one random test sample.
+5. Duplicate detection is currently ineffective.
+   Notebook 01 checks duplicates before removing the unique ID, so it reports zero. After removing ID, there are 35 duplicated rows, involving 70 records. Under the current random split, seven test rows have exact duplicates in the training data. These may represent legitimate different customers, but they should be investigated because they can slightly contaminate the holdout estimate.
+6. Evaluation relies on one split and an unexamined 0.5 threshold.
+   There is no cross-validation, confidence interval, validation set, threshold selection, calibration analysis, or cost-based evaluation. Threshold selection is especially important here because both models miss about 65% of defaults.
+7. The “transparent” model is not yet explained.
+   Logistic regression is structurally interpretable, but the project does not extract transformed feature names, coefficients, odds ratios, or uncertainty. Therefore, the current output does not demonstrate its transparency.
+8. Traceability is lost when ID is dropped.
+   ID should be excluded from training, but it could be retained separately as a record key. The prediction tables contain only outcome, prediction, probability, and sex, making it difficult to reconnect a result to its original row.
+9. No fitted models or preprocessing pipelines are saved.
+   The models/ directory is empty. Exact models must be retrained before scoring, explaining, or auditing them.
+10. Reproducibility documentation is incomplete.
+    The setup notes recommend generating requirements.txt, but it does not exist. The legacy .xls reader requires xlrd; it is installed locally but absent from the documented installation command. The VS Code settings also do not pin the project’s .venv interpreter.
+11. The repository lacks normal project infrastructure.
+    There is no README, dependency lock, automated test suite, package structure, Git metadata, data dictionary, dataset citation, or documented category definitions. src/ is empty, while model logic is duplicated between notebooks and root scripts, which creates a future drift risk.

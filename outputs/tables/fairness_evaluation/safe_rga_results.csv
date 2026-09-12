@@ -1,0 +1,7 @@
+model,SEX,group,records,RGA,ROC-AUC,Average Precision (AP),implementation,package_version
+logistic,,overall,5996,0.7569488458148638,0.7569488458148638,0.527009028152027,safeaipackage.core.rga,0.8.3
+logistic,1.0,male,2404,0.7613068501592665,0.7613068501592665,0.5285711129360978,safeaipackage.core.rga,0.8.3
+logistic,2.0,female,3592,0.7533883060068278,0.7533883060068278,0.528520343313516,safeaipackage.core.rga,0.8.3
+gradient_boosting,,overall,5996,0.778132290613578,0.7781322906135781,0.5521356691545415,safeaipackage.core.rga,0.8.3
+gradient_boosting,1.0,male,2404,0.7740700383658686,0.7740700383658687,0.54138638263769,safeaipackage.core.rga,0.8.3
+gradient_boosting,2.0,female,3592,0.7805250988289699,0.78052509882897,0.5631137934727588,safeaipackage.core.rga,0.8.3

@@ -1,0 +1,8 @@
+# Fairness-stage extension: keep the Performance Evaluation environment lock intact.
+-r requirements.txt
+safeaipackage==0.8.3
+# SAFE 0.8.3 imports these even for RGA/fairness, but declares no Requires-Dist.
+catboost==1.2.10
+xgboost==3.2.0
+graphviz==0.21
+plotly==7.0.0

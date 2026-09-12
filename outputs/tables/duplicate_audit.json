@@ -1,0 +1,66 @@
+{
+  "raw_all_except_ID": {
+    "excess_duplicate_rows": 35,
+    "records_in_duplicate_groups": 70,
+    "duplicate_groups": 35,
+    "original_crossing_groups": 7,
+    "original_train_records_in_crossing_groups": 7,
+    "original_test_records_in_crossing_groups": 7
+  },
+  "clean_all_except_ID": {
+    "excess_duplicate_rows": 35,
+    "records_in_duplicate_groups": 70,
+    "duplicate_groups": 35,
+    "original_crossing_groups": 7,
+    "original_train_records_in_crossing_groups": 7,
+    "original_test_records_in_crossing_groups": 7
+  },
+  "clean_predictors_including_SEX": {
+    "excess_duplicate_rows": 56,
+    "records_in_duplicate_groups": 108,
+    "duplicate_groups": 52,
+    "original_crossing_groups": 15,
+    "original_train_records_in_crossing_groups": 16,
+    "original_test_records_in_crossing_groups": 15
+  },
+  "model_predictors_excluding_ID_SEX_target": {
+    "excess_duplicate_rows": 93,
+    "records_in_duplicate_groups": 177,
+    "duplicate_groups": 84,
+    "original_crossing_groups": 31,
+    "original_train_records_in_crossing_groups": 33,
+    "original_test_records_in_crossing_groups": 32
+  },
+  "predictor_groups_with_conflicting_outcomes": 37,
+  "new_crossing_predictor_groups": 0,
+  "records_retained": 30000,
+  "records_moved": 34,
+  "train_to_test": 15,
+  "test_to_train": 19,
+  "partition_summary": {
+    "original_split": {
+      "test": {
+        "records": 6000,
+        "defaults": 1327,
+        "default_rate": 0.22116666666666668
+      },
+      "train": {
+        "records": 24000,
+        "defaults": 5309,
+        "default_rate": 0.22120833333333334
+      }
+    },
+    "split": {
+      "test": {
+        "records": 5996,
+        "defaults": 1320,
+        "default_rate": 0.2201467645096731
+      },
+      "train": {
+        "records": 24004,
+        "defaults": 5316,
+        "default_rate": 0.2214630894850858
+      }
+    }
+  }
+}

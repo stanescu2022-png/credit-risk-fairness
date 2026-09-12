@@ -1,0 +1,12 @@
+{
+  "logistic": {
+    "original_predicted_classes_reproduced": true,
+    "max_original_probability_difference": 1.1102230246251565e-16
+  },
+  "gradient_boosting": {
+    "original_predicted_classes_reproduced": true,
+    "max_original_probability_difference": 1.1102230246251565e-16
+  },
+  "all_four_notebooks_executed": true,
+  "notebook_and_script_csvs_identical": true
+}

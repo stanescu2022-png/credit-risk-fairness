@@ -1,0 +1,3 @@
+model,male_RGA,female_RGA,female_minus_male,package_parity,raw_package_return,implementation,package_version
+logistic,0.7613068501592665,0.7533883060068278,-0.007918544152438645,0.007918544152438645,The RGA-based imparity between the protected gorups is 0.007918544152438645.,safeaipackage.check_fairness.compute_rga_parity,0.8.3
+gradient_boosting,0.7740700383658686,0.7805250988289699,0.006455060463101292,0.006455060463101292,The RGA-based imparity between the protected gorups is 0.006455060463101292.,safeaipackage.check_fairness.compute_rga_parity,0.8.3

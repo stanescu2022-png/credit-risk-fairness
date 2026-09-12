@@ -1,0 +1,32 @@
+{
+  "raw_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+  "processed_sha256": "e917d1b00ec2c36a55e930ceca5ac5141b088a74884235b26092de8ecca36b19",
+  "split_sha256": "41a7990a29ea0557c2c0fb49d2e09b04af7f261869a82e9ff01d8a4b2005f876",
+  "random_state": 42,
+  "initial_test_size": 0.2,
+  "split_rule": "Original target-stratified split; all exact predictor-group members follow the lowest-ID member's original partition.",
+  "features": [
+    "LIMIT_BAL",
+    "AGE",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6",
+    "EDUCATION",
+    "MARRIAGE",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6"
+  ]
+}

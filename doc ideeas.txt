@@ -1,0 +1,34 @@
+How do a transparent and an opaque credit-scoring model compare not only in predictive performance, but also in accuracy, fairness, explainability, robustness and stability?
+
+And then we have:
+
+Logistic Regression
+→ transparent / white-box
+
+versus
+
+Gradient Boosting
+→ more complex / black-box
+
+evaluated through three layers:
+
+Layer 1 — Conventional predictive performance
+
+Confusion matrix, accuracy, precision, recall, F1, ROC-AUC, probably PR-AUC as well.
+
+Layer 2 — Trustworthiness / SAFE
+
+RGA
+RGF
+RGE
+RGR
+
+The actual package is explicitly built around evaluating these dimensions on arbitrary ML models.
+
+Layer 3 — Additional diagnostics
+
+Table-2-style SHAP fairness by gender
++
+PSI stability/monitoring
+
+That gives us a much better paper than simply “logistic vs gradient boosting on the Taiwan dataset.”

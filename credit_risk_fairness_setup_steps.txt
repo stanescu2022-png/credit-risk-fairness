@@ -1,0 +1,265 @@
+CREDIT RISK / SAFE AI PROJECT - WINDOWS SETUP
+=============================================
+
+STABILIZATION UPDATE (2026-09-05)
+For the current reproducible baseline, use README.md and the committed
+requirements.txt: python -m pip install -r requirements.txt
+It includes xlrd for the original .xls workbook. Then run:
+    python script_prepare_data.py
+    python script_base_model.py
+    python script_gradient_boost.py
+The historical notes below include optional FUTURE research packages. They are
+not needed for the completed baseline stage. Do not replace requirements.txt
+with a freeze of an environment containing unrelated or future-stage packages.
+
+Purpose
+-------
+This file records the environment setup used for the credit-risk-fairness project so it can be replicated easily on another Windows machine.
+
+Project folder used:
+C:\Users\Andrei\Desktop\credit-risk-fairness
+
+
+1. Install the basic software
+-----------------------------
+
+Install:
+
+- Visual Studio Code
+- Python 3.11 (64-bit)
+- Git (recommended for version control)
+
+Python 3.11 was installed with:
+
+    winget install Python.Python.3.11
+
+After installation, close and reopen the terminal.
+
+Verify that Python 3.11 is available:
+
+    py -3.11 --version
+
+Expected result:
+
+    Python 3.11.x
+
+The environment used in this project is Python 3.11.9.
+
+
+2. Open the project folder
+--------------------------
+
+Open PowerShell or the VS Code terminal and go to the project folder:
+
+    cd C:\Users\Andrei\Desktop\credit-risk-fairness
+
+
+3. Create a Python virtual environment
+--------------------------------------
+
+Create a virtual environment specifically with Python 3.11:
+
+    py -3.11 -m venv .venv
+
+
+4. Activate the virtual environment
+-----------------------------------
+
+Activate it in PowerShell:
+
+    .venv\Scripts\activate
+
+The terminal prompt should now begin with:
+
+    (.venv)
+
+If Conda's "(base)" environment is also active, deactivate Conda:
+
+    conda deactivate
+
+Ideally the prompt should show only:
+
+    (.venv)
+
+
+5. Verify that the virtual environment is using Python 3.11
+-----------------------------------------------------------
+
+Run:
+
+    python --version
+
+Expected:
+
+    Python 3.11.9
+
+Check the exact Python executable:
+
+    python -c "import sys; print(sys.executable)"
+
+Expected path should point inside the project, for example:
+
+    C:\Users\Andrei\Desktop\credit-risk-fairness\.venv\Scripts\python.exe
+
+Check pip as well:
+
+    pip -V
+
+Its path should also point inside:
+
+    credit-risk-fairness\.venv\Lib\site-packages
+
+
+6. Upgrade pip
+--------------
+
+With (.venv) active:
+
+    python -m pip install --upgrade pip
+
+
+7. Install the main data science / credit-risk packages
+-------------------------------------------------------
+
+Run:
+
+    pip install pandas numpy scipy scikit-learn matplotlib seaborn jupyter openpyxl statsmodels fairlearn imbalanced-learn shap
+
+Packages installed for the project include:
+
+- pandas              -> data manipulation
+- numpy               -> numerical operations
+- scipy               -> scientific/statistical functions
+- scikit-learn        -> machine-learning models and metrics
+- matplotlib          -> plotting
+- seaborn             -> statistical visualizations
+- jupyter             -> notebooks
+- openpyxl            -> reading/writing Excel files
+- statsmodels         -> statistical analysis
+- fairlearn           -> fairness metrics and mitigation
+- imbalanced-learn    -> handling class imbalance
+- shap                 -> model explainability
+
+
+8. Install the SAFE AI package dependencies
+-------------------------------------------
+
+The SAFE AI project also requires:
+
+- safeaipackage
+- catboost
+- xgboost
+
+Install them with:
+
+    pip install safeaipackage catboost xgboost
+
+NOTE:
+If this command has not yet been run on the current machine, run it before starting the SAFE analysis.
+
+
+9. Configure Visual Studio Code
+-------------------------------
+
+Install these VS Code extensions:
+
+- Python (Microsoft)
+- Pylance
+- Jupyter
+
+Then select the project's virtual environment:
+
+    Ctrl + Shift + P
+    -> Python: Select Interpreter
+    -> select:
+
+    .venv (3.11.9) .\.venv\Scripts\python.exe
+
+Do NOT select the global Python 3.11 interpreter for this project.
+
+
+10. Test the environment
+------------------------
+
+Basic test:
+
+    python -c "import pandas, sklearn, fairlearn, shap; print('Core environment OK')"
+
+After installing SAFE AI dependencies, run:
+
+    python -c "import pandas, numpy, sklearn, catboost, xgboost, safeaipackage; print('SAFE environment OK')"
+
+If the message prints without an error, the environment is ready.
+
+
+11. Save the exact package versions
+-----------------------------------
+
+Once everything is installed and working, create a reproducible requirements file:
+
+    pip freeze > requirements.txt
+
+Later, the same environment can be recreated on another machine with:
+
+    py -3.11 -m venv .venv
+    .venv\Scripts\activate
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+
+
+12. Recommended project structure
+---------------------------------
+
+credit-risk-fairness/
+|
+|-- .venv/
+|-- data/
+|   |-- raw/
+|   `-- processed/
+|
+|-- notebooks/
+|-- src/
+|-- outputs/
+|   |-- figures/
+|   `-- tables/
+|
+|-- requirements.txt
+|-- README.md
+`-- .gitignore
+
+
+13. Recommended .gitignore
+--------------------------
+
+Add:
+
+    .venv/
+    __pycache__/
+    .ipynb_checkpoints/
+    data/processed/
+    outputs/
+    *.pyc
+
+When real banking/customer data is introduced, also exclude the raw confidential data from Git.
+
+
+Quick replication summary
+-------------------------
+
+On a clean Windows machine:
+
+    winget install Python.Python.3.11
+
+Restart terminal, then:
+
+    cd <project-folder>
+    py -3.11 -m venv .venv
+    .venv\Scripts\activate
+    python -m pip install --upgrade pip
+    pip install pandas numpy scipy scikit-learn matplotlib seaborn jupyter openpyxl statsmodels fairlearn imbalanced-learn shap
+    pip install safeaipackage catboost xgboost
+    pip freeze > requirements.txt
+
+Then select .venv\Scripts\python.exe as the interpreter in VS Code.
+
+=============================================
