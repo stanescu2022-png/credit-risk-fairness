@@ -1,0 +1,22 @@
+{
+  "client_date": "2026-10-10",
+  "milestone": 3,
+  "status": "ready_for_user_review_with_explicit_LR_obstacle",
+  "saved_selection_replayed": true,
+  "full_gbm_reproduces_baseline": true,
+  "heldout_metrics_and_decisions_recomputed": true,
+  "first_10_paired_bootstrap_draws_independently_checked": true,
+  "final_fits_precede_holdout_evaluation": true,
+  "selection_hash_unchanged": true,
+  "prior_evaluation_hash_checks": 410,
+  "unexpected_preexisting_changes": [],
+  "LR_status": "not_estimable",
+  "GBM_predictors": [
+    "PAY_0",
+    "LIMIT_BAL",
+    "PAY_AMT1"
+  ],
+  "isolated_tests_passed": 49,
+  "existing_tests_passed": 30,
+  "complete_run_rerun_verification": "deferred to checkpoint 4"
+}

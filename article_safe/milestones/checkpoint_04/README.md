@@ -1,0 +1,15 @@
+# Checkpoint 4: implementation finished
+
+10 October 2026. Andrei authorized completion without pooling repayment categories. All four implementation work packages are finished under the existing specification. The article LR roles remain explicitly unestimable on this categorical design; finishing the implementation does not mean that those missing fits were repaired.
+
+Read the [results report](../../runs/article_v1_2026-10-10/report/results.md) first. It includes all four planned model profiles, the existing regularized LR reference, selection and final-comparison figures, group/parameter evidence links, fidelity labels and the LR limitation. The [discussion note](../../../docs/plans/article_safe_lr_limitation_2026-10-10.md) records why regularization and category pooling matter for the later framework comparison.
+
+The GBM rule selected **PAY_0, LIMIT_BAL and PAY_AMT1** and stopped on adding PAY_2. Full-versus-selected holdout AUC is **0.7781 versus 0.7512**. Selected-minus-full AUC is -0.0270, with a conditional paired group-bootstrap 95% interval [-0.0348,-0.0190]. The reduced model retains 40.9% of full-model mean absolute SHAP importance. This supplies an observed parsimony/accuracy trade-off, not an overall superiority verdict.
+
+A fresh complete run in `article_v1_reproduction_2026-10-10` repeated preparation, all 22 GBM prefixes, final fits, assessments, 2,000 bootstrap draws and reporting. The numerical comparison checked **48 scientific/data artifacts**, with tolerance 1e-12 and only declared timing fields omitted; **45** were also byte identical. Report/model-profile consistency, saved stopping decisions, holdout metrics, ten independently calculated bootstrap draws and final-fit timing boundaries were checked. Full GBM reproduces the frozen reference probabilities exactly.
+
+Validation: **49 article tests and 30 existing tests passed**. All **410 prior evaluation-manifest checks** passed. The [verification receipt](verification.json) lists each compared artifact and actual test commands; full logs are [here](article_tests.log) and [here](existing_tests.log). Three PNG/SVG figure pairs were visually inspected; report evidence links resolved. No old evaluation/reconstruction runner was executed.
+
+An initial input check found that the raw workbook differed by 20 bytes from its frozen hash. All 30,000 decoded records matched the saved processed data. The pre-restoration copy was preserved and the exact Git HEAD source matching all original hashes was restored. The [recovery record](../input_recovery_2026-10-10/recovery.json) documents this; its cause was not established. No records, category meanings or model methodology were changed by restoration.
+
+No category pooling, substitute penalty, dropped observations, new aggregate score or broader superiority experiment was introduced. Previous scientific stage outputs, model settings, splits and dependency locks remain preserved. The next methodological decision is deferred for Andrei's review: assess the usable comparison scope and decide whether/how to address the article LR obstacle. Unavailable results cannot be treated as inferior scores.

@@ -1,0 +1,5 @@
+first,second,status,difference,p_value,p_value_holm,auc_a,auc_b,variance,statistic,positives,negatives,variance_tolerance,difference_tolerance
+gbm_full,lr_mle_full,model_not_estimable,,,,,,,,,,,
+gbm_selected,lr_mle_selected,model_not_estimable,,,,,,,,,,,
+lr_mle_selected,lr_mle_full,model_not_estimable,,,,,,,,,,,
+gbm_selected,gbm_full,ok,-0.026952345309381176,2.0602612270168146e-11,8.241044908067258e-11,0.7511799453041968,0.778132290613578,1.6174272840966072e-05,-6.7016876062862,1320.0,4676.0,1.690024589836459e-18,1.4210854715202004e-14

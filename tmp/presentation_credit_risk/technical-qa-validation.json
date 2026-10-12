@@ -1,0 +1,12 @@
+{
+  "questions": 49,
+  "priority": 27,
+  "search": true,
+  "diacritics": true,
+  "filters": true,
+  "ctrlF": true,
+  "mobile": true,
+  "print": true,
+  "errors": [],
+  "remote": []
+}

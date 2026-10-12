@@ -1,0 +1,97 @@
+WHAT WE WANT THIS ROBUSTNESS STAGE TO ACHIEVE
+Credit-risk fairness project | 7 October 2026
+
+The main goal
+
+Find out how reliable the frozen credit-default models remain when their
+recorded inputs are subjected to prespecified synthetic corruption, and
+compare Logistic Regression with Gradient Boosting under exactly the same
+conditions.
+
+This complements our other evaluation dimensions:
+  Performance: can the model predict recorded defaults well?
+  Fairness: how does model behavior differ across protected groups?
+  Explainability: can we understand why predictions were made?
+  Robustness: how sensitive are outputs to corrupted inputs?
+  Later stability/governance: when should population/environment changes
+  trigger review?
+
+Questions the completed stage should answer
+
+1. Under authentic SAFE extreme-tail perturbation, how much does each model's
+   output ordering change? What does the genuine RGR implementation report
+   at the primary p=0.05 severity?
+
+2. As SAFE severity increases through 0.01, 0.025, 0.05 and 0.10, how do RGR,
+   probability movement, ranking, decision flips and performance evolve?
+
+3. Which input features or feature families produce the largest response?
+   What happens when several families are corrupted jointly?
+
+4. Do the models remain stable under smaller semantic changes such as amount
+   errors, age adjustments, repayment-delay coding changes, or valid category
+   substitutions? Are conclusions similar to the SAFE stress results?
+
+5. Does either model lose more performance relative to its own baseline?
+   Does the difference persist in paired comparisons and useful confidence
+   intervals, or is it small/uncertain?
+
+6. Do movement, flip rates or degradation differ descriptively between SEX
+   groups? How much of the observed difference accompanies different exposure
+   to changed records?
+
+What Codex should produce
+
+  - A saved protocol/configuration documenting severity, transformations,
+    constraints, repetitions, seeds, and uncertainty definitions.
+  - Focused scripts and checks that load the existing frozen models and split.
+  - Reproduction evidence for the original saved baseline predictions.
+  - Authentic SAFE RGR tables, individual and grouped, at all four severities.
+  - Conventional robustness tables for those same SAFE inputs and for the
+    supplementary semantic scenarios.
+  - Clear model-comparison and severity plots using repository conventions.
+  - Descriptive SEX-group tables with counts and actual corruption exposure.
+  - A focused uncertainty summary separating sampling and Monte Carlo variation.
+  - A reproducible report with provenance, assumptions, limitations, and a
+    concise implementation summary.
+
+What a successful result looks like
+
+The original predictions reproduce, earlier artifacts remain intact, both
+models receive identical perturbations, and every headline result can be
+traced to saved configuration and actual SAFE code. The report explains what
+the numbers mean and what conclusions the synthetic design can support.
+
+Success does not require finding that GBM is better, LR is safer, or one model
+is fragile. Similar responses, small differences, or inconclusive comparisons
+are valid findings. We want evidence we can defend in the article, including
+results that do not match our expectations.
+
+How the findings could inform the article
+
+We can discuss the trade-off between predictive quality and sensitivity to
+input corruption. For example, a model could have better baseline ranking
+but lose more under stress; alternatively, it could preserve that advantage.
+These are possible interpretations to test, not conclusions already reached.
+
+Feature-level results can identify where output sensitivity is concentrated.
+They do not establish causal importance, and they do not automatically justify
+removing features. Group summaries can identify questions for later review
+without treating synthetic sensitivity as proof of unfairness.
+
+What this stage cannot establish
+
+  - Real-world error rates or the likelihood of these exact corruptions.
+  - Causal changes in a customer's true default risk.
+  - Security against a defined adversarial attacker.
+  - Reliability on future Romanian bank data or future populations.
+  - Complete financial plausibility of every synthetic record.
+  - A universally best model or an automatically approved deployment threshold.
+  - Completion of drift monitoring, governance, or mitigation.
+
+The endpoint
+
+We should leave with a verified, reproducible robustness evaluation suitable
+for the Python analysis/article, plus a clear list of remaining limitations.
+The frozen model-development decisions stay intact. Later stability/governance
+work can then be planned as its own stage.

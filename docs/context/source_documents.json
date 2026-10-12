@@ -1,0 +1,77 @@
+[
+  {
+    "path": "docs/context/sources/01_codex_robustness_prompt.txt",
+    "bytes": 16095,
+    "sha256": "5bdf2e14f8e665d9941cb0e4516a478f5154c39d61b12abb0c0824cf6810140c"
+  },
+  {
+    "path": "docs/context/sources/02_why_this_prompt.txt",
+    "bytes": 10900,
+    "sha256": "124e34288e427ea32a27b3095820d956f6ad435b3e21555ea527961c69ea13d7"
+  },
+  {
+    "path": "docs/context/sources/03_what_we_want_to_achieve.txt",
+    "bytes": 4737,
+    "sha256": "04c8855a7134fff2d7f7fd75087b4baa2110b2d0e4b6fcab5895efe83430c21c"
+  },
+  {
+    "path": "docs/context/sources/3. 1-s2.0-S0957417423017220-main.pdf",
+    "bytes": 1756122,
+    "sha256": "df63164a9c8beab73863dcd642a0a5724bb25853aa49048f0b6f21ccc2361f49"
+  },
+  {
+    "path": "docs/context/sources/3. 1-s2.0-S0957417423017220-main.pdf.extracted.txt",
+    "bytes": 55007,
+    "sha256": "bf93bc03decffcbedae36aff560f4116c8677fb256cd03282adce228a8f8f2e0"
+  },
+  {
+    "path": "docs/context/sources/Brief_Python_SAFE_Table2_PSI_EN (1).docx",
+    "bytes": 25862,
+    "sha256": "833dd8723f3114785d2c2d4573be1bd205bc10a1d0b7aecd17aacade2fdc1372"
+  },
+  {
+    "path": "docs/context/sources/Brief_Python_SAFE_Table2_PSI_EN (1).extracted.txt",
+    "bytes": 11475,
+    "sha256": "b964e55a11079a244100ecded37e4a8f36b81d862b0f4d290be6cddaf3c4de5f"
+  },
+  {
+    "path": "docs/context/sources/Cerere_Date_Credite_IMM_SAFE_RO.docx",
+    "bytes": 24791,
+    "sha256": "04d732699802aba9329daa7d7208d4de46118411d6952ade054d7662b9bedd0e"
+  },
+  {
+    "path": "docs/context/sources/Cerere_Date_Credite_IMM_SAFE_RO.extracted.txt",
+    "bytes": 10936,
+    "sha256": "49f948ae75192da3d78644d63d3c7a1ced727d8c6c7c6f3f246f827e6a4b9573"
+  },
+  {
+    "path": "docs/context/sources/explainability_implementation_prompt.txt",
+    "bytes": 12281,
+    "sha256": "fe9b504360238f470c344ba01e24f1c56238f034222765f4d932bc291c55f0f2"
+  },
+  {
+    "path": "docs/context/sources/robustness_implementation_prompt.txt",
+    "bytes": 21557,
+    "sha256": "0476140f7e8750d908c237c2c65c395d635cbdb721fda4706378fb1e65cb736d"
+  },
+  {
+    "path": "docs/context/sources/Structura_tehnica_date_risc_credit.pdf",
+    "bytes": 115054,
+    "sha256": "a19e324969b9b844a55355014163a15d47e4aaebd172fff653998c88ff71ad2d"
+  },
+  {
+    "path": "docs/context/sources/Structura_tehnica_date_risc_credit.pdf.extracted.txt",
+    "bytes": 5629,
+    "sha256": "dab227bd4c9a8632213132814fd1eddfbc583d8b68c64444b533739137b3f66b"
+  },
+  {
+    "path": "docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx",
+    "bytes": 25012,
+    "sha256": "27e05a0a9c4aae1032d8c917ebc371478ab2c870cbbf04bf4c598a32b259bad3"
+  },
+  {
+    "path": "docs/context/sources/Trustworthy-AI-Framework-Proposal_new.extracted.txt",
+    "bytes": 10166,
+    "sha256": "5cbc1209b4f60c6a4d3c8c71e12604312898522d9972620f709eaf3a82ce64f6"
+  }
+]

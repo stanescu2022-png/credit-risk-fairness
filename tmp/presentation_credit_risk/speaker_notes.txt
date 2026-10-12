@@ -1,0 +1,88 @@
+SLIDE 1
+30-45 secunde. Întrebarea de pornire este ce câștigăm printr-un model mai complex și ce compromisuri apar. Comparăm rezultatele empirice ale logisticii și boostingului, apoi discutăm intenția cadrului propus. Nu prezentăm acest cadru ca fiind deja validat și nu revendicăm o metodă statistică nouă.
+
+Surse în proiect:
+outputs/stabilization_report.md; data/README.md; README.md
+docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx; extrasul text corespunzător
+
+SLIDE 2
+60 secunde. Setul public UCI conține 30.000 de înregistrări Taiwan, cu default în luna următoare. Am păstrat toate rândurile. Gruparea pe cei 22 de predictori a eliminat overlap-ul exact prin modificarea a 34 de atribuiri. Predictorii identici nu dovedesc că este aceeași persoană. Modelele finale și preprocesarea sunt salvate. CV folosește modele temporare în antrenare. Holdout-ul fusese inspectat înainte de blocare, fapt care trebuie declarat.
+
+Surse în proiect:
+outputs/stabilization_report.md; data/README.md; README.md
+outputs/performance_evaluation_report.md; outputs/tables/performance_evaluation/holdout_metrics.csv; holdout_confidence_intervals.csv
+
+SLIDE 3
+60 secunde. AUC și AP descriu ordonarea riscului; recall descrie câte default-uri detectăm la 0,50. Logistică: AUC 0,7569, AP 0,5270, accuracy 0,8180, recall 0,3545. Boosting: AUC 0,7781, AP 0,5521, accuracy 0,8177, recall 0,3515. Brier și log loss sunt mai mici pentru boosting. Intervalele din explorer sunt marginale și nu reprezintă un test al diferenței între modele. Nu am selectat un prag nou.
+
+Surse în proiect:
+outputs/performance_evaluation_report.md; outputs/tables/performance_evaluation/holdout_metrics.csv; holdout_confidence_intervals.csv
+
+SLIDE 4
+60 secunde. pp înseamnă puncte procentuale. Recall și FPR sunt femei minus bărbați. SAFE parity este gapul unsigned max-minus-min între RGA-urile de grup. În acest set binar, RGA coincide numeric cu AUC; nu presupunem identitatea în orice problemă. Boosting are gap SAFE mai mic, dar gapuri absolute de recall/FPR mai mari. Intervalele semnate includ zero, fără a dovedi echivalență sau absența disparităților. Flagul pozitiv este un risc de default, nu o aprobare.
+
+Surse în proiect:
+outputs/fairness_evaluation_report.md; outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv; fairness_confidence_intervals.csv
+
+SLIDE 5
+60 secunde. PAY_0 și LIMIT_BAL conduc ambele modele. Primele trei variabile sunt PAY_0, LIMIT_BAL, PAY_6 la logistică și PAY_0, LIMIT_BAL, PAY_AMT1 la boosting. SHAP explică log-odds față de un background de 100 de rânduri de training. Contribuțiile pentru 85 de coloane transformate sunt agregate la 22 de predictori; pentru boosting aceasta nu este un joc nou de coaliții pe inputuri brute. RGE măsoară schimbarea ordonării la înlocuirea cu referințe training. SHAP apare deja în KAIRI. Exemplul ID 2 din explorer este un default ratat de ambele modele; cazurile sunt ilustrative, nu reprezentative.
+
+Surse în proiect:
+outputs/explainability_evaluation_report.md; outputs/tables/explainability_evaluation/model_summary.csv; local_shap_contributions.csv
+docs/context/sources/3. 1-s2.0-S0957417423017220-main.pdf
+
+SLIDE 6
+90 secunde. SAFE p=0,05 schimbă cozi opuse; p nu înseamnă o modificare de 5% a fiecărei valori. Joint SAFE schimbă inputuri pentru aproximativ 65,14% din holdout. Semantic q=0,10 selectează circa 10% și aplică reguli cu IQR de training, vârstă, întârzieri pozitive valide și substituții categoriale. Există 30 de repetări semantice. Mișcarea medie este 0,51 pp la logistică și 0,83 pp la boosting. Diferența pereche este 0,318 pp, cu IC95% condiționat [0,297; 0,340] pp. RGR are doar estimări punctuale și normalizare specifică modelului. Stresurile nu sunt echivalente; outcome-ul observat rămâne fix.
+
+Surse în proiect:
+outputs/robustness_evaluation_report.md; outputs/tables/robustness_evaluation/protocol.json; diagnostic_summary.csv; sampling_intervals.csv
+
+SLIDE 7
+60 secunde. Acesta este un rezumat al propunerii colegului, nu o validare. Documentul cere indicatori complementari cu formule, teste, clasificare după accesul la model și surse. Propune o axă de incertitudine/calibrare și bias transversal. Maparea la EU AI Act, NIST și HLEG rămâne propusă, fără validare juridică. Tabelul de incertitudine din draft repetă rânduri de explainability; pentru acest rezumat folosim intenția explicită din introducere, iar draftul va trebui corectat.
+
+Surse în proiect:
+docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx; extrasul text corespunzător
+
+SLIDE 8
+90 secunde. Nu calculăm un procent de framework finalizat. Brier și log loss există, dar DM, DeLong și MCS nu au fost executate. Ratele/gapurile/rapoartele de grup și IC există, însă nu testele z/permutare propuse și nici entropia. Corupțiile semantice nu echivalează cu energy/MMD sau DeepFool. SHAP/RGE nu echivalează cu AOPC/fidelitate/randomizare, iar grupurile SHAP nu au teste KS. ECE global și intervalele condiționate nu sunt decompoziție aleatorică/epistemică sau conformal. Acoperirea este parțială, la nivelul unor indicatori și diagnostice.
+
+Surse în proiect:
+docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx; extrasul text corespunzător
+outputs/performance_evaluation_report.md; outputs/tables/performance_evaluation/holdout_metrics.csv; holdout_confidence_intervals.csv
+outputs/fairness_evaluation_report.md; outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv; fairness_confidence_intervals.csv
+outputs/explainability_evaluation_report.md; outputs/tables/explainability_evaluation/model_summary.csv; local_shap_contributions.csv
+outputs/robustness_evaluation_report.md; outputs/tables/robustness_evaluation/protocol.json; diagnostic_summary.csv; sampling_intervals.csv
+
+SLIDE 9
+60 secunde. Întrebarea este dacă procedurile propuse răspund estimanzilor și dependenței din date. Bootstrap-ul curent nu înlocuiește automat alte teste. Analiza actuală include rezultate/erori pe SEX, asocieri descriptive în training, SHAP pe grupuri și robustețe pe grupuri; nu avem o baterie completă de bias transversal sau calibrare pe grupuri. Un singur set Taiwan și un holdout anterior inspectat limitează confirmarea. PSI, monitorizarea temporală și datele românești rămân în afara muncii executate.
+
+Surse în proiect:
+docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx; extrasul text corespunzător
+docs/context/sources/3. 1-s2.0-S0957417423017220-main.pdf
+outputs/performance_evaluation_report.md; outputs/tables/performance_evaluation/holdout_metrics.csv; holdout_confidence_intervals.csv
+outputs/fairness_evaluation_report.md; outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv; fairness_confidence_intervals.csv
+
+SLIDE 10
+60 secunde. Încheiem cerând feedback concret: adecvarea bazei, prioritatea extensiilor și formularea contribuției. Nu cerem validarea implicită a tuturor indicatorilor din draft. Propunem un subset coerent, cu ipoteze și proceduri adecvate, înainte de implementare. Păstrăm cea mai mare parte din întâlnirea de 30 de minute pentru dialog. Explorerul poate susține o întrebare fără a-l parcurge integral.
+
+Surse în proiect:
+docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx; extrasul text corespunzător
+outputs/stabilization_report.md; data/README.md; README.md
+
+SLIDE 11
+Anexă pentru întrebări tehnice. Bootstrap-ul are 2.000 de resample-uri pe grupuri exacte, seed 42, intervale percentile. Grupurile pot traversa SEX/outcome și sunt păstrate intacte. Modelele împart resample-urile. Intervalele sunt condiționate pe modele și date observate, iar robustețea pe realizările salvate; fiecare repetare semantică este recalculată ca metrică în resample înainte de mediere. SD între 30 de repetări nu este un interval de sampling. Verificarea salvată a robusteții raportează 30 de teste și 24 de CSV/cache identice în două rulări. Explorerul este un snapshot offline, nu un acces live la bază de date.
+
+Surse în proiect:
+outputs/performance_evaluation_report.md; outputs/tables/performance_evaluation/holdout_metrics.csv; holdout_confidence_intervals.csv
+outputs/fairness_evaluation_report.md; outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv; fairness_confidence_intervals.csv
+outputs/robustness_evaluation_report.md; outputs/tables/robustness_evaluation/protocol.json; diagnostic_summary.csv; sampling_intervals.csv
+explorer/README.md
+
+SLIDE 12
+Anexă pentru acoperirea indicatorilor. Scor calculat și test executat sunt două stări distincte. Interpretarea rapoartelor de flagging depinde de sensul labelului pozitiv; nu mapăm automat un raport de default la discriminare în aprobarea creditelor. Media probabilității versus frecvență este descriptivă, fără test t. Datele SHAP sunt salvate, dar testele KS/Gini nu au fost rulate. Testele propuse trebuie revizuite pentru adecvare statistică; nu le tratăm ca o listă obligatorie validată. MCS, AOPC și conformal sunt neimplementate.
+
+Surse în proiect:
+docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx; extrasul text corespunzător
+outputs/performance_evaluation_report.md; outputs/tables/performance_evaluation/holdout_metrics.csv; holdout_confidence_intervals.csv
+outputs/fairness_evaluation_report.md; outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv; fairness_confidence_intervals.csv
+outputs/explainability_evaluation_report.md; outputs/tables/explainability_evaluation/model_summary.csv; local_shap_contributions.csv

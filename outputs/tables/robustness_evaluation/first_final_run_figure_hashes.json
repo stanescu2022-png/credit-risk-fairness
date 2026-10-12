@@ -1,0 +1,51 @@
+{
+  "PNG_hashes": {
+    "feature_family_sensitivity.png": "5c619c9b3c43eb68c545179174e5a18b7c1a91d0d15bdf53bd40ec16c35a3f71",
+    "individual_rgr_primary_severity.png": "27c99d4f11411e52f8cfa48dc6920603ffcdc36aa16584174844fe6ba9ec3162",
+    "joint_severity.png": "53ed553e88c12c573856fd9f7639c0d44d8181e84ea4d4a33b9e90146b1d7770"
+  },
+  "SVG_file_hashes": {
+    "feature_family_sensitivity.svg": "76b481fc9ce00cfc4ab9c1da69e7dcc272eb25d0893e74c3d0da874cbe860109",
+    "individual_rgr_primary_severity.svg": "dcd9fa93c722d3b02ff2880500dd71a63c96060f4cc0405789c8c83d1c0cf528",
+    "joint_severity.svg": "7e7d56c20b66279fbbbac83794abc27c55df40719d7a5537219d4c74daa86e61"
+  },
+  "SVG_content_hashes_after_ID_normalization": {
+    "feature_family_sensitivity.svg": "ed89d2b6e13a51c59631aca69661c4444ebe0cf25ec87797b4a054a6eb8d4658",
+    "individual_rgr_primary_severity.svg": "8f416b339d985a70348396e3544d89554d9f70c16842fe79f91ef9bc5bd14c31",
+    "joint_severity.svg": "08d87d5374f55bc7b75f6bf3efabb947a5cce43012115445100a0b287b2431e2"
+  },
+  "report_sha256": "47edb8cfc89b3a3dfc52f1d4d470718ca0452227a6105588a0ff31e7daf496e6",
+  "manifest_compared_fields": [
+    "stage",
+    "status",
+    "holdout_rows",
+    "training_rows",
+    "protected_artifact_hashes",
+    "protected_artifacts_unchanged",
+    "source_hashes",
+    "safe_identity",
+    "protocol_sha256",
+    "rationale_sha256",
+    "models_fitted",
+    "calibration_fitted",
+    "selected_threshold",
+    "threshold",
+    "class_rule",
+    "predictors",
+    "scenarios",
+    "realizations",
+    "semantic_repetitions",
+    "bootstrap_repetitions",
+    "bootstrap_seed",
+    "python",
+    "platform",
+    "environment_versions",
+    "prediction_cache_format",
+    "initial_prespecified_protocol_sha256",
+    "implementation_revision_sha256",
+    "undefined_diagnostics_count",
+    "undefined_bootstrap_count",
+    "undefined_SAFE_fixture_count"
+  ],
+  "first_final_run_completed_utc": "2026-10-08T10:07:32.716259+00:00"
+}

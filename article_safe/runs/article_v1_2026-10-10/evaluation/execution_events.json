@@ -1,0 +1,33 @@
+[
+  {
+    "event": "selection_verified",
+    "time_utc": "2026-10-10T12:53:43.202672+00:00",
+    "selected_subsets_sha256": "760b778f2a657851dc0211b1fa416097066d3c7ee9c15ba10e62363c61de03f6"
+  },
+  {
+    "event": "final_refit_finished",
+    "model": "lr_mle_full",
+    "time_utc": "2026-10-10T12:53:43.436992+00:00",
+    "status": "not_estimable"
+  },
+  {
+    "event": "final_refit_finished",
+    "model": "gbm_full",
+    "time_utc": "2026-10-10T12:53:51.372612+00:00",
+    "status": "ok"
+  },
+  {
+    "event": "final_refit_finished",
+    "model": "gbm_selected",
+    "time_utc": "2026-10-10T12:53:52.544215+00:00",
+    "status": "ok"
+  },
+  {
+    "event": "holdout_evaluation_started",
+    "time_utc": "2026-10-10T12:53:52.794155+00:00"
+  },
+  {
+    "event": "holdout_assessments_finished",
+    "time_utc": "2026-10-10T12:54:03.151114+00:00"
+  }
+]

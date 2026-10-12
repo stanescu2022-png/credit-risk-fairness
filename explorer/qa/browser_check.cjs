@@ -1,0 +1,52 @@
+const {chromium}=require('C:/Users/Andrei/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+(async()=>{
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:1365,height:1000}});
+const errors=[],requests=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
+await page.goto('file:///'+path.resolve('explorer/credit-risk-explorer.html').replaceAll('\\','/'));
+await page.getByRole('heading',{name:'Better ranking, similar decisions'}).waitFor();
+assert.match(await page.locator('main').innerText(),/0\.7569/);
+await page.screenshot({path:'explorer/qa/performance.png',fullPage:true});
+await page.locator('#perfMetric').selectOption('Recall');assert.match(await page.locator('main').innerText(),/35\.45%/);
+await page.locator('#perfPartition').selectOption('training_cv');assert.match(await page.locator('main').innerText(),/Between-fold variability/);
+await page.getByRole('button',{name:'Fairness',exact:true}).click();assert.match(await page.locator('main').innerText(),/2\.32 pp/);
+await page.screenshot({path:'explorer/qa/fairness.png',fullPage:true});
+await page.locator('#fairMetric').selectOption('safe_rga_difference');assert.match(await page.locator('main').innerText(),/-0\.0079/);
+await page.getByRole('button',{name:'Explainability',exact:true}).click();assert.match(await page.locator('main').innerText(),/54\.16%/);
+await page.screenshot({path:'explorer/qa/explainability.png',fullPage:true});
+await page.locator('#exView').selectOption('local');await page.locator('#exCase').selectOption('67');
+await page.locator('#exModel').selectOption('gradient_boosting');assert.match(await page.locator('main').innerText(),/Public record ID/);
+await page.screenshot({path:'explorer/qa/local-case.png',fullPage:true});
+await page.locator('#exView').selectOption('sex');assert.match(await page.locator('main').innerText(),/Female minus male/);
+await page.getByRole('button',{name:'Robustness',exact:true}).click();assert.match(await page.locator('main').innerText(),/65\.14%/);
+await page.screenshot({path:'explorer/qa/robustness-safe.png',fullPage:true});
+await page.locator('#robMetric').selectOption('RGR');assert.match(await page.locator('main').innerText(),/0\.8170/);
+await page.locator('#robSex').selectOption('1');assert.match(await page.locator('main').innerText(),/Choose Overall/);
+await page.locator('#robSex').selectOption('0');await page.locator('#robLayer').selectOption('semantic');assert.match(await page.locator('main').innerText(),/0\.51 pp/);
+assert.match(await page.locator('main').innerText(),/0\.32 pp/);
+await page.screenshot({path:'explorer/qa/robustness-semantic.png',fullPage:true});
+await page.locator('#robScope').selectOption('feature:PAY_5');await page.locator('#robSeverity').selectOption('stronger');assert.match(await page.locator('main').innerText(),/Sensitivity scenario/);
+await page.locator('#robMetric').selectOption('delta_Brier Score');assert.match(await page.locator('main').innerText(),/Positive means greater probability loss/);
+const coverage=await page.evaluate(()=>{
+ const failures=[];let checks=0;
+ for(const s of D.protocol.scenarios.filter(s=>!s.permutation_seed)){
+  state.layer=s.layer;state.scope=(s.kind==='individual'?'feature:':'group:')+s.scope;state.severity=String(s.layer==='safe'?s.p:s.level);state.sex='0';state.robustnessMetric='mean_absolute_movement';renderRobustness();
+  if(!document.querySelector('main').textContent.includes(s.scenario)||document.querySelector('main').textContent.includes('Unavailable'))failures.push(s.scenario);
+  checks++;
+ }
+ return {checks,failures};
+});assert.deepEqual(coverage.failures,[]);
+await page.getByRole('button',{name:'Study & sources',exact:true}).click();assert.match(await page.locator('main').innerText(),/28 artifacts/);
+await page.screenshot({path:'explorer/qa/methods.png',fullPage:true});
+await page.getByRole('button',{name:'Performance',exact:true}).click();await page.locator('#perfMetric').selectOption('ROC-AUC');await page.locator('#perfPartition').selectOption('locked_holdout');
+const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Download displayed table'}).click();const download=await downloadPromise;await download.saveAs('explorer/qa/download.csv');assert.match(fs.readFileSync('explorer/qa/download.csv','utf8'),/0\.7569488458148638/);
+await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'explorer/qa/mobile.png',fullPage:true});
+await page.setViewportSize({width:1365,height:1000});await page.evaluate(()=>document.documentElement.style.fontSize='32px');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+assert.deepEqual(errors,[]);assert.equal(requests.filter(u=>/^https?:/.test(u)).length,0);
+const result={offline_file_open:true,javascript_errors:errors,network_requests:requests.filter(u=>/^https?:/.test(u)),scenario_views_checked:coverage.checks,csv_download_verified:true,mobile_no_horizontal_overflow:true,text_enlargement_checked:true};
+fs.writeFileSync('explorer/qa/browser_checks.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

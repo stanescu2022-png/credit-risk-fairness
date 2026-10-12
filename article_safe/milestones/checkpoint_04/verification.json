@@ -1,0 +1,423 @@
+{
+  "completed_at_utc": "2026-10-10T14:25:44.581331+00:00",
+  "client_date": "2026-10-10",
+  "status": "implementation_complete_with_explicit_unestimable_LR_roles",
+  "reference_run": "article_v1_2026-10-10",
+  "independent_rerun": "article_v1_reproduction_2026-10-10",
+  "numerical_tolerance": {
+    "rtol": 1e-12,
+    "atol": 1e-12
+  },
+  "rerun_artifacts": [
+    {
+      "artifact": "selection/gbm_choice.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "selection/gbm_fitting_importance.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "selection/gbm_fitting_shap.npz",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "selection/gbm_prefix_path.csv",
+      "passed": true,
+      "byte_identical": false,
+      "ignored_runtime_fields": [
+        "fit_seconds"
+      ]
+    },
+    {
+      "artifact": "selection/gbm_selection_encoded_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "selection/gbm_validation_predictions.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "selection/lr_choice.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "selection/lr_encoded_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "selection/lr_fit_diagnostics.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "selection/selected_subsets.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "selection/selection_shap_background.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/auc_comparisons.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/auc_comparisons.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/auc_difference_intervals.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/bootstrap_replicates.npz",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/component_statuses.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/conditional_uncertainty.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/execution_events.json",
+      "passed": true,
+      "byte_identical": false,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/explanation_gap_intervals.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/final_fit_complete.json",
+      "passed": true,
+      "byte_identical": false,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/final_shap_background.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/full_gbm_reproduction.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/gbm_full_contribution_fairness.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_full_encoded_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_full_importance.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_full_shap.npz",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_full_shap_checks.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/gbm_full_shap_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_full_shap_regression.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_full_shap_regression_status.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/gbm_full_unknown_categories.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/gbm_selected_contribution_fairness.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_selected_encoded_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_selected_importance.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_selected_shap.npz",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_selected_shap_checks.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/gbm_selected_shap_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_selected_shap_regression.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/gbm_selected_shap_regression_status.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/gbm_selected_unknown_categories.json",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": [
+        "completed_at_utc",
+        "seconds",
+        "started_at_utc",
+        "time_utc"
+      ]
+    },
+    {
+      "artifact": "evaluation/group_metric_gaps.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/group_metrics.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/holdout_metrics.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/holdout_predictions.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "evaluation/lr_mle_full_encoded_mapping.csv",
+      "passed": true,
+      "byte_identical": true,
+      "ignored_runtime_fields": []
+    },
+    {
+      "artifact": "protocol.json",
+      "passed": true,
+      "byte_identical": true
+    },
+    {
+      "artifact": "development_assignments.csv",
+      "passed": true,
+      "byte_identical": true
+    },
+    {
+      "artifact": "data_audit.json",
+      "passed": true,
+      "byte_identical": true
+    }
+  ],
+  "rerun_artifact_count": 48,
+  "independent_checks": {
+    "saved_selection_replayed": true,
+    "holdout_metrics_recomputed": true,
+    "first_10_bootstrap_draws_independently_checked": true,
+    "final_fits_precede_holdout": true,
+    "missing_LR_roles_visible_in_report": true,
+    "full_GBM_matches_frozen_reference": true,
+    "report_profiles_match_saved_metrics": true
+  },
+  "isolated_tests": {
+    "command": [
+      "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "article_safe/tests",
+      "-v"
+    ],
+    "tests_run": 49,
+    "exit_code": 0
+  },
+  "existing_tests": {
+    "command": [
+      "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "tests_run": 30,
+    "exit_code": 0
+  },
+  "prior_evaluation_hash_checks": 410,
+  "unexpected_preexisting_changes": [],
+  "pooling_performed": false,
+  "regularized_LR_substituted_for_article_tests": false,
+  "scientific_claim": "GBM reduction trade-off; no framework superiority established",
+  "verification_source_sha256": "ed7d9e798a650e917f1044938d84e8e01e3ba7a192184138cd29ed90cc64f756",
+  "report_manifest_sha256": "3f93baf03c08f1220b7e841a6329fa1c2a87041944fdc4decbebb3956a2b8138"
+}

@@ -1,0 +1,14 @@
+fixture,value,expected,status,reason
+identity,1.0,1.0,defined,
+preserved_order,1.0,1.0,defined,
+reversed_order,0.0,0.0,defined,
+original_ties,1.0,1.0,defined,
+perturbed_ties,0.8999999999999999,0.9,defined,
+both_ties,1.0,1.0,defined,
+constant_original,,,undefined,constant original scores: inc minus dec equals zero
+constant_perturbed,0.5,0.5,defined,
+API_index_reset_constant_False_p_0.0,1.0,1.0,defined,
+API_index_reset_constant_False_p_0.25,0.10000000000000009,0.10000000000000009,defined,
+API_index_reset_constant_True_p_0.0,,,undefined,constant original scores: zero normalization
+API_index_reset_constant_True_p_0.25,,,undefined,constant original scores: zero normalization
+API_constant_perturbed,0.5,0.5,defined,

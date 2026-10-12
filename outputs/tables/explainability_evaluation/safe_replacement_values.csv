@@ -1,0 +1,23 @@
+feature,replacement,rule
+LIMIT_BAL,167348.44192634561,training mean
+AGE,35.42922012997834,training mean
+BILL_AMT1,51091.959131811367,training mean
+BILL_AMT2,49004.176595567405,training mean
+BILL_AMT3,46854.147433761042,training mean
+BILL_AMT4,43149.546242292949,training mean
+BILL_AMT5,40157.796033994331,training mean
+BILL_AMT6,38669.611314780872,training mean
+PAY_AMT1,5622.6955507415432,training mean
+PAY_AMT2,5879.0714464255962,training mean
+PAY_AMT3,5214.9847942009665,training mean
+PAY_AMT4,4789.6099400099984,training mean
+PAY_AMT5,4769.22325445759,training mean
+PAY_AMT6,5229.1103566072325,training mean
+EDUCATION,2,training mode (first sorted tie)
+MARRIAGE,2,training mode (first sorted tie)
+PAY_0,0,training mode (first sorted tie)
+PAY_2,0,training mode (first sorted tie)
+PAY_3,0,training mode (first sorted tie)
+PAY_4,0,training mode (first sorted tie)
+PAY_5,0,training mode (first sorted tie)
+PAY_6,0,training mode (first sorted tie)

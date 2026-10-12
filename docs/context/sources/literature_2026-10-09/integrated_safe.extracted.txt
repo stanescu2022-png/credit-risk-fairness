@@ -1,0 +1,1459 @@
+===== PDF PAGE 1 =====
+Machine Learning with Applications 23 (2026) 100821
+Contents lists available at ScienceDirect
+MachineLearningwithApplications
+journal homepage: www.elsevier.com/locate/mlwa
+SAFEAImetrics:Anintegratedapproach
+Paolo Giudici ∗, Vasily Kolesnikov
+Department of Economics and Management, University of Pavia,Via San Felice al Monastero 5,27100Pavia,Italy
+A R T I C L E I N F O A B S T R A C T
+Keywords: We contribute to the field of AI governance with the development of a unified compliance metric that
+AI governance integrates three key dimensions of SAFE Artificial Intelligence: Security, Accuracy, and Explainability. While
+AI risk management these aspects are typically assessed in isolation, the proposed approach integrates them into a single and
+Responsible AI interpretable metric, grounded in a consistent mathematical structure. To develop an integrated framework,
+SAFE AI
+the outputs of machine learning models are evaluated under three risk dimensions, that correspond to different
+Accuracy
+input data perturbations: data removal (for accuracy); data poisoning (for security); and feature removal (for
+Explainability
+Security explainability). The experimentation of the methodology on both real and simulated datasets shows that the
+integrated metric improves compliance monitoring and enables a consistent evaluation of AI risks.
+1. Literature review and motivation poisoning, and is commonly measured by means of red teaming
+procedures, see e.g. Ferrer et al. (2024) and Zhao et al. (2022) for
+Machine learning (ML) is rapidly advancing the capabilities of Arti- a review.
+ficial Intelligence (AI) across a wide range of human activities. Unlike • Accuracy: This principle require that AI systems make correct
+conventional software systems, AI systems not only transform inputs predictions, and it is often quantified using metrics such as
+into outputs but can also influence and reshape their environments. Root Mean Squared Error (RMSE) for continuous outcomes and
+The dynamic and adaptive nature of AI introduces new categories of the Area Under the Curve (AUC) for binary classifications, see
+risk that affect individuals, organizations, and the broader structures e.g. Gneiting and Katzfuss (2014) and Terven et al. (2025).
+of society. To address these emerging risks, regulators, policymakers, • Fairness: This principles requires that AI systems behave sim-
+and standards organizations have developed AI governance regulations, ilarly for different population groups, and is commonly evalu-
+guidelines and standards, such as European Commission (2020, 2023), ated using parity-based metrics such as demographic parity or
+International Organization for Standardization and International Elec-
+equalized odds, see e.g. Hurlin et al. (2024)
+trotechnical Commission (2023), National Institute for Standards and • Explainability: This principle requires that the output of AI sys-
+Technology (2023) and United Nations High-Level Advisory Body on
+tems should be understood in its drivers, to allow its monitoring
+Artificial Intelligence (2024).
+and control, and is mostly measured by post-hoc techniques such
+These initiatives emphasize the importance of systematically assess-
+as Shapley Values and LIME, see e.g. Lundberg and Lee (2017),
+ing and mitigating the risks associated with AI. A key aspect for the
+Molnar (2019) and Ribeiro et al. (2016).
+governance of AI, and of its risk management, is the establishment of
+consistent and interpretable metrics, that can guide monitoring and
+Although widely used metrics and procedures such as red teaming,
+ensure compliance. However, despite increasing attention to AI risk
+AUC, RMSE, Shapley Values and fairness parity measures address indi-
+management, a standardized set of risk metrics for AI systems is still
+vidual aspects of the S.A.F.E-AI principles, they are generally applied in
+lacking, in both the academic literature and in the professional practice,
+isolation and lack internal consistency. This fragmentation limits their
+see e.g. Bernardelli and Giudici (2025).
+ability to provide a comprehensive assessment of AI risk.
+In response to this challenge, Babaei et al. (2025) summarized
+This limitation has been acknowledged in some recent papers, such
+the existing governance guidelines and introduced four measurable
+as Liang et al. (2022) and Nguyen and Do (2025). In Nguyen and
+principles under the acronym S.A.F.E:
+Do (2025) the authors introduce RAISE (Responsible AI Scoring and
+• Sustainability: This principle requires that AI systems are robust Evaluation): ‘‘a unified framework that systematically quantifies model
+and resilient to adversarial attacks, such as cyber attacks or data performance across the foundational and often competing dimensions
+∗ Corresponding author.
+E-mail addresses: paolo.giudici@unipv.it (P. Giudici), vasily.kolesnikov01@universitadipavia.it (V. Kolesnikov).
+https://doi.org/10.1016/j.mlwa.2025.100821
+Received 20 July 2025; Received in revised form 28 November 2025; Accepted 9 December 2025
+Available online 15 December 2025
+2666-8270/© 2025 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license ( http://creativecommons.org/licenses/by-
+nc-nd/4.0/) .
+
+===== PDF PAGE 2 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+of explainability, fairness, robustness, and sustainability’’. They propose
+to standardize and integrate the existing individual metrics for the lat-
+ter four dimension, leading to a unified responsibility score for tabular
+data that can be put in trade-off with accuracy. In Liang et al. (2022)
+the authors propose a similar approach to evaluate Large Language
+models, considering a multi-metric framework that integrates seven
+dimensions: accuracy, calibration, robustness, fairness, bias, toxicity
+and efficiency. Both papers employ existing individual metrics, stan-
+dardize them to a common metric and, then, integrate them in a single
+measurement.
+The advantage of a unified metric approach to responsible AI and
+AI risk management is a transparent manner to evaluate the output
+of AI applications, which leads to a single, interpretable, and task-
+agnostic S.A.F.E-AI score. The resulting framework improves the ability
+of different stakeholders, such as AI providers, users and regulators, to
+monitor and manage AI-related risks.
+We follow a similar approach: consider a multi-metric framework
+that integrates four dimensions: sustainability, accuracy, fairness and
+explainability into a single metric. And, similarly as in Nguyen and Fig. 1. The Lorenz 𝐿 and 𝐿′ dual Lorenz curves, the concordance curve
+𝑌∗ 𝑌∗
+Do (2025), we consider tabular data as a reference case. However, 𝐶, and the 45-degree line, where 𝑝 (on the 𝑥-axis) and 𝑓(𝑝) (on the 𝑦-axis)
+differently from Nguyen and Do (2025) we do not consider different represent the cumulative values of the 𝑥 and 𝑦 coordinates of the 𝐿 𝑌∗ , 𝐿′ 𝑌∗ ,
+metrics but, rather, measure all dimensions with a common metric, and 𝐶 curves.
+derived from a common mathematical basis: the Lorenz curve and
+its relationship to the Receiver Operating Characteristic (ROC) curve
+(see, e.g. Giudici & Raffinetti, 2024; Koshevoy & Mosler, 1996; Lorenz, Importantly, the concordance curve coincides exactly with the
+1905). Lorenz curve when the rankings of 𝑌∗ and 𝑌∗∗ are identical, and
+The advantage of our proposal is a precise determination of the it matches the dual Lorenz curve when the rankings are perfectly
+relative importance of each dimension, as they are all measured with reversed. More generally, the difference between the concordance and
+the same metric. A possible disadvantage is that we are not using Lorenz curves at any point reflects the degree to which the rank
+existing metrics but, rather, new ones, which need to be understood, orderings of the two variables differ, providing a measure of their
+especially in comparison with the standard ones. concordance or divergence in terms of their distributions.
+2. Proposal
+2.1. Rank Graduation Accuracy (RGA)
+The RGB framework (Babaei et al., 2025) consists of three fun-
+Accuracy reflects how closely the output of an AI system aligns with
+damental mathematical constructs: the Lorenz curve, the dual Lorenz
+the expected or true values. For instance, in the NIST Risk Management
+curve, and the concordance curve. These curves form a unified basis
+Framework (National Institute for Standards and Technology, 2023),
+for defining the proposed risk and compliance metrics.
+accuracy is described as the degree to which results or estimates
+Consider two statistical variables, 𝑌∗ and 𝑌∗∗, which may be con-
+approximate actual or accepted reference values.
+tinuous, ordinal or binary. The 𝑌∗ values can be used to build the
+Lorenz curve, 𝐿 𝑌∗, arranging the 𝑌∗ values in a non-decreasing order.
+mea
+In
+su r
+b
+e
+o
+d
+t h
+u s
+s
+i
+t
+n
+a
+g
+t i
+w
+st
+e
+ic
+ll
+s
+- e
+a
+s
+n
+ta
+d
+b l
+m
+is
+a
+h
+c
+e
+h
+d
+i n
+m
+e
+e t
+l
+r
+e
+i
+a
+c
+r
+s
+n
+.
+i
+F
+n
+o
+g
+r
+,
+c
+a
+o
+c
+n
+c
+t
+u
+in
+ra
+u
+c
+o
+y
+u s
+i s
+o u
+tr
+t
+a
+co
+d
+m
+iti
+e
+o
+s
+n
+,
+a
+t
+l
+h
+ly
+e
+For 𝑖=1,…,𝑛, the Lorenz curve can be constructed by the pairs:
+Root Mean Squared Error (RMSE) is commonly used, while for binary
+(
+𝑖 , 1 ∑
+𝑖
+𝑦∗
+)
+, (1) classification tasks, the Area Under the Receiver Operating Character-
+𝑛 𝑛𝑦̄∗ 𝑗=1 𝑟∗ 𝑗 istic Curve (AUROC) serves as a standard performance indicator.
+To address the limitations of task-specific accuracy metrics, a more
+where 𝑟∗ indicates the non-decreasing ranks of 𝑌∗ and 𝑦̄∗ denotes the
+𝑗 general, response-agnostic measure was proposed—Rank Graduation
+mean of 𝑌∗.
+Accuracy (RGA). An important property is that the RGA measure is
+In contrast, the dual Lorenz curve is created by ordering the same
+equal to the AUROC when applied to binary outcomes. Also, it extends
+𝑌∗ values in a non-increasing order and is defined by pairs:
+naturally to ordinal and continuous targets, preserving a consistent
+( 𝑖 , 1 ∑ 𝑖 𝑦∗ ) , (2) interpretation across different problem types.
+𝑛 𝑛𝑦̄∗ 𝑟∗ Dividing the area under the concordance curve by its maximum
+𝑗=1 𝑛+1−𝑗
+value, we obtain the RGA measure:
+where 𝑟∗ indicates the non-increasing ranks of 𝑌∗.
+𝑛+1−𝑗 { }
+𝑖 c th u = e r i v W r 1 e , i o t C … w h n c , t a h 𝑛 r n , e a i n b s n k a e d s m i , c c e o b a n t u p e s t r t i r t w n u h c i c e t i t h p e n l d e o r e , n b s w - y p d e e e o c c r c t r d a e t e n a o r s i o i t n n h r g g d e e t r r h r a a e n n t h k k 𝑌 e s s ∗ 𝑌 o o v f f ∗ a ∗ 𝑌 𝑌 l u v ∗ ∗ e ∗ a ∗ s . . l u F n A e o o s r t . c o 𝑖 i L n n e = c t t o e 1 𝑟 r r , ∗ 𝑖 d m ∗ … a , s n f , c o o 𝑛 e r f , 𝑅𝐺𝐴= ∑ ∑ 𝑛 𝑖 𝑛 𝑖 = = 1 1 { 𝑛 𝑛 1 1 𝑦 𝑦 ̄ ̄ ( ( ∑ ∑ 𝑖 𝑗 𝑖 𝑗 = = 1 1 𝑦 𝑦 𝑟 𝑟 𝑛 𝑛 + + 1 1 − − 𝑗 𝑗 − − ∑ ∑ 𝑖 𝑗 𝑖 𝑗 = = 1 1 𝑦 𝑦 𝑟 𝑟̂𝑗 𝑗 ) ) } = ∑ ∑ 𝑛 𝑖 𝑛 𝑖 = = 1 1 𝑖 𝑖 𝑦 𝑦 𝑟 𝑟̂𝑖 𝑖 − − ∑ ∑ 𝑛 𝑖 𝑛 𝑖 = = 1 1 𝑖 𝑖 𝑦 𝑦 𝑟 𝑟 𝑛 𝑛 + + 1 1 − − 𝑖 𝑖 ,
+the concordance curve is defined by the pairs:
+(4)
+( 𝑖 )
+𝑖 , 1 ∑ 𝑦∗ , (3) where, for any 𝑖=1,…,𝑛: 𝑟 are the non-decreasing ranks of the actual
+𝑛 𝑛𝑦̄∗ 𝑗=1 𝑟∗ 𝑗 ∗ response values 𝑦; 𝑟̂ are t 𝑖 he non-decreasing ranks of the predicted
+𝑖 𝑖
+where 𝑟∗ 𝑖 ∗ indicates the non-decreasing ranks of 𝑌∗∗. values 𝑦̂ 𝑖 ; 𝑟 𝑛+1−𝑖 are the non-increasing ranks of the actual response
+To illustrate these concepts, Fig. 1 presents the concordance curve values 𝑦 𝑖 ; 𝑦̄ is the mean value of the actual response values 𝑦 𝑖 .
+𝐶 along with the Lorenz curve and the dual Lorenz curve for the binary It can be shown that the values of the RGA metric lie in the interval
+classification problem. 0⩽𝑅𝐺𝐴⩽1, with 𝑅𝐺𝐴=1 for a perfectly concordant model (𝐶≡𝐿 𝑌̂);
+2
+
+===== PDF PAGE 3 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+𝑅𝐺𝐴 = 0 for a perfectly discordant model (𝐶 ≡ 𝐿′); 𝑅𝐺𝐴 = 0.5 for
+𝑌̂
+random predictions (C coincides with the 45-degree line).
+We propose a decomposition of the RGA metric into a vector of
+partial RGA values, each corresponding to a segment of the ranked
+predictions. This approach goes beyond the use of a single summary
+score and provides a more detailed view of how different parts of the
+data contribute to the overall accuracy of the model.
+This decomposition is particularly important in the context of the
+unified compliance score, where we simulate cyber-attacks that selec-
+tively damage or degrade parts of the data. In such scenarios, relying
+solely on the final RGA score is insufficient, as it may hide local weak-
+nesses or failure points. By breaking the RGA into partial contributions,
+we can assess how specific segments of the model’s ranking respond to
+such disruptions. This allows for a more robust evaluation of the model
+accuracy under adverse conditions.
+More specifically, we remove data proceeding from the highest-
+ranked values to the lowest-ranked values, following a reversed con-
+struction, compared to the usual Lorenz and concordance curves. The
+Fig. 2. Rank Graduation Accuracy (RGA) Curve of the Random Forest Clas-
+dataset is divided into 𝑘 equal-sized segments, where for each segment
+sifier on the California Home Mortgage Disclosure Act (HDMA) dataset, in
+𝑘 = 1,…,𝑛, we calculate a partial RGA contribution, denoted 𝑅𝐺𝐴 𝑘 , comparison with a random baseline. The Figure shows the superiority of the
+using the same RGA formula, but restricted to the 𝑘th slice of the data. Random Forest model, up to a 90% data removal.
+These partial contributions are normalized by the total area between
+the dual Lorenz and Lorenz curves to ensure that their cumulative sum
+equals the full RGA score. The complete RGA value corresponds to the
+Dividing the area under the concordance curve by its maximum
+sum of all partial contributions:
+value, we obtain the RGR measure:
+𝑛
+∑ { }
+𝑅 T in o 𝐺 r 𝐴 e co v = n er s s 𝑘 t e r = u 1 o c 𝑅 r t d 𝐺 t e h 𝐴 r e , 𝑘 s . f t i a n r a ti l n v g e f c r t o o m r, t w h e e f a u c l c l u R m G u A l a a t n e d t h d e e c p re a m rti e a n l ti c n o g n t i r t i b b y u t e i a o ( c n 5 h s ) 𝑅𝐺𝑅= ∑ ∑ 𝑛 𝑖 𝑛 𝑖 = = 1 1 { 𝑛 𝑛 1 1 𝑦 𝑦 ̄̂ ̄̂ ( ( ∑ ∑ 𝑖 𝑗 𝑖 𝑗 = = 1 1 𝑦 𝑦 ̂ ̂ 𝑟 𝑟 𝑛 𝑛 + + 1 1 − − 𝑗 𝑗 − − ∑ ∑ 𝑖 𝑗 𝑖 𝑗 = = 1 1 𝑦 𝑦 ̂ ̂ 𝑟 𝑟 𝑝 𝑗 𝑗 ) ) } = ∑ ∑ 𝑛 𝑖 𝑛 𝑖 = = 1 1 𝑖 𝑖 𝑦 𝑦 ̂ ̂ 𝑟 𝑟 𝑝 𝑖 𝑖 − − ∑ ∑ 𝑛 𝑖 𝑛 𝑖 = = 1 1 𝑖 𝑖 𝑦 𝑦 ̂ ̂ 𝑟 𝑟 𝑛 𝑛 + + 1 1 − − 𝑖 𝑖,
+slice’s contribution :
+[ ] (8)
+𝑅𝐺𝐴, 𝑅𝐺𝐴−𝑅𝐺𝐴 , 𝑅𝐺𝐴−(𝑅𝐺𝐴 +𝑅𝐺𝐴 ), …, 0 . (6)
+1 1 2 where, for any 𝑖 = 1,…,𝑛: 𝑟 are the non-decreasing ranks of the
+𝑖
+This cumulative vector provides a monotonically decreasing, stepwise predicted values 𝑦̂ 𝑖 computed on data without perturbations; 𝑟𝑝 𝑖 are the
+approximation of the concordance curve’s area, where each step in- non-decreasing ranks associated with the predicted values computed
+dicates the remaining predictive power when progressively removing on perturbed data; 𝑟 𝑛+1−𝑖 are the non-increasing ranks of the predicted
+contributions from the highest-ranked segments down to the lowest- values 𝑦̂ 𝑖 computed on data without perturbations; 𝑦̄̂ is the mean value
+ranked ones. of the predicted values 𝑦̂ 𝑖 computed on data without perturbations.
+Building on the previous procedure, we can define The Area Under This metric has the same normalization properties as RGA. The
+the Rank Graduation Accuracy Curve (AURGA) and formally write the values of the RGR metric lie in the interval 0⩽𝑅𝐺𝑅⩽1, with 𝑅𝐺𝑅=1
+formula: for a full robust model (𝐶 ≡𝐿 𝑌̂); 𝑅𝐺𝑅=0 for a full perturbed model
+1 (𝐶 ≡ 𝐿′); 𝑅𝐺𝑅 = 0.5 if perturbations lead to a random model (C
+𝐴𝑈𝑅𝐺𝐴= ∫ 𝑅𝐺𝐴(𝑥)𝑑𝑥, (7) coincide 𝑌 s ̂ with the 45-degree line).
+0
+We evaluate robustness through two perturbation strategies that
+where 𝑅𝐺𝐴(𝑥) is the piecewise constant (step) function defined by our
+test different aspects of model stability. A percentile swapping method
+discrete cumulative vector, with 𝑥 representing the proportion of the
+introduces controlled, distribution-preserving perturbations by swap-
+highest-ranked segments considered.
+ping values between the lower (𝑝th percentile) and upper ((1−𝑝)th
+Fig. 2 shows an illustration of how RGA can be derived, for a
+percentile) tails of each variable. Whereas a Gaussian noise method
+Random Forest model applied to the California HMDA dataset that will
+adds random noise (0,(𝛼⋅𝜎 )2) across all features simultaneously,
+be considered in the application. data
+simulating realistic measurement errors and sensor noise commonly
+encountered in real-world applications.
+2.2. Rank Graduation Robustness (RGR)
+Building on the RGR definition, we propose to calculate the Area
+Robustness in machine learning generally refers to a model’s ability
+Under the Robustness Curve (AURGR) as a single summary metric of
+to maintain stable performance under perturbations or unexpected model robustness to data perturbations. First, we generate the robust-
+conditions. The robustness literature addresses various dimensions in- ness curve by plotting the RGR score against the perturbation intensity.
+cluding adversarial attacks, natural corruptions, distribution shifts, and Since RGR starts at the value 1 when there is no perturbation and then
+algorithmic stability (Cohen et al., 2019; Hendrycks & Dietterich, 2019; monotonically decreases — typically falling below the random baseline
+National Institute for Standards and Technology, 2025; Rousseeuw & value of 0.5 as perturbation increases — the curve captures how
+Leroy, 1987). In this work, we focus on adversarial attacks by measur- rapidly model performance degrades under increasing perturbations.
+ing how model performance degrades under systematic perturbations To ensure comparability across different perturbation methods, we
+to assess stability across different architectures. normalize all perturbation intensities to a common scale. We evaluate
+Most robustness metrics quantify change in accuracy or rankings RGR at raw perturbation intensities ranging from 0% to 50% (where
+after perturbation. The S.A.F.E-AI framework introduces Rank Gradua- 50% represents complete tail swapping for the percentile method and
+tion Robustness (RGR), which, for each feature, compares the ranks of the multiplier of the data standard deviation for Gaussian noise), then
+predictions on original versus perturbed input. normalize these intensities by dividing by the maximum value to obtain
+3
+
+===== PDF PAGE 4 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+ensuring safety and enabling meaningful oversight. Traditional ‘‘white-
+box’’ models such as linear and logistic regression are relatively easy to
+interpret, using clear mathematical relationships and well-understood
+statistical methods. In contrast, modern high-capacity models, such as
+random forests and deep neural networks, are often seen as ’black
+boxes’ because their complex internal structure make it difficult to
+understand how specific inputs lead to specific outputs (Doshi-Velez
+& Kim, 2017).
+Explainability is usually defined as the ability to represent how an
+AI system operates in a form that is understandable to humans (Na-
+tional Institute for Standards and Technology, 2023). This is vital for
+enabling user monitoring, intervention, and correction of AI system
+behavior.
+Among the several XAI methods available, the most popular is based
+on Shapley values (Guidotti et al., 2018). However, Shapley-based
+methods are computationally demanding and become impractical when
+dealing with a large number of input variables. The Rank Graduation
+Explainability metric (RGE) proposed in Babaei et al. (2025) overcomes
+Fig. 3. Rank Graduation Robustness (RGR) Curve of the Random Forest this drawback.
+Classifier on the California HMDA dataset (Percentile Swap Perturbation), in The RGE metric is obtained dividing the area under the concordance
+comparison with a random baseline. The Figure shows the superiority of the curve by its maximum value, and taking its complement:
+Random Forest model, up to a 50% data perturbation.
+{ }
+∑𝑛 𝑖=1 𝑛 1 𝑦̄̂ (∑𝑖 𝑗=1 𝑦̂ 𝑟𝑛+1−𝑗 − ∑𝑖 𝑗=1 𝑦̂ 𝑟−𝑋𝑘 )
+𝑅𝐺𝐸=1− { 𝑗 }
+∑𝑛 1(∑𝑖 𝑦̂ − ∑𝑖 𝑦̂ )
+𝑖=1 𝑛𝑦̄̂ 𝑗=1 𝑟𝑛+1−𝑗 𝑗=1 𝑟𝑗
+∑𝑛 𝑖=1 𝑖𝑦̂ 𝑟−𝑋𝑘 − ∑𝑛 𝑖=1 𝑖𝑦̂ 𝑟𝑛+1−𝑖
+=1− 𝑗 , (10)
+∑𝑛 𝑖𝑦̂ − ∑𝑛 𝑖𝑦̂
+⏟⏞⏞⏞⏞ 𝑖 ⏞ = ⏞⏞⏞ 1 ⏞⏞⏞⏞⏞⏞ 𝑟 ⏞ 𝑖 ⏞⏞⏞⏞⏟ 𝑖 ⏞ = ⏞⏞ 1 ⏞⏞⏞⏞⏞⏞ 𝑟 ⏞⏞ 𝑛 ⏞+⏞⏞1⏞−⏞⏞ 𝑖 ⏞⏞⏟
+𝑅̃𝐺𝐸
+where, for any 𝑖 = 1,…,𝑛: 𝑟 are the non-decreasing ranks of the
+𝑖
+predicted values 𝑦̂ provided by the full model; 𝑟−𝑋𝑘 are the non-
+𝑖 𝑖
+decreasing ranks associated with the predicted values provided by the
+model without the 𝑘th predictor (with 𝑘=1,…,𝐾); 𝑟 are the non-
+𝑛+1−𝑖
+increasing ranks of the predicted values computed on the full model; 𝑦̄̂
+is the mean value of the full model predicted values 𝑦̂.
+𝑖
+The values of the RGE metric lie in the interval 0 ⩽ 𝑅𝐺𝐸 ⩽1:
+𝑅𝐺𝐸 = 1 if the 𝑘th predictor provides the maximum explanation
+(𝐶 ≡ 𝐿′); 𝑅𝐺𝐸 = 0 if the 𝑘th predictor does not contribute to the
+explanat
+𝑌̂
+ion of the response (𝐶≡𝐿 𝑌̂); 𝑅𝐺𝐸=0.5 if the model without
+Fig. 4. RGR Curve of the Random Forest Classifier on the California HMDA the 𝑘th predictor corresponds to the random model (C coincides with
+dataset (Gaussian Noise Perturbation, in comparison with a random baseline. the 45-degree line).
+The Figure shows a clear superiority of the model, up to a 20% data pertur- Based on the RGE framework, we propose the Area Under the
+bation. Explainability Curve (AURGE) as a single summary metric of model
+explainability. We can define it as:
+1
+𝑝∈[0,1]. We then compute AURGE = ∫ RGE(𝑝)d𝑝, (11)
+0
+1
+where 𝑝 denotes the fraction of features excluded. To make the explain-
+AURGR = RGR(𝑝)d𝑝, (9)
+∫
+0 ability curve decrease as we remove features, we will use a reversed
+where 𝑝=𝑡∕𝑝 is the normalized perturbation intensity in [0,1], with RGE definition:
+max { }
+𝑡 T
+a c
+h b
+r
+e i
+o
+s i
+s
+n n
+s
+g o
+p
+r t
+e
+m h
+r
+e
+t
+a
+u
+l r
+r
+i a z
+b
+w a
+a
+t
+t
+i p
+i
+o
+o
+e n
+n
+r t e
+m
+u n r
+e
+s b u
+t
+a
+h
+r t
+o
+e io s
+d
+n
+s
+t
+,
+h i
+r
+a n
+e
+t t
+g
+e A
+a
+n U
+r
+s
+d
+i R t
+l
+y
+e
+G
+s
+R a
+s
+n
+o
+v d
+f
+a
+t
+𝑝 l
+h
+u m
+e
+e a
+i
+s x
+r
+a b
+n
+r e
+a
+e
+t
+t
+u
+d h
+r
+i e r
+a
+e
+l
+m c
+i
+t
+n
+a l x
+t
+y
+e
+i m
+n
+co
+s
+u
+i
+m
+t
+m
+y
+p
+s
+a v
+c
+r a
+a
+a l
+l
+b u
+e
+l e
+s
+e
+.
+. 𝑅𝐺𝐸∗= ∑
+∑
+𝑛 𝑖=
+𝑛
+1
+{
+𝑛 1 𝑦̄̂
+1
+(∑
+(∑
+𝑖 𝑗=
+𝑖
+1 𝑦̂ 𝑟
+𝑦̂
+𝑛+1−𝑗 −
+−
+∑
+∑
+𝑖 𝑗=
+𝑖
+1 𝑦̂ 𝑟
+𝑦̂
+− 𝑗 𝑋𝑘
+)
+}
+)
+Figs. 3and4 illustrate the derivation of RGR for a Random Forest 𝑖=1 𝑛𝑦̄̂ 𝑗=1 𝑟𝑛+1−𝑗 𝑗=1 𝑟𝑗
+m
+tiv
+o
+e
+d
+l
+e
+y
+l
+, o
+u
+n
+si n
+th
+g
+e
+p
+C
+e
+a
+rc
+li
+e
+fo
+n
+r
+ti
+n
+l
+i
+e
+a
+s
+H
+w
+M
+ap
+D A
+an
+d
+d
+a
+G
+ta
+a
+s
+u
+e
+s
+t.
+s i
+T
+a
+h
+n
+e
+n
+p
+o
+e
+i
+r
+s
+c
+e
+e
+p
+n
+e
+ti
+r
+l
+t
+e
+u
+s
+rb
+w
+a
+a
+t
+p
+io
+c
+n
+a
+s
+s
+,
+e
+r e
+sh
+sp
+o
+e
+w
+c
+s
+-
+=
+∑𝑛 𝑖=1 𝑖𝑦̂ 𝑟−
+𝑗
+𝑋𝑘 − ∑𝑛 𝑖=1 𝑖𝑦̂ 𝑟𝑛+1−𝑖
+, (12)
+no initial sharp drop because perturbations are localized to extreme ⏟ ∑ ⏞⏞⏞⏞ 𝑛 𝑖 ⏞ = ⏞⏞⏞ 1 ⏞⏞ 𝑖 ⏞⏞ 𝑦̂ ⏞⏞ 𝑟 ⏞ 𝑖 ⏞⏞⏞ − ⏞⏟ ∑𝑛 𝑖 ⏞ = ⏞⏞ 1 ⏞⏞⏞ 𝑖 ⏞ 𝑦 ⏞ ̂ ⏞ 𝑟 ⏞⏞ 𝑛 ⏞+⏞⏞1⏞−⏞⏞ 𝑖 ⏞⏞⏟
+values, whereas Gaussian noise affects all observations simultaneously,
+immediately degrading model performance.
+𝑅̃𝐺𝐸
+We flip the original RGE so that at 𝑝 = 0 (no features removed) it
+starts at 1, and at 𝑝=1 (all features removed) it ends at the random-
+2.3. Rank Graduation Explainability (RGE)
+baseline value of 0.5. That way, the plotted RGE curve is monotonically
+decreasing over 𝑝.
+As machine learning systems have grown in complexity, the de- Fig. 5 shows an illustration of how RGE can be derived using the
+mand for transparency and human-understandable reasoning, known same Random Forest model and California HMDA dataset as in the
+as Explainable AI (XAI), has become significant for building trust, previous examples.
+4
+
+===== PDF PAGE 5 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+and security requirements (robustness). This compliance assessment
+provides a single metric for evaluating model readiness across the com-
+prehensive standards expected in regulated production environments.
+We will visualize the distribution of compliance scores across different
+models using histogram plots to facilitate comparative analysis and
+identify performance patterns.
+For comparison, we will compare our aggregation methods with
+TOPSIS (Technique for Order of Preference by Similarity to Ideal Solu-
+tion) (Hwang & Yoon, 1981), a multi-criteria decision analysis method
+that identifies the best alternative by minimizing distance from the
+ideal solution and maximizing distance from the negative-ideal solution
+across all metrics, providing an alternative aggregation perspective.
+We remark that our approach is agnostic with respect to risk
+preferences—we do not assign weights to the three dimensions but
+rather take simple averages across all perturbation combinations. While
+it is beyond our scope, we will briefly demonstrate one example of
+weight assignment, showing that this may be a promising direction for
+future research developments.
+Fig. 5. Rank Graduation Explainability (RGE) Curve of the Random Forest
+Classifier for the California HMDA dataset. The Figure shows that about 60%
+of the variables can be removed.
+3. Data
+To illustrate our methodology, we utilize data from the Home
+Mortgage Disclosure Act (HMDA), the most comprehensive publicly
+2.4. Integration
+available dataset on the U.S. mortgage market. Enacted in 1975 and
+implemented through Regulation C, HMDA requires various financial
+We now describe how the three metrics can be integrated in a single
+institutions to report detailed information on individual mortgage ap-
+measurement. We will compute a normalized volume under a three-
+plications. This data serves multiple critical functions: HMDA helps
+dimensional surface defined by RGA, RGE and RGR metric vectors.
+assess whether lenders are meeting community credit needs, helps
+Given the three RGA, RGE and RGR vectors of equal length, 𝑛, (cor-
+policy makers develop equitable housing initiatives, and highlights
+responding to the number of features), we construct a 3D grid where:
+potential patterns of discriminatory lending. To ensure the borrower’s
+RGA captures how data quality degrades as input data is removed,
+privacy, the publicly released data is anonymized. We examine two dif-
+RGE reflects how model explainability is affected when features are
+ferent subsets of HMDA data for the loan applications filed in 2017: the
+removed, and RGR shows the model’s robustness against increasingly
+New York dataset which consists of 446902 loans, and the California
+additional noise. dataset containing 1714459 loans.
+For each triplet of indices (𝑖,𝑗,𝑘) where 𝑖,𝑗,𝑘 ∈ {1,2,…,𝑛}, we After filtering out irrelevant and non-informative features and re-
+apply a mean aggregation function to the corresponding metric values ducing the number of categories in some variables, we focus on 21
+(𝑅𝐺𝐴[𝑖],𝑅𝐺𝐸[𝑗],𝑅𝐺𝑅[𝑘]). We will use three alternative mean calcula- features for further analysis, as described in Table 1.
+tions: For comparison we also apply the proposal to a synthetic dataset,
+Arithmetic mean: 𝑀(𝑖,𝑗,𝑘)
+which contains 3000 employee records with eight features including
+salary, age, education, job tenure, previous experience, minority status
+𝑅𝐺𝐴[𝑖]+𝑅𝐺𝐸[𝑗]+𝑅𝐺𝑅[𝑘]
+= and gender. The binary target variable follows an XOR (exclusive OR)
+3
+pattern based on age and salary, where the positive class is assigned
+(13)
+when exactly one of two conditions holds: either an employee is young
+Geometric mean (Cube): 𝑀(𝑖,𝑗,𝑘)
+(below median age) with high salary (above median), or older (above
+√
+= 3𝑅𝐺𝐴[𝑖]×𝑅𝐺𝐸[𝑗]×𝑅𝐺𝑅[𝑘] median age) with low salary (below median). This XOR relationship
+(14) creates a non-linear decision boundary that cannot be captured by any
+Quadratic mean (Root mean square): 𝑀(𝑖,𝑗,𝑘)
+single hyperplane, as the two target classes occupy diagonally opposite
+√ quadrants in the age-salary feature space. Consequently, linear models
+=
+𝑅𝐺𝐴[𝑖]2+𝑅𝐺𝐸[𝑗]2+𝑅𝐺𝑅[𝑘]2
+such as logistic regression are fundamentally incapable of learning this
+3
+pattern without feature transformations or interactions. This design
+(15)
+makes this dataset suitable for detecting meaningful variations in our
+This creates an 𝑛×𝑛×𝑛 tensor 𝐌 representing a discrete approxi-
+metrics that might be obscured in datasets where all models perform
+mation of a continuous 3D surface:
+similarly.
+𝐌={𝑀(𝑖,𝑗,𝑘)∶𝑖,𝑗,𝑘∈{1,2,…,𝑛}} (16)
+4. Empirical findings
+The final normalized volume is computed as:
+𝑛 𝑛 𝑛 This section presents a comparative analysis of models performance
+1 ∑∑∑
+V= 𝑀(𝑖,𝑗,𝑘) (17) across our datasets using AURGA, AURGR, and AURGE metrics. We
+𝑛3
+𝑖=1𝑗=1𝑘=1 evaluate AURGR under two perturbation strategies (Swapping and
+This normalized volume represents the average ‘‘height’’ of the Gaussian noise), compare RGE results with Shapley values and demon-
+3D surface across the entire cyber attack scenario space, providing a strate the impact of weight assignments on model rankings.
+unified metric that captures the joint behavior of accuracy, explain- A diverse set of machine learning models was applied. These models
+ability, and robustness under different conditions. We will term this are used as tools to generate predictions upon which the new scoring
+unified measure the Compliance Score, as it assesses how well a model methodology is evaluated. The selection includes models from different
+complies with multiple critical requirements simultaneously: perfor- algorithmic families: logistic, tree-based, ensemble and neural network
+mance standards (accuracy), transparency regulations (explainability) approaches, ensuring a well-rounded and representative set of models.
+5
+
+===== PDF PAGE 6 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Table 1
+Summary of HMDA variables.
+Variable Description Values
+Response variable
+action_taken Loan approval outcome Application denied, Loan originated
+Binary variables
+loan_type Categories of the loan Conventional, FHA-insured
+applicant_sex Applicant gender Male, Female
+lien_status Collateral priority Secured by a first lien, Secured by a
+subordinate lien
+applicant_ethnicity Applicant ethnicity Hispanic or Latino, Not Hispanic or
+Latino
+Categorical variables
+loan_purpose Purpose of the loan Home purchase, Home improvement,
+Refinancing
+co_applicant_ethnicity Co-applicant ethnicity Hispanic or Latino, Not Hispanic or
+Latino, No co-applicant
+applicant_race_1 Applicant race White, Black or African American,
+Asian(for California)
+co_applicant_race_1 Co-applicant race White, Black or African American,
+Asian(for California), No co-applicant
+co_applicant_sex Co-applicant gender Male, Female, No co-applicant
+Continuous variables
+loan_amount_000s Loan Amount in thousands of dollars Continuous
+applicant_income_000s Gross Annual Income in thousands of Continuous
+dollars
+county_code Three-digit FIPS county identifier Continuous
+census_tract_number Census tract number Continuous
+msamd Metropolitan Statistical Area Continuous
+population Total population in tract Continuous
+minority_population Percentage of minority population to Continuous
+total population for tract
+hud_median_family_income Median family income fro the tract Continuous
+tract_to_msamd_income Percentage of tract median family Continuous
+income compared to MSA/MD
+median family income
+number_of_owner_occupied_units Number of dwellings, including Continuous
+individual condominiums, that are
+lived in by the owner
+number_of_1_to_4_family_units Dwellings that are built to house Continuous
+fewer than 5 families
+Table 2
+AURGA comparison between datasets for each model.
+Model New York HMDA California HMDA Synthetic employee
+LR 0.3837 0.3709 0.4818
+RF 0.4121 0.3963 0.9999
+XGB 0.4133 0.3995 0.9999
+SEM 0.4137 0.3997 0.9999
+VEM 0.4138 0.3993 0.9999
+NN 0.4100 0.3960 –
+Random 0.3024 0.3030 0.4978
+4.1. AURGA results
+We first compare models in terms of AURGA. Table 2 contains
+results for all considered data and Fig. 6 visualize the RGA curves,
+for the California HMDA data (as representative of the different model
+behavior). Note that the Neural Network model was not evaluated on
+the Employee dataset due to insufficient data for reliable training.
+Fig. 6. Rank Graduation Accuracy (RGA) Curves of all models for the Cali-
+fornia HMDA dataset. The curves indicates that Stacking, Voting and Gradient
+Based on the comparison, here are the key conclusions:
+Boosting Classifier (XGB) classifiers are the best models.
+• On real-world data all models outperform the random baseline as
+expected.
+• The Employee dataset exposes fundamental model limitations:
+• On HMDA datasets, ensemble methods (Voting and Stacking)
+Logistic Regression achieves only 0.4818 (worse than random
+slightly outperform individual models on New York dataset but
+performance), while all other models reach near-perfect scores
+show nearly identical performance with XGBoost on California
+(0.9999), demonstrating their ability to capture the XOR pattern.
+dataset, with all algorithms demonstrating competitive perfor-
+mance within a narrow 0.01–0.03 range.
+6
+
+===== PDF PAGE 7 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Table 3
+AURGR comparison (Swapping) between datasets for each model.
+Model New York HMDA California HMDA Synthetic employee
+LR 0.4484 0.4619 0.3121
+RF 0.5181 0.5504 0.6778
+XGB 0.5372 0.5557 0.6665
+SEM 0.5279 0.5580 0.6779
+VEM 0.5289 0.5531 0.6780
+NN 0.5242 0.5481 –
+Random 1.0 1.0 1.0
+Table 4
+AURGR comparison (Gaussian noise) between datasets for each model.
+Model New York HMDA California HMDA Synthetic employee
+LR 0.9807 0.9668 0.9815
+RF 0.5070 0.5135 0.5133
+XGB 0.5082 0.5104 0.5167
+SEM 0.5096 0.5114 0.5180
+VEM 0.5078 0.5123 0.5166
+NN 0.7608 0.8152 – Fig. 8. Rank Graduation Robustness (RGR) Curves of all models for the Cal-
+Random 1.0 1.0 1.0 ifornia HMDA dataset (Gaussian Noise). The curves indicate that the Logistic
+regression and the Neural network are the most robust models.
+baseline is just a benchmark, and not a model, as it does not
+depend on the input data.
+• The choice of perturbation method reveals drastically different
+robustness patterns. Under swapping perturbations, tree-based
+methods (RF, XGB, SEM, VEM) consistently outperform Logistic
+Regression across all datasets, achieving AURGR values between
+0.5181–0.6780 compared to LR’s 0.3121–0.4619, while Neu-
+ral Network demonstrate intermediate performance (0.5242 and
+0.5481). Under Gaussian noise, this hierarchy reverses com-
+pletely: Logistic Regression achieves near-perfect robustness
+(0.9668–0.9815) and Neural Network show strong robustness
+scores (0.7608 and 0.8152), while other models remain vulner-
+able around 0.5070–0.5180.
+• The contrasting behavior between perturbation types reveals im-
+portant differences in how model architectures handle data cor-
+ruption. Based on our results, Logistic Regression and Neural Net-
+work tend to maintain high robustness under Gaussian noise but
+experience greater degradation under Swapping perturbations.
+Fig. 7. Rank Graduation Robustness (RGR) Curves of all models for the
+This can occur because:
+California HMDA dataset (Swapping perturbation.) The curves indicate that the
+Random Forest, Gradient Boosting, Voting and Stacking are the most robust
+(1) Gaussian noise increases variance but preserves expected
+models. values and the general structure of feature distributions. Lin-
+ear models and shallow Neural Networks can tolerate this and
+maintain a stable signal-to-noise ratio.
+• Logistic Regression is the weakest performer across all datasets, (2) In contrast, Swapping fundamentally disrupts the learned
+with the Employee data magnifying this weakness—the perfor-
+associations between features and outcomes. This breaks the spe-
+mance gap between LR and non-linear models is 0.51 on the
+cific patterns encoded in model parameters, leading to more sub-
+Employee data with only 0.03 gap on HMDA datasets.
+stantial performance degradation that cannot be readily adapted
+to at inference time.
+Conversely, tree-based models display the opposite trend. Their
+4.2. AURGR results
+hierarchical split-based decision rules can be disrupted by Gaus-
+sian noise, as it alters the feature distributions that determine
+We now compare models in terms of AURGR across different per-
+optimal split points, leading to noticeable performance drops—
+turbation methods. Table 3 contains results for all considered datasets
+though ensemble averaging provides some mitigation. However,
+using the Swapping perturbation method, while Table 4 presents results
+these models demonstrate better resilience to Swapping perturba-
+for Gaussian noise.
+tions. Because trees rely on independent feature-specific thresh-
+Figs. 7 and 8 visualize the RGR curves using our perturbation
+olds at each split rather than global correlation patterns, they
+methods for the California HMDA data.
+can maintain reasonable performance even when feature rela-
+Based on the AURGR comparison tables and graphs, here are the
+tionships are disrupted, as their local branching logic adapts to
+key conclusions:
+the available data structure. Importantly, the actual robustness
+• Almost all models achieve AURGR scores significantly below the patterns depend on perturbation severity, swapping methodology,
+Random baseline (1.0), which by construction is perfectly robust
+and specific model configurations.
+as it remains unaffected by input perturbations. The random
+7
+
+===== PDF PAGE 8 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Table 5 Table 6
+AURGE comparison between datasets for each model. RGE and SHAP comparison for XGBoost model on New York HMDA.
+Model New York HMDA California HMDA Employee data Variable RGE Shapley RGE rank Shapley rank
+LR 0.9661 0.9644 0.9100 loan_purpose 0.1266 0.5472 1 1
+RF 0.9454 0.9547 0.8943 applicant_income 0.0852 0.3822 2 2
+XGB 0.9416 0.9350 0.9042 loan_amount 0.0756 0.2263 3 3
+SEM 0.9471 0.9406 0.9045 applicant_race_1 0.0231 0.1067 4 5
+VEM 0.9467 0.9486 0.9002 hud_median_family_income 0.0163 0.1334 5 4
+NN 0.9414 0.9381 – minority_population 0.0077 0.0610 6 9
+Random 1.0 1.0 1.0
+census_tract_number 0.0074 0.0551 7 10
+Spearman’s rank correlation: 𝜌=0.853 (𝑝<0.0001)
+Table 7
+RGE and SHAP comparison for XGBoost model on California HMDA.
+Variable RGE Shapley RGE rank Shapley rank
+loan_purpose 0.1679 0.4331 1 1
+loan_amount 0.1488 0.3631 2 2
+applicant_income 0.1382 0.3571 3 3
+hud_median_family_income 0.0192 0.0862 4 4
+applicant_race_1 0.0162 0.0667 5 6
+tract_to_msamd_income 0.0150 0.0748 6 5
+lien_status 0.0127 0.0182 7 18
+Spearman’s rank correlation: 𝜌=0.878 (𝑝<0.0001)
+agreement between the two methods. Tables 6and7 present the top-
+ranked features obtained from the application of RGE and Shapley,
+respectively, along with Spearman’s correlation.
+The comparison between RGE scores and Shapley values reveals
+strong alignment in feature importance rankings across both HMDA
+Fig. 9. Rank Graduation Explainability (RGE) Curves of all models for the
+datasets. The Spearman’s rank correlation coefficients of 𝜌= 0.853 for
+California HMDA dataset. The figure indicates that about 40% of the variables
+New York data and 𝜌= 0.878 for California data, both with 𝑝<0.0001,
+can be removed, for all models.
+indicate substantial agreement between the two methods. This concor-
+dance is particularly evident for the top-ranked features. Both methods
+identify loan_purpose, applicant_income, and loan_amount as the three
+4.3. AURGE results
+most important variables across datasets, though their relative ordering
+slightly. The California dataset shows even stronger agreement, with
+the top four features (including hud_median_family_income) ranked
+We finally compare models in terms of AURGE. Table 5 contains
+identically by both methods. Some divergence emerges in middle-to-
+results for all considered data and Fig. 9 visualize the RGE curves for
+lower importance rankings. For example, in California, lien_status ranks
+the California HMDA data.
+seventh by RGE but eighteenth by Shapley values. These discrepan-
+Based on the AURGE comparison table, here are the key conclu- cies reflect fundamental differences in methodology: RGE measures
+sions: performance degradation upon feature removal through perturbation,
+while Shapley values calculate marginal contribution based on coali-
+• All models achieve AURGE scores below the Random baseline tional game theory. Features with complex interactions may be valued
+(1.0), which by construction of the formula achieves perfect ex- differently by these approaches.
+plainability since variable removal does not affect its predictions: Fig. 10 illustrates the comparison between RGE and Shapley for the
+it is not a model, as no feature variable contributes to its output. New York HMDA (due to space constraints, only one representative
+• Logistic Regression consistently demonstrates the highest ex- visualization is included).
+plainability across all three datasets, achieving AURGE scores The visualization shows that while both methods identify the same
+of 0.9661 (New York HMDA), 0.9644 (California HMDA) and dominant features, they exhibit greater spread for lower importance
+0.9100 (Synthetic Employee data). This superior performance features, reflecting the different scales and aggregation methods in-
+aligns with the theoretical expectation for this metric. herent to each approach. The strong positive correlations observed
+• Tree-based models (RF, XGB) and ensemble methods (SEM, VEM) across both datasets provide preliminary evidence that RGE captures
+show comparable explainability performance, clustering in nar- similar feature importance patterns to Shapley values. However, the
+row ranges across datasets. XGBoost and Neural Network consis- differences in middle-to-lower ranked features suggest that further
+tently rank among the least explainable models on all datasets. comparative analysis across additional datasets and model architectures
+would be necessary to fully characterize the relationship between RGE
+The AURGE curve visualizations confirm that across all datasets Logis-
+and established explainability metrics, and to determine under what
+tic Regression is the most explainable model, and these visualizations
+conditions they converge or diverge in their assessments.
+provide clearer differentiation between model performances compared
+to previous metrics graphs. 4.4. Integration
+To complement the analysis, we also compare RGE scores with
+Shapley values for HMDA datasets. For computational efficiency and We now calculate the integrated compliance metric directly from
+clarity of presentation, we limit this comparison to one representative the original RGA, RGE, and RGR values that are used to construct the
+model, XGBoost. We employ Spearman’s rank correlation to assess the curves, without any preprocessing or transformation. The raw values
+8
+
+===== PDF PAGE 9 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Fig. 10. Rank Graduation Explainability (RGE) and Shapley values comparison for the Gradient Boosting model on the New York HMDA. The figures indicate a
+strong agreement between the two variable importance methods, RGE and Shapley.
+Table 8 Quadratic Mean (0.69337), but with a relatively low TOPSIS
+Compliance score comparison across models using raw RGA, RGR, and RGE score (0.40138).
+values for the California HMDA dataset (Swapping). – Logistic Regression ranks the lowest across all aggregation
+Model Arithmetic Geometric Quadratic TOPSIS methods, reflecting its vulnerability to feature relationship
+mean mean (1/3) mean (RMS) disruption by Swapping perturbations.
+LR 0.59695 0.47965 0.67482 0.36325 – Notably, all models usually cluster in a close range, suggest-
+R
+XG
+F
+B
+0
+0
+.
+.
+6
+6
+3
+2
+2
+8
+1
+9
+8
+3
+0
+0
+.
+.
+5
+5
+3
+3
+0
+0
+1
+4
+1
+2
+0
+0
+.
+.
+6
+6
+9
+8
+3
+6
+3
+6
+7
+1
+0
+0
+.
+.
+4
+4
+0
+0
+1
+5
+3
+4
+8
+3
+ing comparable overall compliance under Swapping pertur-
+SEM 0.63151 0.53229 0.68968 0.40590
+bations.
+VEM 0.63217 0.53141 0.69202 0.40413
+NN 0.62639 0.52752 0.68482 0.40140 • Under Gaussian noise perturbations (Table 9), the performance
+Random 0.76681 0.61145 0.84059 0.45074
+hierarchy shifts dramatically:
+– Logistic Regression emerges as the top performer with the
+Table 9 highest TOPSIS score and all mean-based metrics, demon-
+Compliance score comparison across models using raw RGA, RGR, and RGE strating its resilience to additive noise that preserves linear
+values for the California HMDA dataset (Gaussian noise).
+relationships.
+Model Arithmetic Geometric Quadratic TOPSIS – The Neural Network achieves the second-highest compli-
+mean mean (1/3) mean (RMS)
+ance, suggesting that its learned representations can tolerate
+LR 0.76303 0.63247 0.82379 0.45528 distributional shifts from Gaussian perturbations.
+RF 0.62348 0.52555 0.68259 0.38863
+XGB 0.61731 0.52230 0.67402 0.39080
+– All the other models show a degraded performance com-
+SEM 0.61940 0.52360 0.67677 0.39091 pared to swapping scenarios, indicating their sensitivity to
+VEM 0.62211 0.52525 0.68036 0.39058 threshold-disrupting noise.
+NN 0.71322 0.60367 0.76478 0.44423
+Random 0.76681 0.61145 0.84059 0.42454 • Figs. 11–14, for Swapping perturbations, show that the arith-
+metic mean is relatively right-skewed and bell-shaped distribu-
+tions across all six models. The geometric mean exhibits right-
+skewed distributions with longer tails, while the RMS values
+from each metric vector are used as input to calculate the scores
+display distinctive bimodal distributions with two unclear peaks,
+using arithmetic, cubic geometric, root mean square mean and TOPSIS
+indicating the presence of two distinct subgroups or performance
+methods.
+regimes in the model predictions.
+For lack of space, we present the results only for the California
+dataset. While Tables 8and9 reports the results of the comparison of all These contrasting responses to different perturbation types are con-
+models, in terms of all described mean scores and TOPSIS methodology, sistent across all analyzed datasets. However, these contradictory pat-
+Fig. 11 represents all three curves for each model. Figs. 12–14 represent terns in compliance scores—where different models excel under dif-
+the distribution of the resulting values for the three considered means, ferent perturbation regimes—indicate that further research is needed
+using Swapping perturbations. to develop unified model selection frameworks that can account for
+The main findings from Tables 8and9 and from Figs. 11–14 can be multiple degradation scenarios. Overall, applying multiple aggregation
+summarized as follows. metrics provides a nuanced perspective on model compliance. While
+Arithmetic Mean captures general performance, Geometric Mean em-
+• Under Swapping perturbations (Table 8), ensemble methods phasizes balanced improvements across dimensions, RMS highlights
+demonstrate superior compliance: variance sensitivity, and TOPSIS provides distance-based ranking. This
+approach can enable informed candidate selection for credit lending
+– The Stacked Ensemble Model (SEM) achieves the highest applications where accuracy, explainability, and robustness must be
+TOPSIS score (0.40590) and Geometric Mean (0.53229), in- simultaneously optimized under realistic perturbation scenarios.
+dicating balanced performance across all three dimensions. To further validate the sensitivity and interpretability of our
+– Random Forest demonstrates strong overall performance, methodology, we now demonstrate that unequal weight assignments
+achieving the highest Arithmetic Mean (0.63218) and produce rankings that directly correspond to subjective criteria. For
+9
+
+===== PDF PAGE 10 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Fig. 11. Rank Graduation Accuracy (RGA), Rank Graduation Explainability (RGE) and Rank Graduation Robustness (RGR) for the California HMDA dataset
+(Swapping). The three curves are the basis of the unified metric.
+Fig. 12. Arithmetic Mean Histograms for the California HMDA dataset (Swapping). The Figures indicate the integrated performance behavior of all models, using
+the arithmetic mean.
+simplicity, we show this on one representative dataset and for one The weight configurations are as follows: Accuracy Focus (RGA: 0.9,
+integration method. When we assign a dominant weight of 0.9 to a RGR: 0.05, RGE: 0.05), Robustness Focus (RGA: 0.05, RGR: 0.9, RGE:
+specific dimension (accuracy, robustness, or explainability) and min- 0.05) and Explainability Focus (RGA: 0.05, RGR: 0.05, RGE: 0.9) (see
+imal weights of 0.05 to each to the remaining two dimensions, the Table 10).
+resulting ranking should theoretically align with the raw ranking of The results confirm that the framework correctly responds to weight
+the emphasized criterion. The following table presents the results adjustments, with model rankings shifting to reflect the emphasized
+for the New York HMDA dataset under three weighting scenarios. dimension. This validation demonstrates that weighted aggregation
+10
+
+===== PDF PAGE 11 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Fig. 13. Geometric Mean Histograms for the California HMDA dataset (Swapping) The Figures indicate the integrated performance behavior of all models, using
+the geometric mean.
+Fig. 14. Quadratic mean Histograms for the California HMDA dataset (Swapping) The Figures indicate the integrated performance behavior of all models, using
+the quadratic mean.
+can be naturally integrated into the compliance framework in future • Area Under the Rank Graduation Accuracy Curve (AURGA): Eval-
+applications, enabling organizations to customize model selection based uates model performance consistency measuring accuracy degra-
+on their specific regulatory requirements, risk appetite or operational dation across ranked prediction segments. The metric captures
+priorities. how accuracy changes when progressively removing contribu-
+tions from the highest- to lowest-ranked predictions.
+5. Conclusions • Area Under the Rank Graduation Robustness Curve (AURGR): As-
+sesses model stability under data perturbations using both Swap-
+ping and Gaussian noise approaches.
+This work has addressed a critical gap in artificial intelligence gov-
+• Area Under the Rank Graduation Explainability Curve (AURGE):
+ernance by developing a unified framework for measuring S.A.F.E-AI
+Evaluates model transparency by systematically removing fea-
+system trustworthiness across multiple risk dimensions.
+tures and measuring the impact on explanatory power using a
+The primary contribution of this research is the introduction of three
+greedy approach that captures how rapidly explainability is lost.
+novel metrics:
+11
+
+===== PDF PAGE 12 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Table 10 We finally remark that, while in the present paper we have, for lack
+Compliance score comparison with raw RGA, RGR (Swapping perturbations), of space, focused our experimental work on a credit lending database,
+and RGE values using TOPSIS approach for New York HMDA dataset with similar analysis can be conducted for classification problems arising in
+different focus scenarios. other fields, such as health care and manufacturing.
+Model Accuracy focus Robustness focus Explainability focus
+AURGA TOPSIS Rank AURGR TOPSIS Rank AURGE TOPSIS Rank CRediT authorship contribution statement
+LR 0.3837 0.38136 6 0.4484 0.42620 7 0.9661 0.19093 2
+RF 0.4121 0.41022 4 0.5181 0.49857 6 0.9454 0.18212 5 Paolo Giudici: Conceptualization, Methodology, Project adminis-
+XGB 0.4133 0.41148 3 0.5372 0.51876 2 0.9416 0.18049 6 tration, Resources, Supervision, Validation, Writing – review & edit-
+S
+V
+E
+E
+M
+M
+0
+0
+.
+.
+4
+4
+1
+1
+3
+3
+7
+8
+0
+0
+.
+.
+4
+4
+1
+1
+1
+1
+8
+9
+7
+0
+2
+1
+0
+0
+.
+.
+5
+5
+2
+2
+7
+8
+9
+9
+0
+0
+.
+.
+5
+5
+0
+0
+9
+9
+1
+9
+8
+1
+4
+3
+0
+0
+.
+.
+9
+9
+4
+4
+7
+6
+1
+7
+0
+0
+.
+.
+1
+1
+8
+8
+3
+2
+1
+9
+8
+8
+3
+4
+ing. Vasily Kolesnikov: Data curation, Formal analysis, Investigation,
+NN 0.4100 0.40812 5 0.5242 0.50584 5 0.9414 0.18006 7 Software, Writing – original draft.
+Random 0.3024 0.30114 7 1.000 0.93164 1 1.000 0.21793 1
+Declaration of competing interest
+The authors declare that they have no known competing finan-
+We demonstrated that model selection for compliance scoring appli- cial interests or personal relationships that could have appeared to
+cations requires a nuanced, multi-faceted evaluation that accounts for influence the work reported in this paper.
+both absolute performance and relative stability. The comparative anal-
+ysis across multiple datasets and evaluation methodologies reveals that Acknowledgments
+compliance performance fundamentally depends on perturbation types.
+Linear models exhibit resilience to Gaussian noise but are more vulner- This work is a the result of a close collaboration between the two
+able to Swapping perturbations, whereas tree-based models display the authors. However, V.K. carried out the modeling, computational and
+opposite trend. This perturbation-dependent behavior indicates that no paper drafting work, whereas P.G. conceptualized and supervised the
+single architecture achieves universal superiority across all compliance work, and revised the draft. The authors thank the colleagues at the
+dimensions; thus, the optimal model choice must consider the dominant SAFE_AI laboratory of the University of Pavia,. for useful discussions.
+data quality degradation modes in the target deployment environment. They also thanlk two anonymous reviewers and the editors for their
+The proposed Compliance Score framework, which integrates mul- constructive comments, which have helped improving the paper.
+tiple aggregation methods (Arithmetic Mean, Geometric Mean, RMS,
+and TOPSIS), offers an evaluation tool adaptable to diverse orga- Data availability
+nizational priorities through weighted schemes. The strong correla-
+tion between RGE scores and Shapley values supports the validity Data will be made available on request.
+of the perturbation-based explainability approach, although observed
+discrepancies for lower-ranked features suggest the need for further
+References
+investigation.
+From an ethical and regulatory viewpoint, the unified metric pro-
+Babaei, G., Giudici, P., & Raffinetti, E. (2025). A rank graduation box for SAFE AI.
+vides a clear tool that can be employed by auditors and regulators to Expert Systems with Applications, 259, Article 125239.
+assess the compliance of any AI application, and to highlight where Bernardelli, A. E., & Giudici, P. (2025). AI risk management: A bibliometric analysis.
+that compliance is to be improved (e.g. in security, accuracy, explain- Risks, 13(7), 131.
+ability, and also in fairness, considering the explainability of protected
+Cohen, J., Rosenfeld, E., & Kolter, J. Z. (2019). Certified adversarial robustness via
+randomized smoothing. arXiv:1902.02918.
+variables). The same auditors and regulators could also give different
+Doshi-Velez, F., & Kim, B. (2017). Towards a rigorous science of interpretable machine
+weights to the four dimensions, in line with the evolving policies learning. arXiv.1702.08608.
+and their implementations, as described for example, in European European Commission (2020). White paper on artificial intelligence: A European approach
+Commission, 2023; National Institute for Standards and Technology, to excellence and trust. Brussels: Report.
+European Commission (2023). The EU artificial intelligence act. Brussels: Legislative act.
+2023).
+Ferrer, L., et al. (2024). Enhancing cybersecurity resilience through advanced
+Future research should address the limitations of the present work. red-teaming. Computers & Security, 145, Article 102805.
+First of all, our proposal should be compared with methods that Giudici, P., & Raffinetti, E. (2024). RGA: A unified measure of predictive accuracy.
+integrate individual existing metrics, such as Nguyen and Do (2025), in
+Advances in Data Analysis and Classification, 19, 67–93.
+Gneiting, T., & Katzfuss, M. (2014). Probabilistic forecasting. Annual Review of Statistics
+real case scenarios, as we did for the credit data in this paper. Second,
+and its Applications, 1(1), 125–151.
+the proposal should be extended beyond tabular data, to consider, for Guidotti, R., Monreale, A., Ruggieri, S., Turini, F., Giannotti, F., & Pedreschi, D. (2018).
+example, image processing and natural language processing and large A survey of methods for explaining black box models. ACM Computing Surveys,
+language models, as in Liang et al. (2022). 51(5), 1–42.
+Hendrycks, D., & Dietterich, T. (2019). Benchmarking neural network robustness
+Another line of research that could address the limitations of the
+to common corruptions and perturbations. In International conference on learning
+current work should concern investigation into how the Compliance representations.
+Score framework can be adapted to meet evolving regulatory require- Hurlin, C., Pérignon, C., & Saurin, S. (2024). The fairness of credit scoring models.
+ments, including the integration of fairness metrics beyond the pre- Management Science.
+Hwang, C.-L., & Yoon, K. (1981). Lecture notes in economics and mathematical systems: vol.
+sented measures, represents another critical research direction. This
+186, Multiple attribute decision making: Methods and applications—A state-of-the-art
+includes exploring how the framework can accommodate emerging AI survey. Springer.
+governance standards and audit requirements in financial services. International Organization for Standardization and International Electrotechnical
+Further research should focus on the challenge of reconciling con- Commission (2023). ISO/IEC 23894:2023 – Information technology – Artificial
+intelligence – Guidance on risk management. Standard. First edition; aligned with
+flicting model recommendations when different perturbation scenarios
+ISO 31000:2018 for AI risk management.
+favor different architectures. Dynamic weighting schemes that adapt Koshevoy, G., & Mosler, K. (1996). The Lorenz zonoid of a multivariate distribution.
+to specific regulatory requirements or business contexts represent a Journal of the American Statistical Association, 91(434), 873–882.
+promising direction, potentially incorporating stakeholder preferences Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., Yasunaga, M., Zhang, Y.,
+through interactive multi-criteria decision-making approaches. Estab-
+N
+Co
+a
+s
+r
+g
+a
+r
+y
+o
+a
+v
+n
+e
+a
+,
+n ,
+C
+D
+.,
+.,
+M
+W
+an
+u
+n
+,
+in
+Y
+g
+.,
+,
+K
+C
+u
+.
+m
+D
+ar
+.,
+, A
+R
+.
+é
+,
+,
+N
+C
+e
+.
+w
+,
+m
+A
+a
+c
+n
+o
+,
+s t
+B
+a-
+.
+N
+,
+a
+Y
+v
+u
+a
+a
+s
+n
+,
+,
+D
+B
+.
+.
+,
+,
+H
+Ya
+u
+n
+d
+,
+s o
+B
+n
+.
+,
+, Z
+D
+h
+.
+an
+A
+g
+.,
+, C
+...
+.
+.
+,
+lishing standardized benchmarking protocols and extending the frame-
+Koreeda, Y. (2022). Holistic evaluation of language models. arXiv preprint arXiv:
+work to continuous outcome variables would broaden its applicability. 2211.09110. Version v2 published 1 Oct 2023; formally in TMLR Aug 2023.
+12
+
+===== PDF PAGE 13 =====
+P. Giudici and V. Kolesnikov Machine Learning with Applications 23 (2026) 100821
+Lorenz, O. M. (1905). Methods of measuring the concentration of wealth: vol. 9, (pp. Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). Why should I trust you? Explaining the
+209–219). Publications of the American Statistical Association, 70. predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international
+Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model conference on knowledge discovery and data mining (pp. 1135–1144).
+predictions. vol. 30, In Advances in neural information processing systems. Rousseeuw, P., & Leroy, A. (1987). Robust regression & outlier detection. Journal of
+Molnar, C. (2019). Interpretable machine learning: A guide for making black box models Educational Statistics, 13, 358–364.
+explainable. Terven, J., Cordova-Esparza, D.-M., Romero-González, J.-A., et al. (2025). A compre-
+National Institute for Standards and Technology (2023). Artificial intelligence risk hensive survey of loss functions and metrics in deep learning. Artificial Intelligence
+management framework. Review, 58, 195.
+National Institute for Standards and Technology (2025). Adversarial machine learning: United Nations High-Level Advisory Body on Artificial Intelligence (2024). Governing
+A taxonomy and terminology of attacks and mitigations. AI for humanity: final report.
+Nguyen, L. P. T., & Do, H. T. (2025). RAISE: A unified framework for responsible Zhao, W., Alwidian, S., & Mahmoud, Q. H. (2022). Adversarial training methods for
+AI scoring and evaluation. arXiv preprint arXiv:2510.18559. Preprint; submitted deep learning: a systematic review. Algorithms, 15(8), 283.
+October 2025.
+13

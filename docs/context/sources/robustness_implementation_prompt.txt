@@ -1,0 +1,536 @@
+IMPLEMENT THE ROBUSTNESS EVALUATION STAGE
+Credit-risk fairness project | Consolidated protocol, 8 October 2026
+
+Implement a reproducible robustness evaluation of the existing frozen
+Logistic Regression (LR) and Gradient Boosting (GBM) models.
+
+The research question is:
+How sensitive are these models' predictions and recorded-outcome performance
+to prespecified synthetic corruption of their inputs, and how do the models
+compare under identical conditions?
+
+Use the design below. Complete implementation, evaluation, verification,
+artifact inspection, and reporting. Treat this as an empirical robustness
+study; do not claim that it establishes the novelty or validates the entire
+proposed extended trustworthiness framework.
+
+1. INSPECT THE PROJECT AND VERIFY THE BASELINE
+
+Before editing, inspect:
+- repository instructions, including any applicable AGENTS.md;
+- research plan, README, data documentation, and current stage status;
+- data preparation, predictor definitions, feature order, and preprocessing;
+- frozen pipelines, locked split metadata, and saved predictions;
+- performance, fairness, and explainability reports and relevant code;
+- threshold decisions, metric utilities, tests, dependency locks;
+- reporting, output-directory, and provenance conventions.
+
+Use repository artifacts as authoritative for paths, input schemas, record
+counts, model interfaces, and completed work. Do not assume earlier notes
+describe the current checkout exactly.
+
+The documented protocol uses:
+- the repaired approximately 80/20 split;
+- both existing frozen models;
+- ID and SEX as metadata, excluded from model predictors;
+- the 0.50 reference classification threshold;
+- Average Precision (AP), rather than trapezoidal PR-AUC;
+- conservative whole-predictor-group uncertainty estimation.
+
+Verify these facts locally. If artifacts conflict with the stated frozen
+baseline or reference classification rule, report the conflict before
+proceeding rather than choosing a replacement.
+
+Load the frozen pipelines and reconstruct unmodified holdout probabilities
+and classifications. Align predictions by ID and verify row order, class
+labels, and agreement with saved predictions and relevant metrics using
+documented numerical tolerances.
+
+Default probability must refer to class default=1. Verify class ordering,
+including any probability column selected by SAFE.
+
+Reuse the exact established classification rule at 0.50, including equality
+handling. OOF threshold candidates and earlier fairness sensitivity thresholds
+are not alternative operating decisions.
+
+If baseline reproduction fails materially, stop the robustness evaluation
+and report the discrepancy. Do not silently continue from a changed baseline.
+
+2. SCOPE AND ARTIFACT PROTECTION
+
+Use the existing models, preprocessing, predictors, and locked split.
+
+Do not:
+- retrain, tune, recalibrate, select thresholds, or change features;
+- resplit or delete records;
+- implement mitigation, PSI, population or temporal drift, monitoring,
+  governance deployment, or adversarial-security testing.
+
+Preserve original data, model files, split assignments, saved predictions,
+earlier reports, and prior-stage outputs. Put robustness outputs in their own
+paths. Minimal additive documentation updates are allowed; do not rewrite
+earlier conclusions.
+
+Hash protected artifacts before and after execution. Use independent copies
+when calling functions that might mutate inputs.
+
+ID, target, and SEX must never be perturbed. Preserve their record associations.
+SEX is unchanged metadata for descriptive subgroup analysis.
+
+3. INSPECT AND VALIDATE AUTHENTIC SAFE
+
+Inspect the installed project's actual implementation of:
+- safeaipackage.check_robustness.perturb;
+- safeaipackage.check_robustness.compute_rgr_values;
+- the find_yhat helper;
+- core.rga.
+
+Trace input conversion, indices, mutation behaviour, classifier support,
+probability-column selection, sorting, ties, normalization, argument direction,
+and returned quantities.
+
+Record the installed package version and source identity: commit if available,
+otherwise relevant source-file hashes. Do not silently upgrade dependencies.
+
+Upstream source inspected while preparing this protocol exchanges opposite
+feature tails and computes:
+    rga(original_default_probabilities, perturbed_default_probabilities)
+
+Verify that the installed implementation agrees. If it differs materially,
+document the discrepancy before evaluation. Never silently substitute a custom
+transformation or metric and label it authentic SAFE RGR.
+
+Use the actual compute_rgr_values API wherever compatible. If an adapter is
+needed, preserve the frozen pipeline's preprocessing and probability output
+exactly. Never fit the adapter.
+
+Verify adapter equivalence and authentic API behaviour with deterministic
+fixtures covering:
+- unchanged inputs/identity;
+- preserved and reversed ordering;
+- ties in original and perturbed scores;
+- constant original scores;
+- constant perturbed scores;
+- index and record alignment.
+
+Report undefined metrics explicitly, with reasons and counts.
+
+If authentic RGR cannot be run or validated, mark that component blocked.
+Other independently valid diagnostics may proceed, but do not describe the
+entire requested stage as complete.
+
+4. SAVE THE PROTOCOL BEFORE ROBUSTNESS RESULTS
+
+Save a machine-readable configuration and a readable rationale before
+computing robustness results.
+
+Record scenarios, feature groups, levels, destination maps, bounds, rounding,
+seeds, repetitions, metric definitions, delta directions, and uncertainty
+methods.
+
+Do not select or revise analytical choices because of holdout outcomes or
+because a model comparison looks more interesting.
+
+The experiment has two distinct layers:
+A. authentic SAFE extreme-tail corruption;
+B. supplementary domain-informed synthetic input-error sensitivity.
+
+These layers are not severity-equivalent.
+
+5. LAYER A: AUTHENTIC SAFE EXTREME-TAIL CORRUPTION
+
+Use these prespecified perturbation_percentage values:
+- 0.01: lower-severity sensitivity;
+- 0.025: intermediate sensitivity;
+- 0.05: primary severity;
+- 0.10: stronger sensitivity.
+
+Use the genuine package perturb function exactly as implemented.
+
+The parameter p is a tail fraction, not a percentage change in each value.
+At p=0.05, approximately 10% of records participate per feature. Actual changed
+values can be fewer because of rounding and ties.
+
+Derive and report nominal participation and actual changed-row/cell counts
+from the actual implementation and holdout size. For joint scenarios, report
+the union of changed records; do not describe it as 10% merely because each
+individual feature has approximately 10% participation.
+
+Explicit training-only exception:
+SAFE identifies tails from the supplied evaluation inputs. Preserve this
+authentic behaviour. The severity grid is fixed independently of y_test.
+Do not replace evaluation tails with training quantiles.
+
+Run individual-feature RGR at every severity.
+
+Also run grouped RGR at every severity for:
+- credit limit;
+- six bill amounts;
+- six payment amounts;
+- six repayment-status variables;
+- age;
+- education;
+- marriage;
+- all predictive features jointly.
+
+Resolve exact columns from the frozen schema and document group order.
+Grouped RGR is not an average of individual-feature RGR.
+
+For every scenario, calculate the conventional diagnostics in section 8 on
+the exact same perturbed inputs. Both models must receive identical inputs.
+Verify that transformations generated for conventional diagnostics agree
+with those used internally by authentic SAFE.
+
+Do not clip, repair, or apply semantic substitutions to authentic SAFE inputs.
+
+Document that:
+- numeric ordering of nominal education/marriage codes is arbitrary;
+- swaps preserve feature marginals but can break cross-feature relationships;
+- valid marginal values do not guarantee plausible complete financial records.
+
+Retain canonical holdout order for primary results.
+
+Add one prespecified secondary row-order diagnostic:
+- all-feature joint SAFE scenario;
+- p=0.05;
+- permutation seed 20261008.
+
+Permute inputs, aligned original probabilities, and metadata together.
+Preserve ID associations and restore canonical ID order for record-level
+comparisons. Use the same permutation for both models.
+
+Compare exposure, RGR, and principal conventional diagnostics. Keep canonical
+order as primary; do not select the more favourable ordering.
+
+6. LAYER B: DOMAIN-INFORMED SYNTHETIC INPUT-ERROR SENSITIVITY
+
+These are prespecified research choices, not SAFE requirements or measured
+operational error frequencies.
+
+For each feature-specific scenario, select floor(q*N) records uniformly
+without replacement, independently of target and SEX:
+- primary: q=0.10;
+- stronger: q=0.20.
+
+Select from the complete holdout. Eligibility restrictions and bounds can
+produce no-op cases; report these rather than silently redefining the sample.
+
+A. Monetary variables
+For LIMIT_BAL, BILL_AMT1-6, and PAY_AMT1-6:
+- primary: add +0.10*training IQR or -0.10*training IQR;
+- stronger: add +0.20*training IQR or -0.20*training IQR.
+
+Use equal sign probabilities. Compute feature-specific IQRs using only the
+locked training split, in raw input units.
+
+This is fixed-magnitude signed noise, not Gaussian noise or a uniform interval.
+If IQR is zero, record a zero-scale scenario; do not invent a fallback after
+examining results.
+
+B. AGE
+- primary: add +1 or -1 year with equal probability;
+- stronger: add +2 or -2 years with equal probability.
+
+Preserve integers. Use documented domain bounds or, if unavailable, explicitly
+labelled training-support bounds.
+
+C. Repayment status
+For PAY_0 and PAY_2-6:
+- primary: one ordinary delay step up/down;
+- stronger: two ordinary delay steps up/down;
+- equal probabilities for the intended directions.
+
+Establish explicit allowed source/destination maps per feature before results.
+Use documented semantics and training support.
+
+Do not automatically interpret -2, -1, or 0 as equally spaced delay months.
+Leave special states unchanged and report the coverage limitation.
+
+Do not introduce unobserved/invalid codes or fractional statuses. Numeric
+adjacency across missing levels must not be called a one-month change.
+Document endpoint handling and no-op cases.
+
+A separate special-state categorical experiment is not required for this
+stage. Do not silently add it after seeing results.
+
+D. EDUCATION and MARRIAGE
+Replace selected values with a different valid category, sampled from the
+feature's training empirical frequencies conditional on differing from the
+original value.
+
+Use q=0.10 primary and q=0.20 stronger. Do not add numeric offsets.
+If no alternative category exists, report a no-op.
+
+E. Joint semantic scenarios
+Use one common selected-record mask at each q and apply all corresponding
+feature rules to those selected records.
+
+This represents concentrated multifeature corruption. It does not establish
+realistic error dependence or severity equivalence with SAFE.
+
+Use 30 repetitions per stochastic scenario.
+
+Use master seed 20261007 and deterministic, documented child seeds for
+scenarios and repetitions. Both models must receive identical realizations.
+
+Couple primary/stronger masks and signs where practical, nesting the primary
+mask within the stronger mask. Record the coupling.
+
+Unless coupling requires otherwise, use independent equal-probability sign
+draws across selected records and features. Do not silently use one common
+sign for an entire record or feature family.
+
+The stronger scenario increases both selected-record fraction and magnitude.
+Interpret it as combined stress, not an isolated magnitude effect.
+
+F. Bounds and exposure
+For semantic tests only:
+- preserve nonnegative payments;
+- preserve positive credit limits using a documented valid lower bound;
+- allow negative bills where valid;
+- preserve integer age/status/category values;
+- respect documented monetary precision.
+
+If a required bound is unavailable, define and document a training-support
+bound before evaluation rather than presenting it as a universal domain rule.
+
+Do not automatically cap all amounts at training maxima.
+Do not invent accounting identities.
+
+Apply bounds and rounding only to selected perturbed cells. Unselected records
+must remain unchanged.
+
+If an original value already lies outside a chosen training-support interval,
+leave it unchanged in that bounded scenario and report it. Do not project
+baseline values into support or turn a small planned change into a larger one.
+
+Report eligible, selected, changed, clipped, and no-op counts by feature and SEX.
+Define exposure through input changes, not model-specific prediction changes.
+
+7. PRIMARY SCENARIOS AND RGR INTERPRETATION
+
+The two primary joint scenarios are:
+1. authentic SAFE, all predictive features jointly, p=0.05;
+2. joint semantic corruption, q=0.10, primary magnitudes.
+
+Other severities and feature/family analyses are sensitivity analyses.
+Do not select headline scenarios after seeing results.
+
+Interpret higher RGR as greater preservation of the original-score ordering
+under the specified corruption.
+
+The actual implementation uses original probability magnitudes and a
+normalization based on their distribution. It is not simply a rank correlation
+between two rank vectors, and normalization differs between models.
+
+High RGR does not establish accurate probabilities, fairness, operational
+safety, or reliability under all possible corruptions.
+
+Interpret LR-versus-GBM RGR differences alongside probability movement,
+classification flips, and recorded-outcome performance.
+
+8. CONVENTIONAL DIAGNOSTICS AND REPETITION AGGREGATION
+
+Use the project's existing metric utilities and definitions.
+
+For both models and both layers, calculate:
+- mean signed probability movement;
+- mean, median, and p95 absolute probability movement;
+- Spearman original-versus-perturbed score correlation;
+- fixed-rule classification flip rate at the established 0.50 threshold;
+- original and perturbed ROC-AUC;
+- original and perturbed Average Precision (AP), calculated with
+  average_precision_score;
+- Brier score and log loss;
+- accuracy, precision, recall, specificity, F1, and confusion counts;
+- existing calibration diagnostics where applicable, without recalibration.
+
+Report movement across all records, with changed-record summaries as a labelled
+supplement. Report undefined metrics rather than silently replacing them.
+
+Use:
+- perturbed minus baseline for metric changes;
+- GBM minus LR for paired model differences.
+
+State whether higher values mean better performance or greater instability.
+Retain signed improvements as well as deterioration.
+
+Keep y_test fixed. Outcome-based changes describe sensitivity to corrupted
+records with recorded outcomes held constant; they are not causal estimates
+of what would happen if clients changed their behaviour.
+
+For stochastic scenarios:
+1. calculate metrics separately in each repetition;
+2. calculate baseline-relative changes within each model;
+3. calculate paired GBM-minus-LR differences within each repetition;
+4. average those quantities across the 30 repetitions.
+
+Do not average probabilities before calculating primary nonlinear metrics.
+Do not concatenate repetitions as independent additional clients.
+
+Report between-repetition variability separately from sampling intervals.
+Do not manufacture Monte Carlo variability for deterministic SAFE scenarios.
+Do not assume deterioration must be monotonic with severity.
+
+9. PAIRED SAMPLING UNCERTAINTY
+
+Required sampling intervals concern the two primary joint scenarios.
+
+Focus on:
+- mean absolute probability movement;
+- flip rate;
+- changes in ROC-AUC, AP, and Brier score;
+- paired model differences in those quantities.
+
+Use the existing whole-predictor-group bootstrap convention:
+- 2,000 resamples;
+- seed 42;
+- 95% percentile intervals.
+
+Verify the convention locally. If the repository establishes a different
+method, report the discrepancy before selecting a replacement.
+
+Resample complete original predictor groups. Use identical sampled groups
+for both models and retain aligned outcomes and predictions.
+
+Calculate SEX summaries within each resample. Do not split cross-SEX or
+cross-outcome groups to force exact strata. Explain that subgroup composition
+may vary across resamples.
+
+Predictor grouping is conservative: matching inputs do not prove that records
+belong to the same person.
+
+For conventional SAFE diagnostics:
+- resample saved original/perturbed prediction pairs;
+- label intervals conditional on the observed tail-swap realization and
+  frozen models.
+
+These intervals do not estimate uncertainty of repeating the entire
+data-dependent SAFE procedure on a new sample.
+
+For semantic diagnostics:
+- condition on the saved 30 realizations;
+- recompute metrics separately per repetition in each bootstrap resample;
+- average metrics and paired differences as specified in section 8.
+
+Report Monte Carlo spread separately. Repetitions are not independent new
+datasets.
+
+RGR intervals are optional. Produce them only if an estimand and method are
+justified and saved before results; otherwise report RGR point estimates.
+
+Report undefined bootstrap results, reasons, and valid replicate counts.
+Avoid an exhaustive grid of significance tests.
+
+10. DESCRIPTIVE SEX-GROUP ANALYSIS
+
+Use unchanged SEX metadata and the project's established labels.
+
+Report group counts, actual perturbation exposure, probability movement,
+flip rates, and relevant performance changes, especially in primary scenarios.
+
+Subset the globally perturbed records by SEX. Do not silently identify SAFE
+tails separately within each group.
+
+Distinguish:
+- differences in who receives input changes;
+- differences in model response;
+- baseline feature and score distributions;
+- proximity to the classification threshold.
+
+Keep conclusions descriptive. Synthetic robustness differences do not establish
+discrimination or replace the completed fairness analysis.
+
+11. IMPLEMENTATION, VERIFICATION, AND PROVENANCE
+
+Reuse established utilities where practical. Cache baseline and perturbed
+predictions; do not rerun model prediction unnecessarily inside bootstrap
+calculations.
+
+Do not silently reduce repetitions, resamples, or scenario coverage to save
+runtime. Document any genuine execution blocker.
+
+Add focused checks for:
+- frozen-model loading and absence of fitting;
+- baseline prediction reproduction;
+- protected artifact hashes;
+- unchanged split membership;
+- row count, ID alignment, and canonical ordering;
+- unchanged model input schema and feature order;
+- unchanged ID, target, and SEX;
+- training-only semantic scales, category frequencies, and support rules;
+- valid destinations, bounds, and selected-cell-only transformations;
+- identical LR/GBM perturbations;
+- classification-rule provenance and equality handling;
+- authentic SAFE calls and fixture agreement;
+- correct metric aggregation and delta direction;
+- permutation-diagnostic alignment;
+- exposure, clipping, no-op, and undefined-result counts;
+- consistency between tables and reports.
+
+Run the complete existing project test suite and the new checks.
+
+Run the finalized evaluation twice with identical configuration. Compare
+numerical CSV outputs byte-for-byte where established conventions permit.
+Document exceptions for timestamps/environment metadata and compare those
+fields appropriately.
+
+Recheck protected hashes and dependency consistency. Do not silently upgrade
+earlier dependency locks to make new checks pass.
+
+Record:
+- model/data/split identities and hashes;
+- feature definitions and order;
+- SAFE version and source identity;
+- environment and dependency versions;
+- scenario configuration and seed mapping;
+- repetitions and uncertainty methods;
+- execution and verification metadata.
+
+Use compact configurations, hashes, and prediction artifacts rather than
+unnecessary full copies of every perturbed dataset. Retain enough information
+to reproduce results and conditional bootstrap calculations.
+
+12. REPORTING AND COMPLETION
+
+Follow existing output naming, directory, report, and figure conventions.
+
+Produce:
+- saved protocol/configuration and rationale;
+- robustness evaluation scripts and focused tests;
+- baseline reproduction evidence;
+- individual and grouped authentic RGR tables;
+- conventional diagnostic and paired-comparison tables;
+- compact severity and feature/family plots;
+- SEX-group summaries with exposure counts;
+- focused uncertainty results;
+- provenance and verification records;
+- a readable robustness report.
+
+Inspect generated tables, plots, reports, and logs. Every headline number must
+trace to a saved scenario identifier and table.
+
+Explain the difference between:
+- article-level conceptual motivation;
+- the package-defined SAFE operation;
+- our supplementary research choices.
+
+Do not discard null, adverse, or unexpected findings. Do not change severity
+to obtain a preferred conclusion.
+
+Finish with a concise implementation summary covering:
+- files created or changed;
+- finalized protocol and rationale;
+- conventional and authentic RGR findings;
+- paired LR/GBM comparisons;
+- descriptive SEX-group findings;
+- sampling and Monte Carlo uncertainty;
+- verification performed;
+- assumptions, limitations, and unresolved issues.
+
+State clearly that these synthetic experiments do not establish real-world
+error rates, causal default-risk changes, adversarial security, future-population
+reliability, a universally best model, or framework novelty.
+
+Do not implement the later stability, monitoring, mitigation, or governance
+stages.

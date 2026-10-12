@@ -1,0 +1,1223 @@
+===== PDF PAGE 1 =====
+Statistics
+A Journal of Theoretical and Applied Statistics
+ISSN: 0233-1888 (Print) 1029-4910 (Online) Journal homepage: www.tandfonline.com/journals/gsta20
+Evaluating SAFE AI principles using Wasserstein
+distance: a comparative study of Machine
+Learning models
+Alessandro Spelta & Emanuela Raffinetti
+To cite this article: Alessandro Spelta & Emanuela Raffinetti (2024) Evaluating SAFE AI
+principles using Wasserstein distance: a comparative study of Machine Learning models,
+Statistics, 58:6, 1283-1303, DOI: 10.1080/02331888.2024.2419420
+To link to this article: https://doi.org/10.1080/02331888.2024.2419420
+© 2024 The Author(s). Published by Informa
+UK Limited, trading as Taylor & Francis
+Group.
+Published online: 24 Oct 2024.
+Submit your article to this journal
+Article views: 1792
+View related articles
+View Crossmark data
+Citing articles: 9 View citing articles
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=gsta20
+
+===== PDF PAGE 2 =====
+STATISTICS
+2024,VOL.58,NO.6,1283–1303
+https://doi.org/10.1080/02331888.2024.2419420
+EvaluatingSAFEAIprinciplesusingWassersteindistance:a
+comparativestudyofMachineLearningmodels
+AlessandroSpeltaandEmanuelaRaffinetti
+DepartmentofEconomicsandManagement,UniversityofPavia,Pavia,Italy
+ABSTRACT ARTICLEHISTORY
+Moderndata-drivenArtificialIntelligence(AI),poweredbyadvanced Received20June2024
+MachineLearning(ML)models,istransformingfinancialtechnolo- Accepted10October2024
+gies by enhancing financial inclusion, transparency and reducing
+KEYWORDS
+transaction costs. However, the opaque nature of some complex
+Lorenzcurves;Optimal
+MLmodelsrequiresnewstatisticalapproachestomanagerisksand Transport;Wasserstein
+ensure trustworthiness. In this paper, we present a novel method distance;SAFEArtificial
+to evaluate the key principles of trustworthy AI - Sustainability Intelligence
+(Robustness), Accuracy, Fairness, and Explainability (SAFE). While
+2020MATHEMATICS
+Babaeietal.[ARankGraduationBoxforSAFEAI.ExpertSystAppl.
+SUBJECT
+259;2025:125239, 2025] introduced the Rank Graduation Box as a
+CLASSIFICATIONS
+streamlinedapproachforassessingtheprinciplesoftrustworthyAI,
+62R07;62P20;68T01
+we extend this work by employing the Wasserstein distance. Our
+methodoffersamorenuancedandgeometricallyorientedcompar-
+isonofMLmodels,particularlyincontextswhereshiftsineconomic
+or environmental conditions alter the prediction distributions. We
+applythismethodtocomparepopularMLmodels,includingSup-
+portVectorMachines,EnsembleTrees,K-NearestNeighboursLinear
+andLogisticRegression.Theproposalisvalidatedusingbothsimu-
+lateddataandreal-worlddatainthecontextoffinancialriskassess-
+ment.OurfindingsdemonstratethattheWassersteindistanceoffers
+nuancedandinterpretableinsightsintomodelbehaviouracrossthe
+SAFEdimensions,makingitavaluabletoolformodelselectionand
+regulatorycomplianceinAIapplications.
+1. Introduction
+In the last years, the fast and growing availability of data and computational power has
+ledtothespreadofsophisticatedMachineLearning(ML)models,togetherwithArtificial
+Intelligence-based systems. The application of Artificial Intelligence (AI) methods leads
+tosocietalandeconomicalbenefitsresultingintoanimprovementofuserexperienceand
+inclusion.
+Nevertheless,besidestheopportunitiesderivedfromitsemployment,AIcanalsogener-
+atepotentialrisks,suchascyberrisks(typicallyemergingfromattackstotheInformation
+and Communication Technology systems) and model risks (caused by the failure of a
+specificselectedmodeltoprovidequantitativeinformation).
+CONTACT EmanuelaRaffinetti emanuela.raffinetti@unipv.it DepartmentofEconomicsandManagement,
+UniversityofPavia,ViaSanFelicealMonastero5,27100Pavia,Italy
+©2024TheAuthor(s).PublishedbyInformaUKLimited,tradingasTaylor&FrancisGroup.
+ThisisanOpenAccessarticledistributedunderthetermsoftheCreativeCommonsAttributionLicense(http://creativecommons.org/licenses/
+by/4.0/),whichpermitsunrestricteduse,distribution,andreproductioninanymedium,providedtheoriginalworkisproperlycited.Theterms
+onwhichthisarticlehasbeenpublishedallowthepostingoftheAcceptedManuscriptinarepositorybytheauthor(s)orwiththeirconsent.
+
+===== PDF PAGE 3 =====
+1284 A.SPELTAANDE.RAFFINETTI
+Many AI systems, while complex, offer varying degrees of interpretability and con-
+trol.However,somestillpresentchallengesintermsoftransparency:dataprocessingand
+decision-making can occur through intricate mechanisms that may be difficult to fully
+monitor. This can potentially complicate the management of operational, reputational,
+andstrategicrisks,particularlywhenitcomestoidentifyingandmitigatingbiasesinthe
+system’soutputs.
+Withtheaimofavoiding,oratleastmitigating,thenegativeeffectsinducedbyanincor-
+rectuseoftheAIoutputs,theEuropeanCommissionhasrecentlyproposedaregulationon
+ArtificialIntelligence,theAIAct,whichappearsasthefirstattemptintheworldtomanage
+theuseofAIbyresortingtoasetofbasicprinciplesaddressedtomeettheconditionof
+trustworthiness(see[1]).Tobetrustworthy,AIsystemshavetobe:robusttoshockscenar-
+ioswhichmayleadtoextremedata;accurateintermsofpredictions;fairwithrespectto
+thesub-groupscomposingthepopulation;explainableintermsoftheirpredictiveoutput.
+In line with the previous requirements, [2–4], among others, illustrated interesting
+applications of explainable AI methods based on the Shapley’s cooperative game theory
+framework(see[5]).
+Recently, further contributions were developed giving rise to new statistical metrics
+based on the extension of the Lorenz and concordance curves (see [6]). As an example,
+[7] exploited the Lorenz Zonoid tool, corresponding to the multivariate Gini index (see
+[8]),todetecttheexplainabilityofthepredictorsinablack-boxMachineLearning(ML)
+model. Differently from Shapley-values [4,5], their proposal is expressed through a nor-
+malizedscalewhichmeasuresthepercentageoftheoverallvariabilityexplainedbyeach
+singlepredictor.
+TheconditionofsafetyofAIsystemsimpliesalsotheneedofevaluatingthecapability
+ofthehighlycomplexMLmodelstobeaccurate.Thisbecausetheautomaticchoiceofan
+actionisstronglyaffectedbythemadepredictions.Themeasurescommonlyusedinlitera-
+ture(RMSEorAUROC)dependonthetypeofresponsevariable,andnoneofthemcanbe
+universallyapplied,therebylimitingtheautonomyofAIapplications.Thisissuebecomes
+moreproblematicwhentheresponseisavectorofvariables,ofdifferenttypes(continuous,
+ordinal,binary),implyingdifficultiesinthechoiceofthesuitableaccuracymeasure.Tofill
+thisgap,[9]introducedanewglobalmeasure(calledRankGraduationAccuracy)thatcan
+be universally applied, regardless of the nature of the underlying response variable. The
+RankGraduationAccuracy(RGA)measureisnormalizedandbasedonthecomparison
+between the Lorenz curve of the response variable and the concordance curve obtained
+orderingtheresponsevaluesintermsofthepredictedvalues.GiudiciandRaffinetti[10],
+furtherinvestigatedthepropertiesoftheRGAmetricandshoweditsequivalencewiththe
+AUROCintheclassificationframework.
+Based on these premises, [11] provided a further methodological extension of the
+Lorenz-Zonoids, called the SAFE approach, with the purpose of assessing also the sus-
+tainability (robustness) and fairness principles of AI systems, in addition to those of the
+accuracyandexplainability.TheAuthorsusedthetermSAFEwithatwofoldrole:withthe
+meaningofreliabilityofAIbutalsoastheacronymof‘Sustainability’,‘Accuracy’,‘Fairness’,
+and‘Explainability’,i.e.,thefourprinciplestobeachievedbyeachmodel.
+Foramorecompleteoverviewofthemaincontributionsaddressedtotheassessment
+of the AI systems, we refer to Professor Paolo Giudici’s call for papers in ‘Safe Machine
+Learning’publishedinthisJournalonJune2024andtothereferencestherein(see[12]).In
+
+===== PDF PAGE 4 =====
+STATISTICS 1285
+responsetothesamecallofpapers,[13]investigatedtheapplicationofBayesianinference
+withintheSAFEmodelframework,inordertoensuretheaccuracyandreliabilityofthe
+environmental,social,andgovernance(ESG)conditionswithinthefinancialfield.
+More recently, with the purpose of further improving and facilitating the implemen-
+tation of the metrics proposed by Giudici and Raffinetti [11], Babaei et al. [14] have
+introducedanovelframeworkfortheAIriskmeasurement.Specifically,theapproachby
+GiudiciandRaffinetti[11]wasre-formalizedthroughtheemploymentoftheConcordance
+curvewhichappearsasacommonrootfortheconstructionofconsistentmetrics,allbased
+onthenotionofconcordancebetweentwocumulativedistributions.Inthisway,arevised
+setofmetricssimpletointerpretandextendabletoadditionalAIcomplianceprinciplesis
+derived.
+CoherentlywiththecontributionbyBabaeietal.[14],weproposetoinvestigatethejoint
+dynamicsofthescoresmentionedaboveusingtheWassersteindistance,derivedfromthe
+OptimalTransport(OT)theory(see[15,16]).TheWassersteindistanceoffersseveralkey
+advantagesoverpreviousapproaches.Itprovidesamorenuancedcomparisonbycapturing
+theunderlyinggeometryofdistributions,accountingfordifferencesinlocationandscale
+that might be overlooked by simpler measures. This is particularly valuable in financial
+applications,whereshiftsineconomicconditionsmightalterthelocationorspreadofpre-
+dictionswithoutfundamentallychangingtheirstructure.TheWassersteindistance’sability
+tocomparedistributionswithdifferentsupportsordimensionalityalsomakesourmethod
+highlyadaptableforfutureextensions,potentiallyallowingcomparisonsbetweendiverse
+modeltypesorpredictionformats.Moreover,itsreducedsensitivitytosmallperturbations
+oroutlierscontributestomorestableandrobustassessmentsofmodelbehaviour,acrucial
+factorwhenevaluatingAIsystemsforhigh-stakesapplicationsinfinance.
+Inthispaper,weintroduceanovelframeworkthatleveragesOptimalTransport(OT)
+theory and the Wasserstein distance to evaluate Machine Learning models against the
+SAFEAIprinciples:sustainability(robustness),accuracy,fairness,andexplainability.Our
+approach provides a unified metric for assessing these diverse aspects of model perfor-
+mance,offeringacomprehensiveviewofmodeltrustworthinessasoutlinedbytheAIAct.
+By applying this framework to various ML models, including Support Vector Machines,
+EnsembleTrees,K-NearestNeighbours,LinearandLogisticRegression,wedemonstrate
+its utility in comparing, and selecting appropriate models based on specific application
+requirementsandregulatoryguidelines.
+Thepaperisstructuredasfollows.InSection2,anoverviewoftheexistingmethodology
+fortheassessmentofthesafetyconditionofMLmodels,togetherwiththeillustrationof
+ourproposalbasedontheWaasersteindistance,isprovided.InSection3,aMonteCarlo
+simulationisledwiththepurposeofcomparingthebehaviouroftheWassersteindistance-
+basedmetricswithrespecttotheexistingSAFEmeasures.InSection4anapplicationto
+realdata,concerningthecontextoffinancialriskassessment,istakenintoaccount.Finally,
+Section 5 concludes with a discussion about the relevance of the SAFE approach when
+dealingwithAIsystems.
+2. Methodology
+This section is devoted to the illustration of the methodology. Specifically, in Sec-
+tions2.1and2.2,wedescribethemathematicalbackgroundunderlyingboththeapproach
+
+===== PDF PAGE 5 =====
+1286 A.SPELTAANDE.RAFFINETTI
+introducedbyBabaeietal.[14]andourproposalbasedontheOptimalTransportTheory
+andtheWassersteindistance.
+2.1. Background
+The Rank Graduation Box (RGB), recently proposed by Babaei et al. [14], is based on
+thenotionofconcordancebetweentwocumulativedistributionsandconsistsofasetof
+consistentmetricsdevelopedfortheassessmentoftheSAFEprinciples.
+∗ ∗∗
+Formally,letY andY betwostatisticalvariables,eachdefinedonasetofndatapoints
+anddefinedonacontinuous,ordinalorbinaryscale.TheRGBmetricsarederivedthrough
+∗
+adirectcomparisonbetweenthecumulativedistributionsoftheY variablevaluesordered
+accordingtothreealternativeways:(a)inanon-decreasingsense;(b)inanon-increasing
+∗∗
+sense;(c)basedonthenon-decreasingranksofY .
+TheRankGraduationBoxmetricsareexpressedthrougharatio:thenumeratorspecifies
+∗
+the distance between the cumulative distribution of the Y values ordered in a non-
+∗
+increasingsenseandthatoftheY valuesorderedaccordingtothenon-decreasingranks
+∗∗
+of Y ; the denominator measures the distance between the cumulative distribution of
+∗ ∗
+the Y values ordered in a non-increasing sense and that of the Y values ordered in a
+non-decreasingsense.
+Aftersomemathematicalmanipulations,theRankGraduationRG·indexisderivedas:
+(cid:2) (cid:2)
+RG·= (cid:2) n s=1 sy r ∗ s ∗∗ − (cid:2) n s=1 sy r ∗ n ∗ +1−s, (1)
+n s=1 sy r ∗ s ∗ − n s=1 sy r ∗ n ∗ +1−s
+where,foranys=1,...,n:r ∗ arethenon-decreasingranksofthey ∗ values;r ∗∗ arethe
+s s s
+∗∗ ∗ ∗
+non-decreasingranksofthey s values;r n+1−s arethenon-increasingranksofthey s values;
+y¯∗
+isthemeanofthey
+∗
+values.
+s
+FromEquation(1),thespecificmetricsforthemeasurementofthesustainability,accu-
+∗ ∗∗
+racy,fairnessandexplainabilityofAIapplicationsareprovidedbyreplacingY andY
+withtheproperinputscharacterizingthefourprinciples:
+• tomeasuresustainability(robustness),the‘RankGraduationRobustness’(RGR)met-
+ricisdefinedbysettingY ∗ =Y ˆ andY ∗∗ =Y ˆp,whereY ˆ andY ˆp denotethepredicted
+valuesobtainedusingthenon-perturbeddataandthepredictedvaluesobtainedusing
+perturbeddata,respectively;
+• tomeasureaccuracy,the‘RankGraduationAccuracy’(RGA)metricisderivedbyset-
+tingY ∗ =YandY ∗∗ =Y ˆ ,whereY andY ˆ denotetheobservedresponsevaluesandthe
+correspondingpredictedvalues,respectively;
+• tomeasurefairness,the‘RankGraduationFairness’(RGF)metricisderivedbysetting
+Y ∗ =Y ˆ andY ∗∗ =Y ˆ(−Xg ) ,where,givenasetofG groupvariables(convertedintoG
+ˆ
+binary variables), Y are the predicted values obtained from the full model (including
+all the G group variables as predictors) and Y
+ˆ(−Xg )
+are the predicted values obtained
+fromthereducedmodel(i.e.,themodelwhichexcludestheg-thgroupvariableunder
+evaluation,withg =1,...,G);
+
+===== PDF PAGE 6 =====
+STATISTICS 1287
+• tomeasureexplainability,the‘RankGraduationExplainability’(RGE)metricisderived
+bysettingY ∗ =Y ˆ andY ∗∗ =Y ˆ(−Xh ) ,where,givenasetofHpredictors,Y ˆ arethepre-
+dicted values obtained from the full model (which includes all the H predictors) and
+Y
+ˆ(−Xh )
+arethepredictedvaluesobtainedfromthereducedmodel(i.e.,themodelwhich
+excludestheh-thpredictorunderevaluation,withh=1,...,H).
+TheRG·metrictakesvaluesinthecloserange[0,1].ThemoretheRG·approachesto
+value1,thehigheristherobustness,accuracyandfairnessofthemodel.Theaforemen-
+tioned behaviour does not hold for explainability: indeed, the stronger is the effect of a
+variable X on explaining Y, the greater is the divergence between the ranks of the full
+h
+modelpredictedvaluesandthoseassociatedwiththereducedmodel.Itfollowsthat,for
+coherencewiththeothermetrics,RGEisdefinedasRGE=1−RG·.
+2.2. Proposal
+2.2.1. Optimaltransport(OT)theory
+Optimal Transport (OT) measures the minimum effort needed to reconfigure the prob-
+ability mass of an input distribution to match a target distribution. Initially formulated
+asanintractable,non-convexoptimizationproblem,itsmodernlinearprogrammingfor-
+mulation was introduced by Kantorovich in 1942 (see [17]) and is detailed in Villani’s
+monograph (see [18]). OT primarily addresses the computation of distances between
+distributions,takingintoaccountthegeometryoftheirsupports.
+In this work, we focus on the specific case of discrete probability measure(cid:2)s, i.e., his-
+tograms,inlinewith[19].Accordingly,wewritethefirstdistributionasα = m i=1 α i δ Ii ,
+whereI
+i
+representsthei-thbininte(cid:2)rval.Thisallowsustoobtainthepoint-wiseestimated
+d(cid:2)ensityforadatapointxasα(x)= m
+i=1
+α
+i
+δ
+Ii
+(x).Similarly,theseconddistributionisβ =
+m
+i=1
+β
+i
+δ
+Ii
+.Bothdistributionsaredefinedoversupportsdescribedbytheset{I
+1
+,...,I
+m
+}.
+Thevariableδ istheDiracmeasureatI.Suchdistributionsarefullycharacterizedbythe
+Ii i (cid:2)
+probabilitymassvectorsα
+i
+andβ
+i
+definedoverthesimplex(cid:5)
+m
+d=ef.{h∈Rm +;
+i
+h
+i
+=1}.
+Wecanthenexpressthedistancebetweenαandβ as:
+d(α,β)= min (cid:4)π,C(cid:5). (2)
+π∈(cid:7)(α,β)
+Thetransportationplanπ ∈(cid:7)(α,β)determinesthejointdistributionundertheOTmet-
+rics, on the product space {I ,...,I }×{I ,...,I }, where the cost matrix C ∈Rm×m
+1 m 1 m
+specifiesthetransportationcostfromindividualpairsI toI.Consequently,πiscontained
+i j
+inthetransportationpolytope(cid:7)(α,β),specifiedas:
+(cid:7)(α,β)={π ∈Rm + ×m |π1 m =α,π(cid:6) 1 m =β}. (3)
+2.2.2. Wassersteindistance
+The Wasserstein distance, also known as the Earth Mover’s distance, is a key concept in
+OT theory. It evaluates the geometric discrepancy between input distributions by deter-
+miningtheminimum‘work’requiredtotransferallthemassfromonedistributiontothe
+other.UnlikeothermetricssuchastheKullback-Leiblerdivergenceorthe(cid:8) and(cid:8) norms,
+1 2
+theWassersteinmetricconsidersthegeometryofthedistributions’supportsanddoesnot
+requirethedistributionstobedefinedonthesameprobabilityspace.
+
+===== PDF PAGE 7 =====
+1288 A.SPELTAANDE.RAFFINETTI
+By selecting, C :=(cid:7)I −I(cid:7)2, the OT problem formulated in Equation (2) yields the
+i,j i j
+so-called(cid:8) -Wassersteindistanced(·,·)=W2(·,·).
+2
+The distance W2(α,β) is usually computed by solving the Linear Assignment Prob-
+lem (LAP) from Equation (2) via specialized algorithms (see [20–22]). However, these
+approachesarecomputationallyheavyandslowinpractice,aspointedoutin[23].Apop-
+ular alternative is augmenting the LAP objective with an additional entropy parameter,
+whichgivesrisetotheSinkhornoperatordefinedas:
+OT(α,β)d=ef min (cid:4)π,C(cid:5)+γH(π), (4)
+π∈U(α,β)
+(cid:2)
+whereγ >0andH(π)d=ef π logπ isthenegativeentropy.Then,OT(α,β)isdiffer-
+ij ij ij
+entiableandcanbesolvedusingSinkhorniterations(seee.g.,[23]).BydefiningtheGibbs
+kernelasK d=ef. e − γ C ∈Rm + ×m,andavectorf =1 m ,onecanfindπ byusingtheSinkhorn
+iterations:
+β α
+g ← and f ← . (5)
+(cid:6)
+Kf K g
+AsshownbyCuturi[23],thisschemeconvergestoaminimizerofEquation(4).Thusthe
+couplingmatrixcanbeobtainedas:
+π =diag(f)Kdiag(g). (6)
+Moreindept,lety1 andy2,betwo1-dimensional(vector)processesoflengthT.More-
+T T
+over, let α(y1) and β(y2) be two uniform distributions located on the support 1,...,T,
+T T
+definedas:
+(cid:3)
+1
+α(y1):= δ ,
+T |T| t
+t∈T
+(cid:3) (7)
+1
+β(y2):= δ .
+T |T| t
+t∈T
+Inthiscontext,wesetthecostbetweenvectorstobehalfquadratic,namelyC = 1((cid:7)y1 −
+2 T
+y2(cid:7)2).
+T
+Our method thus provides geometrically meaningful distances to compare discrete
+distributions, and therefore data which represent the space over which distributions are
+located.Inthisway,datacanbenegativeandnotsummingtoone.Moreover,sincethey
+enterinthecostmatrix,theycanbeonanypossibledimension.
+2.2.3. MathematicalfoundationsoftheWassersteinmetricinourframework
+ToelucidatetheworkingsoftheWassersteinmetricinourspecificcontext,weconsiderthe
+mathematicalfoundationsofourapproach.Wedefineourdistributionsα(y1)andβ(y2)
+T T
+asuniformdistributionslocatedonthesupport1,...,T:
+(cid:3) (cid:3)
+1 1
+α(y1):= δ , β(y2):= δ , (8)
+T |T| t T |T| t
+t∈T t∈T
+whereδ istheDiracmeasureatt.Giventhatbothdistributionsareuniformoverthesame
+t
+support,thetransportationplanπ willbeaT×Tmatrixwithallentriesequalto1/|T|2.
+
+===== PDF PAGE 8 =====
+STATISTICS 1289
+This is because each point in the source distribution must be transported equally to all
+pointsinthetargetdistribution:
+1
+π = ∀i,j∈{1,...,T}. (9)
+ij T2
+ThekeydifferenceinourapproachliesinthecostmatrixC,whichwedefineas:
+C = 1(cid:7)y1 −y2(cid:7)2. (10)
+2 T T
+ThiscostmatrixcapturesthesquaredEuclideandistancebetweentheactualvaluesofy1
+T
+andy2,notjusttheirpositionsintheuniformdistribution.Now,wecomputethesquared
+T
+2-Wassersteindistance:
+W2(α,β)= min (cid:4)π,C(cid:5)
+π∈(cid:7)(α,β)
+(cid:3)
+= π C
+ij ij
+i,j
+(cid:3)
+1 1
+= (y1−y2)2
+|T|2 2 i j
+i,j
+(cid:3)
+1
+= (y1−y2)2. (11)
+2|T|2 i j
+i,j
+Thisformulationrevealsseveralimportantpropertiesofourapproach:
+Scaleinvariance:theWassersteindistanceisinvarianttothescaleofT.AsT →∞,the
+distanceconvergesto:
+(cid:4) (cid:4)
+W2(α,β)= 1 1 1 (F −1(x)−F −1(y))2dxdy, (12)
+2 1 2
+0 0
+whereF
+−1andF −1arethequantilefunctionsofthecontinuousdistributionsapproximated
+1 2
+byy1 andy2.
+T T
+Sensitivitytovaluedifferences:unlikemethodsthatonlyconsidertheranksorposi-
+tionsofvalues,ourapproachissensitivetothemagnitudeofdifferencesbetweeny1 and
+y2values.
+Quadraticpenalization: the squared difference (y1−y2)2 means that larger discrep-
+i j
+anciesbetweeny1andy2valuesarepenalizedmoreheavilythansmallerones.
+Toillustrate,considerasimpleexamplewhereT =2,y1 =[0,1]andy2 =[0,2].The
+costmatrixwouldbe:
+(cid:5) (cid:6)
+1 0 1
+C = . (13)
+2 1 4
+AndtheWassersteindistancewouldbe:
+1 3
+W2(α,β)= (0+1+1+4)= =0.375. (14)
+2·22 8
+InthecontextofourSAFEAIevaluation,thisformulationallowsustodefine:
+
+===== PDF PAGE 9 =====
+1290 A.SPELTAANDE.RAFFINETTI
+Sustainability(Robustness):wequantifyhowmuchmodelpredictionschangeunder
+dataperturbations,capturingbothfrequencyandmagnitudeofchanges:
+W =W2(yˆ,yˆ ). (15)
+SUST perturbed
+Accuracy:wemeasurethediscrepancybetweenpredictionsandactualvalues,sensitiveto
+thesizeofpredictionerrors:
+W =W2(y,yˆ). (16)
+ACC
+Fairness: we assess how model behaviour changes across different subgroups, detecting
+bothsubtleandlargedisparities:
+W FAIR =maxW2(yˆ g ,yˆ g(cid:12) ). (17)
+g,g(cid:12)
+Explainability: we quantify the impact of removing variables on model predictions,
+capturingthemagnitudeofchangesinthepredictiondistribution:
+W EXP =W2(yˆ,yˆ −h ), (18)
+whereyˆ −h arepredictionswithvariablex h removed.Thismathematicalfoundationunder-
+scoresthepowerandflexibilityofourWassersteindistance-basedapproachinproviding
+aunified,interpretableframeworkforevaluatingkeyaspectsofAItrustworthiness.
+2.2.4. Applicationtomachinelearningmodels
+TheWassersteindistanceprovidesaversatileframeworkforevaluatingvariousaspectsof
+ML models. For Support Vector Machines (SVM), we can use the Wasserstein distance
+tomeasurethechangeinthedecisionboundaryunderperturbations,providinginsights
+intomodelrobustness.InEnsembleTrees,suchasRandomForestsorGradientBoosting
+Machines,theWassersteindistancecanquantifythediversityofpredictionsacrossindivid-
+ualtrees,offeringameasureofmodeluncertaintyandstability.ForK-NearestNeighbours
+(KNN),theWassersteindistancecanassesstheimpactofchangesinthefeaturespaceon
+the model’s predictions, providing a measure of local sensitivity. In Linear and Logistic
+Regression,wecanusetheWassersteindistancetoevaluatethechangeinpredictionsunder
+feature perturbations or across different subgroups, offering insights into model fairness
+and stability. By applying the Wasserstein distance to these diverse model types, we can
+provideaunifiedandinterpretablemetricforassessingtheirperformanceacrosstheSAFE
+dimensions,facilitatingmeaningfulcomparisonsandinformedmodelselection.
+3. Wassersteinmetricsversusalternativecompetitors
+To contextualize our Wasserstein distance-based method within the existing literature,
+we conducted, by means of simulated data, a comparative analysis with the RGB-based
+approachproposedbyBabaeietal.[14].
+3.1. Simulationconditions
+Inordertosetthesimulationstudy,wereferredtotheexperimentsAandCreportedinthe
+paperbyBabaeietal.[14].Specifically,accordingtoexperimentA,1000five-dimensional
+
+===== PDF PAGE 10 =====
+STATISTICS 1291
+Table1.CorrelationmatrixS (Source:Babaeietal.[14]).
+1
+Y X X X X
+1 2 3 4
+Y 1 0.6 0.4 0.3 0.1
+X 1 1 0.2 0.7 0.3
+X 2 1 0.05 0.1
+X 3 1 0.5
+X 4 1
+samples(Y,X ,X ,X ,X )withsamplesizeequalto100observationsweredrawnfroma
+1 2 3 4
+Normaldistributionwithameanvectorμ={150,20,72,5,200}andacorrelationmatrix
+S specifiedasinTable1.
+1
+ToreplicateexperimentC,1000samplesfromanon-Normaldistributioncharacterized
+bythesamecorrelationmatrixwithskewnessandkurtosisparametersequaltoν =3and
+κ =61werealsodrawn.
+Moreover,perturbeddataweregeneratedbyreplacinginallthefourpredictorstheval-
+ueslowerthanthe15%percentileandgreaterthanthe85%percentilewithvaluessampled
+fromuniformdistributionsU(−6,−4)andU(15,22),respectively.
+Finally,forassessingfairness,thepredictor X wasbinarisedassigninglabel‘1’tothe
+1
+valuesgreaterthanthemeanandlabel‘0’intheoppositecase.Bydoingso,variableX is
+1
+treatedasagroupvariable.
+FourdifferentMLmodelswererunondatafromexperimentsAandC:aLinearRegres-
+sion model; an Ensemble Tree model; a K-Nearest Neighbour (KNN) model; a Support
+VectorMachine(SVM)model.LinearRegressionmodelpredictsthevalueofavariableas
+afunctionofoneormoreindependentvariables.Itbelongstotheclassofmodelswhichare
+explainablebydesign.TheK-NearestNeighbour,instead,predictstheclassofadatapoint
+based on the majority class of its k closest neighbours in the feature space. In contrast,
+Ensemble Tree is a ML technique that handles non-linearities and interactions without
+needingaspecifiedregressionmodel.Itusesbootstrapaggregationofmultipleregression
+treestomitigateoverfitting,combiningpredictionsfromnumeroustreesformoreaccurate
+forecasting.Finally,theSupportVectorMachineisasupervisedlearningalgorithmused
+forclassificationthatfindstheoptimalhyperplanewhichmaximizesthemarginbetween
+differentclassesinthefeaturespace.
+Weremarkthatallthemodelswerefitonthesametrainingandtestsets,includingthe
+80%andtheremaining20%oftheobservations,respectively.
+With the aim of properly show how to assess the robustness, accuracy, explainability
+andfairnessofMLmodels,theWassersteindistancemetricswerecomputedandcompared
+withtheonesproposedbyBabaeietal.[14].
+3.2. Simulationresults
+In this subsection we investigate the contribution of the Wasserstein distance and RGB
+metricsinassessingthekeyaspectsofAIsafety.Theresultsofthemetricsareexpressedby
+thecorrespondingmeanvaluescomputedalongthe1000drawnsamples.
+Tofurthervalidatetheempiricalfindings,theJTtestisapplied(see[24]).TheJTtest
+comparesqmetricsν (withr =1,...,q).Underthenullhypothesis,thereisnodifference
+r
+amongtheexpectedvaluesoftheqmetrics.Whereas,underthealternativehypothesisof
+
+===== PDF PAGE 11 =====
+1292 A.SPELTAANDE.RAFFINETTI
+monotonicordering,theexpectedvaluesdiffer.Notethat,intermsofaccuracy,robustness
+andfairness,themodelsarerankedfromthelowestWassersteindistancevalue,onwards;
+andfromthehighestRG·value,downwards.Itfollowsthatthehypothesestobespecified
+fortheRG·metricstaketheformofH :ν =···=ν vsH :ν >···>ν ,whileforthe
+0 1 q 1 1 q
+WassersteindistancemetricsthealternativehypothesisisdefinedasH :ν <···<ν .
+1 1 q
+Explainability is assessed by interpreting the RGE and the Wasserstein distance from
+the highest value, downwards, as both the metrics move in the same direction. Indeed,
+foraspecificpredictor,ahighRGEvaluemeansthatthemodelisstronglyaffectedbyits
+deletion.ThishappensalsointhecaseoftheWassersteindistancemetric,asdroppingthe
+predictorfromthemodelimpliesthatthedistancebetweenthepredictionsfromthefull
+modelandthosefromthemodelwithoutthepredictorofinterestincreases.Thus,theJT
+testalternativehypothesisassociatedwiththeWassersteindistancemetrichastobesetas
+follows:H :ν >···>ν .
+1 1 q
+3.2.1. Accuracy
+ThepredictiveaccuracyofthemodelsisdeterminedthroughtheRGAmeasureandthe
+WassersteindistancemetricW .
+ACC
+Informulas,thetwometricsarecomputedineachsampleas:
+RGASVM(y,yˆSVM) RGAENS(y,yˆENS)
+RGAKNN(y,yˆKKN) RGALIN(y,yˆLIN)
+and
+WSVM(y,yˆSVM) WENS(y,yˆENS)
+ACC ACC
+WKKN(y,yˆKNN) WLIN (y,yˆLIN),
+ACC ACC
+wheresuperscriptsSVM,ENS,KNNandLINrefertotheSupportSupportVectorMachine,
+EnsembleTree,K-NearestNeighbour,LinearRegressionmodels;yandyˆaretheobserved
+responsevaluesandthepredictionscomputedonthetestset.
+Tables2and3reportthevaluesofthetwometrics(RGAandW ),jointlywiththe
+ACC
+rankingofthemodelsbasedontheircapabilitytoprovideaccuratepredictioninthecase
+ofnormallyandnon-normallydistributeddata.
+FromTable2,itarisesthatboththeapproachesdetectLinearRegressionmodelasthe
+firstrankedmodelandtheSVMasthemodelwhichprovidesanintermediatecontribution
+toprediction.
+ThemodelrankingsinducedbytheRGAandtheW metricsareconfirmedbythe
+ACC
+JT test (p−values<0.01), meaning that Linear Regression actually appears as the most
+accuratemodel.
+Table2.RGAandWACC metricscomputedbetweentargetdata
+andmodelpredictions(normaldata).
+Rankedmodel RGA Rankedmodel WACC
+LINEARREG 0.8297 LINEARREG 0.4278
+ENSEMBLE 0.7911 KNN 0.5067
+SVM 0.7865 SVM 0.5073
+KNN 0.7728 ENSEMBLE 0.5514
+
+===== PDF PAGE 12 =====
+STATISTICS 1293
+Table3.RGAandWACC metricscomputedbetweentargetdata
+andmodelpredictions(non-normaldata).
+Rankedmodel RGA Rankedmodel WACC
+LINEARREG 0.8263 LINEARREG 0.4429
+ENSEMBLE 0.8001 KNN 0.5261
+SVM 0.7902 ENSEMBLE 0.5517
+KNN 0.7831 SVM 0.5519
+SimilarconclusionscanbederivedfromTable3:alsointhisscenario,theRGAandthe
+W metricsdetecttheLinearRegressionasthemostaccuratemodel.TheJTtestfurther
+ACC
+validatethemodelrankingsprovidedbyboththemetrics(p−values<0.01).However,the
+findingsfromnon-normaldatashowthatbasedontheW metric,themodelcharac-
+ACC
+terized by an intermediate contribution to the predictive accuracy is the Ensemble Tree
+insteadoftheK-NearestNeighbourmodel.
+3.2.2. Sustainability
+TherobustnessdimensionisassessedineachsamplethroughtheRGRandW metrics,
+SUST
+whoseformulasarereportedbelow:
+RGRSVM(yˆ,y ˆ p SVM) RGRENS(yˆ,y ˆ p ENS)
+RGRKNN(yˆ,y ˆ p KKN) RGRLIN(yˆ,y ˆ p LIN)
+and
+WSVM(yˆ,y ˆ p SVM) WENS (yˆ,y ˆ p ENS)
+SUST SUST
+WKKN(yˆ,y ˆ p KKN) WLIN (yˆ,y ˆ p LIN),
+SUST SUST
+whereyˆarethemodelpredictionsderivedfromdatawithoutperturbationsandy ˆ parethe
+modelpredictionsderivedfromdatawithperturbations.
+ResultsonrobustnessaredisplayedinTable4(normaldata)andTable5(non-normal
+data).
+FromTables4and5,itresultsthattheRGRandW metricstakevaluesequalto1
+SUST
+and0,respectively,identifyingtheSVMmodelasperfectlyrobusttodataperturbations.
+ItisworthnotingthatthemodelrankingsinTables4and5fullyoverlap,apartfromthe
+case of the RGR metric with non-normally distributed data, where it arises that Linear
+Regression has a better performance than the Ensemble Tree and K-Nearest Neighbour
+models,asalsosupportedbytheJTtestp−values(p−values<0.01).
+Table4.RGRandWSUST metricscomputedbetweenmodelpre-
+dictionsderivedfromdatawithoutperturbationsandmodelpre-
+dictionsderivedfromdatawithperturbations(normaldata).
+Rankedmodel RGR Rankedmodel WSUST
+SVM 1 SVM 0
+ENSEMBLE 0.9440 ENSEMBLE 0.1789
+KNN 0.8773 KNN 0.2381
+LINEARREG 0.6570 LINEARREG 0.6610
+
+===== PDF PAGE 13 =====
+1294 A.SPELTAANDE.RAFFINETTI
+Table5.RGRandWSUST metricscomputedbetweenmodelpre-
+dictionsderivedfromdatawithoutperturbationsandmodelpre-
+dictionsderivedfromdatawithperturbations(non-normaldata).
+Rankedmodel RGR Rankedmodel WSUST
+SVM 1 SVM 0
+LINEARREG 0.9737 ENSEMBLE 0.1769
+ENSEMBLE 0.9618 KNN 0.2936
+KNN 0.8464 LINEARREG 0.6452
+3.2.3. Fairness
+Wemovetotheassessmentofthefairnessdimension,whosefindings,includedinTables6
+and 7, are obtained by computing in each sample the RGF and the Wasserstein distance
+metricW .Informulas:
+FAIR
+RGFS
+−
+V
+X
+M
+g
+(yˆSVM,yˆ
+−
+SV
+X
+M
+g
+) RGFE
+−
+N
+X
+S
+g
+(yˆENS,yˆ
+−
+EN
+X
+S
+g
+)
+RGFK
+−
+K
+X
+N
+g
+(yˆKNN,yˆ
+−
+KK
+X
+N
+g
+) RGFL
+−
+I
+X
+N
+g
+(yˆLIN,yˆ
+−
+LI
+X
+N
+g
+),
+and
+WS
+F
+V
+AI
+M
+R−Xg
+(yˆSVM,yˆ
+−
+SV
+X
+M
+g
+) WE
+FA
+N
+I
+S
+R−Xg
+(yˆENS,yˆ
+−
+EN
+X
+S
+g
+)
+WK
+FA
+K
+I
+N
+R−Xg
+(yˆKNN,yˆ
+−
+KK
+X
+N
+g
+) WL
+FA
+IN
+IR−Xg
+(yˆLIN,yˆ
+−
+LI
+X
+N
+g
+),
+whereyˆandyˆ −Xg (withg =1,...,G)representthepredictedvaluesofthefullmodel(fitted
+byincludingallthepredictors)andthepredictedvaluesfromthemodelfittedbydropping
+thegroupvariableX .
+g
+FromTable6,itresultsthattheRGFandW metricsidentifytheK-NearestNeigh-
+FAIR
+bourandtheSupportVectorMachinemodelsasthemostandleastfairmodels,respec-
+tively.WhileinthecaseoftheRGF,EnsembleTreeismorefairthanLinearRegression,the
+Table6.RGFandWFAIRmetricscomputedbetweenthefullmodel
+predictionsandthemodelpredictionsobtainedbydroppingthe
+binarisedX predictor(normaldata).
+1
+Rankedmodel RGF Rankedmodel WFAIR
+KKN 0.9450 KKN 0.0677
+ENSEMBLE 0.9130 LINEARREG 0.1273
+LINEARREG 0.7260 ENSEMBLE 0.1346
+SVM 0.6814 SVM 0.2154
+Table7.RGFandWFAIRmetricscomputedbetweenthefullmodel
+predictionsandthemodelpredictionsobtainedbydroppingthe
+binarisedX predictor(non-normaldata).
+1
+Rankedmodel RGF Rankedmodel WFAIR
+KKN 0.9405 KKN 0.0519
+ENSEMBLE 0.8843 ENSEMBLE 0.1447
+SVM 0.8026 SVM 0.2385
+LINEARREG 0.7771 LINEARREG 0.3149
+
+===== PDF PAGE 14 =====
+STATISTICS 1295
+twomodelsarereversedbasedontheW metric.Theseconclusionsarealsoconfirmed
+FAIR
+bytheJTtest(p−values<0.01).
+SimilarfindingsarisefromTable7:theonlydifferencewithrespecttothecaseofnor-
+mallydistributeddata,whichisinturnsupportedbytheJTtest(p−values<0.01),isthat
+theRGFandW metricsgiverisetothesamemodelrankings.
+FAIR
+3.2.4. Explainability
+Explainabilityismainlyaddressedtothedetectionoftheexplanatoryvariableresultingas
+themostpowerfulinaffectingtheresponseexplanation.Toevaluateit,theRGEandthe
+WassersteindistanceW metricsarecomputedbyresortingtothefollowingformulas:
+EXP
+RGES
+−
+V
+X
+M
+h
+(yˆSVM,yˆ
+−
+SV
+X
+M
+h
+) RGEE
+−
+N
+X
+S
+h
+(yˆENS,yˆ
+−
+EN
+X
+S
+h
+)
+RGEK
+−
+K
+X
+N
+h
+(yˆKNN,yˆ
+−
+KK
+X
+N
+h
+) RGEL
+−
+I
+X
+N
+h
+(yˆLIN,yˆ
+−
+LI
+X
+N
+h
+),
+and
+WS
+E
+V
+X
+M
+P−Xh
+(yˆSVM,yˆ
+−
+SV
+X
+M
+h
+) WE
+EX
+N
+P
+S
+−Xh
+(yˆENS,yˆ
+−
+EN
+X
+S
+h
+)
+WK
+EX
+K
+P
+N
+−Xh
+(yˆKNN,yˆ
+−
+KK
+X
+N
+h
+) WL
+E
+I
+X
+N
+P−Xh
+(yˆLIN,yˆ
+−
+LI
+X
+N
+h
+),
+where yˆ and yˆ −Xh (with h=1,...,H) represent the predicted values of the full model
+(fittedbyincludingallthepredictors)andthepredictedvaluesfromthemodelfittedby
+droppingtheh-thpredictorX .
+h
+Tables 8 and 9 display the RGE and W in the case of normally and non-normally
+EXP
+distributeddata.
+BasedonTable8,itfollowsthat,ingeneral,oneofthepredictorswhichcontributesthe
+mosttotheexplanationoftheresponseisX (bothintermsofRGEandW ).Alsothe
+1 EXP
+X predictorappearsasarelevantvariable.
+2
+Similarly,fromTable9,itresultsthatX andX arecrucialvariablesfortheexplanation
+1 2
+oftheresponse.However,notethatalsovariableX appearsasoneofthemostimportant
+4
+Table8.RGEandWEXPmetricscomputedbetweenthefullmodelpredictionsandthemodelpredictions
+obtainedbydroppingtheX hpredictor(normaldata).
+VariableX
+1
+VariableX
+2
+VariableX
+3
+VariableX
+4
+Model RGE WEXP RGE WEXP RGE WEXP RGE WEXP
+SVM 0.1057 0.0636 0.0175 0.0993 0.0446 0.0701 0.0175 0.0614
+ENSEMBLE 0.1126 0.1470 0.0691 0.1357 0.0358 0.1067 0.0422 0.1257
+KNN 0.1924 0.1826 0.1826 0.1958 0.1235 0.1761 0.1315 0.1723
+LINEARREG 0.0278 0.0465 0.0237 0.0985 0.2639 0.0383 0.0032 0.0342
+Table9.RGEandWEXPmetricscomputedbetweenthefullmodelpredictionsandthemodelpredictions
+obtainedbydroppingtheX hpredictor(non-normaldata).
+VariableX
+1
+VariableX
+2
+VariableX
+3
+VariableX
+4
+Model RGE WEXP RGE WEXP RGE WEXP RGE WEXP
+SVM 0.0969 0.0785 0.0638 0.0658 0.0111 0.0481 0.1390 0.0577
+ENSEMBLE 0.1079 0.1350 0.0772 0.1279 0.0209 0.0857 0.0229 0.0912
+KNN 0.1938 0.1738 0.1856 0.1648 0.1105 0.1252 0.0072 0.1421
+LINEARREG 0.0950 0.0537 0.0638 0.0646 0.0072 0.0112 0.1105 0.0161
+
+===== PDF PAGE 15 =====
+1296 A.SPELTAANDE.RAFFINETTI
+intermsofRGEwhenconsideringSupportVectorMachineandLinearRegressionmodels.
+Thep−values<0.01oftheJTtestfurthervalidatealltheseconclusions.
+Our analysis reveals that while both methods identify similar trends in model per-
+formance, the Wasserstein distance-based approach shows increased sensitivity to sub-
+tle differences in distribution shapes. Specifically, in terms of fairness evaluation, our
+approach provides a more granular view of the magnitude of the differences. For
+explainability, the SAFE approach defines easily interpretable percentage contributions
+for each variable, while our method offers a more nuanced view of how variable
+exclusion affects the overall prediction distribution. This suggests that the two meth-
+ods could be complementary, with SAFE providing an accessible overview and our
+approachofferingdeeperinsightsintodistributionchanges.Thesecomparisonshighlight
+the unique strengths of our Wasserstein distance-based method, particularly in captur-
+ing subtle distribution changes and giving a unified framework across all evaluation
+dimensions.
+4. Application
+Inthissectionweaimatillustratinghowourproposalworksondatareferredtothefieldof
+financialriskassessment,wheretheresponsetobepredictedisexpressedthroughabinary
+scale.
+Whileinthecontinuousscenario,theRGBandWassersteindistance-basedapproaches
+share the same inputs, i.e., the predictions derived from the model, in the classification
+frameworktheRGBmethodnecessarilyrequirestheuseofthepredictedscores,associated
+withthetruecategoryoftheresponsevariabletobepredicted.ItfollowsthattheWasser-
+steindistanceappearsasanextensionoftheRGB-basedapproach:indeed,itdirectlyallows
+theemploymentofthepredictedclassifications(expressedthroughthelabels‘0’and‘1’)
+inplaceofthepredictedscores.
+To further emphasize this point, the analysis on data is led by only focusing on the
+Wassersteindistancecomputedbymeansofthepredictedclassifications.
+4.1. Datadescription
+WerefertoasubsetofthedatasuppliedbyModefinance,aEuropeanCreditAssessment
+Institution(ECAI)thatspecializesincreditscoringforP2P(Peer-to-Peer)platformswhich
+concernwithSME(SmallandMediumEnterprises)commerciallending.
+Data report the official financial ratios derived from the balance-sheets of 3453 small
+andmediumenterprises.Specifically,thefocusisontenvariables:TotalAssets/TotalLia-
+bilities;Currentratio;Leverageratio;ROE(ReturnonEquity);Quickratio;ROI(Return
+oninvestments);Assetturnover;Debtratio;ROCE(Returnoncapital);NACE(Nomen-
+clatureofEconomicActivities)group,i.e.,thecompany’smacro-sectorofactivityspecified
+throughthreelevels:Agriculture;Industry;Services.
+Inaddition,informationaboutthestatusofthecompanyarealsoprovidedthroughthe
+variableDefault(0=active,1=defaulted).
+Anexhaustivedescriptionofsimilardatacanbefoundin[25].
+Weaimatestimatingthedefaultstatusofeachcompany,usingtheavailableexplanatory
+data.
+
+===== PDF PAGE 16 =====
+STATISTICS 1297
+For comparison purposes, we focus on the same models illustrated in the simula-
+tionstudy. Weremark that,asdealingwiththebinary classification problem,theLinear
+RegressionisnowreplacedbytheLogisticRegressionmodel.
+4.2. Results
+Wefirstexplorethesustainabilityoftheaforementionedmodels.Namely,wecompare(in
+termsofWassersteindistances),theoutputsprovidedbythemodelsagainstthoseobtained
+byperturbingtheexplanatoryvariables.
+Inparticular,werandomlyselectthe10%oftheavailabledataandweaddaGaussian
+noisetoeachofthem,withmeanequaltothestandarddeviationoftherespectivevariable.
+Werepeatthisprocess100timesand,ateachiteration,wecomputetheWasserteindistance
+(W ).
+SUST
+Figure1showsthehistogramsoftheWassersteindistancesofeachmodeltomeasure
+therobustnessagainstdatamanipulation.
+In particular, from Figure 1, it is worth to notice that while the predictions of the K-
+Nearest Neighbour model do not show any deviation when data are perturbed, those of
+the Support Vector Machine report the lowest distance as much of the predictions are
+concentratedinthesmallvaluesbinofthedistribution.
+To compare the accuracy of each model we simply compute the Wasserstein (W )
+ACC
+distancebetweenthemodel’spredictionandthetargetvariable.
+Figure2reportsthemodelaccuracyintermsoftheWassersteindistanceofthepredic-
+tionsfromthetargetvariable.AsFigure2suggestsapartfromtheEnsembleTree,allthe
+modelsperformequallywell,withthelogisticpredictionshavingthelowestdistancefrom
+thetargetdata.
+Figure1.DistributionofWassersteindistances.ThefigurereportsthehistogramsoftheWasserstein
+distancesofeachMLmodelasproxyoftherobustnessofthemodelagainstdataperturbation.
+
+===== PDF PAGE 17 =====
+1298 A.SPELTAANDE.RAFFINETTI
+Figure2.Wasserstein distances between model predictions and target data. The figure reports the
+WassersteindistancesbetweenmodeloutputofeachMLmodelandthetargetvariable,asproxyofthe
+accuracyofthemodel.
+Table10.Wassersteindistancesbetweenmodelpredictionswith
+andwithoutcompanieswithaparticularNACEcode.
+Agriculture Industry Servicesector
+SVM 0 0 0
+ENSEMBLE 2.9092×105 13084 2.424×105
+KNN 0 0 0
+LOGISTIC 7157.8 1088 4775.3
+Note: The table reports the Wasserstein distances between model outputs
+beforeandafterhavingdroppedcompaniesthatbelongtoaspecificNACE
+category.
+Toinspectthemodels’behaviourintermsoffairness,weexploitthecategoricalvariable
+whichdescribestheNACEcategoryeachcompanybelongsto.Basically,wecompareeach
+modeloutcomebeforeandafterhavingdroppedaspecificNACEcategory.
+Table10showsthefairnessofeachmodelandtheWassersteindistance(W )ofits
+FAIR
+outcomesbeforeandafterhavingdroppedcompaniesthatbelongtoaspecificNACEcat-
+egory(wherec = 1,2,3,with‘1’,‘2’,and‘3’correspondingtoAgriculture,Industryand
+Servicessectors).1
+As Table 10 suggests, Support Vector Machine and K-Nearest Neighbour models are
+notaffectedbytheexclusionofcompaniesofanycategory,whiletheEnsembleTreeand
+the Logistic Regression, beside being affected, display the lowest distance in the case of
+suppressionofcompaniesbelongingtotheNACE-2category.
+Finally,weareinterestedincomparingmodelswhileaccountingforexplainability.That
+is,weaskourselveswhethersomevariablesaremoreimportantthanotherinformingthe
+modelsoutcomes.Inordertocopewiththisissue,wecomputetheWassersteindistance
+(W )ofthepredictionsgeneratedbyeachmodelwithandwithoutaspecificvariable.
+EXP
+
+===== PDF PAGE 18 =====
+STATISTICS 1299
+Table11reportstheresultsconcerningtheexplainabilityofeachmodel,computedasthe
+Wassersteindistancesbetweenmodeloutputsbeforeandafterhavingdroppedaspecific
+explanatoryvariable.
+Asforthefairness,weobservethattheSupportVectorMachineandK-NearestNeigh-
+bourmodelsarenotaffectedbytheexclusionofexplanatoryvariables,whiletheEnsemble
+Tree and a Logistic Regression suffer when variables are removed. In particular, the
+EnsembleTreeisthemostaffectedmodel,displayingthehighestdistance.
+4.3. Concludingcomments
+This analysis provides an in-depth analysis of various ML models in terms of their
+robustness,accuracy,fairness,andexplainability.
+TheK-NearestNeighbourmodeldemonstratedthehighestrobustnesstodatapertur-
+bations, with minimal deviations observed. The Support Vector Machine also showed
+considerablerobustness,withitspredictionsconcentratedinthelowervaluesofthedis-
+tance distribution. In terms of accuracy, the Logistic Regression model outperformed
+others.ApartfromtheEnsembleTree,whichshowedhigherdistances,allmodelsgener-
+allyperformedwell.TheSupportVectorMachineandK-NearestNeighbourmodelswere
+unaffectedbytheexclusionofanycategory.Thesameholdsfortheexplainabilitywhere
+thesemodelsdonotheavilydependonanysingleexplanatoryvariable.
+Overall, the findings highlight that while the Support Vector Machine and K-Nearest
+Neighbourmodelsexcelinrobustnessandfairness,theLogisticRegressionmodelstands
+out in terms of accuracy. The Ensemble Tree, despite its sensitivity, provides valuable
+insights but requires careful handling due to its dependence on specific variables. This
+comprehensive evaluation underscores the importance of selecting appropriate models
+basedonthespecificrequirementsofrobustness,accuracy,fairness,andexplainabilityin
+AIapplications.
+5. Discussion
+The prioritization of robustness, accuracy, fairness, and explainability in AI systems is
+highlycontext-dependentandshouldbecarefullyconsideredforeachapplication.Inhigh-
+stakesdecision-makingscenarios,suchascreditriskassessmentforlargecorporateloans,
+explainabilitymighttakeprecedence.Here,theabilitytoprovideclear,understandablerea-
+sonsforamodel’spredictionsiscrucialforregulatorycomplianceandbuildingtrustwith
+stakeholders.Conversely,inhigh-frequencytradingapplications,accuracyandrobustness
+mightbeprioritized.
+The rapid pace of transactions and the potential for significant financial losses make
+it essential that models perform consistently and accurately under varying market con-
+ditions. However, this doesn’t negate the importance of explainability in these contexts,
+particularlyforregulatoryoversightandriskmanagement.
+For consumer-facing applications like personal loan approvals or insurance pricing,
+fairness often becomes a top priority. Ensuring that models don’t discriminate based on
+protected characteristics is not only an ethical imperative but often a legal requirement.
+However, this must be balanced with accuracy to ensure the financial viability of these
+products.
+
+===== PDF PAGE 19 =====
+1300
+A.SPELTAANDE.RAFFINETTI
+Table11.Wassersteindistancesbetweenmodelpredictionswithandwithoutaparticularexplanatoryvariable.
+ROE Leverage Asset CurrentR. QuickR. ROI Turnover DebtR. ROCE NACE
+SVM 0 0 0 0 0 0 0 0 0 0
+ENSEMBLE 331,482 331,482 331,482 331,482 331,482 331,482 332,878 331,482 331,482 331,482
+KNN 0 0 0 0 0 0 0 0 0 0
+LOGISTIC 12,772 9773 11,793 11,768 12,111 12,284 12,101 11,021 12,521 10,561
+Note:ThetablereportstheWassersteindistancesbetweenmodeloutputsbeforeandafterhavingdroppedaspecificexplanatoryvariable.
+
+===== PDF PAGE 20 =====
+STATISTICS 1301
+Robustness becomes particularly crucial in applications subject to adversarial attacks
+orsignificantdatashifts.Forinstance,infrauddetectionsystems,theabilitytomaintain
+performanceinthefaceofnew,previouslyunseenfraudpatternsisvital.
+It’simportanttonotethatthesedimensionsareofteninterrelated.Forexample,improv-
+ingexplainabilitycanoftenleadtoinsightsthatenhancefairnessandrobustness.Similarly,
+amorerobustmodelmightnaturallyachievebetteraccuracyacrossdiversescenarios.
+Ultimately,theidealbalanceofthesedimensionsshouldbedeterminedthroughcareful
+considerationofthespecificusecases,regulatoryrequirements,ethicalimplicationsand
+potentialrisksassociatedwithmodelfailuresineachdimension.
+InevaluatingourmethodagainsttheSAFEapproachproposedbyBabaeietal.[14],it
+becomesevidentthatbothmethodologiesofferdistinctadvantagesindifferentcontexts.
+OuruseoftheWassersteindistanceprovidesamoregeometricallynuancedevaluationof
+MachineLearningmodelsbyaccountingfordifferencesinbothlocationandscaleofdistri-
+butions.Thisfeatureisparticularlybeneficialinfinancialapplications,wheretheabilityto
+detectshiftsineconomicconditionsiscritical.TheflexibilityoftheWassersteindistance
+also allows for comparisons across various types of models and data formats, including
+categoricalandcontinuousvariables.Moreover,therobustnessofthismetricensuressta-
+bility in the face of small perturbations or outliers, which is crucial when dealing with
+high-stakes financial data. As a unified framework for evaluating the SAFE principles (
+sustainability,accuracy,fairness,andexplainability),ourapproachoffersacomprehensive
+toolforassessingAImodelperformance.
+However, the computational complexity of our method, especially in large datasets,
+can be a drawback. The calculations required for the Wasserstein distance are more
+intensive than those in Babaei et al.’s RGB, which may limit its practical application in
+time-sensitive or resource-constrained environments. Furthermore, while our approach
+providesdeeperinsights,itsrelianceonOptimalTransporttheorymightmaketheresults
+less immediately interpretable for practitioners who are unfamiliar with the underlying
+mathematics.
+In contrast, Babaei et al.’s RGB method offers a more streamlined and computation-
+ally efficient set of metrics for evaluating AI models according to the SAFE principles.
+TheRGBapproachisgroundedintheuseofconcordancecurves,whicharesimplerand
+easier to interpret, making it accessible to a broader audience. The internal consistency
+of their metrics ensures that all four key dimensions of AI safety are evaluated within
+a unified statistical framework, and its efficiency makes it especially suitable for large-
+scale applications or real-time monitoring. However, the simplicity of the RGB method
+comesatthecostofdepth.Indeed,ifontheonehandtheapproachproposedbyBabaei
+et al. [14] is excellent for general assessments, on the other hand it may overlook more
+subtledistributionalchanges,particularlyincomplexfinancialscenarioswheretheshifts
+in prediction patterns are not easily captured by rank-based methods alone. Addition-
+ally, the RGB approach may be less effective in handling highly irregular or complex
+distributions, where the geometric precision of the Wasserstein distance becomes more
+valuable.
+These considerations suggest that while our Wasserstein distance-based approach is
+morerobustandadaptableincomplex,high-riskenvironments,theRGBmethodoffersa
+morepracticalsolutionforsimpler,routineapplications,orwhencomputationalresources
+arelimited.
+
+===== PDF PAGE 21 =====
+1302 A.SPELTAANDE.RAFFINETTI
+Inaddition,theWassersteindistancemetricsallowtodealwiththeclassificationframe-
+worknotonlybymeansofthepredictedscores,asdonebytheRGB-basedmethod,but
+alsobymeansofthepredictedclassificationsasinputs.
+In conclusion, by integrating insights from both methodologies, we offer a more
+comprehensiveunderstandingofmodelbehaviouracrossvariousappliedcontexts.
+Note
+1. Wecomparethemodels’predictionsonlyforthecompaniesthatremainafterexcludingthose
+belongingtoaspecificNACEcategory.
+Acknowledgments
+WealsothanktheEditorandthetwoanonymousreviewersfortheirstimulatingcommentsand
+remarkswhichallowedtoimprovethepaper.
+Disclosurestatement
+Nopotentialconflictofinterestwasreportedbytheauthor(s).
+Funding
+ThisworkhasbeenpartiallysupportedbytheItalianMinistryofUniversityandResearch(MUR)
+throughtheproject‘Ageo-localizeddataframeworkformanagingclimaterisksanddesigningpoli-
+cies to support sustainable investments’ (No. 20229CWYXC) within the PRIN 2022 programme,
+fundedbytheEuropeanUnion–NextGenerationEU.
+References
+[1] European Commission. Proposal for a regulation of the european parliament and of the
+councillayingdownharmonisedrulesonartificialintelligence(artificialintelligenceact)and
+amendingcertainunionlegislativeact.2021.
+[2] BrackeP,DattaA,JungC,etal.Machinelearningexplainabilityinfinance:anapplicationto
+defaultriskanalysis.BankofEngland;2019.(StaffWorkingPaperNo.816).
+[3] Bussmann N, Giudici P, Marinelli D, et al. Explainable machine learning in credit risk
+management.ComputEcon.2021;57(1):203–216.doi:10.1007/s10614-020-10042-0
+[4] LundbergSM,LeeS.Aunifiedapproachtointerpretingmodelpredictions.In:Advancesin
+neuralinformationprocessingsystems.Vol.30.1953.p.34768-4777.
+[5] ShapleyL.AValueforn-PersonGames.In:KuhnH,TuckerA,editors.Contributionstothe
+theoryofgamesII,Princeton:PrincetonUniversityPress;1953.p.307–317.
+[6] LorenzM.Methodsofmeasuringtheconcentrationwealth.PublAmStatAssoc.1905;9(70):
+209–219.doi:10.1080/15225437.1905.10503443
+[7] Giudici P, Raffinetti E. Shapley-Lorenz eXplainable artificial intelligence. Expert Syst Appl.
+2021;167:114104.doi:10.1016/j.eswa.2020.114104
+[8] Koshevoy G, Mosler K. The Lorenz zonoid of a multivariate distribution. J Am Stat Assoc.
+1996;91(434):873–882.doi:10.1080/01621459.1996.10476955
+[9] RaffinettiE.Arankgraduationaccuracymeasuretomitigateartificialintelligencerisks.Qual
+Quant.2023;57(2):131–150.doi:10.1007/s11135-023-01613-y
+[10] GiudiciP,RaffinettiE.RGA:aunifiedmeasureofpredictiveaccuracy.AdvDataAnalClassif.
+2024.
+[11] GiudiciP,RaffinettiE.SAFEartificialintelligenceinfinance.FinanceResLett.2023;56:104088.
+doi:10.1016/j.frl.2023.104088
+
+===== PDF PAGE 22 =====
+STATISTICS 1303
+[12] GiudiciP.Safemachinelearning.Statistics.2024;58(3):473–477.
+[13] Wu L. The application of Bayesian inference under SAFE model. Statistics. 2024;1–21.
+doi:10.1080/02331888.2024.2391402
+[14] Babaei G, Giudici P, Raffinetti E. A rank graduation box for SAFE AI. Expert Syst Appl.
+2025;259:125239.doi:10.1016/j.eswa.2024.125239
+[15] De Giuli M, Spelta A. Wasserstein barycenter regression for estimating the joint dynam-
+ics of renewable and fossil fuel energy indices. Comput Manage Sci. 2023;20(1):1–17.
+doi:10.1007/s10287-023-00436-4
+[16] SpeltaA,PecoraN.Wassersteinbarycenterforlinkpredictionintemporalnetworks.JRStat
+SocSerA:StatSoc.2024;18(1):178–206.
+[17] KantorovichL.Onthetransferofmasses(inRussian).DoklAkadNauk.1942;37:227–229.
+[18] VillaniC,etal.Optimaltransport:oldandnew.Vol.338.Springer;2009.
+[19] PeyréG,CuturiM.Computationaloptimaltransport:withapplicationstodatascience.Found
+TrendsMachLearn.2019;11(5-6):355–607.doi:10.1561/2200000073
+[20] KuhnHW.TheHungarianmethodfortheassignmentproblem.NavalResLogistQ.1955;2(1-
+2):83–97.doi:10.1002/nav.v2:1/2
+[21] PeleO,WermanM.Fastandrobustearthmover’sdistances.In:2009IEEE12thinternational
+conferenceoncomputervision.Kyoto,Japan:IEEE;2009.p.460–467.
+[22] Rubner Y, Guibas LJ, Tomasi C. The Earth mover’s distance, multi-dimensional scaling,
+andcolor-basedimageretrieval.In:ProceedingsoftheARPAimageunderstandingworkshop.
+Vol.661.NewOrleans,LA.1997.p.668.
+[23] CuturiM.Sinkhorndistances:lightspeedcomputationofoptimaltransport.AdvNeuralInf
+ProcessSyst.2013;26.
+[24] Jonckheere A. A distribution-free k-sample. Tests against ordered alternatives. Biometrika.
+1954;41(1-2):133–145.doi:10.1093/biomet/41.1-2.133
+[25] Giudici P, Hadji-Misheva B, Spelta A. Network based credit risk models. Qual Eng.
+2020;32(2):199–211.doi:10.1080/08982112.2019.1655159

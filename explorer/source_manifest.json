@@ -1,0 +1,142 @@
+[
+  {
+    "key": "performance",
+    "path": "outputs/tables/performance_evaluation/holdout_metrics.csv",
+    "sha256": "fb48e395d0ba80dcff05bbd8a29107b66239999387a9ccc98300651e197a2292"
+  },
+  {
+    "key": "performanceCI",
+    "path": "outputs/tables/performance_evaluation/holdout_confidence_intervals.csv",
+    "sha256": "20e40ef12cb74f0ce7bcf5e1edd5624a0aff9968e83b57ac8623f1f487a971a9"
+  },
+  {
+    "key": "cv",
+    "path": "outputs/tables/performance_evaluation/cv_summary_metrics.csv",
+    "sha256": "082c297f1a7e3cf1eddd35176599f265c616dec175c946cc1e2a73c2af1a3479"
+  },
+  {
+    "key": "calibration",
+    "path": "outputs/tables/performance_evaluation/calibration_bins.csv",
+    "sha256": "283ef5104f3c1a1cd646c30c08703cb4e7dde90c40cb789a32389202e59ee93c"
+  },
+  {
+    "key": "calibrationSummary",
+    "path": "outputs/tables/performance_evaluation/calibration_summary.csv",
+    "sha256": "48b8e04e60a0dd1db9a2fc613d9bc2a74927ef95134ccb3a0248893aa9544bac"
+  },
+  {
+    "key": "fairness",
+    "path": "outputs/tables/fairness_evaluation/group_metrics_threshold_050.csv",
+    "sha256": "63351c7a0388a34aa9db9fee131210e2730ea85b44a4576a2cccccafa64a1a00"
+  },
+  {
+    "key": "fairnessCI",
+    "path": "outputs/tables/fairness_evaluation/fairness_confidence_intervals.csv",
+    "sha256": "d422417c3f5df75b3344f519f13be9fd77766d88e75e6bc3f4204135dbaddef0"
+  },
+  {
+    "key": "fairnessComparison",
+    "path": "outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv",
+    "sha256": "71e0a57464e7d6784a04e1b90d77370405d939ccdba64ec51e49a6ba184714ce"
+  },
+  {
+    "key": "rga",
+    "path": "outputs/tables/fairness_evaluation/safe_rga_results.csv",
+    "sha256": "f0725d1efc17ecb142fa8ce149198748f2a7052527d7c3300d9194a83be5d8de"
+  },
+  {
+    "key": "shapLR",
+    "path": "outputs/tables/explainability_evaluation/global_shap_importance_logistic.csv",
+    "sha256": "dbb2e05c9b3957fb705ec621e47dfd03b3c4851ed98d7db6f56fdcb26c57f119"
+  },
+  {
+    "key": "shapGBM",
+    "path": "outputs/tables/explainability_evaluation/global_shap_importance_gradient_boosting.csv",
+    "sha256": "7fe62c1a2a54ed7c5b9dfd1f64b97af239d2798f17f0727f56985f3395b28e14"
+  },
+  {
+    "key": "shapSummary",
+    "path": "outputs/tables/explainability_evaluation/model_summary.csv",
+    "sha256": "e409329e8989aafc23c2a2beb13afb56d4c37e7a260153cfd1a770d4fec58f8d"
+  },
+  {
+    "key": "localCases",
+    "path": "outputs/tables/explainability_evaluation/local_case_selection.csv",
+    "sha256": "9ea64337fc213d3651ff633478b0552f8db26fa87873c10cd0f1955eac97f04f"
+  },
+  {
+    "key": "localSHAP",
+    "path": "outputs/tables/explainability_evaluation/local_shap_contributions.csv",
+    "sha256": "4848534e286f816c7b3001a3bf0595bb29a427c415fe62ce15fd2c67c406abc0"
+  },
+  {
+    "key": "groupedRGE",
+    "path": "outputs/tables/explainability_evaluation/safe_grouped_rge.csv",
+    "sha256": "a4f2b5872f242d18a10ee47bff09a1bb6180247156476d8b528c397d29e2fc2e"
+  },
+  {
+    "key": "sexSHAP",
+    "path": "outputs/tables/explainability_evaluation/sex_shap_comparison.csv",
+    "sha256": "c0e41d3ba0658f18c8e466b8cddcde63159234882179b26d65066aee5fbbfe60"
+  },
+  {
+    "key": "robustnessCI",
+    "path": "outputs/tables/robustness_evaluation/sampling_intervals.csv",
+    "sha256": "0150061df23427e25903a2b2a2e0386063e0064a0e5017a3c5ec09ec3d51a087"
+  },
+  {
+    "key": "rgr",
+    "path": "outputs/tables/robustness_evaluation/authentic_rgr.csv",
+    "sha256": "daebffe7b2f8c9bb2a5e941b23a3ca04c96b45c75e530a9e33d45dafef74a88d"
+  },
+  {
+    "key": "robustness",
+    "path": "outputs/tables/robustness_evaluation/diagnostic_summary.csv",
+    "sha256": "4ff03338b83a751ef1fded4d57bb8d7d869e1e703d189c1e1f25bcb9c5e522ba"
+  },
+  {
+    "key": "exposure",
+    "path": "outputs/tables/robustness_evaluation/exposure_summary.csv",
+    "sha256": "d82e6e4f3a63dce1e80da131b4048f3be0917fb724397951afe60d805b44a89f"
+  },
+  {
+    "key": "paired",
+    "path": "outputs/tables/robustness_evaluation/paired_summary.csv",
+    "sha256": "97b152a7c70ea1468c557e6ef8a0f438bade1dd67fdfaf1d7809423ea81dcac9"
+  },
+  {
+    "key": "changed",
+    "path": "outputs/tables/robustness_evaluation/changed_record_movement.csv",
+    "sha256": "cf69d15e04e62f52576f77ab6c3c0ddfed0a887f70eaff79d8692eeaa245e4c0"
+  },
+  {
+    "key": "protocol",
+    "path": "outputs/tables/robustness_evaluation/protocol.json",
+    "sha256": "f46212d17fbc6d49b3ffe84ce0f1e3da147804bf999a46d6d12cd137dbdb78da"
+  },
+  {
+    "key": "performanceVerification",
+    "path": "outputs/tables/performance_evaluation/verification.json",
+    "sha256": "3f1d3b32187c0d2f954ab81bc198a64e6ae02388a664e855f82fcc4b1550a74f"
+  },
+  {
+    "key": "fairnessVerification",
+    "path": "outputs/tables/fairness_evaluation/verification.json",
+    "sha256": "70747d2b1624a12d5e7a3b554b9b683f9b42b2c7700bd68df041e87c4803ac9f"
+  },
+  {
+    "key": "explainabilityVerification",
+    "path": "outputs/tables/explainability_evaluation/verification.json",
+    "sha256": "52eca08464f5cfb9c378b9bacc9c3a548f9dbc79036bfa28b8c1e0016a3e121a"
+  },
+  {
+    "key": "robustnessVerification",
+    "path": "outputs/tables/robustness_evaluation/verification.json",
+    "sha256": "26277d730b2ce2d6dd541777ce927189501d646e25736c8c98ee80c3dcc1fa06"
+  },
+  {
+    "key": "order",
+    "path": "outputs/tables/robustness_evaluation/row_order_diagnostic.csv",
+    "sha256": "a6fc0fd6947a979a23311471444ce834e3414bc7b4bb266f6000d03f8dbc1f4f"
+  }
+]

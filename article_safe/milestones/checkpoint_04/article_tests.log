@@ -1,0 +1,59 @@
+Conditional group bootstrap: 32/40
+LR backward step 0: 3 predictors; {'action': 'remove', 'feature': 'LIMIT_BAL', 'p_value': 1.0, 'status': 'complete', 'reason': 'largest_removal_p_at_or_above_alpha'}
+LR backward step 1: 2 predictors; {'action': 'stop', 'feature': None, 'status': 'complete', 'reason': 'all_removal_p_below_alpha'}
+test_bootstrap_zero_model_difference_and_original_group_gap (test_assessments.AssessmentTests.test_bootstrap_zero_model_difference_and_original_group_gap) ... ok
+test_fairness_signed_effects_and_missing_predictors_remain_visible (test_assessments.AssessmentTests.test_fairness_signed_effects_and_missing_predictors_remain_visible) ... ok
+test_fixed_weighted_auc_matches_expanded_records_with_ties (test_assessments.AssessmentTests.test_fixed_weighted_auc_matches_expanded_records_with_ties) ... ok
+test_outcome_regression_has_explicit_target_and_covariance_variants (test_assessments.AssessmentTests.test_outcome_regression_has_explicit_target_and_covariance_variants) ... ok
+test_grouping_requires_all_original_inputs (test_foundation.DevelopmentDataTests.test_grouping_requires_all_original_inputs) ... ok
+test_groups_crossing_sex_and_outcome_stay_whole (test_foundation.DevelopmentDataTests.test_groups_crossing_sex_and_outcome_stay_whole) ... ok
+test_input_and_returned_views_cannot_mutate_partition (test_foundation.DevelopmentDataTests.test_input_and_returned_views_cannot_mutate_partition) ... ok
+test_no_holdout_interface_or_role (test_foundation.DevelopmentDataTests.test_no_holdout_interface_or_role) ... ok
+test_order_alignment_and_outcome_mismatch_are_rejected (test_foundation.DevelopmentDataTests.test_order_alignment_and_outcome_mismatch_are_rejected) ... ok
+test_same_seed_and_metadata_sex_changes_preserve_assignments (test_foundation.DevelopmentDataTests.test_same_seed_and_metadata_sex_changes_preserve_assignments) ... ok
+test_protocol_records_estimator_and_package_scope_distinction (test_foundation.ProtocolAndRunTests.test_protocol_records_estimator_and_package_scope_distinction) ... ok
+test_run_destinations_cannot_escape_or_replace_existing_work (test_foundation.ProtocolAndRunTests.test_run_destinations_cannot_escape_or_replace_existing_work) ... ok
+test_alpha_boundary_and_invalid_tests (test_foundation.SelectionTests.test_alpha_boundary_and_invalid_tests) ... ok
+test_backward_alpha_boundary_and_retaining_significant_terms (test_foundation.SelectionTests.test_backward_alpha_boundary_and_retaining_significant_terms) ... ok
+test_backward_largest_p_and_deterministic_tie_order (test_foundation.SelectionTests.test_backward_largest_p_and_deterministic_tie_order) ... ok
+test_first_stop_cannot_be_undone_by_later_recovery (test_foundation.SelectionTests.test_first_stop_cannot_be_undone_by_later_recovery) ... ok
+test_invalid_forward_path_does_not_return_an_accepted_model (test_foundation.SelectionTests.test_invalid_forward_path_does_not_return_an_accepted_model) ... ok
+test_invalid_removal_is_not_silently_ignored (test_foundation.SelectionTests.test_invalid_removal_is_not_silently_ignored) ... ok
+test_significant_deterioration_cannot_be_accepted (test_foundation.SelectionTests.test_significant_deterioration_cannot_be_accepted) ... ok
+test_different_scores_with_same_placements_are_identical (test_inference.DeLongTests.test_different_scores_with_same_placements_are_identical) ... ok
+test_identical_predictions_return_identical_result (test_inference.DeLongTests.test_identical_predictions_return_identical_result) ... ok
+test_invalid_inputs_are_rejected (test_inference.DeLongTests.test_invalid_inputs_are_rejected) ... ok
+test_midrank_tie_values (test_inference.DeLongTests.test_midrank_tie_values) ... ok
+test_missing_class_is_visible (test_inference.DeLongTests.test_missing_class_is_visible) ... ok
+test_model_swap_reverses_difference_and_preserves_p (test_inference.DeLongTests.test_model_swap_reverses_difference_and_preserves_p) ... ok
+test_nonzero_difference_with_zero_variance_has_no_p (test_inference.DeLongTests.test_nonzero_difference_with_zero_variance_has_no_p) ... ok
+test_row_permutation_preserves_the_paired_result (test_inference.DeLongTests.test_row_permutation_preserves_the_paired_result) ... ok
+test_single_positive_retains_auc_but_not_covariance_test (test_inference.DeLongTests.test_single_positive_retains_auc_but_not_covariance_test) ... ok
+test_ties_and_paired_covariance_match_direct_placements (test_inference.DeLongTests.test_ties_and_paired_covariance_match_direct_placements) ... ok
+test_constant_identical_ks_and_empty_group (test_inference.FairnessAndSamplingTests.test_constant_identical_ks_and_empty_group) ... ok
+test_equal_and_concentrated_gini_with_two_groups (test_inference.FairnessAndSamplingTests.test_equal_and_concentrated_gini_with_two_groups) ... ok
+test_gini_zero_and_negative_domain_handling (test_inference.FairnessAndSamplingTests.test_gini_zero_and_negative_domain_handling) ... ok
+test_ks_uses_full_distributions_even_when_means_match (test_inference.FairnessAndSamplingTests.test_ks_uses_full_distributions_even_when_means_match) ... ok
+test_opposite_signs_remain_visible_despite_equal_magnitudes (test_inference.FairnessAndSamplingTests.test_opposite_signs_remain_visible_despite_equal_magnitudes) ... ok
+test_whole_group_weights_match_expanded_draws (test_inference.FairnessAndSamplingTests.test_whole_group_weights_match_expanded_draws) ... ok
+test_holm_known_family (test_inference.LikelihoodAndMultiplicityTests.test_holm_known_family) ... ok
+test_known_two_binomial_group_likelihood_statistic (test_inference.LikelihoodAndMultiplicityTests.test_known_two_binomial_group_likelihood_statistic) ... ok
+test_missing_hypothesis_remains_missing_but_counts_in_family (test_inference.LikelihoodAndMultiplicityTests.test_missing_hypothesis_remains_missing_but_counts_in_family) ... ok
+test_penalty_rows_zero_df_and_bad_fit_are_not_ordinary_tests (test_inference.LikelihoodAndMultiplicityTests.test_penalty_rows_zero_df_and_bad_fit_are_not_ordinary_tests) ... ok
+test_whole_categorical_block_uses_rank_difference (test_inference.LikelihoodAndMultiplicityTests.test_whole_categorical_block_uses_rank_difference) ... ok
+test_lr_and_gbm_shap_additivity_and_grouping (test_models.ModelAndExplanationTests.test_lr_and_gbm_shap_additivity_and_grouping) ... ok
+test_metadata_never_enters_prediction (test_models.ModelAndExplanationTests.test_metadata_never_enters_prediction) ... ok
+test_outcome_regression_rejects_margins_and_reports_rank_deficiency (test_models.ModelAndExplanationTests.test_outcome_regression_rejects_margins_and_reports_rank_deficiency) ... ok
+test_rank_deficiency_and_separation_are_not_silently_regularized (test_models.ModelAndExplanationTests.test_rank_deficiency_and_separation_are_not_silently_regularized) ... ok
+test_reduced_gbm_is_a_new_smaller_fit (test_models.ModelAndExplanationTests.test_reduced_gbm_is_a_new_smaller_fit) ... ok
+test_reference_encoding_and_unknown_category_are_explicit (test_models.ModelAndExplanationTests.test_reference_encoding_and_unknown_category_are_explicit) ... C:\Users\Andrei\Desktop\credit-risk-fairness\.venv\Lib\site-packages\sklearn\preprocessing\_encoders.py:262: UserWarning: Found unknown categories in columns [0] during transform. These unknown categories will be encoded as all zeros
+  warnings.warn(msg, UserWarning)
+ok
+test_saved_model_reload_predictions (test_models.ModelAndExplanationTests.test_saved_model_reload_predictions) ... ok
+test_unpenalized_models_converge_and_nested_categorical_df (test_models.ModelAndExplanationTests.test_unpenalized_models_converge_and_nested_categorical_df) ... ok
+test_identifiable_path_removes_a_whole_unnecessary_predictor (test_paths.BackwardPathIntegrationTest.test_identifiable_path_removes_a_whole_unnecessary_predictor) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 1.455s
+
+OK

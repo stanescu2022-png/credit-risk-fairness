@@ -1,0 +1,38 @@
+{
+  "client_date": "2026-10-10",
+  "verified_at_utc": "2026-10-10T12:34:00.132125+00:00",
+  "milestone": 1,
+  "total_work_packages": 4,
+  "scope_estimate_percent": 25,
+  "status": "waiting_for_user_review",
+  "isolated_tests_passed": 36,
+  "existing_tests_passed": 30,
+  "saved_evaluation_hash_checks_passed": 410,
+  "preexisting_files_inventoried": 369,
+  "unexpected_preexisting_changes": [],
+  "authorized_preexisting_changes": [
+    "PROJECT_CONTEXT.md"
+  ],
+  "prepare_run": "article_safe/runs/checkpoint_01_2026-10-10",
+  "prepare_source_input_output_hashes_match": true,
+  "documentation_links_valid": true,
+  "article_credit_models_fitted": 0,
+  "article_model_selection_executed": false,
+  "article_holdout_performance_evaluated": false,
+  "remaining_work": [
+    "model adapters and F/V selection paths",
+    "final refits and SAFE profiles",
+    "reports and full-run verification"
+  ],
+  "new_source_hashes": {
+    "article_safe/data.py": "23a669f097090eb719ffad5bf479f77e0c7c0fd5109d2b811e0adf2d61d3f3b4",
+    "article_safe/inference.py": "3a86da1ba957481426c7f9ee614ecffd6b3a35e1580fa513561d31d6a0e91d14",
+    "article_safe/protocol.py": "67ffbb527f120f8b762e4eb631f166498114edea82c7bd3165a2f7d24ad80af0",
+    "article_safe/run.py": "6eadf114bdb88c83a17bc4772ef8c6b6b1afec15a64bc69c0127749cb1698af6",
+    "article_safe/selection.py": "7eebb54dd6f87ec50c8cc02636685e5aacde2827497ff8c16190475b6a204dab",
+    "article_safe/__init__.py": "7cf3e080588bbe32162a75b7d56c3dfc8c9c2a6524b04c91b31e92caa44ee339",
+    "article_safe/tests/test_foundation.py": "bc722ac78b7a6032d7128342f824ed520561e489f2a9cba205271a8297aed8c6",
+    "article_safe/tests/test_inference.py": "1c3c63f3e977454a34f42dd255128e071b98ba4fc20e8ae3bca2607c54540dbc",
+    "article_safe/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

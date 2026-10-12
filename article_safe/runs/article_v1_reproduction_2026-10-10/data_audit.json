@@ -1,0 +1,45 @@
+{
+  "fitting": {
+    "records": 19203,
+    "predictor_groups": 19147,
+    "defaults": 4253
+  },
+  "selection": {
+    "records": 4801,
+    "predictor_groups": 4783,
+    "defaults": 1063
+  },
+  "training_records": 24004,
+  "training_predictor_groups": 23930,
+  "crossing_fitting_selection_groups": 0,
+  "predictors": [
+    "LIMIT_BAL",
+    "EDUCATION",
+    "MARRIAGE",
+    "AGE",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6"
+  ],
+  "holdout_outcomes_used_for_selection": false,
+  "holdout_records": 5996,
+  "crossing_original_train_holdout_groups": 0,
+  "stage": "prepare",
+  "credit_models_fitted": 0,
+  "credit_predictions_generated": 0
+}

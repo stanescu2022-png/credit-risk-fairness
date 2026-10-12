@@ -1,0 +1,3 @@
+model,holdout_rows,original_features,transformed_features,max_margin_reconstruction_error,predictions_unchanged
+logistic,5996,22,85,5.3290705182007514e-15,True
+gradient_boosting,5996,22,85,8.0442349087439524e-08,True

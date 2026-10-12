@@ -1,0 +1,1581 @@
+===== PDF PAGE 1 =====
+Expert Systems With Applications 259 (2025) 125239
+ContentslistsavailableatScienceDirect
+ExpertSystemsWithApplications
+journalhomepage:www.elsevier.com/locate/eswa
+ARankGraduationBoxforSAFEAI
+GolnooshBabaei,PaoloGiudici,EmanuelaRaffinetti∗
+DepartmentofEconomicsandManagement,UniversityofPavia,ViaSanFelicealMonastero5,27100,Pavia,Italy
+A R T I C L E I N F O A B S T R A C T
+Dataset link:https://github.com/GolnooshBab ThegrowthofArtificialIntelligenceapplicationsrequirestodevelopriskmanagementmodelsthatcanbalance
+aei/safeaipackage opportunitieswithrisks.
+WecontributetothedevelopmentofArtificialIntelligenceriskmodelsproposingaRankGraduationBox
+Keywords:
+(RGB),asetofintegratedstatisticalmetricsthatcanmeasurethe‘‘Sustainability’’,‘‘Accuracy’’,‘‘Fairness’’and
+Concordance
+‘‘Explainability’’ofanyArtificialIntelligenceapplication.
+Lorenzcurve
+Machinelearning Ourmetricsareconsistentwitheachother,astheyareallderivedfromacommonunderlyingstatistical
+Ranks methodology:theLorenzcurve.
+Riskmanagement Thevalidityofthemetricsisassessedbymeansoftheirpracticalapplicationtobothsimulatedandreal
+data.Theresultsfromthecomparisonofalternativemachinelearningmodelstosimulateddataarealigned
+with the generating models, in general indicating linear regression models as the most accurate, regression
+tree models as the most fair, Random Forest models as the most robust; and leading to model explanations
+similartothetrueonesfromthegeneratingmodel.
+The outcomes from the application of Random Forest models to real data show that the proposed RGB
+metrics are more interpretable and more consistent with the expectations, with respect to standard metrics
+suchasAUC,RMSEandShapleyvalues.TheevidencealsoshowsthattheRGBmetricsareverygeneraland
+canbeappliedtoanymachinelearningmethod,regardlessoftheunderlyingdataandmodel.
+1. Backgroundandmotivation literatureanditisusuallyconductedintermsofthedifferencebetween
+theaccuracyoftwodifferentpredictions,obtainedrespectivelyunder
+Machine Learning (ML) methods are boosting the applications of normal and perturbed input data. Accuracy can be measured by the
+Artificial Intelligence (AI) in all human activities. Differently from AUCorbytheRMSE(see,e.g.Nairetal.,2022).
+ordinary computer software and applications, AI not only converts
+The measurement of Accuracy is well known in the statistics and
+inputsintooutputs,butcanalsochangethesurroundingenvironment,
+machine learning: the Root Mean Square Error (RMSE) is routinely
+with the risk of creating harms for individuals, organisations and the
+employed for a continuous response; the Area Under the ROC curve
+environment.
+(AUCorAUROC)istypicallyemployedforabinaryresponse(see,e.g.
+This is the reason why policy makers, regulators and standard
+Gneiting, 2011; Hand & Till, 2001). More recently, Raffinetti (2023)
+bodiesaroundtheworldareissuingregulationsandrecommendations
+that AI developers, deployers and users should follow to manage the and Giudici and Raffinetti (2024) have introduced a new accuracy
+risksarisingfromtheadoptionofAImethods. measurethatcanbeappliedtobothtypesofresponse,generalisingthe
+AI risk management requires to develop a consistent set of AI AUCtothecontinuouscase.
+risk metrics that can be employed to monitor the compliance of AI Fairness is one of the most important requirements for AI ap-
+applications.Suchasetofmetricsisnotcommonpractice,yet. plications. Unfairness indicates that the output leads to an unequal
+Recently, Giudici and Raffinetti (2023) have summarised the re- treatment of different population groups, by gender, age and nation-
+quirementsintheexistingregulationsandrecommendationsintofour ality, for example. There are several recent research papers that deal
+mainmeasurable‘‘S.A.F.E.’’keyprinciples:‘‘S’’forsustainability;‘‘A’’
+with the measurement of fairness. Most of them are based on parity
+foraccuracy;‘‘F’’forfairness;‘‘E’’forexplainability.
+measures,whichcalculatethedifferenceinaccuracyoftheAIoutput
+Sustainability refers to the robustness of an AI system to extreme
+obtained separately on different population groups. Accuracy can be
+events,suchascyberattacksorenvironmentalissues.Themeasurement
+measuredemployingAUCorRMSE(see,e.g.Quyetal.,2022).
+of robustness is well known in the statistics and machine learning
+∗ Correspondingauthor.
+E-mailaddresses: golnoosh.babaei@unipv.it(G.Babaei),paolo.giudici@unipv.it(P.Giudici),emanuela.raffinetti@unipv.it(E.Raffinetti).
+https://doi.org/10.1016/j.eswa.2024.125239
+Received20March2024;Receivedinrevisedform8August2024;Accepted26August2024
+Available online 29 August 2024
+0957-4174/© 2024 The Author(s). Published by Elsevier Ltd. This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/ ).
+
+===== PDF PAGE 2 =====
+G.Babaeietal.
+Table1
+LiteraturereviewonthekeyprinciplesforAIriskmanagemen
+AIprinciple Mainreference
+Nairetal.(2022)
+Sustainability
+Giudicietal.(2024)
+GiudiciandRaffinetti(2023)
+Gneiting(2011),HandandTill(2001)
+Accuracy
+GiudiciandRaffinetti(2024),Raffinetti(20
+Giudicietal.(2024)
+GiudiciandRaffinetti(2023)
+Fairness Quyetal.(2022)
+Giudicietal.(2024)
+GiudiciandRaffinetti(2023)
+Shapley(1953)
+LundbergandLee(2017)
+Explainability
+GiudiciandRaffinetti(2021)
+Giudicietal.(2024)
+GiudiciandRaffinetti(2023)
+Explainabilityisarequirementthathasemergedwiththedevelop-
+mentofhighlyaccuratemachinelearningmodelswhichhave,however,
+somanyparametersthatmakedifficulttoreconducttheoutputtothe
+inputswhichdetermineit.Themeasurementofexplainabilityrequires
+toattachtoeachinputvariableanimportanceweightwhichexpresses
+itsinfluenceonthefinaloutput.Amodelisexplainableifthereexists
+at least one input variable which significantly impacts the output. In
+white-box models, such as regression models, such weights are func-
+tionsoftheestimatedparameters.Instead,toexplainblack-boxmodels,
+such as Random Forests and deep learning, further post-processing
+of the output is necessary. The most employed techniques are based
+on Shapley values and Shapley–Lorenz values (see, e.g. Giudici &
+Raffinetti,2021;Lundberg&Lee,2017;Shapley,1953).
+In a recent paper, Giudici, Centurelli, and Turchetta (2024) sug-
+gestedtomeasuretheS.A.F.E.principlesusingstateoftheartmetrics,
+such as AUC, RMSE and Shapley values which are not, however,
+consistentwitheachother.Amoreconsistentmeasurementmodelwas
+putforwardbyGiudiciandRaffinetti(2023),whoreplacedtraditional
+metrics with new ones based on Lorenz Zonoids, the multivariate
+extension of the Gini coefficient. While mathematically sound, their
+approach suffers from computational complexity, especially when a
+largenumberofexplanatoryvariablesisconsidered.
+Whatdescribedsofarcanbesummarisedinaconcisepictureofthe
+stateoftheartforAIriskmeasurement,whichisreportedinTable1.
+TheaimofthispaperistoproposeasetofmetricsforAIriskmea-
+surementwhichareconsistentwitheachother,asthemetricsproposed
+byGiudiciandRaffinetti(2023),butalsosimpletounderstandandto
+implement,asthetraditionalmetricsproposedinGiudicietal.(2024).
+Tothispurpose,weextendtheapproachbyGiudiciandRaffinetti
+(2023)intwomainways:(a)weemploytheConcordancecurveand,
+specifically, the Rank Graduation Accuracy measure (RGA) to extend
+the AUC metric to the ordinal and continuous cases; (b) in analogy
+withtheconstructionoftheRGA,weproposea‘‘RankGraduationBox’’
+(RGB), a set of consistent metrics, all based on the notion of concor-
+dancebetweentwocumulativedistributions.Doingso,weobtainaset
+ofmetricswhichare:easytointerpret,similarlytothewellknownArea
+UndertheROCCurve(AUC);easytoimplementandcompute,usinga
+similar logic; generalisable to other AI compliance principles, which
+may emerge from future recommendations, as long as they require a
+comparisonbetweentwocumulativedistributions.
+WeremarkthatbothGiudicietal.(2024)andGiudiciandRaffinetti
+(2023)considerfinancialapplications.Financeprovidesverychalleng-
+ingmachinelearningproblemsandishighlyregulated,thusjustifying
+thedevelopmentofAIriskmetrics.However,theAIriskmetricsthat
+we are going to present can be similarly applied to other important
+2
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+nt.
+Maincontribution
+ChangeinRMSEorAUCwith
+respecttoextremedata
+Regularisationandmodelselection
+ConcentrationofShapley–Lorenzvalues
+RMSE(continuouscase);AUC
+(binarycase)
+023) RGA(binaryandcontinuouscase)
+AUC,RMSE
+LorenzZonoids
+Paritymeasures(differenceinRMSE
+orAUC)
+VariabilityofShapleyvalues
+VariabilityofShapley–Lorenzvalues
+Shapley-valuesingametheory
+Shapley-valuesinmachinelearning
+Shapley–Lorenzvalues:normalisedShapley
+values
+Shapleyvalues
+Shapley–Lorenzvalues
+fieldsofapplicationofAI,suchasmedicine,automotive,roboticsand
+faulttolerance.
+Therestofthepaperisorganisedasfollows: Section2introduces
+the theoretical framework of our proposal and the description of the
+proposed RGB metrics; Section 3 presents the application of our pro-
+posal, respectively to a simulated and a real dataset, to assess the
+validityoftheproposal;Section4concludesthepaperwithsomefinal
+remarksandcomments.
+2. Methodology
+Inthissection,wedescribeourproposal.Specifically,inSection2.1,
+weshowthefunctioningoftheLorenz,dualLorenzandConcordance
+curves, which represent the common mathematical background of all
+our proposed metrics; in Section 2.2 we define the proposed Rank
+Graduation Box metrics to assess ‘‘Sustainability’’, ‘‘Accuracy’’, ‘‘Fair-
+ness’’ and ‘‘Explainability’’ of AI applications. Finally, in Section 2.3,
+we introduce a set of statistical tests that can be employed to assess
+thestatisticalsignificanceoftheproposedmetrics.
+2.1. Theoreticalbackground
+ThebasicingredientsofourproposalaretheLorenzcurveandthe
+relatednotionsofdualLorenzcurveandConcordancecurve,whichare
+statistical tools widely used to summarise the distribution of income
+andwealth(see,e.g.Lorenz,1905).
+Formally,let𝑌∗and𝑌∗∗beanytwostatisticaldistributions(contin-
+uous,ordinalorbinary),eachdefinedonasetof𝑛datapoints,which
+wearegoingtocompare.
+The𝑌∗valuescanbeorderedinanon-decreasingsensetobuildthe
+Lorenz curve 𝐿 𝑌∗. For 𝑖 = 1,…,𝑛, the Lorenz curve is defined by the
+pairs:(𝑖∕𝑛,∑𝑖 𝑦∗∕(𝑛𝑦̄∗)),where𝑟∗indicatesthenon-decreasingranks
+𝑗=1 𝑟∗ 𝑗
+𝑗
+of𝑌∗ and𝑦̄∗ indicatesthemeanof𝑌∗.
+The same 𝑌∗ values can be ordered in a non-increasing sense to
+buildthedualLorenzcurve,𝐿′ .For𝑖=1,…,𝑛,thedualLorenzcurve
+isdefinedbythepairs:(𝑖∕𝑛,∑𝑌
+𝑖
+∗
+𝑦∗ ∕(𝑛𝑦̄∗)),where𝑟∗ indicates
+𝑗=1 𝑟∗ 𝑛+1−𝑗
+thenon-increasingranksof𝑌∗.
+𝑛+1−𝑗
+The Concordance curve C can be derived ordering the 𝑌∗ values
+withrespecttotheranksofthe𝑌∗∗ values.Let𝑟∗∗,for𝑖=1,…,𝑛,de-
+𝑖
+notethenon-decreasingranksof𝑌∗∗.For𝑖=1,…,𝑛,theConcordance
+curveisdefinedbythepairs:(𝑖∕𝑛,∑𝑖 𝑦∗ ∕(𝑛𝑦̄∗)).
+𝑗=1 𝑟∗∗
+𝑗
+ToillustratetheconstructionoftheLorenz,dualLorenzandConcor-
+dancecurves,wenowintroduceatoyexample.Let𝑌∗and𝑌∗∗betwo
+vectorsof𝑛=10points,with𝑌∗={12,27,48,3,34,11,0,46,75,28}and
+2
+
+===== PDF PAGE 3 =====
+G.Babaeietal.
+Table2
+ConstructionoftheLorenzcurve.
+ID 𝑦∗ 𝑦∗ ∑𝑖 𝑦∗ 𝑦-axisvalues (∑𝑖 𝑗=1𝑦∗ 𝑟∗𝑗 ) 𝑥-axisvalues ( 𝑖 )
+𝑖 𝑟∗ 𝑖 𝑗=1 𝑟∗ 𝑗 𝑛𝑦̄∗ 𝑛
+1 12 0 0 0 0.1
+2 27 3 3 0.01 0.2
+3 48 11 14 0.05 0.3
+4 3 12 26 0.09 0.4
+5 34 27 53 0.19 0.5
+6 11 28 81 0.29 0.6
+7 0 34 115 0.40 0.7
+8 46 46 161 0.57 0.8
+9 75 48 209 0.74 0.9
+10 28 75 284 1 1
+Table3
+ConstructionofthedualLorenzcurve.
+ID 𝑦∗ 𝑦∗ ∑𝑖 𝑦∗ 𝑦-axisvalues (∑𝑖 𝑗=1𝑦∗ 𝑟∗𝑛+1−𝑗 ) 𝑥-axisvalues ( 𝑖 )
+𝑖 𝑟∗ 𝑛+1−𝑗 𝑗=1 𝑟∗ 𝑛+1−𝑗 𝑛𝑦̄∗ 𝑛
+1 12 75 75 0.26 0.1
+2 27 48 123 0.43 0.2
+3 48 46 169 0.60 0.3
+4 3 34 203 0.71 0.4
+5 34 28 231 0.81 0.5
+6 11 27 258 0.91 0.6
+7 0 12 270 0.95 0.7
+8 46 11 281 0.99 0.8
+9 75 3 284 1 0.9
+10 28 0 284 1 1
+Table4
+ConstructionoftheConcordancecurveC..
+ID 𝑦∗ 𝑦∗ ∑𝑖 𝑦∗ 𝑦-axisvalues (∑𝑖 𝑗=1𝑦∗ 𝑟∗𝑗∗ ) 𝑥-axisvalues ( 𝑖 )
+𝑖 𝑟∗ 𝑗 ∗ 𝑗=1 𝑟∗ 𝑗 ∗ 𝑛𝑦̄∗ 𝑛
+1 12 27 27 0.10 0.1
+2 27 12 39 0.14 0.2
+3 48 48 87 0.31 0.3
+4 3 34 121 0.43 0.4
+5 34 3 124 0.44 0.5
+6 11 11 135 0.48 0.6
+7 0 46 181 0.64 0.7
+8 46 0 181 0.64 0.8
+9 75 75 256 0.90 0.9
+10 28 28 284 1 1
+𝑌∗∗={15,12,18,24,21,27,33,30,36,39}.Itfollowsthatthemeanvalue
+of𝑌∗,𝑦̄∗,isequalto28.4.The𝑥-axisand𝑦-axisvaluesoftheLorenz
+curvearereportedinTable2.Thecurveisthenobtainedjoining(𝑛+1)
+points:the(0,0)pointwithallpointswhosecoordinatesarespecified
+inTable2.
+The 𝑥-axis values of the dual Lorenz curve are the same as those
+oftheLorenzcurve,whereasthe𝑦-axisvaluesareobtainedcumulating
+the𝑌∗valuesinthereverseorder.Theresultingcoordinatepairsofthe
+dualLorenzcurvearereportedinTable3,andthedualLorenzcurveis
+thenobtainedjoiningthe(0,0)pointwithalltheotherpointsinTable3.
+FortheConcordancecurve,the𝑥-axisvaluesareasbefore,whereas
+the𝑦-axisareobtainedcumulatingthe𝑌∗valuesaccordingtotheranks
+of𝑌∗∗.BotharereportedinTable4.TheConcordancecurveconnects
+the(0,0)pointwithalltheotherpointsinTable4.
+Having clarified the calculation of the coordinates of the Lorenz,
+dual Lorenz and Concordance curves with a toy example, we now
+representtheminfourdistinctstylisedscenarios,inFig.1.
+ReadingFig.1,fromthetopleftdiagramandclockwise,itfollows
+that: [a] when 𝑟∗∗ = 𝑟∗, for all 𝑖 = 1,…,𝑛, the Concordance curve C
+𝑖 𝑖
+coincides with the Lorenz curve (full concordance); [b] when 𝑟∗∗ =
+𝑖
+𝑟∗ ,forall𝑖=1,…,𝑛,theConcordancecurveCcoincideswiththe
+𝑛+1−𝑖
+dualLorenzcurve(fulldiscordance);[c]when𝑟∗∗areallequaltoeach
+𝑖
+other, for all 𝑖 = 1,…,𝑛, the Concordance curve C overlaps with the
+3
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+45-degreeline(noassociation)meaningthat,asallthe𝑌∗∗ valuesare
+tied, the 𝑌∗ values have to be replaced by their mean value 𝑦̄∗ (see
+Ferrari & Raffinetti, 2015); [d] in general, the distance between the
+ConcordancecurveCandtheLorenzcurvemeasureshowtheranksof
+𝑌∗∗ differfromtheranksof𝑌∗,intermsoftherankedvalues.
+Fig. 1 shows that the Concordance curve C is always between the
+𝐿 𝑌∗ Lorenzcurveandthe𝐿′ 𝑌∗ dualLorenzcurve.
+We can leverage this observation building a summary measure of
+thedistancebetweentheConcordancecurveandthetwoLorenzcurves,
+whichwillbethekernelofallourRankGraduationBoxriskmetrics.
+WecandividetheareabetweentheConcordancecurveCandthedual
+Lorenzcurvebyitsmaximumvalue,correspondingtotheareabetween
+the Lorenz and dual Lorenz curves. Such a normalised summary will
+benamed‘‘RankGraduation’’(RG⋅)measure.Moreformally,theRank
+Graduationmeasureisdefinedas:
+{ }
+∑𝑛 1 (∑𝑖 𝑦∗ − ∑𝑖 𝑦∗ )
+𝑖=1 𝑛𝑦̄∗ 𝑗=1 𝑟∗ 𝑗=1 𝑟∗∗
+𝑅𝐺⋅= { 𝑛+1−𝑗 𝑗 }
+∑𝑛 1 (∑𝑖 𝑦∗ − ∑𝑖 𝑦∗)
+𝑖=1 𝑛𝑦̄∗ 𝑗=1 𝑟∗ 𝑗=1 𝑟∗
+𝑛+1−𝑗 𝑗
+∑𝑛 𝑖𝑦∗ − ∑𝑛 𝑖𝑦∗
+𝑖=1 𝑟∗∗ 𝑖=1 𝑟∗
+= 𝑖 𝑛+1−𝑖, (1)
+∑𝑛 𝑖𝑦∗ − ∑𝑛 𝑖𝑦∗
+𝑖=1 𝑟∗ 𝑖=1 𝑟∗
+𝑖 𝑛+1−𝑖
+where, for any 𝑖 = 1,…,𝑛: 𝑟∗ are the non-decreasing ranks of the 𝑦∗
+𝑖 𝑖
+values;𝑟∗∗arethenon-decreasingranksofthe𝑦∗∗values;𝑟∗ arethe
+𝑖 𝑖 𝑛+1−𝑖
+non-increasingranksofthe𝑦∗ values;𝑦̄∗ isthemeanofthe𝑦∗ values.
+𝑖 𝑖
+In summary, in this subsection we have shown how to extend the
+mathematicalframeworkunderlyingtheLorenzcurvetoobtainaRank
+Graduation measure, which will be the common basis of the Rank
+GraduationBoxthatisgoingtobedescribedinthenextsubsection.
+2.2. RankGraduationBoxmetrics
+Inthissection,wewilldescribehowtoemploytheRankGraduation
+measure to derive AI risk metrics for ‘‘Sustainability’’, ‘‘Accuracy’’,
+‘‘Fairness’’and‘‘Explainability’’.Weremarkthatthederivationisrather
+general, and other metrics can be developed, once specified from
+regulatory viewpoint, using the same logic, and put in a comprehen-
+sive ‘‘Rank Graduation Box’’ aimed at assessing the overall risk of AI
+applications.
+Wefirstconsider‘‘Accuracy’’.Accuracyrequiresthattheoutputof
+anAIapplicationis‘‘close’’totheobserved(orexpected)output.
+Given a target variable 𝑌 and a set of 𝐾 predictors, a machine
+learning model can be applied to obtain predictions, 𝑌̂. The RGA
+measure can then be derived from RG⋅ in Eq. (1) letting 𝑌∗ = 𝑌 and
+𝑌∗∗=𝑌̂.
+We can then interpret Fig. 1 in terms of accuracy, once 𝑌∗ is
+replaced by 𝑌 and 𝑌∗∗ by 𝑌̂. The best scenario [a] occurs when the
+predicted ranks of the response variable 𝑌 are equal to the observed
+ranks,withtheConcordancecurveCperfectlyoverlappingtheLorenz
+curve 𝐿 (top left graph); the worst scenario [b] occurs when the
+𝑌
+predicted ranks of the response variable are equal to the reversed
+observed ranks, with the Concordance curve C perfectly overlapping
+the dual Lorenz curve 𝐿′ (top right graph); the no association [c]
+𝑌
+scenario is achieved for a model that produces random predictions,
+leadingtoaConcordancecurveCoverlappingthe45degree-line(bot-
+tom left graph); in the general scenario [d] (bottom right graph), the
+ConcordancecurveCliesintheareabetweenthe𝑌 responsevariable
+Lorenzcurve,𝐿 ,anditsdual,𝐿′.
+𝑌 𝑌
+It can be shown that 0 ≤ RGA ≤ 1, with RGA = 1 for a perfectly
+concordantmodel(𝐶≡𝐿 );RGA=0foraperfectlydiscordantmodel
+𝑌
+(𝐶 ≡ 𝐿′); RGA = 0.5 for random predictions (C coincides with the
+𝑌
+45-degreeline).
+WeremarkthattheRGAmetricwasoriginallyintroducedbyRaf-
+finetti (2023) to measure accuracy, independently of the nature of
+the response variable. Indeed, when the response is binary, the RGA
+3
+
+===== PDF PAGE 4 =====
+G.Babaeietal.
+Fig.1. The𝐿 𝑌∗ and𝐿′ 𝑌∗ Lorenzcurves,theConcordancecurveCandthe45-degreeline
+associationscenario;[𝑑]anintermediatescenario.Notethat𝑝(onthe𝑥-axis)and𝑓(𝑝)(o
+curves.
+measurecoincideswiththeAUC(see,e.g.Giudici&Raffinetti,2024).
+Itcanhoweverbecalculated,inthesamemanner,alsoforordinaland
+continuousresponses.Intheremainingpartofthissubsectionweshow
+howthereasoningbehindtheRGAcanbeextendedtoothermetrics,
+leadingtoaunifiedframeworktoassessthecomplianceandriskofAI,
+basedontheRG⋅metric.
+We now consider ‘‘Sustainability’’. Sustainability is related to the
+robustness of AI applications. The output of AI may be affected by
+extremedata,eitherinternalorgeneratedbycyberattacks,whichcan
+distorttheinputsofanAIapplicationand,consequently,itsoutput.
+Themeasurementofrobustnessisusuallyconductedintermsofan
+appropriatedistancebetweenthemodelpredictionsandthoseobtained
+under(intentionalornonintentional)dataperturbations.
+The distance provided by the RG⋅ metric can be quite useful in
+this context, as it is based on a distance between ranks which is, by
+definition, more robust to outliers and extreme data than distances
+basedontheactualvalues,suchastheRootMeanSquareError.
+WeproposetomeasuretherobustnessofAIapplicationsbymeans
+ofa‘‘RankGraduationRobustness’’measure,denotedwithRGR,which
+can be obtained setting in Eq. (1) 𝑌∗ = 𝑌̂ and 𝑌∗∗ = 𝑌̂𝑝, with 𝑌̂ and
+𝑌̂𝑝thepredictedvaluesobtainedusingthenon-perturbeddataandthe
+predictedvaluesobtainedusingperturbeddata,respectively.
+We can then interpret Fig. 1 in terms of robustness, once 𝑌∗ is
+replacedby𝑌∗=𝑌̂ and𝑌∗∗ by𝑌∗∗=𝑌̂𝑝.
+FromFig.1,notethatthecaseofmaximumrobustness[a]occurs
+when the ranks of the response predicted values 𝑌̂ correspond to the
+ranksofthepredictedvaluesobtainedusingtheperturbeddata,with
+the Concordance curve C perfectly overlapping the Lorenz curve 𝐿 𝑌̂;
+theworstcase[b]occurswhentheranksofthe𝑌̂ responsepredicted
+values are in inverse correspondence with the ranks of the predicted
+valuesobtainedusingtheperturbeddata,withtheConcordancecurve
+CperfectlyoverlappingthedualLorenzcurve𝐿′;the[c]caseoccurs
+𝑌̂
+4
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+einthecaseof:[𝑎]afullconcordancescenario;[𝑏]afulldiscordancescenario;[𝑐]ano
+onthe𝑦-axis)arethecumulativevaluesofthe𝑥and𝑦coordinatesofthe𝐿 𝑌∗,𝐿′
+𝑌∗
+andC
+when the Concordance curve C overlaps the 45-degree implying that
+perturbationsontheinputdataleadtorandompredictions;thegeneral
+case[d]occurswhentheConcordancecurveCliesintheareabetween
+the𝑌̂ Lorenzcurve,𝐿 𝑌̂,anditsdual,𝐿′
+𝑌̂
+.
+OnecanprovethatRGRtakesvaluesinthecloserange[0,1].RGR
+=1forafullyrobustmodel(𝐶 ≡𝐿 𝑌̂);RGR=0forafullyperturbed
+model (𝐶 ≡ 𝐿′); RGR = 0.5 if the perturbations lead to a random
+𝑌̂
+model.
+Wenowconsiderthemeasurementof‘‘Explainability’’.
+The standard metrics for explainability are Shapley values and
+theirvariants,suchasShapley–Lorenzvalues.Botharecomputationally
+intensiveandtheircalculation,whenalargeamountofinputvariables
+isinvolved,maybecomeinfeasible.
+In this paper, we propose to overcome this drawback adapting
+Eq. (1) to the measurement of explainability, leading to a ‘‘Rank
+GraduationExplainability’’(RGE)metric.Moreprecisely,welet𝑌∗ =
+𝑌̂ and 𝑌∗∗ = 𝑌̂(−𝑋𝑘), where 𝑌̂ are the predicted values from a full
+model (which includes all 𝐾 predictors) and 𝑌̂(−𝑋𝑘) are the predicted
+valuesfromareducedmodel(whichexcludesthe𝑘-thpredictorunder
+evaluation).
+We remark that the stronger is the effect of a variable 𝑋 on
+𝑘
+explaining𝑌,thelargeristhedivergencebetweentheranksofthefull
+modelpredictedvaluesandthoseassociatedwiththereducedmodel.
+Thus,forinterpretationalpurpose,oncelet𝑌∗ =𝑌̂ and𝑌∗∗ =𝑌̂(−𝑋𝑘),
+wewilldefineRGEasRGE=1−RG⋅.
+Interpreting Fig. 1 in terms of explainability, note that the case
+ofminimumexplainability[a]occurswhentheranksoftheresponse
+predictedvalues𝑌̂ correspondtotheranksofthe𝑌̂−𝑋𝑘predictedvalues
+(obtained by fitting the model without the 𝑘-th predictor), with the
+Concordance curve C perfectly overlapping the Lorenz curve 𝐿 𝑌̂ (left
+graph);thecaseofmaximumexplainability[b]occurswhentheranks
+of the 𝑌̂ response predicted values is in inverse correspondence with
+4
+
+===== PDF PAGE 5 =====
+G.Babaeietal.
+theranksofthe𝑌̂(−𝑋𝑘) predictedvalues(obtainedbyfittingthemodel
+on the data without the 𝑘-th predictor), with the Concordance curve
+C perfectly overlapping the dual Lorenz curve 𝐿′; the case [c] arises
+𝑌̂
+when the Concordance curve C is equivalent to the 45-degree line
+meaning that the 𝑌̂−𝑋𝑘 predicted values are random predictions; the
+general case [d] occurs when the Concordance curve C lies in the
+a
+th
+re
+e
+a
+pr
+b
+e
+e
+v
+tw
+io
+e
+u
+e
+s
+n
+co
+th
+n
+e
+sid
+𝑌̂
+era
+L
+t
+o
+i
+r
+o
+e
+n
+n
+s
+z
+, i
+c
+t
+u
+h
+rv
+o
+e
+ld
+,
+s
+𝐿
+t
+𝑌
+h
+̂,
+at
+an
+0
+d
+≤
+it
+R
+s
+G
+d
+E
+ua
+≤
+l,
+1
+𝐿
+.
+′
+𝑌̂
+S
+.
+pe
+B
+c
+a
+i
+s
+f
+e
+ic
+d
+al
+o
+ly
+n
+:
+𝑅𝐺𝐸 = 1 if the 𝑘-th predictor provides the maximum explanation
+(𝐶 ≡ 𝐿′); 𝑅𝐺𝐸 = 0 if the 𝑘-th predictor does not contribute to the
+explanat
+𝑌̂
+ionoftheresponse(𝐶≡𝐿 𝑌̂);𝑅𝐺𝐸=0.5ifthemodelwithout
+the𝑘-thpredictorcorrespondstotherandommodel(Ccoincideswith
+the45-degreeline).
+Wefinallyconsiderthemeasurementof‘‘Fairness’’.
+Fairness istypically measuredby paritymeasures, which compare
+theAIoutputsobtainedseparatelyondifferentpopulationgroups.This
+group based comparison is unconditional on the values of the other
+input variables, and it is not useful to assess, besides unfairness, its
+reasons.Furthermore,itmayleadtoparadoxes:theoutputmaybefair
+marginally, but not conditionally on a control variable. For example,
+acreditscoremaybefairwithrespecttothegenderoftheborrower
+overall,butnotconditionallyonthelevelofincomeoftheborrower.
+Weproposetoovercomethedifficultiesofparitymeasuresadapting
+formula (1) to the fairness context, leading to the ‘‘Rank Graduation
+Fairness’’(RGF)metric.
+Moreprecisely,givenaset𝐺 ofgroupvariables,convertedinto𝐺
+binary variables, to calculate RGF we let 𝑌∗ = 𝑌̂ and 𝑌∗∗ = 𝑌̂(−𝑋𝑔),
+where𝑌̂ arethepredictedvaluesobtainedwithafullmodel(including
+all the 𝐺 group variables as predictors); and 𝑌̂(−𝑋𝑔) are the predicted
+values obtained with a reduced model (that excludes the 𝑔-th group
+binaryvariableunderevaluation).
+We can now interpret Fig. 1 in terms of the RGF measure. The
+maximum fairness scenario [a] arises when the ranks of the response
+predicted values 𝑌̂ correspond to the ranks of the 𝑌̂(−𝑋𝑔) predicted
+values(obtainedbyfittingthemodelwithoutthe𝑔-thgroupvariable),
+withtheConcordancecurveCperfectlyoverlappingtheLorenzcurve
+𝐿 𝑌̂ (leftgraph);themaximumunfairnesscondition[b]ariseswhenthe
+ranksofthe𝑌̂ responsepredictedvaluesareininversecorrespondence
+with the ranks of the 𝑌̂(−𝑋𝑔) predicted values (obtained by fitting the
+modelondatawithoutthe𝑔-thgroupvariable),withtheConcordance
+curve C perfectly overlapping the dual Lorenz curve 𝐿′; in the case
+𝑌̂
+[c], the Concordance curve C coincides with the 45-degree line, indi-
+catingthatthe𝑌̂(−𝑋𝑔)predictedvalueswithoutthe𝑔-thgroupvariable
+correspond to a random model; in the intermediate scenario [d], the
+ConcordancecurveCliesintheareabetweenthe𝑌̂ Lorenzcurve,𝐿 𝑌̂
+and its dual, 𝐿′. It can be shown that 0 ≤ RGF ≤ 1. More precisely:
+𝑌̂
+𝑅𝐺𝐹 =1(𝐶≡𝐿 𝑌̂)inthecaseofmaximumfairness;𝑅𝐺𝐹 =0(𝐶≡𝐿′
+𝑌̂
+)
+inthecaseofmaximumunfairness.𝑅𝐺𝐹 =0.5ifthemodelwithoutthe
+𝑔-thgroupvariablecorrespondstotherandommodel.
+Forthesakeofclarity,thetoyexampleintroducedinSection2.1is
+furtherexploitedintheAppendixsectiontoshowhowtheRGA,RGR,
+RGEandRGFcanbepracticallycomputed.
+In summary, in this subsection we have shown how to adapt the
+Rank Graduation measure, illustrated in the previous subsection, to
+measure different compliance aspects of AI: Accuracy, by means of
+RGA;Sustainability,bymeansofRGR;Explainability,bymeansofRGE;
+andfairness,bymeansofRGF.TheapplicationofthemetricstoanAI
+applicationcanassessitscomplianceandrisks.
+2.3. Statisticaltests
+The introduced 𝑅𝐺⋅ metric can be complemented with statistical
+tests that can indicate whether the found degree of sustainability,
+accuracy,fairnessorexplainabilityissignificantlyhighornot,taking
+intoaccountthesamplingvariability.
+5
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+To this aim, we now derive two statistical tests based on the RG⋅
+metric.ThefirsttestcanbeappliedtoRGAandRGR.Forbothcases,
+RG⋅canbeexpressedintermsofthecovarianceoperatorasfollows:
+𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗))
+1 𝑟(𝑌∗∗) 1
+𝑅𝐺⋅= + , (2)
+2 𝑐𝑜𝑣(𝑌∗,𝐹(𝑌∗)) 2
+where 𝑌∗ represents the 𝑌∗ variable re-ordered according to the
+𝑟(𝑌∗∗)
+ranksof𝑌∗∗ and𝐹 isthecumulativecontinuousdistributionfunction
+of𝑌∗.
+ItfollowsthattheRG⋅isalinearfunctionoftheratio:
+𝜓(𝑌∗,𝑌∗∗)=𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗))∕𝑐𝑜𝑣(𝑌∗,𝐹(𝑌∗)). (3)
+𝑟(𝑌∗∗)
+Werecallthat𝑌∗ and𝑌∗∗ havetwodifferentroles:forRGA,they
+represent the target variable 𝑌 to be predicted (i.e., 𝑌∗ = 𝑌) and
+the predicted values 𝑌̂ (i.e., 𝑌̂ = 𝑌∗∗); for RGR, they represent the
+predictedvalues𝑌̂,providedbythemodelfittedonnon-perturbeddata
+(i.e., 𝑌∗ = 𝑌̂), and the predicted values 𝑌̂𝑝, derived from the same
+modelfittedonperturbeddata(i.e.,𝑌∗∗=𝑌̂𝑝).
+Giventwoalternativemodels(𝑀𝑜𝑑 and𝑀𝑜𝑑 ),thestatisticsin(3)
+1 2
+canbeusedtotestthefollowinghypotheses:
+𝐻 ∶𝜓(𝑌∗ ,𝑌∗∗ )=𝜓(𝑌∗ ,𝑌∗∗ ) vs
+0 𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+(4)
+𝐻 ∶𝜓(𝑌∗ ,𝑌∗∗ )≠𝜓(𝑌∗ ,𝑌∗∗ ),
+1 𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+where
+𝜓(𝑌∗ ,𝑌∗∗ )=𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗ ))∕𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗ ))
+𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑟(𝑌
+𝑀
+∗∗
+𝑜𝑑1
+) 𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑1
+and
+𝜓(𝑌∗ ,𝑌∗∗ )=𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗ ))∕𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗ ))
+𝑀𝑜𝑑2 𝑀𝑜𝑑2 𝑟(𝑌
+𝑀
+∗∗
+𝑜𝑑2
+) 𝑀𝑜𝑑2 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+are functions that derive from the application of (3), respectively to
+𝑅𝐺⋅ and𝑅𝐺⋅ .
+𝑀𝑜𝑑1 𝑀𝑜𝑑2
+Note that the estimator of 𝜓(𝑌∗ ,𝑌∗∗ ) can be expressed as a
+𝑀𝑜𝑑1 𝑀𝑜𝑑1
+functionoftwodependentU-statistics,denotedwith𝑈 and𝑈 :
+1 2
+1 ∑𝑛 (2𝑖−1−𝑛)𝑌∗
+𝜓̂(𝑌∗ ,𝑌∗∗ )= 𝑈 1 = 4( 2 𝑛) 𝑖=1 𝑟(𝑌 𝑖 ∗ 𝑀 ∗ 𝑜𝑑1 ) . (5)
+𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑈 2 4( 1
+2
+𝑛) ∑𝑛 𝑖=1 (2𝑖−1−𝑛)𝑌 𝑟 ∗ (𝑌
+𝑖
+∗
+𝑀𝑜𝑑1
+)
+Similarly, the estimator of 𝜓(𝑌∗ ,𝑌∗∗ ) can be defined as a
+𝑀𝑜𝑑2 𝑀𝑜𝑑2
+functionoftwodependentU-statistics,𝑈 and𝑈 :
+3 4
+1 ∑𝑛 (2𝑖−1−𝑛)𝑌∗
+𝜓̂(𝑌∗ ,𝑌∗∗ )= 𝑈 3 = 4( 2 𝑛) 𝑖=1 𝑟(𝑌 𝑖 ∗ 𝑀 ∗ 𝑜𝑑2 ) . (6)
+𝑀𝑜𝑑2 𝑀𝑜𝑑2 𝑈 4 4( 1
+2
+𝑛) ∑𝑛 𝑖=1 (2𝑖−1−𝑛)𝑌 𝑟 ∗ (𝑌
+𝑖
+∗
+𝑀𝑜𝑑2
+)
+It follows that 𝛿 = 𝜓(𝑌∗ ,𝑌∗∗ )−𝜓(𝑌∗ ,𝑌∗∗ ) can be esti-
+matedby𝛿̂,afunctionoffo 𝑀 u 𝑜 r 𝑑1 dep 𝑀 en 𝑜𝑑 d 1 entU-st 𝑀 at 𝑜 i 𝑑 s 2 tics 𝑀 : 𝑜𝑑2
+𝑈 𝑈
+𝛿̂=𝜓̂(𝑌∗ ,𝑌∗∗ )−𝜓̂(𝑌∗ ,𝑌∗∗ )= 1 − 3. (7)
+𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2 𝑈
+2
+𝑈
+4
+AccordingtoHoeffding(1948),afunctionofseveraldependentU-
+statistics has a normal distribution, provided that the sample size is
+large enough. Thus, the estimator in Eq. (7) has a limiting normal
+distribution,whosevariance ⋀ 𝑉𝑎𝑟(𝛿̂)canbeestimatedbymeansofthe
+Jackknifemethod(see,e.g.Efron&Stein,1981)eachtimeomittingthe
+pairs(𝑌∗ ,𝑌∗∗ )and(𝑌∗ ,𝑌∗∗ ).
+𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+Therefore, a test statistic for testing the null hypothesis 𝐻 ∶
+0
+𝜓(𝑌∗ ,𝑌∗∗ )=𝜓(𝑌∗ ,𝑌∗∗ )is:
+𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+𝛿̂
+𝑍= →𝑁(0,1), (8)
+√
+⋀ 𝑉𝑎𝑟(𝛿̂)
+where,for𝑖=1,…,𝑛: ⋀ 𝑉𝑎𝑟(𝛿̂)= 𝑛−1∑𝑛 (𝛿̂ −𝛿̄)2;𝛿̂ arethevalues
+𝑛 𝑖=1 (−𝑖) (−𝑖)
+of𝛿̂byomittingthepairs(𝑌∗ ,𝑌∗∗ )and(𝑌∗ ,𝑌∗∗ )atatime;𝛿̄
+istheaverageofthevalues
+𝑀
+𝛿̂
+𝑜𝑑1
+.
+𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+(−𝑖)
+5
+
+===== PDF PAGE 6 =====
+G.Babaeietal.
+For a fixed significance level 𝛼, a rejection region for the test
+corresponds to the region |𝑍| ≥ 𝑧
+𝛼∕2
+. If the test statistic falls in this
+region,𝑀𝑜𝑑 and𝑀𝑜𝑑 aresignificantlydifferentfromeachother.
+1 2
+Notethat:inthecaseofRGA,𝑌∗ =𝑌∗ ,being𝑌∗=𝑌,i.e.the
+𝑀𝑜𝑑1 𝑀𝑜𝑑2
+observed target variable to be predicted based on two alternative
+models 𝑀𝑜𝑑 and 𝑀𝑜𝑑 ; in the case of RGR, 𝑌∗ ≠ 𝑌∗ , being
+𝑌∗ =𝑌̂ 1 and𝑌∗ 2 =𝑌̂ ,i.e.thepredic 𝑀 te 𝑜 d 𝑑1 value 𝑀 sc 𝑜𝑑 o 2 mputed
+𝑀𝑜𝑑1 𝑀𝑜𝑑1 𝑀𝑜𝑑2 𝑀𝑜𝑑2
+onnon-perturbeddataandprovidedby𝑀𝑜𝑑 and𝑀𝑜𝑑 ,respectively.
+1 2
+We now derive a second test, aimed to assess the significance of
+RGE and RGF. In this case 𝑌∗ corresponds to the predicted values
+obtained with a full model while 𝑌∗∗ corresponds to the predicted
+valuesgeneratedbythereducedmodel,thatisthemodelwithoutthe
+𝑘-th variable, for RGE; and without the 𝑔-th group variable for RGF.
+Itfollowsthatasuitableteststatisticcanbedefinedasthedifference
+betweenthedenominatorandthenumeratorof(3):
+𝛾(𝑌∗,𝑌∗∗)=𝑐𝑜𝑣(𝑌∗,𝐹(𝑌∗))−𝑐𝑜𝑣(𝑌∗ ,𝐹(𝑌∗)). (9)
+𝑟(𝑌∗∗)
+Byresortingto𝛾(𝑌∗,𝑌∗∗),thehypotheses
+𝐻 ∶𝛾(𝑌∗,𝑌∗∗)=0 vs 𝐻 ∶𝛾(𝑌∗,𝑌∗∗)≠0, (10)
+0 1
+canbetested.
+Notethattheestimatorof𝛾(𝑌∗,𝑌∗∗)canbeexpressedasafunction
+oftwodependentU-statistics,denotedwith𝑈̃ and𝑈̃ :
+1 2
+𝑛 𝑛
+𝛾̂(𝑌∗,𝑌∗∗)=𝑈̃ 1 −𝑈̃ 2 = 4 ( 1 2 𝑛) ∑ 𝑖=1 (2𝑖−1−𝑛)𝑌 𝑟 ∗ (𝑌 𝑖 ∗) − 4 ( 1 2 𝑛) ∑ 𝑖=1 (2𝑖−1−𝑛)𝑌 𝑟 ∗ (𝑌 𝑖 ∗∗) .
+(11)
+By exploiting Hoeffding’s Theorem (see, e.g. Hoeffding, 1948),
+(11) has a limiting normal distribution whose variance 𝑉𝑎𝑟(𝛾̂) can be
+estimatedthroughtheJackknifemethodgivingrisetotheteststatistic:
+𝛾̂
+𝑍= →𝑁(0,1), (12)
+√
+⋀𝑉𝑎𝑟(𝛾̂)
+where,for𝑖=1,…,𝑛: ⋀𝑉𝑎𝑟(𝛾̂)= 𝑛−1∑𝑛 (𝛾̂ −𝛾̄)2;𝛾̂ arethevalues
+𝑛 𝑖=1 (−𝑖) (−𝑖)
+of 𝛾̂ by omitting one pair (𝑌∗,𝑌∗∗) at a time; 𝛾̄ is the average of the
+values𝛾̂ .
+(−𝑖)
+For a fixed significance level 𝛼, a rejection region for the test
+correspondstotheregion|𝑍| ≥𝑧
+𝛼∕2
+.
+In summary, in this subsection we have shown how to improve
+therobustnessoftheresultsfromtheapplicationoftheproposedRGB
+metrics.Essentially,bymeansofstatisticalteststhatcanverifywhether
+the obtained assessments for Sustainability, Accuracy, Fairness and
+Explainabilityarestatisticallysignificant.
+3. Empiricalanalysis
+InthissectionweapplythedescribedRankGraduationBoxmetrics.
+Weconsiderbothasimulatedandarealdataset.
+Specifically,thesimulationsettingsandtherelatedresultsarepre-
+sented and discussed in Section 3.1, whereas the application of our
+proposaltorealsurveysisdescribedinSection3.2.
+3.1. Simulateddata
+For simulated data, we illustrate the experimental designs in Sec-
+tion3.1.1andtheobtainedempiricalfindingsinSection3.1.2.
+6
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+Table5
+Correlationmatrix𝑆.
+1
+𝑌 𝑋 𝑋 𝑋 𝑋
+1 2 3 4
+𝑌 1 0.6 0.4 0.3 0.1
+𝑋 1 0.2 0.7 0.3
+1
+𝑋 1 0.05 0.1
+2
+𝑋 1 0.5
+3
+𝑋 1
+4
+Table6
+Correlationmatrix𝑆.
+2
+𝑌 𝑋 𝑋 𝑋 𝑋
+1 2 3 4
+𝑌 1 0.1 0.5 0.2 0.8
+𝑋 1 0.3 0.6 0.3
+1
+𝑋 1 0.05 0.1
+2
+𝑋 1 0.5
+3
+𝑋 1
+4
+3.1.1. Experimentaldesigns
+We simulate 1000 times 100 five-dimensional samples (𝑌,𝑋 ,𝑋 ,
+1 2
+𝑋 ,𝑋 ), from a five-dimensional Normal distribution, with mean 𝝁
+3 4
+andcorrelationmatrix𝜮.Weassume,withoutlossofgenerality,that
+𝝁 = {150,20,72,5,200}. For the correlation matrix, we consider two
+alternative specifications: 𝛴 = 𝑆 , as in Table 5; and 𝛴 = 𝑆 , as
+1 2
+in Table 6, with different correlations between the target variable
+and the predictors. We also simulate the 1000 samples from a non-
+Normaldistribution,withmeanandcorrelationmatricesasbefore,plus
+askewnessparameterat𝜈=3andakurtosisparameterat𝜅=61.
+Wethusobtainfourexperimentalsettings:(A)1000samplesofsize
+100 from a Normal distribution with correlation matrix 𝑆 ; (B) 1000
+1
+samplesofsize100fromaNormaldistributionwithcorrelationmatrix
+𝑆 ;(C)1000samplesofsize100fromanon-Normaldistributionwith
+2
+correlationmatrix𝑆 ;(D)1000samplesofsize100fromanon-Normal
+1
+distributionwithcorrelationmatrix𝑆 .
+2
+Tomeasurerobustness,inallfourscenariosthepredictorsarethen
+perturbedinthetrainsetbyreplacingtheleftandrighttailsofthere-
+lateddistributionswithoutliers.Specifically,thevalueslowerthanthe
+15%percentilearereplacedbyobservationssampledfroma𝑈(−6,−4)
+distribution, whereas the values greater than the 85% percentile are
+replacedbyobservationssampledfroma𝑈(15,22)distribution.
+Tomeasurefairness,inallfourscenariosthepredictor𝑋 isbina-
+1
+risedassigningalevelof1tothevaluesgreaterthanthecorresponding
+meanandalevelof0otherwise.
+Wehavethenrunthreealternativemachinelearningmodelsonthe
+simulateddata:alinearregressionmodel,aregressiontreemodelanda
+RandomForestmodel.Whilethelinearregressionmodelisexplainable
+by design and the regression tree can be explained by visualising its
+tree,theRandomForestisafullblack-boxmodel.
+The proposed metrics (RGA, RGR, RGE and RGF) have then been
+applied to compare the three machine learning models in terms of
+accuracy,robustness,explainabilityandfairness.Allmodelshavebeen
+fitonthesametrainingset(80%oftheobservations)andevaluatedon
+thesametestset(20%oftheobservations).
+3.1.2. Experimentalresults
+The results of the RGA, RGR, RGF and RGE metrics can be sum-
+marisedbytheirmeanandstandarddeviationsalongthe1000consid-
+eredsamples.
+Tables7and8showtheresultsforexperiment(A).
+FromTable7,notethatthelinearregressionmodelisthemostaccu-
+ratemodel,followedbytheRandomForestandbytheregressiontree
+model.Thisisnotsurprising,asthegeneratingmodelisamultivariate
+Gaussian distribution. On the contrary, the linear regression model
+appears as the least robust and fair. Whereas the Random Forest and
+regressiontreemodelsappearasthemostrobustandfair,respectively.
+6
+
+===== PDF PAGE 7 =====
+G.Babaeietal.
+Table7
+SummarystatisticsforRGA,RGRandRGFmetricsinexperiment(A).
+RGA Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.8297 0.0722
+Regressiontree 0.7569 0.0882
+RandomForest 0.7911 0.0835
+RGR Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.6543 0.1943
+Regressiontree 0.8222 0.1111
+RandomForest 0.9445 0.0465
+RGF Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.7252 0.2465
+Regressiontree 0.9668 0.0946
+RandomForest 0.9142 0.0729
+Table8
+SummarystatisticsfortheRGEmetricinexperiment(A).
+RGE𝑋1 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0307 0.0733
+Regressiontree 0.2379 0.1623
+RandomForest 0.1116 0.0709
+RGE𝑋2 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0242 0.0483
+Regressiontree 0.1388 0.1491
+RandomForest 0.0703 0.0545
+RGE𝑋3 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.2594 0.2253
+Regressiontree 0.1371 0.1340
+RandomForest 0.0354 0.0290
+RGE𝑋4 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0031 0.0130
+Regressiontree 0.0466 0.0885
+RandomForest 0.0436 0.0387
+Table9
+SummarystatisticsfortheRGA,RGRandRGFmetricsinexperiment(B).
+RGA Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.9736 0.0149
+Regressiontree 0.8828 0.0483
+RandomForest 0.9323 0.0353
+RGR Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.2335 0.1431
+Regressiontree 0.9010 0.0700
+RandomForest 0.9591 0.0312
+RGF Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.6355 0.2295
+Regressiontree 0.9999 0.0032
+RandomForest 0.9616 0.0352
+Movingtoexplainability,Table8showsthat,ingeneral,themost
+explainable predictor is 𝑋 , which is indeed the variable with the
+1
+highestcorrelationwith𝑌.Removingvariable𝑋 fromanyofthethree
+1
+modelsleadstoachangeintherankedvaluesofabout3%–24%.The
+importance ranking of the predictors is almost the same for the tree
+models: 𝑋 is followed by 𝑋 and, then, by 𝑋 and 𝑋 . This is as
+1 2 3 4
+expected,beingthetruecorrelationswith𝑌 equalto0.4,0.3and0.1,
+respectively. A notable exception is the explanation for 𝑋 with the
+3
+linearregressionmodel,whichhasaveryhighmean,butalsoavery
+highstandarddeviation.Takingintoaccountallfourmetrics,wecan
+concludethattheRandomForestmodelisthebestmodel,asthehigh
+performance of the linear regression on RGA may be due to its low
+robustness.
+The results for experiment (B) are displayed in Table 9 and in
+Table10.
+7
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+Table10
+SummarystatisticsfortheRGEmetricinexperiment(B).
+RGE𝑋1 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0634 0.0951
+Regressiontree 0.0077 0.0247
+RandomForest 0.0285 0.0243
+RGE𝑋2 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.1312 0.1270
+Regressiontree 0.0461 0.0742
+RandomForest 0.0770 0.0487
+RGE𝑋3 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.1176 0.1370
+Regressiontree 0.0254 0.0489
+RandomForest 0.0183 0.0147
+RGE𝑋4 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.2579 0.2264
+Regressiontree 0.3926 0.1365
+RandomForest 0.1750 0.0883
+Table11
+SummarystatisticsfortheRGA,RGRandRGFmetricsinexperiment(C).
+RGA Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.8263 0.0819
+Regressiontree 0.7707 0.0914
+RandomForest 0.7994 0.0876
+RGR Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.9743 0.0268
+Regressiontree 0.9378 0.0859
+RandomForest 0.9613 0.0364
+RGF Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.7757 0.1185
+Regressiontree 0.8794 0.1436
+RandomForest 0.8837 0.0749
+Table9highlightsthatthelinearregressionmodelisagainthemost
+accuratemodel,followedbytheRandomForestandtheregressiontree
+models.
+As in Scenario (A), the linear regression has a worse performance
+inrobustnessandfairness.TheRandomForestandtheregressiontree
+performbetter.
+Intermsofexplainability,Table10showsthat,forallthreemodels,
+thepredictor𝑋 contributesthemosttotheexplanationofthetarget
+4
+variable 𝑌. Removing 𝑋 from any of the three models leads to a
+4
+changeintherankedvaluesofabout17.5%–39%.Ontheotherhand,
+𝑋 ingeneralprovidesthesmallestcontributioninexplainingthetarget
+1
+variable 𝑌. These findings are coherent with our expectations as 𝑋
+1
+and 𝑋 have, respectively, a low and a strong correlation with 𝑌 in
+4
+experiment (B). Overall, we can conclude that, for this experiment,
+bothlinearregressionandRandomForestaregoodmodels,thechoice
+dependsonwhichmetricisretainedmoreimportant.
+Consider now experiment (C), whose results are displayed
+inTables11andinTable12.
+From Table 11, it turns out that the linear regression model has
+again the highest accuracy. The regression model has also a good
+performance in robustness, but it is low performing in fairness with
+respecttoRandomForest.
+Table12showsthat,alsoincaseofnon-normallydistributeddata,
+the most important predictor is 𝑋 , followed by 𝑋 , 𝑋 and 𝑋 . The
+1 2 4 3
+highestexplanationfor𝑋 isreachedwiththeregressiontree,which,
+1
+however,isalsothemodelwheretheRGEmetricachievesthelargest
+variability. In this scenario, removing predictor 𝑋 from any of the
+1
+three models leads to a change in the ranked values of about 9.5%–
+25%. Overall, no one of the three models dominate the others in
+termsofallmetrics.Thechoicethereforedependsonwhichmetricis
+consideredmostimportant.
+7
+
+===== PDF PAGE 8 =====
+G.Babaeietal.
+Table12
+SummarystatisticsfortheRGEmetricinexperiment(C).
+RGE𝑋1 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0955 0.0698
+Regressiontree 0.2502 0.1234
+RandomForest 0.1069 0.0657
+RGE𝑋2 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0641 0.0578
+Regressiontree 0.1212 0.1101
+RandomForest 0.0752 0.0543
+RGE𝑋3 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0068 0.0133
+Regressiontree 0.0204 0.0458
+RandomForest 0.0217 0.0185
+RGE𝑋4 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0086 0.0155
+Regressiontree 0.0250 0.0542
+RandomForest 0.0231 0.0233
+Table13
+SummarystatisticsfortheRGA,RGRandRGFmetricsinexperiment(D).
+RGA Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.9666 0.0239
+Regressiontree 0.8666 0.0598
+RandomForest 0.9134 0.0523
+RGR Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.9820 0.0200
+Regressiontree 0.9398 0.0742
+RandomForest 0.9673 0.0295
+RGF Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.7282 0.1819
+Regressiontree 0.9994 0.0063
+RandomForest 0.9774 0.0236
+Table14
+SummarystatisticsfortheRGEmetricinexperiment(D).
+RGE𝑋1 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0073 0.0112
+Regressiontree 0.0070 0.0212
+RandomForest 0.0126 0.0105
+RGE𝑋2 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0697 0.0541
+Regressiontree 0.1016 0.0815
+RandomForest 0.0828 0.0498
+RGE𝑋3 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.0036 0.0076
+Regressiontree 0.0082 0.0238
+RandomForest 0.0110 0.0091
+RGE𝑋4 Mean Standarddeviation(𝑠𝑑)
+Linearregression 0.1823 0.0938
+Regressiontree 0.3163 0.1349
+RandomForest 0.1750 0.0862
+Wefinallyconsiderexperiment(D),whoseresultsaredisplayedin
+Table13andinTable14.
+Table13showsthatthelinearregressionismoreaccuratethanthe
+Random Forest and regression tree. And it also appears as the most
+robustmodelinpresenceofextremeobservations,followedbyRandom
+Forest and regression tree. Differently, in terms of fairness, the linear
+regressionmodelhastheworstperformance.
+Intermsofexplainability,fromTable14itarisesthatthepredictor
+whichmostlyaffectthetargetvariable𝑌 is𝑋 ,followedbypredictor
+4
+𝑋 .Removingpredictor𝑋 fromanyofthethreemodelswouldimply
+2 4
+achangeintherankedvaluesofabout17.5%–32%.
+Torobustifythepresentedresults,helpingthefinalchoicebetween
+the three models, we now carry out statistical tests to check whether
+8
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+the difference in the values of the metrics among the three models is
+statistically significant. To this aim, we apply the tests presented in
+Section2.3tocompare𝑠=3metrics.Underthenullhypotheses,there
+is no difference among the expected value of the 𝑠 metrics. Whereas,
+underthealternativehypothesestheexpectedvaluesdiffer.
+Theresultsofthetest,intermsof𝑝-values,arereportedinTable15,
+fortheRGA,RGRandRGFmetrics,andinTable16forRGE.
+The results of the statistical tests, reported in Tables 15 and 16,
+highlightthatthemetricscomputedonthedifferentmodelsareallsig-
+nificantlydifferent(𝑝-value<0.01)inalltheconsideredexperiments.
+Wecanthereforeconcludethatthevaluesofthemetrics,previously
+discussed,areallstatisticallysignificant.
+3.2. Realdata
+Inthissection,weshowhowtheproposedmetricscanbeactually
+employedtocheckthecomplianceofAIapplicationsonrealdata.
+Weconsiderthepubliclyavailable‘‘employee’’dataset,whichcan
+be directly uploaded from the stima package in R. The data derive
+fromastudycarriedoutonthe473employeesofabank,andinclude
+informationontheirgender,age,educationaldegree(intermsofyears
+of education), employment category (custodial, clerical, or manager),
+jobtimeinmonthssincehire,previousexperience(jobtimeinmonths
+frompreviousexperiences),minorityclassification(thatis,whetherof
+anethnicminority),startingsalary(indollars),andcurrentsalary(in
+dollars).Forabetterdescriptionseee.g.FerrariandRaffinetti(2015).
+We consider both classification and prediction machine learning
+problems for the employee data. In the classification problem, the
+response variable is binary. It is defined as a ‘‘doubling salary’’, ob-
+tained assigning a level of 1 to the employees who achieve a salary
+growth rate (ratio of the current salary to the starting salary) greater
+orequaltotwo,andalevelof0otherwise.Inthepredictionproblem,
+the response variable is directly the ‘‘salary growth’’, defined as the
+difference between two variables, the current salary and the starting
+salary.
+Weconsider,forboththepredictionandtheclassificationproblems,
+aRandomForestmodel.Morespecifically,thepredictedvaluesforthe
+responsevariableareestimatedforthetestdata(correspondingtothe
+30% of the whole dataset), employing the model fitted on the train
+dataset,usingallexplanatoryvariables,andincludingthe70%ofthe
+observations.WeremarkthatthechoiceofaRandomForestmodelis
+takenwithoutlossofgenerality,asitcaneasetheinterpretationofthe
+results,asweusethesametypeofmodelsforbothclassificationand
+prediction.
+We apply the proposed RGA, RGR, RGE and RGF metrics to the
+predictions from the Random Forest model. In the case of RGR we
+consider perturbing all input variables, with a perturbation scheme
+differentfromwhatseenforthesimulateddata:wereplacethevalues
+smaller than the 5% percentile with the values greater than the 95%
+percentile.
+Toimprovetherobustnessofourresults,wecomparetheproposed
+metricswithexistingstandardmethods.Thiswillprovideabenchmark
+andaclearerpictureoftheadvantagesandlimitationsoftheproposed
+metrics. Specifically, the RGA will be compared with the Root Mean
+Squared Error (RMSE) in the continuous case and to the AUC in the
+binary case; the RGR will be compared with the loss in accuracy
+when all input data are perturbed; the RGF will be compared with
+the difference in accuracy between the model applied separately on
+the different population groups; the explanations from RGE will be
+comparedwiththoseobtainedapplyingShapleyvalues.
+Table17displaystheresultsfromtheapplicationofRGA,RGRand
+RGF,alongwiththebenchmarkmetrics,inthecontinuouscase.
+From Table 17, it results that the RGA is equal to about 91%.
+We recall that the higher the RGA value, the better the concordance
+betweenthetrainedmodelandtheactualvalues.Here,theRGAvalue
+is close to one, meaning that the predictive accuracy of the model
+8
+
+===== PDF PAGE 9 =====
+G.Babaeietal.
+Table15
+𝑝-valuesforRGA,RGR,RGF.
+Experiment(A) Alternativehypothesi
+RGA 𝐻
+1
+∶𝑅𝐺𝐴linreg>𝑅
+RGR 𝐻
+1
+∶𝑅𝐺𝑅RandFor>
+RGF 𝐻
+1
+∶𝑅𝐺𝐹regtree>𝑅
+Experiment(B) Alternativehypothesi
+RGA 𝐻
+1
+∶𝑅𝐺𝐴linreg>𝑅
+RGR 𝐻
+1
+∶𝑅𝐺𝑅RandFor>
+RGF 𝐻
+1
+∶𝑅𝐺𝐹regtree>𝑅
+Experiment(C) Alternativehypothesi
+RGA 𝐻
+1
+∶𝑅𝐺𝐴linreg>𝑅
+RGR 𝐻
+1
+∶𝑅𝐺𝑅linreg>𝑅
+RGF 𝑅𝐺𝐹RandFor>𝐻
+1
+∶
+Experiment(D) Alternativehypothesi
+RGA 𝐻
+1
+∶𝑅𝐺𝐴linreg>𝑅
+RGR 𝐻
+1
+∶𝑅𝐺𝑅linreg>𝑅
+RGF 𝐻
+1
+∶𝑅𝐺𝐹regtree>𝑅
+Table16
+𝑝-valuesforRGE.
+Experiment(A) Alternativehypothesis
+RGE𝑋1 𝐻 1 ∶𝑅𝐺𝐸 𝑋1regtree >𝑅
+RGE𝑋2 𝐻 1 ∶𝑅𝐺𝐸 𝑋2regtree >𝑅
+RGE𝑋3 𝐻 1 ∶𝑅𝐺𝐸 𝑋3linreg >𝑅𝐺
+RGE𝑋4 𝐻 1 ∶𝑅𝐺𝐸 𝑋4regtree >𝑅
+Experiment(B) Alternativehypothesis
+RGE𝑋1 𝐻 1 ∶𝑅𝐺𝐸 𝑋1linreg >𝑅𝐺
+RGE𝑋2 𝐻 1 ∶𝑅𝐺𝐸 𝑋2linreg >𝑅𝐺
+RGE𝑋3 𝐻 1 ∶𝑅𝐺𝐸 𝑋3linreg >𝑅𝐺
+RGE𝑋4 𝐻 1 ∶𝑅𝐺𝐸 𝑋4regtree >𝑅
+Experiment(C) Alternativehypothesis
+RGE𝑋1 𝐻 1 ∶𝑅𝐺𝐸 𝑋1regtree >𝑅
+RGE𝑋2 𝐻 1 ∶𝑅𝐺𝐸 𝑋2regtree >𝑅
+RGE𝑋3 𝐻 1 ∶𝑅𝐺𝐸 𝑋3RandFor >
+RGE𝑋4 𝑅𝐺𝐸 𝑋4regtree >𝐻 1 ∶𝑅
+Experiment(D) Alternativehypothesis
+RGE𝑋1 𝐻 1 ∶𝑅𝐺𝐸 𝑋1RandFor >
+RGE𝑋2 𝐻 1 ∶𝑅𝐺𝐸 𝑋2regtree >𝑅
+RGE𝑋3 𝐻 1 ∶𝑅𝐺𝐸 𝑋3RandFor >
+RGE𝑋4 𝐻 1 ∶𝑅𝐺𝐸 𝑋4regtree >𝑅
+Table17
+RGA,RGR,RGFandbenchmarkmeasures,continuousresponse.
+Accuracy RGA RMSE
+0.9149 8107.1686
+Robustness RGR AccuracyLoss
+0.4697 399.6947
+Fairness RGF AccuracyDifference
+0.9984 5244.0689
+is high. The result is statistically significant, as it turns out that, if
+we test the model against a random model, the 𝑝-value is very small,
+approximately equal to 10−253, thus rejecting the null hypotheses of
+equality.
+9
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+is 𝑝-values
+𝑅𝐺𝐴RandFor>𝑅𝐺𝐴regtree 0.001
+>𝑅𝐺𝑅regtree>𝑅𝐺𝑅linreg 0.001
+𝑅𝐺𝐹RandFor>𝑅𝐺𝐹linreg 0.001
+is 𝑝-values
+𝑅𝐺𝐴RandFor>𝑅𝐺𝐴regtree 0.001
+>𝑅𝐺𝑅regtree>𝑅𝐺𝑅linreg 0.001
+𝑅𝐺𝐹RandFor>𝑅𝐺𝐹linreg 0.001
+is 𝑝-values
+𝑅𝐺𝐴RandFor>𝑅𝐺𝐴regtree 0.001
+𝑅𝐺𝑅RandFor>𝑅𝐺𝑅regtree 0.001
+∶𝑅𝐺𝐹regtree>𝑅𝐺𝐹linreg 0.001
+is 𝑝-values
+𝑅𝐺𝐴RandFor>𝑅𝐺𝐴regtree 0.001
+𝑅𝐺𝑅RandFor>𝑅𝐺𝑅regtree 0.001
+𝑅𝐺𝐹RandFor>𝑅𝐺𝐹linreg 0.001
+𝑝-values
+𝑅𝐺𝐸 𝑋1RandFor >𝑅𝐺𝐸 𝑋1linreg 0.001
+𝑅𝐺𝐸 𝑋2RandFor >𝑅𝐺𝐸 𝑋2linreg 0.001
+𝐺𝐸 𝑋3regtree >𝑅𝐺𝐸 𝑋3RandFor 0.001
+𝑅𝐺𝐸 𝑋4RandFor >𝑅𝐺𝐸 𝑋4linreg 0.001
+𝑝-values
+𝐺𝐸 𝑋1RandFor >𝑅𝐺𝐸 𝑋1regtree 0.001
+𝐺𝐸 𝑋2RandFor >𝑅𝐺𝐸 𝑋2regtree 0.001
+𝐺𝐸 𝑋3regtree >𝑅𝐺𝐸 𝑋3RandFor 0.001
+𝑅𝐺𝐸 𝑋4linreg >𝑅𝐺𝐸 𝑋4RandFor 0.001
+𝑝-values
+𝑅𝐺𝐸 𝑋1RandFor >𝑅𝐺𝐸 𝑋1linreg 0.001
+𝑅𝐺𝐸 𝑋2RandFor >𝑅𝐺𝐸 𝑋2linreg 0.001
+𝑅𝐺𝐸 𝑋3regtree >𝑅𝐺𝐸 𝑋3linreg 0.001
+𝑅𝐺𝐸 𝑋4RandFor >𝑅𝐺𝐸 𝑋4linreg 0.005
+𝑝-values
+𝑅𝐺𝐸 𝑋1linreg >𝑅𝐺𝐸 𝑋1regtree 0.001
+𝑅𝐺𝐸 𝑋2RandFor >𝑅𝐺𝐸 𝑋2linreg 0.001
+𝑅𝐺𝐸 𝑋3regtree >𝑅𝐺𝐸 𝑋3linreg 0.001
+𝑅𝐺𝐸 𝑋4linreg >𝑅𝐺𝐸 𝑋4RandFor 0.001
+ThebenchmarkmeasureforRGAistheRMSEwhich,inthiscase,
+is equal to about 8107. We cannot easily interpret this value, in
+absolute terms; we need to make relative comparisons. For example,
+as the mean salary growth is about 17409$, we can conclude that
+the RMSE is about half of the mean. The RGA, instead, is normalised
+andcanbeinterpretedinbothabsoluteandrelativeterms.Apossible
+disadvantageofRGAisthat,withrespecttoRMSE,itrequiresafurther
+computationalstepoforderingtheresponsevalueswithrespecttothe
+ranksofthepredictions.This,however,allowstocomparemodelsfor
+acontinuousresponsewithmodelswithabinaryresponse.
+TheresultoftheapplicationofRGRleadstoavalueofabout47%,
+which indicates that the Random Forest model is not so robust in
+terms of the considered perturbation of all input variables. However,
+themodelissignificantlymorerobustthenarandommodel,asthe𝑝-
+value of the RGR test is approximately equal to 10−27. The RGR can
+be compared with the loss in accuracy (in RMSE) obtained moving
+9
+
+===== PDF PAGE 10 =====
+G.Babaeietal.
+Table18
+RGA,RGR,RGFandbenchmarkmeasures,binaryresponse.
+Accuracy RGA AUC
+0.6848 0.6848
+Robustness RGR AccuracyLoss
+0.8591 0.0333
+Fairness RGF AccuracyDifference
+0.9366 0.1116
+from the model with non-perturbed data to a model with perturbed
+data.Suchdifferenceisequalto399,about5%oftheoriginalRMSE,
+indicating high robustness. This result seems, however, not very re-
+liable, considering that all input variables have been perturbed. The
+RGR appears more suited to capture lack of robustness. A further
+advantage of RGR, with respect to the difference in accuracy, is that
+it is normalised. This allows an easier interpretation with respect to
+theaccuracyloss,albeitatthecostofanextracomputationalcost.
+We now discuss the obtained value for the RGF metric, taking
+genderastheselectedprotectedvariable.TheresultisanRGFcloseto
+one, which seems to indicate that ‘‘gender’’ does not affect the ranks
+of the target variable ‘‘salary growth’’. The result is, however, not
+statistically significant, as the 𝑝-value for the statistical test on RGA
+is equal to 0.003: we reject the assumption of fairness. On the other
+hand,thestandard‘‘parity’’measurewhichcomparestheRMSEofthe
+modelinthefemaleandmalegroupisequalto5244:about64%ofthe
+valueoftheoverallRMSE,indicatingasimilarbehaviourofthemodel
+inthetwogroups.TheresultisconsistentwithRGF,thedifferenceis
+thatRGF,althoughmoreexpensivecomputationally,isnormalisedand,
+thus,easiertointerpret.
+We now consider the case of a binary response. Table 18 reports
+theresultsfromtheapplicationofRGA,RGRandRGF,alongwiththe
+benchmarkmetrics,inthebinarycase,respectively.
+Table18highlightstheclearadvantageofourproposedmetrics:we
+cancomparetheperformanceoftheRandomForestmodelundertwo
+differentconfigurationsoftheresponse.Whileitisnotpossibletodi-
+rectlycompareRMSEwithAUC,oraccuracyloss/differenceexpressed
+asdifferenceofRMSEratherthandifferenceinAUC,theRGBmetrics
+arethesameforthebinaryandthecontinuouscases.Specifically,the
+comparison indicates that a continuous response is better predicted
+than a binary response (RGA = 91% vs 68%); that the model for
+the continuous response is less robust than the model for the binary
+response (47% vs 85%); that the model which predicts salary growth
+(continuous)ismorefairthanthemodelwhichpredictssalarydoubling
+(binary) (99% vs 93%). The application of the statistical tests show
+thatthemodelissignificantlymoreaccurateandrobustthanarandom
+model;andthat,similarlytowhatoccursforacontinuousresponse,the
+modelisnotsignificantlyfair,beingthe𝑝-valueequalto0.001.
+The results for standard metrics are consistent with those from
+our metrics; however, the latter have the advantage of a better inter-
+pretability and of a wider comparability, against the disadvantage of
+anincreasedcomputationalcost.
+WenowcomparetheapplicationofRGEwiththestandardexplain-
+abilitymetrics:Shapleyvalues. Table19includestheresultsfromthe
+applicationofRGE,alongwithShapleyvalues,inboththecontinuous
+andbinarycases.
+Table 19 shows that the explanations for the binary response are
+higherthanthoseforthecontinuousresponse.Thishighlightsthat,in
+thecontinuouscase,thereisahighinteractionbetweenthevariables,
+and it is difficult for a single feature to have a high explainability.
+Overall, based on RGE, the most important explanations are jobtime,
+age, previous experience and also education. The standard Shapley
+values do not allow an easy comparison between the values of the
+two problems, binary and continuous. However, in both cases, the
+contributionofthepredictorstoexplainabilityisconsistentwiththose
+1
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+oftheRGE.Oncemore,thecomparisonshowsthatourproposedmetric
+iseasiertointerpretthanthebenchmark.Fromacomputationalcom-
+plexityviewpoint,Shapleyvaluesarecomputationallyexpensive,more
+thantheRGE,astheyrequirecalculatingthedifferenceinpredictions
+forallpossiblemodels’combinations.
+AfurthercomparisonbetweenourproposedRGBmetricsandstan-
+dardonescanbeconductedbymeansofresampling.Forexample,ifwe
+focusonourcoremetrics,withoutlossofgenerality,andforthesakeof
+space,wecancalculatethevalueofRGAandofRMSE,foracontinuous
+response, in 100 different train/sample tests. We can then compute
+themeanandstandarddeviationofthevalueswhichareprovidedin
+Table20.
+From Table 20, note that the RGA has a low standard deviation,
+about50timessmallerthanthemean.Anapproximate99.7%empirical
+confidenceintervalrangesfrom0.84to0.94,indicatingahighvalueof
+accuracy.Ontheotherhand,theRMSEhasahigherstandarddeviation,
+about10timessmallerthanthemean.Anapproximate99.7%empirical
+confidence interval ranges from 5069 to 9226, indicating a variable
+degreeofaccuracy.
+4. Concludingremarks
+The paper has presented a set of consistent statistical metrics, all
+rooted in the framework of the rank graduation approach introduced
+byLorenz(1905).
+The implementation instructions of the proposed metrics, along
+withtheircorrespondingPythoncodeandalldataanalysedinthepaper
+are available at: https://github.com/GolnooshBabaei/safeaipackage.
+The results of the paper are therefore fully transparent and repro-
+ducible.
+In this contribution we illustrated how these metrics can practi-
+cally assess the compliance of any AI application to regulatory re-
+quirementssuchasSustainability(Robustness),Accuracy,Fairnessand
+Explainability.
+Ourexperimentalresultsshowthattheproposedmetricsworkquite
+effectivelyandcanthusbeausefultoolforthedifferentstakeholders
+involvedintheassessmentofcomplianceofAIapplicationsandtheir
+risks:developers,deployers,consumers,regulators.
+Further research is needed, from a methodological viewpoint, to
+enhancetherobustnessoftheproposedmethodologybycomparingit
+withalternativemodelisations.Additionalresearchisalsoneeded,from
+an applied viewpoint, to test the functioning of the methodology on
+differentfielddomainsandapplications,suchasinsurance,healthand
+robotics,tonameafew.
+We would like to mention that what presented can be enriched
+by new developments, without altering the reference framework. For
+example, different types of adversarial attacks can be considered, as
+different types of perturbations; explainability of group of variables
+couldbeconsidered;otherethicalrequirementscanbeincluded,such
+ashumanoversightandenvironmentalsustainability.
+Overall, our proposed approach to assess the compliance of AI
+applicationsisscientificallysoundandrelativelysimpletoimplement
+andinterpret.Ithastwopossiblelimitations,whichmaybeovercome
+in future research work. First, it assumes that the response variable
+tobepredictedisunidimensional.Amultidimensionalresponsewould
+requireamultidimensionalgeneralisationoftheLorenzcurves.Second,
+ithasbeenappliedtonumericaldatabutitcanbeextendedtodealwith
+non-numericaldata,suchastextandimages.
+We finally remark that our devised approach is based only on the
+comparisonoftheoutputsofmachinelearningmodels.Itistherefore
+rathersecure,asitdoesnotinvolveneithernewdatainputsnornew
+modelelaborations.
+10
+
+===== PDF PAGE 11 =====
+G.Babaeietal.
+Table19
+RGEandShapleyvaluesforaRandomForestmodeltopredictacontinuou
+Variable RGE Shapleyvalues
+Jobtime 0.0355 0.0830
+Age 0.0151 0.1018
+Previousexperience 0.0130 0.0888
+Education 0.0180 0.0193
+Manager 0.0129 0.0221
+Clerical 0.0004 0.0263
+Minority 0.0016 0.0180
+Gender 0.0015 0.0120
+Custodial 0.0004 0.0085
+Table20
+RobustnesscomparisonbetweenRGAandRMSE.
+RGA Mean Standarddeviation(𝑠𝑑)
+0.8962 0.0167
+RMSE Mean Standarddeviation(𝑠𝑑)
+7,148.0864 693.8385
+CRediTauthorshipcontributionstatement
+GolnooshBabaei:Coding,Investigation.PaoloGiudici:Methodol-
+ogy,Supervision,Revisionofthepaper.EmanuelaRaffinetti:Method-
+ology,Investigation,Coding,Revisionofthefinalversiontobesubmit-
+ted.
+Declarationofcompetinginterest
+Theauthorsdeclarethefollowingfinancialinterests/personalrela-
+tionships which may be considered as potential competing interests:
+PaoloGiudicireportsfinancialsupportwasprovidedbyTheEuropean
+Union - NextGenerationEU in the framework of the GRINS- Growing
+Resilient, INclusive and Sustainable (GRINS PE00000018). If there
+are other authors, they declare that they have no known competing
+financial interests or personal relationships that could have appeared
+toinfluencetheworkreportedinthispaper.
+Dataavailability
+https://github.com/GolnooshBabaei/safeaipackage.
+Acknowledgements
+Thisstudywasfundedby:theEuropeanUnion-NextGenerationEU,
+in the framework of the GRINS- Growing Resilient, INclusive and
+Sustainable (GRINS PE00000018). The views and opinions expressed
+are solely those of the authors and do not necessarily reflect those of
+theEuropeanUnion,norcantheEuropeanUnionbeheldresponsible
+forthem.
+We acknowledge very useful discussions and feedback from the
+EuropeanUniversityInstituteSupervisoryDigitalFinanceAcademy.
+We also thank the Editor and two anonymous referees for their
+stimulatingcommentsandsremarks.
+Appendix
+With this Appendix we aim at showing how the RG⋅ metric is
+calculated,basedondatareportedinTables2–4.
+Thesingletermsinvolvedinformula(1)aredisplayedinTable21.
+Bysummingallthetermsappearinginthethird,fifthandseventh
+column of Table 21 across the 10 observations, from formula (1) it
+resultsthatRG⋅=0.6031.
+The proposed metrics can be computed based on the previous
+examplebyreplacingtheterms(i)𝑦∗,(ii)𝑦∗ and(iii)𝑦∗ with:
+𝑟∗ 𝑟∗ 𝑟∗∗
+𝑖 𝑛+1−𝑖 𝑖
+1
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+usresponse(left)andabinaryresponse(right).
+Variable RGE Shapleyvalues
+Jobtime 0.2112 1939.8556
+Age 0.1901 2050.5184
+Previousexperience 0.1197 557.7384
+Education 0.1056 1143.2048
+Manager 0.0986 526.5470
+Clerical 0.0985 221.5846
+Minority 0.0915 284.7139
+Gender 0.0633 208.1586
+Custodial 0.0563 208.2397
+Table21
+ThetermsoftheRG⋅formula.
+ID 𝑦∗ 𝑖𝑦∗ 𝑦∗ 𝑖𝑦∗ 𝑦∗ 𝑖𝑦∗
+𝑟∗
+𝑖
+𝑟∗
+𝑖
+𝑟∗
+𝑛+1−𝑖
+𝑟∗
+𝑛+1−𝑖
+𝑟∗
+𝑖
+∗ 𝑟∗
+𝑖
+∗
+1 0 0 75 75 27 27
+2 3 6 48 96 12 24
+3 11 33 46 138 48 144
+4 12 48 34 136 34 136
+5 27 135 28 140 3 15
+6 28 168 27 162 11 66
+7 34 238 12 84 46 322
+8 46 368 11 88 0 0
+9 48 432 3 27 75 675
+10 75 750 0 0 28 280
+• (i)theresponsevariablevaluesorderedinanon-decreasingsense;
+(ii) the response variable values ordered in a non-increasing
+sense;(iii)theresponsevariablevaluesorderedaccordingtothe
+non-decreasingranksofthepredictedvalues(inthecaseofRGA);
+• the predicted values, computed on non-perturbed data, ordered
+in a non-decreasing sense; (ii) the predicted values, computed
+on non-perturbed data, ordered in a non-increasing sense; (iii)
+the predicted values, computed on non-perturbed data, ordered
+according to the non-decreasing ranks of the predicted values
+computedonperturbeddata(inthecaseofRGR);
+• the predicted values, provided by the full model, ordered in a
+non-decreasing sense; (ii) the predicted values, provided by the
+fullmodel,orderedinanon-increasingsense;(iii)thepredicted
+values,providedbythefullmodel,orderedaccordingtothenon-
+decreasingranksofthepredictedvaluesprovidedbythereduced
+model,i.e.withoutthepredictorunderevaluation(inthecaseof
+RGE);
+• the predicted values, provided by the full model, ordered in a
+non-decreasing sense; (ii) the predicted values, provided by the
+fullmodel,orderedinanon-increasingsense;(iii)thepredicted
+values,providedbythefullmodel,orderedaccordingtothenon-
+decreasingranksofthepredictedvaluesprovidedbythereduced
+model, i.e. without the group variable under evaluation (in the
+caseofRGF).
+References
+Efron,B.,&Stein,C.(1981).Thejackknifeestimateofvariance.TheAnnalsofStatistics,
+9(3),586–596.http://dx.doi.org/10.1214/aos/1176345462.
+Ferrari,P.,&Raffinetti,E.(2015).Adifferentapproachtodependenceanalysis.Multi-
+variateBehavioralResearch,50(2),248–264.http://dx.doi.org/10.1080/00273171.
+2014.973099.
+Giudici,P.,Centurelli,M.,&Turchetta,S.(2024).Artificialintelligenceriskmeasure-
+ment. Expert Systems with Applications, 235, Article 121220. http://dx.doi.org/10.
+1016/j.eswa.2023.121220.
+Giudici, P., & Raffinetti, E. (2021). Shapley-lorenz explainable artificial intelligence.
+ExpertSystemsWithApplications,167,Article114104.http://dx.doi.org/10.1016/j.
+eswa.2020.114104.
+Giudici, P., & Raffinetti, E. (2023). SAFE artificial intelligence in finance. Fi-
+nanceResearchLetters,13,Article104088.http://dx.doi.org/10.1016/j.eswa.2020.
+114104.
+Giudici, P., & Raffinetti, E. (2024). RGA: a unified approach of predictive accuracy.
+AdvancesinDataAnalysisandApplications,http://dx.doi.org/10.1007/s11634-023-
+00574-2,(inpress).
+11
+
+===== PDF PAGE 12 =====
+G.Babaeietal.
+Gneiting, T. (2011). Making and evaluating point forecasts. Journal of the Ameri-
+canStatisticalAssociation,106(494),746–762.http://dx.doi.org/10.1198/jasa.2011.
+r10138.
+Hand, D., & Till, R. (2001). A simple generalisation of the area Under the ROC
+curve for multiple class classification problem. Machine Learning, 45, 171–186.
+http://dx.doi.org/10.1023/A:101092081983.
+Hoeffding,W.(1948).Aclassofstatistcswithasymptoticallynormaldistribution.The
+AnnalsofMathematicalStatistics,19(3),293–325.http://dx.doi.org/10.1214/aoms/
+1177730196.
+Lorenz, M. (1905). Methods of measuring the concentration wealth. Publications of
+the American Statistical Association, 9(70), 209–219. http://dx.doi.org/10.2307/
+2276207.
+Lundberg,S.,&Lee,S.(2017).Aunifiedapproachtointerpretingmodelpredictions.
+In NIPS’17: Proceedings of the 31st international conference on neural information
+processingsystems(pp.4768–4777).
+1
+[RIGHT COLUMN]
+Expert Systems With Applications 259 (2025) 125239
+Nair,etal.(2022).Maximumlikelihooduncertaintyestimation:Robustnesstooutliers.
+SeeURLhttps://arxiv.org/abs/2202.03870.
+Quy,L.,etal.(2022).Asurveyondatasetsforfairness-awaremachinelearning.Wiley
+InterdisciplinaryReviews:DataMiningandKnowledgeDiscovery,12(3),Articlee1452.
+http://dx.doi.org/10.1002/widm.1452.
+Raffinetti, E. (2023). A rank graduation accuracy measure to mitigate artificial
+intellgencerisks.QualityandQuantity,57(2),131–150.http://dx.doi.org/10.1007/
+s11135-023-01613-y.
+Shapley, L. (1953). A value for n-person games. In H. Kuhn, & A. Tucker (Eds.),
+ContributionstothetheoryofgamesII.PrincetonUniversityPress.
+12

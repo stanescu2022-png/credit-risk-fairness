@@ -1,0 +1,78 @@
+PAGE 1
+Proiect analiză risc de credit - structură orientativă a datelor
+Structura tehnică a datelor dorite pentru analiza de risc de credit
+Anexă pentru identificarea unui set de date real din România - modelare predictivă, fairness, explicabilitate, robustețe și monitorizare
+Scop. Documentul descrie structura ideală a unui set de date care să permită construirea și evaluarea în Python a unui model de risc de credit / probabilitate de default. Lista 
+reprezintă situația ideală; metodologia poate fi adaptată în funcție de datele disponibile în practică.
+1. Variabile și câmpuri dorite
+Prioritate Categorie Variabilă / câmp dorit Exemplu Utilitate în analiză
+OBLIGATORIU Outcome Indicator default / non-default 0 = non-default; 1 = default Variabila țintă pentru model.
+OBLIGATORIU Outcome Definiția default-ului ex. 90+ zile întârziere în 12 luni Necesara pentru interpretarea corectă a 
+rezultatului și comparabilitate.
+OBLIGATORIU Credit Valoarea creditului 50.000 RON Variabilă predictivă de bază și context al 
+expunerii.
+OBLIGATORIU Timp Data acordării creditului / origination date 2024-03 Permite separare temporală, validare și 
+analiză de stabilitate în timp.
+RECOMANDAT Credit Tip produs nevoi personale / ipotecar / card Permite segmentarea și analizarea 
+diferențelor de risc între produse.
+RECOMANDAT Credit Durata creditului 60 luni Caracteristică relevantă pentru profilul de 
+risc.
+RECOMANDAT Credit Rata dobânzii 8,5% Poate influența atât riscul, cât și 
+capacitatea de plată.
+RECOMANDAT Credit Rata lunară 1.200 RON Ajută la evaluarea capacității de 
+rambursare.
+RECOMANDAT Financiar Venit lunar 7.000 RON Variabilă importantă pentru evaluarea 
+capacității de plată.
+RECOMANDAT Financiar Grad de îndatorare 35% Indicator direct al presiunii financiare și al 
+capacității de rambursare.
+RECOMANDAT Financiar Datorii / expunere existentă 25.000 RON Oferă context asupra expunerii totale a 
+clientului.
+RECOMANDAT Credit history Întârzieri anterioare număr întârzieri / zile întârziere Poate fi unul dintre cei mai puternici 
+predictori ai riscului.
+RECOMANDAT Credit history Număr de credite active 3 Descrie expunerea și comportamentul 
+financiar curent.
+RECOMANDAT Credit history Istoric de plată punctual / întârzieri / restanțe Permite modelarea comportamentului de 
+rambursare.
+RECOMANDAT Fairness Vârstă 35 ani sau categorie de vârstă Permite comparații între grupuri pentru 
+analiza de fairness.
+RECOMANDAT Fairness Sex F / M / altă codificare disponibilă Permite evaluarea diferențelor de 
+performanță și rezultate între grupuri.
+RECOMANDAT Fairness Zonă geografică județ / regiune Permite identificarea diferențelor regionale 
+și a eventualelor efecte de proxy.
+RECOMANDAT Fairness Statut profesional angajat / PFA / pensionar etc. Util pentru segmentare, predicție și analiza 
+diferențelor între grupuri.
+NICE TO HAVE Decizie Decizia istorică a instituției aprobat / respins
+Permite compararea modelului cu decizia 
+istorică și studierea procesului de 
+aprobare.
+NICE TO HAVE Decizie Scor de risc existent ex. 640 Poate servi drept benchmark față de 
+sistemul actual.
+NICE TO HAVE Decizie Clasă / rating de risc A / B / C Permite analiză comparativă și 
+segmentare suplimentară.
+NICE TO HAVE Financiar Tip venit salariu / pensie / activitate independentă Adaugă granularitate în evaluarea 
+profilului financiar.
+NICE TO HAVE Timp Data ultimei observații / actualizări 2025-12 Sprijină analiza temporală, drift-ul și 
+monitorizarea.
+
+PAGE 2
+Proiect analiză risc de credit - structură orientativă a datelor
+Prioritate Categorie Variabilă / câmp dorit Exemplu Utilitate în analiză
+NICE TO HAVE Demografic Educație / stare civilă categorii
+Poate fi utilă pentru fairness și 
+explicabilitate, dacă poate fi furnizată 
+legal.
+2. Cerințe generale privind setul de date
+• Volum: câteva mii de observații ar fi deja utile; ideal 10.000+ dacă este posibil. Un volum mai mare permite estimări mai stabile, inclusiv pe subgrupuri.
+• Distribuția targetului: setul trebuie să conțină atât cazuri de default, cât și non-default. Dacă default-urile sunt extrem de rare, analiza de performanță și fairness devine 
+mai dificilă.
+• Perioadă: ideal, datele să acopere mai mulți ani sau cel puțin mai multe perioade distincte, astfel încât să putem evalua stabilitatea modelului în timp.
+• Documentație: ar fi foarte utilă o scurtă descriere a fiecărei variabile, a unităților de măsură și a codificărilor folosite.
+• Anonimizare: nu sunt necesare nume, CNP, adresă exactă, telefon, e-mail, IBAN sau alte date care permit identificarea directă a persoanei. Datele pot fi anonimizate sau 
+pseudonimizate.
+3. Minimum necesar pentru proiect
+Pentru modelarea de risc: o variabilă target clară (default / non-default), suficiente caracteristici financiare și/sau de credit și o componentă temporală (de exemplu data 
+acordării creditului).
+Pentru analiza de fairness: este necesară cel puțin una sau, ideal, mai multe variabile care permit definirea unor grupuri relevante. În lipsa acestora putem realiza 
+modelarea de risc, însă componenta de fairness ar fi foarte limitată.
+Notă importantă: nu este necesar ca setul de date să conțină toate câmpurile din tabel. Prioritățile indică ce este esențial și ce ar îmbunătăți analiza. Metodologia va fi 
+adaptată la structura efectivă a datelor care pot fi furnizate legal și practic.

@@ -1,0 +1,32 @@
+{
+  "fitting": {
+    "records": 19203,
+    "columns_including_intercept": 78,
+    "rank": 74,
+    "rank_deficiency": 4,
+    "exact_duplicate_indicator_columns": [
+      [
+        "PAY_2=7",
+        "PAY_3=6"
+      ],
+      [
+        "PAY_4=8",
+        "PAY_5=8",
+        "PAY_6=8"
+      ]
+    ]
+  },
+  "all_training": {
+    "records": 24004,
+    "columns_including_intercept": 78,
+    "rank": 76,
+    "rank_deficiency": 2,
+    "exact_duplicate_indicator_columns": [
+      [
+        "PAY_4=8",
+        "PAY_5=8",
+        "PAY_6=8"
+      ]
+    ]
+  }
+}

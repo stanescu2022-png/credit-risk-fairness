@@ -1,0 +1,52 @@
+model,metric,female_minus_male
+gbm_full,TN,947.0
+gbm_full,FP,35.0
+gbm_full,FN,112.0
+gbm_full,TP,94.0
+gbm_full,Predicted-positive Rate,-0.003433864865165337
+gbm_full,Accuracy,0.024149617008030422
+gbm_full,Balanced Accuracy,0.020067580893336046
+gbm_full,Precision,0.025436009773359136
+gbm_full,Recall,0.03352541583233526
+gbm_full,Specificity,0.006609745954336721
+gbm_full,FPR,-0.006609745954336721
+gbm_full,FNR,-0.03352541583233526
+gbm_full,F1,0.034775550977086844
+gbm_full,ROC-AUC,0.006455060463101292
+gbm_full,Average Precision (AP),0.021727410835068794
+gbm_full,Log Loss,-0.030359192595551532
+gbm_full,Brier Score,-0.012485854274688568
+gbm_selected,TN,962.0
+gbm_selected,FP,20.0
+gbm_selected,FN,121.0
+gbm_selected,TP,85.0
+gbm_selected,Predicted-positive Rate,-0.010115379341780042
+gbm_selected,Accuracy,0.025819995627184178
+gbm_selected,Balanced Accuracy,0.016820922408174566
+gbm_selected,Precision,0.04368393754583011
+gbm_selected,Recall,0.021729871926699618
+gbm_selected,Specificity,0.011911972889649514
+gbm_selected,FPR,-0.011911972889649514
+gbm_selected,FNR,-0.021729871926699618
+gbm_selected,F1,0.02902894876966189
+gbm_selected,ROC-AUC,-0.0017728360227409201
+gbm_selected,Average Precision (AP),-0.0073103424930703875
+gbm_selected,Log Loss,-0.028311858603519202
+gbm_selected,Brier Score,-0.01235918668281924
+lr_frozen_regularized,TN,943.0
+lr_frozen_regularized,FP,39.0
+lr_frozen_regularized,FN,118.0
+lr_frozen_regularized,TP,88.0
+lr_frozen_regularized,Predicted-positive Rate,-0.004540965502929414
+lr_frozen_regularized,Accuracy,0.020540190995705032
+lr_frozen_regularized,Balanced Accuracy,0.014123010605677444
+lr_frozen_regularized,Precision,0.011494252873563204
+lr_frozen_regularized,Recall,0.023238139160593974
+lr_frozen_regularized,Specificity,0.005007882050760859
+lr_frozen_regularized,FPR,-0.005007882050760859
+lr_frozen_regularized,FNR,-0.02323813916059403
+lr_frozen_regularized,F1,0.022544173853881133
+lr_frozen_regularized,ROC-AUC,-0.007918544152438645
+lr_frozen_regularized,Average Precision (AP),-5.076962258176998e-05
+lr_frozen_regularized,Log Loss,-0.025766564355667376
+lr_frozen_regularized,Brier Score,-0.011692901478853879

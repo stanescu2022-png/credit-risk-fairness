@@ -1,0 +1,7 @@
+model,component,status,rank,records,predictive_candidate,reason
+gbm_full,SHAP outcome regression,ok,23.0,5996.0,False,
+gbm_selected,SHAP outcome regression,ok,4.0,5996.0,False,
+lr_mle_full,article model and dependent assessments,not_estimable,,,,rank_deficient_design
+lr_mle_selected,article model and dependent assessments,not_estimable,,,,training_selection_not_estimable
+all,overall SAFE score,not_supplied_by_article,,,,
+lr_mle,coefficient-distribution KS,not_identifiable_from_article,,,,

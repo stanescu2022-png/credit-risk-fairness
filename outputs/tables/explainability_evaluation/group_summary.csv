@@ -1,0 +1,3 @@
+SEX,group,records,defaults,non_defaults,observed_default_rate,holdout_percentage
+1,male,2404,557,1847,0.2316971713810316,40.093395597064713
+2,female,3592,763,2829,0.21241648106904229,59.906604402935287

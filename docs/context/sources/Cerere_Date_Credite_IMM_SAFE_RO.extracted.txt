@@ -1,0 +1,181 @@
+Specificație privind solicitarea de date — Credite IMM
+Pentru un studiu doctoral privind fiabilitatea urmand framewok SAFE a AI în scoringul de credit — debitori IMM
+
+De la:  Alina Cornelia Luchian (Chiriac), doctorandă, Academia de Studii Economice, Scoala doctorală de Cibernetică si Statistică Economică
+Coordonator: prof. univ. dr. Vasile Alecsandru Strat
+Data: 28/08/2026
+Subiect: Solicitare de set de date istorice anonimizate pentru cercetare academică privind fiabilitatea (trustworthiness) sistemelor AI în scoringul de credit
+Date de contact: luchianalina24@stud.ase.ro, alina.luchian@fabiz.ase.ro, alina.luchian1978@gmail.com
+LinkedIn: https://www.linkedin.com/in/alinaluchian/ș 0727.772.652
+
+
+1. Scop și context
+Prezenta reprezintă o solicitare oficială pentru un set de date istorice anonimizate, necesare unei cercetări doctorale privind încrederea în analitica de business bazată pe inteligență artificială. Setul de date va fi utilizat exclusiv pentru antrenarea unor modele de scoring de credit și pentru evaluarea gradului lor de încredere (trustworthiness) prin framework SAFE (Sustenabilitate, Acuratețe, Echitate/Fairness, Explicabilitate), urmând metodologia de scoring de credit din Giudici, Centurelli & Turchetta (2024), Secțiunea 4.1. Obiectivul este academic și metodologic: măsurarea riscului de model pe care îl generează sistemele AI în sine. Datele nu sunt folosite pentru creditare, profilare sau scopuri comerciale, iar cercetătorul nu va încerca și nu va reidentifica nicio persoană sau entitate.
+2. Temei legal, confidențialitate și utilizare
+Datele sunt solicitate exclusiv în scop de cercetare științifică efectuata in cadrul programului doctoral
+Cercetătorul va stoca datele în siguranță, le va utiliza doar pentru cercetarea declarată și le va șterge la finalul perioadei de retenție convenite.
+Rezultatele vor fi publicate numai în formă agregată/statistică; niciun debitor, firmă sau persoană nu va putea fi identificat(ă).
+Numele furnizorului poate fi menționat în mulțumiri sau păstrat confidențial, conform preferinței furnizorului
+3. Domeniu de aplicare și unitatea de analiză
+Unitatea de analiză: debitorul IMM (persoană juridică). Aceasta corespunde activității de creditare a IMM-urilor a furnizorului și studiului Giudici din cadrul sectiunii  §4.1 a articolului atasat (scoring de credit pentru IMM-uri pe baza datelor din bilanț). Fiecare rând reprezintă un IMM la o dată de observație definită, cu rezultatul observat ulterior.
+4. Variabila-răspuns (țintă) — esențială
+Exact un singur rezultat binar per IMM:
+default_flag — 1 = nerambursare (default), 0 = performant („bonis”).
+Definiție solicitată: nerambursare conform standardului EBA / Băncii Naționale a României (peste 90 de zile de întârziere la plată sau improbabilitate de plată – „unlikely-to-pay”), observată într-o fereastră fixă de 12 luni după data de observație. Exemplu: date financiare/de credit la 31 dec. 2022; stare de nerambursare la 31 dec. 2023 — reflectând §4.1, unde starea firmei (default/bonis) a fost înregistrată la sfârșitul anului următor datelor din bilanț.
+5. Proiectarea observației și aspecte temporale (prevenirea scurgerii de informație)
+Un rând per IMM; dacă un IMM poate avea mai multe credite, vă rugăm să precizați dacă rândurile sunt per IMM sau per credit.
+Proiectare la un moment de referință (point-in-time): fiecare câmp explicativ trebuie să fie cunoscut la data de observație, ÎNAINTE de fereastra de rezultat. Aceasta este cea mai importantă cerință de calitate a datelor.
+Vă rugăm să EXCLUDEȚI orice câmp care reflectă evenimente ulterioare datei de observație (restanțe curente, stare de recuperare, restructurări), deoarece acestea „scurg” rezultatul și invalidează analiza.
+Vă rugăm să includeți o coloană data_observatie și o coloană data_rezultat, astfel încât proiectarea punctuală în timp să fie verificabilă.
+6. Variabile explicative solicitate
+Grupate pe categorii; fiecare corespunde unui atribut Statlog sau unei variabile din bilanț din Giudici §4.1 si din Statlog. Vă rugăm să furnizați cât mai multe posibil.
+6.1 Caracteristicile firmei
+Câmp solicitat
+Tip
+Descriere / corespondent în model
+industry_sector
+categorică
+Cod CAEN / grupă de sector. (§4.1: Industrie.)
+region
+categorică
+Județ sau regiune NUTS. (§4.1: Țară.)
+firm_size
+categorică
+Micro / mică / mijlocie (după cifra de afaceri sau număr de angajați).
+firm_age_years
+numerică
+Ani de la înființare.
+legal_form
+categorică
+SRL, SA, PFA etc.
+number_employees
+numerică
+Număr de angajați la data de observație.
+6.2 Variabile din situațiile financiare (bilanț și cont de profit și pierdere, la data de observație)
+Câmp solicitat
+Tip
+Descriere / corespondent în model
+turnover
+numerică
+Cifra de afaceri anuală. (§4.1: Turnover.)
+ebit
+numerică
+Profit înainte de dobânzi și impozite. (§4.1: EBIT.)
+profit_loss
+numerică
+Profit/pierdere net(ă) sau înainte de impozitare. (§4.1: PLTax.)
+total_assets
+numerică
+Total active bilanțier. (§4.1: TAsset.)
+roe
+numerică
+Rentabilitatea capitalului propriu. (§4.1: ROE.)
+leverage
+numerică
+Grad de îndatorare (datorii/capital sau datorii/active). (§4.1: Leverage.)
+liquidity_ratio
+numerică
+Rata de lichiditate curentă sau rapidă.
+solvency_ratio
+numerică
+Rata de solvabilitate (capital propriu/active).
+ebitda_margin
+numerică
+EBITDA / cifra de afaceri, dacă este disponibilă.
+6.3 Caracteristicile creditului
+Câmp solicitat
+Tip
+Descriere / corespondent în model
+loan_amount
+numerică
+Sumă acordată/solicitată. (Statlog: Credit amount.)
+loan_duration_months
+numerică
+Maturitate în luni. (Statlog: Duration.)
+loan_purpose
+categorică
+Capital de lucru, investiție etc. (Statlog: Purpose.)
+collateral_type
+categorică
+Garanție/colateral prezent și tip. (Statlog: Property.)
+guarantor_present
+categorică
+Garanție personală/terță. (Statlog: Other debtors/guarantors.)
+interest_rate
+numerică
+Rata contractuală a dobânzii (dacă poate fi partajată).
+installment_burden
+numerică
+Rata ca % din fluxul de numerar. (Statlog: Instalment rate.)
+6.4 Istoric de credit / comportamental (cunoscut la data de observație)
+Câmp solicitat
+Tip
+Descriere / corespondent în model
+credit_history
+categorică
+Istoric de rambursare / restanțe anterioare. (Statlog: Credit history.)
+existing_credits
+numerică
+Număr de expuneri existente. (Statlog: Number of existing credits.)
+credit_bureau_score
+numerică
+Scor/bandă Biroul de Credit la data de observație.
+current_account_status
+categorică
+Situația contului bancar. (Statlog: Status of checking account.)
+past_default_flag
+categorică
+Orice nerambursare ÎNAINTE de data de observație (nu ulterior).
+relationship_length_years
+numerică
+Vechimea relației bancare.
+6.5 Atribute sensibile — pentru metrica de Echitate (RGF)
+Incluse pentru a putea măsura echitatea între grupuri (așa cum §4.1 a procedat pentru țară și industrie). Pot fi excluse din predicție, dar sunt necesare pentru analiza de echitate.
+Câmp solicitat
+Tip
+Descriere / corespondent în model
+sector_group
+categorică
+Grupare pe sector pentru testarea echității.
+region_group
+categorică
+Grupare pe județ/regiune pentru testarea echității.
+firm_size_group
+categorică
+Grupare micro/mică/mijlocie.
+owner_gender
+categorică
+Doar dacă asociatul este persoană fizică; pentru echitate.
+owner_age_band
+categorică
+Vârsta asociatului pe intervale, dacă e cazul.
+7. Dimensiunea eșantionului și echilibrul claselor
+Vă rugăm să furnizați cât mai multe înregistrări istorice complete posibil. Ca reper, modelul UCI Statlog German Credit (https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) folosește 1.000 de debitori, iar studiul Giudici §4.1 a folosit peste 100.000 de IMM-uri din mai multe tari europene. 
+Minim practic: câteva mii de IMM-uri, cu suficiente cazuri de nerambursare pentru modelare — ideal cel puțin ~300–500 de cazuri, sau o rată de nerambursare apropiată de cea reală a portofoliului.
+Vă rugăm să precizați rata reală de nerambursare a eșantionului livrat și să evitați supra-eșantionarea nedocumentată.
+8. Format și documentație
+Un singur fișier  (CSV sau Excel), un rând per IMM-uri/credit, codificat UTF-8.
+Un dicționar de date (codebook) care listează fiecare coloană, tipul, unitățile de măsură și codurile categoriilor — comparabil cu fișierul de documentație Statlog.
+Codificare consecventă și documentată a valorilor lipsă (o singură convenție declarată, nu amestecată).
+Coloanele data_observatie și data_rezultat incluse.
+9. Anonimizare, GDPR și conformitate cu Regulamentul  EU AI Act
+Pentru a respecta regulamentul  GDPR și a Regulamentului european privind IA (EU AI Act), se solicită explicit următoarele:
+Eliminarea tuturor identificatorilor direcți înainte de livrare: denumirea companiei, CUI/CIF, numărul de înregistrare, adresa și orice CNP sau nume al asociatului/administratorului.
+Pseudonimizarea fiecărei înregistrări cu un ID aleatoriu care nu poate fi inversat de către cercetător.
+Minimizarea riscului de reidentificare prin gruparea (banding) categoriilor rare și a valorilor extreme, astfel încât nicio înregistrare să nu fie unică.
+Minimizarea datelor: furnizați doar câmpurile enumerate aici; omiteți orice nu este necesar pentru studiu.
+Acord și supraveghere: un acord de partajare a datelor care precizează scopul, retenția și manipularea securizată; va fi implicat responsabilul cu protecția datelor (DPO) al universității – pentru conformitate.
+10. Livrare securizată și calendar
+Livrare printr-un canal securizat convenit în prealabil (transfer criptat sau portal securizat),  e-mail adresa instituationala (ASE) monitorizat.
+Calendar preferat: Octombrie 2026. 
+11. Listă de verificare (checklist)
+O singură țintă binară de nerambursare (peste 90 de zile întârziere, într-o fereastră fixă de 12 luni).
+Un rând per IMM; coloanele data_observatie și data_rezultat incluse.
+Caracteristicile firmei + variabile financiare + credit + istoric de credit (§6.1–6.4).
+Câmpuri de grupare sensibile pentru echitate (§6.5).
+Doar câmpuri cunoscute la data de observație — fără date ulterioare rezultatului.
+Câteva mii de IMM-uri cu suficiente nerambursări; rata reală de nerambursare precizată.
+CSV/Excel + dicționar de date; codificare documentată a valorilor lipsă.
+Complet anonimizat/pseudonimizat, în baza unui acord conform GDPR.
+
+Referințe. Giudici, P., Centurelli, M. & Turchetta, S. (2024). Artificial Intelligence risk measurement. Expert Systems With Applications, 235, 121220. — Model structural: Hofmann, H. (1994). Statlog (German Credit Data) [set de date]. UCI Machine Learning Repository. https://doi.org/10.24432/C5NC77

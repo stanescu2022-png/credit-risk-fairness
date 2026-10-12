@@ -1,0 +1,9 @@
+selection_model,selection_outcome,ID,eligible_records
+logistic,TP,67,468
+logistic,TN,12,4437
+logistic,FP,55,239
+logistic,FN,2,852
+gradient_boosting,TP,67,464
+gradient_boosting,TN,12,4439
+gradient_boosting,FP,55,237
+gradient_boosting,FN,2,856

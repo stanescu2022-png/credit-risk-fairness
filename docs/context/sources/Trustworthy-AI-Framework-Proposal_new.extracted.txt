@@ -1,0 +1,171 @@
+Measuring Trustworthy Artificial Intelligence: A New Quantitative Framework
+
+I propose an integrated, empirically testable framework for measuring the trustworthiness of AI systems in financial services, built as a principled extension of the SAFE framework (Giudici & Raffinetti, 2023) and its risk-management counterpart KAIRI (Giudici, Centurelli & Turchetta, 2024). The new framework can be also extended to other industries as well. SAFE and KAIRI express four regulatory principles (Sustainability, Accuracy, Fairness and Explainability) through a single robust statistical object, the Lorenz Zonoid, and pair each with a significance test. My framework keeps that coherence while broadening the instrument in three ways.
+First, for each of the four SAFE/KAIRI dimensions I add three complementary, peer-reviewed statistical indicators that are computable in Python, each accompanied by a formally stated significance test (with null and alternative hypotheses), a classification as black-box (model-agnostic) or white-box (model-dependent), and a source. In accuracy these include the Brier score and logarithmic score as strictly proper scoring rules and the Model Confidence Set for multi-model selection; in fairness, the disparate impact ratio, equalised odds, and the generalised entropy index; in sustainability and robustness, the energy distance, maximum mean discrepancy, and empirical (adversarial) robustness; in explainability, the area over the perturbation curve, infidelity and stability, and model randomisation sanity checks.
+Second, I add a fifth axis — Uncertainty and Calibration — that operationalises the model-uncertainty limitation the SAFE authors themselves acknowledge (Ruggeri et al., 2025): calibration error, the decomposition of predictive uncertainty into aleatoric and epistemic components, and distribution-free conformal prediction with formal coverage back tests.
+Third, and central to the framework, bias is treated as a cross-cutting property rather than a single fairness score: each dimension carries a dedicated, testable bias indicator, so that bias is detected wherever it arises — in outcomes, in errors, in data representation, in explanations, and in confidence.
+Every indicator is mapped to the requirements of the EU AI Act, the NIST AI Risk Management Framework and the HLEG Ethics Guidelines, and the framework retains the SAFE-native jackknife test (Z = γ̂/√Var̂(γ̂) → N(0,1)) as a common testing procedure. The framework is designed to be validated empirically on the Taiwan “Default of Credit Card Clients” dataset (Yeh & Lien, 2009), with trading systems considered as a second application domain that motivates the same indicators.
+
+Justification
+Why a new framework is needed
+AI systems now make consequential financial decisions, and regulation has shifted trustworthiness from an ethical aspiration to a legal obligation that must be demonstrated, not merely asserted (European Union, 2024; Tabassi, 2023; High-Level Expert Group on AI, 2019). Yet regulation speaks in principles while supervision requires numbers, leaving a gap between a legal requirement and a computable statistic. SAFE and KAIRI are the most coherent response to date, but they leave three openings that this dissertation addresses.
+First, an author-acknowledged gap. Giudici and Raffinetti state that the SAFE metrics do not yet quantify model uncertainty and explicitly call for research to close this (Ruggeri et al., 2025). A framework that measures how accurate a model is, but not how confident or well-calibrated it is, cannot answer the most consequential supervisory question: whether a particular decision of an AI system should be trusted. Uncertainty and Calibration axis fills precisely this gap with established statistics (Hüllermeier & Waegeman, 2021; Vovk, Gammerman & Shafer, 2005).
+Second, single metrics are insufficient and can mislead. It is now a formal result that competing fairness criteria cannot be satisfied simultaneously unless group base rates are equal (Kleinberg, Mullainathan & Raghavan, 2017; Chouldechova, 2017), and evaluations of explanation quality are known to disagree (Nauta et al., 2022). A defensible framework must therefore report a panel of indicators and make trade-offs explicit rather than concealing them behind one number — which is why each dimension in my framework carries several indicators and a bias reading.
+Third, bias is broader than fairness. Treating bias as a single checklist item misses where it actually is revealed: in outcome rates (Feldman et al., 2015), in group error rates (Hardt, Price & Srebro, 2016), in data representation (Székely & Rizzo, 2013; Gretton et al., 2012), in explanations (Giudici et al., 2024), and in differential calibration (Guo et al., 2017). Making bias a cross-cutting, testable property is the framework’s distinctive contribution.
+Contribution and feasibility
+The contribution is neither a single new statistic nor a replacement for SAFE/KAIRI, but the assembly, formalisation and empirical testing of a regulation-mapped battery: every indicator is given a formula, a hypothesis test, a model-access classification and a Python implementation, unified under one protocol. This is a genuine gap: existing reviews organise metrics by theme (Kemmerzell et al., 2025; McCormack et al., 2024) but none provides an enriched and single unified framework implementation spine tied to SAFE and mapped to all three regulatory regimes.
+ All indicators are implementable with mature Python libraries (scikit-learn, aif360, fairlearn, alibi-detect, Quantus, MAPIE, netcal, and the authors’ own safeaipackage), and the Taiwan dataset is a well-established, publicly available benchmark in exactly the credit-scoring domain SAFE and KAIRI target. This approach can be further developed for other types of applications and systems as measuring trading biases decisions. 
+The following tables summarise, for every indicator in the battery, the associated significance test (with its null hypothesis), the sources, and its Python implementation. They consolidate, in one place, the operational detail of the empirical study.
+Accuracy (baseline: AUROC with the DeLong test, DeLong et al., 1988; RGA, Raffinetti, 2023).
+Indicator
+Statistical test (H0)
+Reference
+Python instructions
+Brier / CRPS
+Diebold–Mariano (H0: equal loss, E[d]=0)
+Gneiting & Raftery (2007); Diebold & Mariano (1995)
+sklearn.metrics.brier_score_loss; dieboldmariano
+Log loss
+Diebold–Mariano (H0: equal loss)
+Gneiting & Raftery (2007)
+sklearn.metrics.log_loss
+Model Confidence Set
+MCS block-bootstrap equivalence test (H0: all models equal)
+Hansen, Lunde & Nason (2011)
+arch.bootstrap.MCS
+Bias: calibration-in-the-large
+one-sample t-test (H0: E[p−y]=0)
+Gneiting & Raftery (2007)
+scipy.stats.ttest_1samp
+
+Fairness
+
+Indicator
+Statistical test (H0)
+Reference
+Python instructions
+Disparate Impact
+two-proportion z-test (H0: equal selection rates)
+Feldman et al. (2015)
+fairlearn.metrics.demographic_parity_ratio; statsmodels proportions_ztest
+Equalised Odds / Equal Opportunity
+permutation test (H0: ΔEO=0)
+Hardt, Price & Srebro (2016)
+fairlearn.metrics.equalized_odds_difference
+Generalised Entropy / Theil
+bootstrap CI on between-group share (H0: =0)
+Speicher et al. (2018)
+aif360 generalized_entropy_index, theil_index
+Bias: Statistical Parity Difference
+two-proportion z-test (H0: SPD=0)
+Feldman et al. (2015); Hardt et al. (2016)
+fairlearn.metrics.demographic_parity_difference
+
+Sustainability /robustness.
+
+Indicator
+Statistical test (H0)
+Reference
+Python instructions
+Energy distance
+permutation two-sample test (H0: F_X=F_Y)
+Székely & Rizzo (2013)
+scipy.stats.energy_distance; dcor
+Maximum Mean Discrepancy
+permutation two-sample test (H0: P=Q)
+Gretton et al. (2012)
+alibi_detect.cd.MMDDrift
+Empirical robustness (DeepFool)
+Mann-Whitney U on perturbation norms (H0: equal robustness)
+Moosavi-Dezfooli et al. (2016)
+art.metrics.empirical_robustness; foolbox
+Bias: representation/covariate
+permutation two-sample on subgroups (H0: F₁=F₂)
+Székely & Rizzo (2013); Gretton et al. (2012)
+dcor; alibi-detect
+
+Explainability.
+Indicator
+Statistical test (H0)
+Reference
+Python instructions
+AOPC
+Wilcoxon signed-rank, informed vs random (H0: no difference)
+Samek et al. (2017)
+Quantus
+Infidelity / max-sensitivity
+bootstrap CI on the mean (H0: equal fidelity)
+Yeh et al. (2019)
+captum.metrics.infidelity, sensitivity_max; Quantus
+Sanity check (randomisation)
+Spearman correlation test (H0: s=0)
+Adebayo et al. (2018)
+Quantus ModelParameterRandomisation; scipy.stats.spearmanr
+Bias: explanation disparity across groups
+Kolmogorov–Smirnov on group attributions (H0: F₁=F₂)
+Giudici, Centurelli & Turchetta (2024)
+scipy.stats.ks_2samp on shap values
+
+Uncertainty and calibration.
+Indicator
+Statistical test (H0)
+Reference
+Python instructions
+AOPC
+Wilcoxon signed-rank, informed vs random (H0: no difference)
+Samek et al. (2017)
+Quantus
+Infidelity / max-sensitivity
+bootstrap CI on the mean (H0: equal fidelity)
+Yeh et al. (2019)
+captum.metrics.infidelity, sensitivity_max; Quantus
+Sanity check (randomisation)
+Spearman correlation test (H0: s=0)
+Adebayo et al. (2018)
+Quantus ModelParameterRandomisation; scipy.stats.spearmanr
+Bias: explanation disparity across groups
+Kolmogorov–Smirnov on group attributions (H0: F₁=F₂)
+Giudici, Centurelli & Turchetta (2024)
+scipy.stats.ks_2samp on shap values
+
+
+
+
+Consolidated Trustworthy AI Framework and Regulatory Mapping
+
+Dimension
+Featured indicators
+EU AI Act
+NIST AI RMF
+HLEG
+Accuracy
+Brier/CRPS, log loss, Model Confidence Set
+Art. 15
+Valid & reliable
+(2)
+Fairness
+Disparate Impact, Equalised Odds, Generalised Entropy/Theil
+Art. 10
+Fair with harmful bias managed
+(5)
+Sustainability
+Energy distance, MMD, Empirical robustness
+Art. 15
+Safe; Secure & resilient
+(2)
+Explainability
+AOPC, Infidelity/sensitivity, Sanity checks
+Arts. 13, 14
+Explainable & interpretable
+(4)
+Uncertainty
+Calibration error, Aleatoric/epistemic, Conformal coverage
+Art. 15
+Safe; Valid & reliable
+(2)
+SAFE baseline
+Lorenz Zonoid, Shapley-Lorenz, RGA/RGR/RGE
+Arts. 10, 13, 15
+(i), (v), (vii)
+(2), (4), (5)
+

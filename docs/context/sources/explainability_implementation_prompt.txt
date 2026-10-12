@@ -1,0 +1,422 @@
+You are working in the existing repository:
+
+`C:\Users\Andrei\Desktop\credit-risk-fairness`
+
+Your task is to implement the **Explainability stage** of the research project.
+
+## 1. Project context
+
+The project compares two frozen credit-default prediction models:
+
+* Logistic Regression
+* Gradient Boosting
+
+using the Taiwan credit-card default dataset.
+
+The broader research objective is to compare the models across:
+
+1. Predictive performance
+2. Fairness
+3. Explainability
+4. Robustness
+5. Stability / monitoring
+
+The following stages are already complete:
+
+* Data understanding and EDA
+* Baseline model development
+* Baseline stabilization
+* Performance evaluation
+* Fairness evaluation
+
+Do **not** redo or alter those stages unless something is genuinely required to consume their saved outputs.
+
+Current headline results include:
+
+* Gradient Boosting ROC-AUC ≈ 0.778
+* Logistic Regression ROC-AUC ≈ 0.757
+* Both models have ≈81.8% accuracy at threshold 0.50
+* Recall for defaults is only ≈35% at the reference threshold
+* Fairness analysis found no single overall fairness winner
+* Actual SAFE RGA and RGA-parity calculations have already been implemented
+
+The models are considered **frozen**.
+
+The reference decision threshold remains:
+
+`0.50`
+
+Do not retrain, retune, recalibrate, change the train/test split, modify preprocessing, or select a new threshold as part of this task.
+
+---
+
+# 2. Goal of this stage
+
+Implement a rigorous and reproducible **Explainability analysis** for both frozen models using two complementary approaches:
+
+### A. SHAP
+
+Use SHAP to understand how predictors contribute to model predictions.
+
+### B. SAFE RGE
+
+Implement the **Rank Graduation Explainability (RGE)** methodology from the SAFE framework using the actual SAFE implementation/library associated with this project, rather than inventing a substitute metric.
+
+The final purpose is to answer:
+
+> Why are the models making their predictions, which variables drive risk predictions most strongly, and do those explanations differ materially between SEX groups or between Logistic Regression and Gradient Boosting?
+
+SHAP and SAFE RGE should be treated as **complementary approaches**, not interchangeable ones.
+
+---
+
+# 3. First inspect the repository
+
+Before implementing anything:
+
+1. Read `README.md`.
+2. Inspect the existing project structure.
+3. Identify:
+
+   * frozen model artifacts
+   * preprocessing objects
+   * exact model predictor list
+   * train/test datasets
+   * holdout predictions
+   * SEX variable/group encoding
+   * existing SAFE implementation
+   * existing fairness scripts
+   * test infrastructure
+   * output/report naming conventions
+4. Read any documentation or scripts related to:
+
+   * RGA
+   * SAFE fairness
+   * the SAFE GitHub library
+5. Reuse established project utilities wherever practical.
+
+Do not duplicate functionality that already exists.
+
+Document in your final report which files/artifacts were used.
+
+---
+
+# 4. Preserve research integrity
+
+The explainability stage must use the **same frozen holdout/test population** used in the completed performance and fairness analysis.
+
+Important:
+
+* Do not leak training information into the test analysis.
+* Do not fit a new predictive model.
+* Do not modify the cleaned dataset.
+* Do not silently drop observations.
+* Do not silently change feature definitions.
+* Do not use SEX as a model predictor if the frozen models did not use SEX.
+* SEX may be used to **stratify explanation results**.
+* Preserve the repaired train/test separation established during baseline stabilization.
+
+If SHAP requires a background/reference sample, choose it from the **training data only**, not the holdout/test set, and document the sampling method and random seed.
+
+---
+
+# 5. SHAP analysis
+
+Implement SHAP analysis separately for Logistic Regression and Gradient Boosting.
+
+Use the SHAP explainer appropriate to each model.
+
+Prefer model-specific explainers when technically appropriate rather than automatically defaulting to a generic black-box explainer.
+
+Ensure reproducibility.
+
+## 5.1 Global SHAP analysis
+
+For each model calculate and save:
+
+* SHAP values for the holdout/test observations
+* mean absolute SHAP value per feature
+* global feature importance ranking
+* SHAP summary / beeswarm plot
+* SHAP global bar plot
+
+Where technically meaningful, also create dependence plots for the most influential predictors.
+
+At minimum inspect several of the highest-ranked predictors.
+
+Avoid generating dozens of low-value plots.
+
+---
+
+# 6. Local explanation examples
+
+Create a small, clearly justified set of individual predictions to illustrate how each model reaches decisions.
+
+Include examples such as:
+
+* correctly predicted default
+* correctly predicted non-default
+* false positive
+* false negative
+
+where examples exist.
+
+For each selected case, show the most important positive and negative contributions to predicted default risk.
+
+Use stable observation identifiers if the project has them.
+
+Do not cherry-pick cases to make one model appear superior.
+
+Document the selection rule.
+
+---
+
+# 7. SEX-group SHAP analysis
+
+Because fairness analysis has already been performed using SEX, analyze whether explanatory patterns differ between the SEX groups.
+
+For each model:
+
+1. Calculate mean absolute SHAP values separately by SEX.
+2. Compare the feature importance rankings between groups.
+3. Compare the magnitude and direction of important feature effects where appropriate.
+4. Identify predictors whose explanatory importance differs substantially between groups.
+5. Produce a compact table comparing group-level SHAP importance.
+
+Important methodological constraint:
+
+Do **not** interpret a difference in SHAP values by itself as discrimination or unfairness.
+
+Describe it as a difference in model behavior/explanation patterns that may warrant interpretation alongside the completed fairness metrics.
+
+Avoid causal language.
+
+---
+
+# 8. SAFE Rank Graduation Explainability — RGE
+
+Implement the actual **SAFE RGE** methodology used by the SAFE framework associated with this repository/research project.
+
+First inspect the existing SAFE implementation and documentation.
+
+Do not create a home-grown approximation if the official/library implementation can be used.
+
+Calculate RGE for the frozen:
+
+* Logistic Regression
+* Gradient Boosting
+
+At minimum calculate RGE at the **individual predictor level**.
+
+Where supported and methodologically meaningful, also calculate RGE for logical groups of predictors, for example:
+
+* repayment-status variables
+* bill-amount variables
+* payment-amount variables
+* demographic/background predictors
+
+Use the actual predictor structure in the repository rather than assuming these exact group names if they differ.
+
+Save:
+
+* RGE value by feature
+* RGE ranking
+* grouped RGE if implemented
+* model-to-model comparison
+
+Document precisely:
+
+* which SAFE function was used
+* which inputs it requires
+* how the calculation works at a conceptual level
+* any parameter settings
+* any limitations of the implementation
+
+---
+
+# 9. Compare SHAP and SAFE RGE
+
+Create a dedicated comparison between the two explainability approaches.
+
+For each model compare:
+
+* SHAP feature ranking
+* SAFE RGE feature ranking
+
+Assess:
+
+* where the methods broadly agree
+* where rankings differ
+* whether the same variables dominate both approaches
+* what methodological difference could explain disagreement
+
+Do not assume disagreement means one metric is wrong.
+
+Explain that SHAP and RGE measure feature contribution using different concepts.
+
+If appropriate, compute a descriptive rank correlation between the SHAP importance ranking and RGE ranking, such as Spearman rank correlation.
+
+If doing so, treat it as descriptive rather than inferential unless justified.
+
+---
+
+# 10. Logistic Regression vs Gradient Boosting
+
+The final analysis should explicitly compare the models.
+
+Questions to answer include:
+
+* Do both models rely on broadly the same predictors?
+* Is Gradient Boosting more concentrated on a few predictors?
+* Does Logistic Regression distribute influence more broadly?
+* Are nonlinear relationships visible in Gradient Boosting that are absent from Logistic Regression?
+* Are SEX-group explanation differences larger for one model?
+* Do SHAP and SAFE RGE tell a consistent story for each model?
+
+Avoid declaring an overall model winner.
+
+The purpose is to characterize the **explainability trade-offs**.
+
+---
+
+# 11. Outputs
+
+Follow the repository's existing structure and naming conventions.
+
+Create reproducible machine-readable outputs such as CSV files for:
+
+* global SHAP importance for Logistic Regression
+* global SHAP importance for Gradient Boosting
+* SEX-stratified SHAP importance
+* SAFE RGE values
+* grouped RGE values, if applicable
+* SHAP vs RGE comparison
+
+Save appropriate visualizations.
+
+Create an explainability report in Markdown summarizing:
+
+### Methods
+
+What was calculated and how.
+
+### Global explanation results
+
+Main predictors for each model.
+
+### Group comparison
+
+Differences in explanation patterns by SEX.
+
+### SAFE RGE
+
+Results and interpretation.
+
+### SHAP vs SAFE RGE
+
+Agreement and disagreement.
+
+### Model comparison
+
+Logistic Regression vs Gradient Boosting.
+
+### Limitations
+
+What these methods can and cannot establish.
+
+### Research implications
+
+What this stage contributes to the eventual paper.
+
+Use actual calculated values in the report rather than generic prose.
+
+---
+
+# 12. Testing and validation
+
+Add or update tests where appropriate.
+
+Verify at minimum:
+
+* SHAP row count matches the holdout population
+* SHAP feature count matches the model predictor set
+* no holdout observations are used as SHAP background data if a background set is required
+* group counts reconcile with the existing fairness outputs
+* RGE outputs are reproducible
+* no NaN/inf values are silently introduced
+* model predictions remain unchanged
+* existing tests still pass
+
+Where practical, check that SHAP values reconstruct the model output according to the relevant SHAP formulation/explainer.
+
+Do not modify model artifacts merely to make tests pass.
+
+---
+
+# 13. Scope boundaries
+
+Do NOT implement the following in this task:
+
+* SAFE RGR
+* perturbation robustness experiments
+* PSI
+* population stability analysis
+* drift monitoring
+* fairness mitigation
+* threshold optimization
+* calibration changes
+* retraining
+* new model development
+* proxy analysis beyond observations directly relevant to interpreting explanations
+* intersectional fairness analysis
+* governance framework
+
+Those belong to later stages.
+
+If you notice issues relevant to those stages, record them under **future work** rather than implementing them.
+
+---
+
+# 14. Documentation update
+
+Update `README.md` only as necessary to reflect that Explainability has now been implemented.
+
+The project-status section should then distinguish:
+
+* Data understanding / EDA — complete
+* Baseline models — complete
+* Stabilization — complete
+* Performance — complete
+* Fairness — complete
+* Explainability — complete
+* Robustness — not started
+* Stability / monitoring — not started
+
+Do not rewrite unrelated README content.
+
+---
+
+# 15. Final response
+
+When finished, provide a concise implementation report containing:
+
+1. Files created
+2. Files modified
+3. Methods implemented
+4. Main numerical findings
+5. Top explanatory variables for each model
+6. Important SEX-group differences
+7. SAFE RGE findings
+8. Relationship between SHAP and RGE
+9. Tests/checks performed and their results
+10. Any limitations or methodological concerns
+11. Exact next recommended research stage
+
+Also explicitly confirm whether:
+
+* models remained frozen
+* the 80/20 split remained unchanged
+* the 0.50 reference threshold remained unchanged
+* performance/fairness outputs were left intact
+
+Do not proceed into robustness or stability after completing this task.

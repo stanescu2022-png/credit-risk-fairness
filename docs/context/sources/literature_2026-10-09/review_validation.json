@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-09",
+  "source_copies_byte_identical": 5,
+  "extracted_pages": 108,
+  "visually_inspected_pages": [
+    "tmp\\pdfs\\literature_2026-10-09\\correlation_metrics_page_4.png",
+    "tmp\\pdfs\\literature_2026-10-09\\correlation_metrics_page_5.png",
+    "tmp\\pdfs\\literature_2026-10-09\\correlation_metrics_page_9.png",
+    "tmp\\pdfs\\literature_2026-10-09\\integrated_safe_page_12.png",
+    "tmp\\pdfs\\literature_2026-10-09\\integrated_safe_page_5.png",
+    "tmp\\pdfs\\literature_2026-10-09\\integrated_safe_page_7.png",
+    "tmp\\pdfs\\literature_2026-10-09\\integrated_safe_page_9.png",
+    "tmp\\pdfs\\literature_2026-10-09\\rank_graduation_box_page_10.png",
+    "tmp\\pdfs\\literature_2026-10-09\\rank_graduation_box_page_5.png",
+    "tmp\\pdfs\\literature_2026-10-09\\rank_graduation_box_page_6.png",
+    "tmp\\pdfs\\literature_2026-10-09\\trustworthiness_review_page_25.png",
+    "tmp\\pdfs\\literature_2026-10-09\\wasserstein_page_17.png",
+    "tmp\\pdfs\\literature_2026-10-09\\wasserstein_page_19.png",
+    "tmp\\pdfs\\literature_2026-10-09\\wasserstein_page_8.png"
+  ],
+  "evaluation_hash_checks": 410,
+  "mismatches": [],
+  "new_credit_experiments": false,
+  "definition_check_receipt": "docs/reports/literature_definition_checks_2026-10-09.json"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "model": "gbm_full",
+    "component": "SHAP outcome regression",
+    "status": "ok",
+    "rank": 23,
+    "records": 5996,
+    "predictive_candidate": false
+  },
+  {
+    "model": "gbm_selected",
+    "component": "SHAP outcome regression",
+    "status": "ok",
+    "rank": 4,
+    "records": 5996,
+    "predictive_candidate": false
+  },
+  {
+    "model": "lr_mle_full",
+    "component": "article model and dependent assessments",
+    "status": "not_estimable",
+    "reason": "rank_deficient_design"
+  },
+  {
+    "model": "lr_mle_selected",
+    "component": "article model and dependent assessments",
+    "status": "not_estimable",
+    "reason": "training_selection_not_estimable"
+  }
+]

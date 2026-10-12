@@ -1,0 +1,24 @@
+test_authentic_rge_calls_categories_references_and_reproduction (test_explainability_evaluation.ExplainabilityTests.test_authentic_rge_calls_categories_references_and_reproduction) ... ok
+test_complete_saved_shap_group_counts_and_finite_outputs (test_explainability_evaluation.ExplainabilityTests.test_complete_saved_shap_group_counts_and_finite_outputs) ... ok
+test_local_rule_is_lowest_id_and_shared_union (test_explainability_evaluation.ExplainabilityTests.test_local_rule_is_lowest_id_and_shared_union) ... ok
+test_manifest_and_protected_artifacts (test_explainability_evaluation.ExplainabilityTests.test_manifest_and_protected_artifacts) ... ok
+test_training_background_and_model_specific_additivity (test_explainability_evaluation.ExplainabilityTests.test_training_background_and_model_specific_additivity) ... ok
+test_completed_artifacts_alignment_and_consistency (test_fairness_evaluation.FairnessArtifactTests.test_completed_artifacts_alignment_and_consistency) ... ok
+test_safe_adapter_and_actual_package_calls (test_fairness_evaluation.FairnessArtifactTests.test_safe_adapter_and_actual_package_calls) ... ok
+test_bootstrap_preserves_mixed_sex_groups (test_fairness_evaluation.FairnessMethodTests.test_bootstrap_preserves_mixed_sex_groups) ... ok
+test_confusion_metrics_and_gap_direction (test_fairness_evaluation.FairnessMethodTests.test_confusion_metrics_and_gap_direction) ... ok
+test_completed_outputs_and_locked_hashes (test_performance_evaluation.PerformanceArtifactTests.test_completed_outputs_and_locked_hashes) ... ok
+test_cv_uses_training_only_and_isolates_actual_predictors (test_performance_evaluation.PerformanceArtifactTests.test_cv_uses_training_only_and_isolates_actual_predictors) ... ok
+test_bootstrap_is_seeded_and_retains_fixed_predictions (test_performance_evaluation.PerformanceMethodTests.test_bootstrap_is_seeded_and_retains_fixed_predictions) ... ok
+test_group_weights_equal_expanded_whole_groups (test_performance_evaluation.PerformanceMethodTests.test_group_weights_equal_expanded_whole_groups) ... ok
+test_reliability_edges_empty_bins_and_ece (test_performance_evaluation.PerformanceMethodTests.test_reliability_edges_empty_bins_and_ece) ... ok
+test_threshold_candidates_handle_ties_and_reject_holdout (test_performance_evaluation.PerformanceMethodTests.test_threshold_candidates_handle_ties_and_reject_holdout) ... ok
+test_all_records_preserved_and_predictors_disjoint (test_stabilization.StabilizationTests.test_all_records_preserved_and_predictors_disjoint) ... ok
+test_groups_ignore_sex_and_outcome (test_stabilization.StabilizationTests.test_groups_ignore_sex_and_outcome) ... ok
+test_saved_models_predictions_and_metrics_align (test_stabilization.StabilizationTests.test_saved_models_predictions_and_metrics_align) ... ok
+test_split_reproduces_and_metadata_order_matches (test_stabilization.StabilizationTests.test_split_reproduces_and_metadata_order_matches) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 16.167s
+
+OK

@@ -1,0 +1,8 @@
+{
+  "repetitions": 2000,
+  "original_groups": 5977,
+  "paired_draws": true,
+  "refitting_or_reselection": false,
+  "sampling_unit": "whole original predictor group",
+  "seed": 42
+}

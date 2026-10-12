@@ -1,0 +1,54 @@
+{
+  "completed_at_utc": "2026-10-10T12:45:52.030107+00:00",
+  "python": "3.11.9",
+  "package_version": "0.1.0",
+  "run_id": "article_v1_2026-10-10",
+  "stage": "prepare",
+  "checkpoint": "1 of 4 work packages; waiting for user review",
+  "protocol_sha256": "62e8ef9f4e2d71c2d83715cd00c963eb83fe2043beac68de12e0e3524c3ada77",
+  "source_hashes": {
+    "article_safe/__init__.py": "7cf3e080588bbe32162a75b7d56c3dfc8c9c2a6524b04c91b31e92caa44ee339",
+    "article_safe/artifacts.py": "a2ef0d9a8172b99c63879d7df209f4ccaca33ba0632e0e368b8adcbfd208ac7a",
+    "article_safe/data.py": "23a669f097090eb719ffad5bf479f77e0c7c0fd5109d2b811e0adf2d61d3f3b4",
+    "article_safe/explainability.py": "527a5eaefcc6d28aba87dcbcf34186dbfcb0404271e402efb1b6641a511db515",
+    "article_safe/inference.py": "3a86da1ba957481426c7f9ee614ecffd6b3a35e1580fa513561d31d6a0e91d14",
+    "article_safe/models.py": "d04de5880f82e47236218b86c38982dd9a4570ba7f969861c025dc772e33a380",
+    "article_safe/paths.py": "5871cf354693cef9b7707fecf079cef06625a4ce3e9ff9102813171b2dd1cfe8",
+    "article_safe/protocol.py": "67ffbb527f120f8b762e4eb631f166498114edea82c7bd3165a2f7d24ad80af0",
+    "article_safe/run.py": "6eec9fca7bfba6fe020486dcab4944340bb3d4403c7a4ad93dff375e66e11d7b",
+    "article_safe/selection.py": "7eebb54dd6f87ec50c8cc02636685e5aacde2827497ff8c16190475b6a204dab"
+  },
+  "input_hashes": {
+    "data/processed/preparation_manifest.json": "2094d76d9990875a780e4aadf19055d4962a393b37adaad0cd20d3e93bc5d7e6",
+    "data/processed/split_metadata.csv": "41a7990a29ea0557c2c0fb49d2e09b04af7f261869a82e9ff01d8a4b2005f876",
+    "data/processed/taiwan_credit_clean.csv": "e917d1b00ec2c36a55e930ceca5ac5141b088a74884235b26092de8ecca36b19",
+    "data/processed/test_metadata.csv": "63a2f715abd0f35c936e3a41499c5cb5b2ab488ffa9f33a5c827e18ffa9a9a4f",
+    "data/processed/train_metadata.csv": "4c0532cc2a087ca1180b1c6e5fb36952bacfbac0ee1a071c360ef502b4d5d451",
+    "models/baseline_gradient_boosting.joblib": "74a06d59895e3e61868090675b8741bf6812dafaef9664c385b7c58ca03e78ba",
+    "models/baseline_gradient_boosting_manifest.json": "81b84b2f3f1365865c9f1d9d1e26ae68a9109cf6c7d050c536d5da5e2d69cddf",
+    "models/baseline_logistic.joblib": "41867f552f1c72bc6e66119604071d3bae82d08985e1b718d95d72212c5beb7e",
+    "models/baseline_logistic_manifest.json": "882fa569ed494737e801efdd14cc909cccb50e273b3cf1493f5a2dcdeeaaf48e",
+    "data/raw/default of credit card clients.xls": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+    "requirements.txt": "d653ca2f1ab650f9c954f11744da9cb9942dfc31f6bda2c96e666dec0a976306",
+    "requirements-fairness.txt": "6159423d90591105970e628bb92191ce9a4745ed5cb53ea008118cc1cc3ae61e",
+    "requirements-explainability.txt": "2b8e90c7b2d7916d07f0cc10bef7fe25342d4bb07801471f985f805288134b57",
+    "article_safe/requirements.txt": "ae76c459dcc4da223d4c126f1d975ce1cf626db0149bb7e39e09fa998777c0af"
+  },
+  "output_hashes": {
+    "data_audit.json": "5b8e83d1d1862c05c37b6215935113ddf1ccc2ff56b8cbf47d760f68b0859c0c",
+    "development_assignments.csv": "bc8993d37ce07979a34bd6757aa061a3947515b56669178d0ed8be78d5418588",
+    "package_reference.json": "6a1c7348e2c07640c2ed6b393f8209514e9542a743de8ec4e59b4bcc633f3f53",
+    "protocol.json": "cdb7239d5925f11667d7703f1b7cb66824cd4fd71276bafed69d7dda5bc2394f"
+  },
+  "prior_artifact_checks_before": {
+    "checks": 410,
+    "failures": []
+  },
+  "prior_artifact_checks_after": {
+    "checks": 410,
+    "failures": []
+  },
+  "credit_models_fitted": 0,
+  "model_selection_executed": false,
+  "heldout_performance_evaluated": false
+}

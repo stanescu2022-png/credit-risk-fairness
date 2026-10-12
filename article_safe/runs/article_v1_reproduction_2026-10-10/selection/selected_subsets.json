@@ -1,0 +1,45 @@
+{
+  "lr_mle": {
+    "status": "not_estimable",
+    "selected_features": null,
+    "reason": "rank_deficient_design"
+  },
+  "gbm": {
+    "selected_k": 3,
+    "status": "complete",
+    "stopped_at_k": 4,
+    "reason": "nonpositive_auc_gain",
+    "selected_features": [
+      "PAY_0",
+      "LIMIT_BAL",
+      "PAY_AMT1"
+    ],
+    "feature_order": [
+      "PAY_0",
+      "LIMIT_BAL",
+      "PAY_AMT1",
+      "PAY_2",
+      "PAY_AMT2",
+      "PAY_AMT3",
+      "BILL_AMT1",
+      "PAY_3",
+      "PAY_AMT6",
+      "BILL_AMT3",
+      "PAY_5",
+      "PAY_4",
+      "PAY_AMT4",
+      "PAY_AMT5",
+      "MARRIAGE",
+      "PAY_6",
+      "BILL_AMT2",
+      "AGE",
+      "BILL_AMT4",
+      "BILL_AMT6",
+      "EDUCATION",
+      "BILL_AMT5"
+    ],
+    "max_shap_additivity_error": 7.084802283729985e-08
+  },
+  "selection_data": "F likelihood / V paired AUC; no H outcomes",
+  "final_model_refit_started": false
+}

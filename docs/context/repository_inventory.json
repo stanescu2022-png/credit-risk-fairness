@@ -1,0 +1,3593 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 161,
+    "sha256": "b84fe0e435a52168fa245b1e211216171af866935eb88207a0bdef3a26686ffb"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 441,
+    "sha256": "b0ff793e402026b1bc9833885aee9e92f54b702b0cc01ed4da782f9424b25c97"
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 2631,
+    "sha256": "b7ea792f78d9d494eff025c815f9021878d7ae928445dd3a99d1889632aadb30"
+  },
+  {
+    "path": "PROJECT_CONTEXT.md",
+    "bytes": 16131,
+    "sha256": "c1e02a5350f99e11d6a57bc0bd4e0fadf5974a899bf5bdfbce54cc2816612a1b"
+  },
+  {
+    "path": "README.md",
+    "bytes": 17830,
+    "sha256": "3e25bf530533b68bc58e3358f8dd058baffb891a187f4ca781db7f9dc7a01f00"
+  },
+  {
+    "path": "credit_risk_fairness_setup_steps.txt",
+    "bytes": 6092,
+    "sha256": "0729c752eeb6ce7f10b58ba4b3e7c2cc95a907cd63abd706e7b9ae36b17c9579"
+  },
+  {
+    "path": "doc ideeas.txt",
+    "bytes": 858,
+    "sha256": "77cd60e2048cf933f16d37daaeebea953f4554c887e90cfab2b16c8bc0a652d4"
+  },
+  {
+    "path": "potential_issues.txt",
+    "bytes": 3804,
+    "sha256": "11190432cee05a8f05869733bf4aa5774e990697f05787ab963cccbadfd012f7"
+  },
+  {
+    "path": "requirements-explainability.txt",
+    "bytes": 169,
+    "sha256": "2b8e90c7b2d7916d07f0cc10bef7fe25342d4bb07801471f985f805288134b57"
+  },
+  {
+    "path": "requirements-fairness.txt",
+    "bytes": 268,
+    "sha256": "6159423d90591105970e628bb92191ce9a4745ed5cb53ea008118cc1cc3ae61e"
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 2312,
+    "sha256": "d653ca2f1ab650f9c954f11744da9cb9942dfc31f6bda2c96e666dec0a976306"
+  },
+  {
+    "path": "script_base_model.py",
+    "bytes": 4887,
+    "sha256": "c1560cda8f98497788ce8b18614bfd9bb06e55bca6772dae7728b2af2c303471",
+    "definitions": []
+  },
+  {
+    "path": "script_explainability_evaluation.py",
+    "bytes": 462,
+    "sha256": "fa4f153f0255e5adf29b77281b1ef218d6fa938505751f953d1c2caa7187b8ed",
+    "definitions": []
+  },
+  {
+    "path": "script_fairness_evaluation.py",
+    "bytes": 239,
+    "sha256": "72911bdfa79c2bc8740fc79ca87b3517ed03e5e9872215e8dfd3ce682db4f6ee",
+    "definitions": []
+  },
+  {
+    "path": "script_gradient_boost.py",
+    "bytes": 5245,
+    "sha256": "35d31251a545880ae5da68b7f4e668aa42632018998c5185bd1634e12c1253dc",
+    "definitions": []
+  },
+  {
+    "path": "script_performance_evaluation.py",
+    "bytes": 249,
+    "sha256": "7c2d84c7d14bcf52911895e0b2ca2b13d6e0d1f6b7bbcce2c6b7ab378325a187",
+    "definitions": []
+  },
+  {
+    "path": "script_prepare_data.py",
+    "bytes": 231,
+    "sha256": "417457954ef320515bcb8e9f45f8013e28c7aaedf556974457cfd12b27817b41",
+    "definitions": []
+  },
+  {
+    "path": "script_robustness_evaluation.py",
+    "bytes": 425,
+    "sha256": "1fdf5a1172f1a84ab77d3cd29538d5491b5c88ad648d4cbc185dc4964c339a59",
+    "definitions": []
+  },
+  {
+    "path": "test.py",
+    "bytes": 14,
+    "sha256": "957e13c0732e48fd5496f935894dc93a9da7dcd5eb8ffea52646fdf178cda1d1",
+    "definitions": []
+  },
+  {
+    "path": ".vscode/settings.json",
+    "bytes": 155,
+    "sha256": "114afadb0cd800e3b287dfc177505a9e9890dcb82b037a1e8833554f14cdb9f1"
+  },
+  {
+    "path": "data/README.md",
+    "bytes": 2735,
+    "sha256": "b890ec1fd9601d3dc1f270b1ea752624ae69bce25cfc985fa2ea4a68a81f3718"
+  },
+  {
+    "path": "data/processed/preparation_manifest.json",
+    "bytes": 839,
+    "sha256": "2094d76d9990875a780e4aadf19055d4962a393b37adaad0cd20d3e93bc5d7e6"
+  },
+  {
+    "path": "data/processed/split_metadata.csv",
+    "bytes": 997598,
+    "sha256": "41a7990a29ea0557c2c0fb49d2e09b04af7f261869a82e9ff01d8a4b2005f876",
+    "columns": [
+      "ID",
+      "SEX",
+      "default",
+      "original_split",
+      "duplicate_group_id",
+      "split",
+      "partition_order"
+    ],
+    "rows": 30000
+  },
+  {
+    "path": "data/processed/taiwan_credit_clean.csv",
+    "bytes": 2897190,
+    "sha256": "e917d1b00ec2c36a55e930ceca5ac5141b088a74884235b26092de8ecca36b19",
+    "columns": [
+      "ID",
+      "LIMIT_BAL",
+      "SEX",
+      "EDUCATION",
+      "MARRIAGE",
+      "AGE",
+      "PAY_0",
+      "PAY_2",
+      "PAY_3",
+      "PAY_4",
+      "PAY_5",
+      "PAY_6",
+      "BILL_AMT1",
+      "BILL_AMT2",
+      "BILL_AMT3",
+      "BILL_AMT4",
+      "BILL_AMT5",
+      "BILL_AMT6",
+      "PAY_AMT1",
+      "PAY_AMT2",
+      "PAY_AMT3",
+      "PAY_AMT4",
+      "PAY_AMT5",
+      "PAY_AMT6",
+      "default"
+    ],
+    "rows": 30000
+  },
+  {
+    "path": "data/processed/test_metadata.csv",
+    "bytes": 186417,
+    "sha256": "63a2f715abd0f35c936e3a41499c5cb5b2ab488ffa9f33a5c827e18ffa9a9a4f",
+    "columns": [
+      "ID",
+      "SEX",
+      "default",
+      "original_split",
+      "duplicate_group_id",
+      "split",
+      "partition_order"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "data/processed/train_metadata.csv",
+    "bytes": 811253,
+    "sha256": "4c0532cc2a087ca1180b1c6e5fb36952bacfbac0ee1a071c360ef502b4d5d451",
+    "columns": [
+      "ID",
+      "SEX",
+      "default",
+      "original_split",
+      "duplicate_group_id",
+      "split",
+      "partition_order"
+    ],
+    "rows": 24004
+  },
+  {
+    "path": "data/raw/default of credit card clients.xls",
+    "bytes": 5539328,
+    "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933"
+  },
+  {
+    "path": "models/baseline_gradient_boosting.joblib",
+    "bytes": 144109,
+    "sha256": "74a06d59895e3e61868090675b8741bf6812dafaef9664c385b7c58ca03e78ba"
+  },
+  {
+    "path": "models/baseline_gradient_boosting_manifest.json",
+    "bytes": 1525,
+    "sha256": "81b84b2f3f1365865c9f1d9d1e26ae68a9109cf6c7d050c536d5da5e2d69cddf"
+  },
+  {
+    "path": "models/baseline_logistic.joblib",
+    "bytes": 5722,
+    "sha256": "41867f552f1c72bc6e66119604071d3bae82d08985e1b718d95d72212c5beb7e"
+  },
+  {
+    "path": "models/baseline_logistic_manifest.json",
+    "bytes": 1318,
+    "sha256": "882fa569ed494737e801efdd14cc909cccb50e273b3cf1493f5a2dcdeeaaf48e"
+  },
+  {
+    "path": "notebooks/01_data_understanding.ipynb",
+    "bytes": 44212,
+    "sha256": "c2deab4f2d63bfa4a86d28f918cf3fb2b1794472e5a9854835d1f17dd137aaa0",
+    "cells": [
+      {
+        "type": "code",
+        "source": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nfrom pathlib import Path\n\npd.set_option(\"display.max_columns\", None)\n\nprint(\"Environment loaded successfully.\")",
+        "execution_count": 1,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "from pathlib import Path\nimport sys\n\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'src/baseline.py').exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.baseline import DATA_PATH, TABLES, load_split, build_model, save_pipeline, CATEGORICAL, NUMERIC\n\nfrom src.baseline import RAW_PATH, clean_data, prepare_data\nDATA_PATH = RAW_PATH\n\ndf = pd.read_excel(DATA_PATH, header=1)\n\nprint(\"Shape:\", df.shape)\ndf.head()",
+        "execution_count": 2,
+        "output_types": [
+          "stream",
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "print(\"ROWS:\", df.shape[0])\nprint(\"COLUMNS:\", df.shape[1])\n\nprint(\"\\nCOLUMN NAMES:\")\nprint(df.columns.tolist())\n\nprint(\"\\nDATA TYPES:\")\nprint(df.dtypes)\n\nprint(\"\\nMISSING VALUES:\")\nprint(df.isna().sum())\n\nprint(\"\\nDUPLICATE ROWS:\")\nprint(\"Excluding ID, including outcome:\", df.drop(columns=\"ID\").duplicated().sum())\nprint(\"Records involved:\", df.drop(columns=\"ID\").duplicated(keep=False).sum())",
+        "execution_count": 3,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "for col in [\"SEX\", \"EDUCATION\", \"MARRIAGE\"]:\n    print(f\"\\n--- {col} ---\")\n    print(df[col].value_counts(dropna=False).sort_index())",
+        "execution_count": 4,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "df.describe().T",
+        "execution_count": 5,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "target = \"default payment next month\"\n\nprint(df[target].value_counts())\nprint(\"\\nPercentages:\")\nprint(df[target].value_counts(normalize=True) * 100)",
+        "execution_count": 6,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Data Cleaning",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "df_clean = clean_data(df)\n# ID is retained for traceability and explicitly excluded by both models.\nprint(\"Clean shape:\", df_clean.shape)\ndf_clean.head()",
+        "execution_count": 7,
+        "output_types": [
+          "stream",
+          "stream",
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "df_clean, split_metadata, duplicate_audit = prepare_data()\nprint(\"Saved cleaned data and shared train/test metadata.\")\nduplicate_audit",
+        "execution_count": 8,
+        "output_types": [
+          "stream",
+          "execute_result"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "notebooks/02_exploratory_analysis.ipynb",
+    "bytes": 191632,
+    "sha256": "46936edb866874c33a5bc3340112ea9db5d9b1cb00ad8bfe0e4329a875e35765",
+    "cells": [
+      {
+        "type": "code",
+        "source": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nfrom pathlib import Path\n\npd.set_option(\"display.max_columns\", None)\n\nfrom pathlib import Path\nimport sys\n\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'src/baseline.py').exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.baseline import DATA_PATH, TABLES, load_split, build_model, save_pipeline, CATEGORICAL, NUMERIC\n\ndf = pd.read_csv(DATA_PATH).drop(columns=\"ID\")  # record key is not an EDA feature\n\nprint(df.shape)\ndf.head()",
+        "execution_count": 1,
+        "output_types": [
+          "stream",
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "target_counts = df[\"default\"].value_counts().sort_index()\ntarget_rates = df[\"default\"].value_counts(normalize=True).sort_index() * 100\n\nprint(target_counts)\nprint(\"\\nPercentages:\")\nprint(target_rates)",
+        "execution_count": 2,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "sns.countplot(data=df, x=\"default\")\n\nplt.title(\"Distribution of Default Outcome\")\nplt.xlabel(\"Default next month\")\nplt.ylabel(\"Number of customers\")\nplt.show()",
+        "execution_count": 3,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "sex_summary = (\n    df.groupby(\"SEX\")[\"default\"]\n      .agg([\"count\", \"sum\", \"mean\"])\n)\n\nsex_summary[\"default_rate_pct\"] = sex_summary[\"mean\"] * 100\n\nsex_summary",
+        "execution_count": 4,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "sns.barplot(\n    data=df,\n    x=\"SEX\",\n    y=\"default\",\n    errorbar=None\n)\n\nplt.title(\"Default Rate by Sex\")\nplt.xlabel(\"Sex (1 = Male, 2 = Female)\")\nplt.ylabel(\"Default Rate\")\nplt.show()",
+        "execution_count": 5,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "df[\"AGE\"].describe()",
+        "execution_count": 6,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "plt.figure(figsize=(10, 5))\n\nsns.histplot(\n    data=df,\n    x=\"AGE\",\n    bins=30\n)\n\nplt.title(\"Age Distribution\")\nplt.xlabel(\"Age\")\nplt.ylabel(\"Customers\")\nplt.show()",
+        "execution_count": 7,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Grouping Age",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "age_bins = [20, 30, 40, 50, 60, 100]\nage_labels = [\"21-30\", \"31-40\", \"41-50\", \"51-60\", \"61+\"]\n\ndf[\"AGE_GROUP\"] = pd.cut(\n    df[\"AGE\"],\n    bins=age_bins,\n    labels=age_labels,\n    right=True\n)\n\ndf[\"AGE_GROUP\"].value_counts().sort_index()",
+        "execution_count": 8,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "age_summary = (\n    df.groupby(\"AGE_GROUP\", observed=False)[\"default\"]\n      .agg([\"count\", \"sum\", \"mean\"])\n)\n\nage_summary[\"default_rate_pct\"] = age_summary[\"mean\"] * 100\n\nage_summary",
+        "execution_count": 9,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "sns.barplot(\n    data=df,\n    x=\"AGE_GROUP\",\n    y=\"default\",\n    errorbar=None\n)\n\nplt.title(\"Default Rate by Age Group\")\nplt.xlabel(\"Age Group\")\nplt.ylabel(\"Default Rate\")\nplt.show()",
+        "execution_count": 10,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Education and marriage",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "education_summary = (\n    df.groupby(\"EDUCATION\")[\"default\"]\n      .agg([\"count\", \"sum\", \"mean\"])\n)\n\neducation_summary[\"default_rate_pct\"] = education_summary[\"mean\"] * 100\neducation_summary",
+        "execution_count": 11,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "marriage_summary = (\n    df.groupby(\"MARRIAGE\")[\"default\"]\n      .agg([\"count\", \"sum\", \"mean\"])\n)\n\nmarriage_summary[\"default_rate_pct\"] = marriage_summary[\"mean\"] * 100\nmarriage_summary",
+        "execution_count": 12,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Credit limit",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "df[\"LIMIT_BAL\"].describe()",
+        "execution_count": 13,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "plt.figure(figsize=(10, 5))\n\nsns.histplot(\n    data=df,\n    x=\"LIMIT_BAL\",\n    bins=40\n)\n\nplt.title(\"Distribution of Credit Limits\")\nplt.xlabel(\"Credit Limit\")\nplt.ylabel(\"Customers\")\nplt.show()",
+        "execution_count": 14,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "df.groupby(\"default\")[\"LIMIT_BAL\"].agg(\n    [\"count\", \"mean\", \"median\", \"std\"]\n)",
+        "execution_count": 15,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "sns.boxplot(\n    data=df,\n    x=\"default\",\n    y=\"LIMIT_BAL\"\n)\n\nplt.title(\"Credit Limit by Default Status\")\nplt.xlabel(\"Default\")\nplt.ylabel(\"Credit Limit\")\nplt.show()",
+        "execution_count": 16,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Repayment status(PAY_0)",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "pay0_summary = (\n    df.groupby(\"PAY_0\")[\"default\"]\n      .agg([\"count\", \"sum\", \"mean\"])\n)\n\npay0_summary[\"default_rate_pct\"] = pay0_summary[\"mean\"] * 100\n\npay0_summary",
+        "execution_count": 17,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "plt.figure(figsize=(10, 5))\n\nsns.barplot(\n    data=df,\n    x=\"PAY_0\",\n    y=\"default\",\n    errorbar=None\n)\n\nplt.title(\"Default Rate by Most Recent Repayment Status\")\nplt.xlabel(\"PAY_0\")\nplt.ylabel(\"Default Rate\")\nplt.show()",
+        "execution_count": 18,
+        "output_types": [
+          "display_data"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "notebooks/03_baseline_model.ipynb",
+    "bytes": 206091,
+    "sha256": "8f55f25a6e1870d180aee514ae5c60530643f8d66ae63f4ce46b5d6c4bfb94ea",
+    "cells": [
+      {
+        "type": "markdown",
+        "source": "Stabilization: ID is metadata only. Exact model-predictor groups share one partition, following the lowest-ID member of the original split. All records are retained. See `../outputs/stabilization_report.md`. Run `script_prepare_data.py` first. Hyperparameters, preprocessing and the default 0.5 decision boundary are unchanged.\n",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "from pathlib import Path\nimport sys\n\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'src/baseline.py').exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.baseline import DATA_PATH, TABLES, load_split, build_model, save_pipeline, CATEGORICAL, NUMERIC\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfrom pathlib import Path\n\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.linear_model import LogisticRegression\n\nfrom sklearn.metrics import (\n    accuracy_score,\n    balanced_accuracy_score,\n    precision_score,\n    recall_score,\n    f1_score,\n    roc_auc_score,\n    average_precision_score,\n    confusion_matrix,\n    ConfusionMatrixDisplay,\n    RocCurveDisplay,\n    classification_report\n)\n\npd.set_option(\"display.max_columns\", None)\n\n\ndf = pd.read_csv(DATA_PATH)\n\nprint(\"Shape:\", df.shape)\ndf.head()",
+        "execution_count": 1,
+        "output_types": [
+          "stream",
+          "execute_result"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Define target and sensitive attribute",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "TARGET = \"default\"\n\ny = df[TARGET]\n\n# Keep sex for fairness auditing, but don't give it to the baseline model\nA_sex = df[\"SEX\"]\n\nX = df.drop(columns=[\"ID\", TARGET, \"SEX\"])\n\nprint(\"X shape:\", X.shape)\nprint(\"y shape:\", y.shape)\n\nprint(\"\\nTarget distribution:\")\nprint(y.value_counts(normalize=True))",
+        "execution_count": 2,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "categorical_features = CATEGORICAL\nnumeric_features = NUMERIC\nprint(\"Predictors:\", len(CATEGORICAL) + len(NUMERIC))",
+        "execution_count": 3,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Train/test split",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "X_train, X_test, y_train, y_test, metadata_train, metadata_test = load_split(df)\nA_train, A_test = metadata_train['SEX'], metadata_test['SEX']\nprint('Training observations:', len(X_train))\nprint('Test observations:', len(X_test))\nprint('Training default rate:', y_train.mean() * 100)\nprint('Test default rate:', y_test.mean() * 100)\n",
+        "execution_count": 4,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Preprocessing pipeline",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "continuous financial variables\n        ↓\nStandardScaler\n\ncategorical variables\n        ↓\nOne-Hot Encoding",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "# Preprocessing and classifier definitions are shared with the standalone scripts.\n# StandardScaler for numeric columns; OneHotEncoder(handle_unknown=\"ignore\") for categorical columns.",
+        "execution_count": 5,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "Logistic Regression",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "baseline_model = build_model(\"logistic\")\nbaseline_model",
+        "execution_count": 6,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Train",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "baseline_model.fit(X_train, y_train)\n\nprint(\"Baseline model trained successfully.\")",
+        "execution_count": 7,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Generate predictions",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "y_pred = baseline_model.predict(X_test)",
+        "execution_count": 8,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "y_prob = baseline_model.predict_proba(X_test)[:, 1]\n\nprint(y_pred[:10])\nprint(y_prob[:10])",
+        "execution_count": 9,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "metrics = {\n    \"Accuracy\": accuracy_score(y_test, y_pred),\n    \"Balanced Accuracy\": balanced_accuracy_score(y_test, y_pred),\n    \"Precision\": precision_score(y_test, y_pred),\n    \"Recall\": recall_score(y_test, y_pred),\n    \"F1\": f1_score(y_test, y_pred),\n    \"ROC-AUC\": roc_auc_score(y_test, y_prob),\n    \"Average Precision (AP)\": average_precision_score(y_test, y_prob)\n}\n\nmetrics_df = pd.DataFrame(\n    metrics.items(),\n    columns=[\"Metric\", \"Value\"]\n)\n\nmetrics_df",
+        "execution_count": 10,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Full classification report",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "print(\n    classification_report(\n        y_test,\n        y_pred,\n        target_names=[\"No Default\", \"Default\"]\n    )\n)",
+        "execution_count": 11,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Confusion matrix",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "cm = confusion_matrix(y_test, y_pred)\n\ndisp = ConfusionMatrixDisplay(\n    confusion_matrix=cm,\n    display_labels=[\"No Default\", \"Default\"]\n)\n\ndisp.plot()\nplt.title(\"Baseline Logistic Regression - Confusion Matrix\")\nplt.show()",
+        "execution_count": 12,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "ROC curve",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "RocCurveDisplay.from_predictions(\n    y_test,\n    y_prob\n)\n\nplt.title(\"Baseline Logistic Regression - ROC Curve\")\nplt.show()\n\nprint(\n    \"ROC-AUC:\",\n    round(roc_auc_score(y_test, y_prob), 4)\n)",
+        "execution_count": 13,
+        "output_types": [
+          "display_data",
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "OUTPUT_PATH = ROOT / Path(\n    \"outputs/tables/baseline_logistic_metrics.csv\"\n)\n\nmetrics_df.to_csv(\n    OUTPUT_PATH,\n    index=False\n)\n\nprint(\"Saved:\", OUTPUT_PATH.resolve())",
+        "execution_count": 14,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "predictions = pd.DataFrame({\n    \"ID\": metadata_test[\"ID\"].values,\n    \"actual\": y_test.values,\n    \"predicted\": y_pred,\n    \"probability_default\": y_prob,\n    \"SEX\": A_test.values\n})\n\nPRED_PATH = ROOT / Path(\n    \"outputs/tables/baseline_logistic_predictions.csv\"\n)\n\npredictions.to_csv(\n    PRED_PATH,\n    index=False\n)\n\npredictions.head()",
+        "execution_count": 15,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "save_pipeline(baseline_model, \"logistic\", X_test, y_pred, y_prob)\n",
+        "execution_count": 16,
+        "output_types": [
+          "stream"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "notebooks/04_gradient_boosting.ipynb",
+    "bytes": 209633,
+    "sha256": "0f4c936c7851c81583eec01c6a17f0be998553c21abefe51849965a7cbfd5111",
+    "cells": [
+      {
+        "type": "markdown",
+        "source": "Stabilization: ID is metadata only. Exact model-predictor groups share one partition, following the lowest-ID member of the original split. All records are retained. See `../outputs/stabilization_report.md`. Run `script_prepare_data.py` first. Hyperparameters, preprocessing and the default 0.5 decision boundary are unchanged.\n",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "Both models were trained and evaluated using identical data partitions and preprocessing procedures; only the classification algorithm differed.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "from pathlib import Path\nimport sys\n\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'src/baseline.py').exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.baseline import DATA_PATH, TABLES, load_split, build_model, save_pipeline, CATEGORICAL, NUMERIC\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfrom pathlib import Path\n\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.ensemble import GradientBoostingClassifier\n\nfrom sklearn.metrics import (\n    accuracy_score,\n    balanced_accuracy_score,\n    precision_score,\n    recall_score,\n    f1_score,\n    roc_auc_score,\n    average_precision_score,\n    confusion_matrix,\n    ConfusionMatrixDisplay,\n    RocCurveDisplay,\n    classification_report\n)\n\npd.set_option(\"display.max_columns\", None)",
+        "execution_count": 1,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "\ndf = pd.read_csv(DATA_PATH)\n\nprint(\"Shape:\", df.shape)\ndf.head()",
+        "execution_count": 2,
+        "output_types": [
+          "stream",
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "TARGET = \"default\"\n\ny = df[TARGET]\n\n# Protected attribute retained for fairness auditing,\n# but excluded from model training\nA_sex = df[\"SEX\"]\n\nX = df.drop(columns=[\"ID\", TARGET, \"SEX\"])\n\nprint(\"X shape:\", X.shape)\nprint(\"y shape:\", y.shape)\n\nprint(\"\\nTarget distribution:\")\nprint(y.value_counts(normalize=True))",
+        "execution_count": 3,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "categorical_features = CATEGORICAL\nnumeric_features = NUMERIC\nprint(\"Predictors:\", len(CATEGORICAL) + len(NUMERIC))",
+        "execution_count": 4,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "X_train, X_test, y_train, y_test, metadata_train, metadata_test = load_split(df)\nA_train, A_test = metadata_train['SEX'], metadata_test['SEX']\nprint('Training observations:', len(X_train))\nprint('Test observations:', len(X_test))\nprint('Training default rate:', y_train.mean() * 100)\nprint('Test default rate:', y_test.mean() * 100)\n",
+        "execution_count": 5,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "# Preprocessing and classifier definitions are shared with the standalone scripts.\n# StandardScaler for numeric columns; OneHotEncoder(handle_unknown=\"ignore\") for categorical columns.",
+        "execution_count": 6,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "boost_model = build_model(\"gradient_boosting\")\nboost_model",
+        "execution_count": 7,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Train",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "boost_model.fit(X_train, y_train)\n\nprint(\"Gradient Boosting model trained successfully.\")",
+        "execution_count": 8,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Generate predictions",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "y_pred_boost = boost_model.predict(X_test)\n\ny_prob_boost = boost_model.predict_proba(X_test)[:, 1]\n\nprint(\"Predicted classes:\")\nprint(y_pred_boost[:10])\n\nprint(\"\\nPredicted default probabilities:\")\nprint(y_prob_boost[:10])",
+        "execution_count": 9,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Metrics",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "boost_metrics = {\n    \"Accuracy\": accuracy_score(y_test, y_pred_boost),\n    \"Balanced Accuracy\": balanced_accuracy_score(y_test, y_pred_boost),\n    \"Precision\": precision_score(y_test, y_pred_boost),\n    \"Recall\": recall_score(y_test, y_pred_boost),\n    \"F1\": f1_score(y_test, y_pred_boost),\n    \"ROC-AUC\": roc_auc_score(y_test, y_prob_boost),\n    \"Average Precision (AP)\": average_precision_score(\n        y_test,\n        y_prob_boost\n    )\n}\n\nboost_metrics_df = pd.DataFrame(\n    boost_metrics.items(),\n    columns=[\"Metric\", \"Value\"]\n)\n\nboost_metrics_df",
+        "execution_count": 10,
+        "output_types": [
+          "execute_result"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Classification report",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "print(\n    classification_report(\n        y_test,\n        y_pred_boost,\n        target_names=[\"No Default\", \"Default\"]\n    )\n)",
+        "execution_count": 11,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Confusion matrix",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "cm_boost = confusion_matrix(\n    y_test,\n    y_pred_boost\n)\n\ndisp = ConfusionMatrixDisplay(\n    confusion_matrix=cm_boost,\n    display_labels=[\"No Default\", \"Default\"]\n)\n\ndisp.plot()\n\nplt.title(\n    \"Gradient Boosting - Confusion Matrix\"\n)\n\nplt.show()",
+        "execution_count": 12,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "ROC curve",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "RocCurveDisplay.from_predictions(\n    y_test,\n    y_prob_boost\n)\n\nplt.title(\n    \"Gradient Boosting - ROC Curve\"\n)\n\nplt.show()\n\nprint(\n    \"ROC-AUC:\",\n    round(\n        roc_auc_score(\n            y_test,\n            y_prob_boost\n        ),\n        4\n    )\n)",
+        "execution_count": 13,
+        "output_types": [
+          "display_data",
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "BOOST_METRICS_PATH = ROOT / Path(\n    \"outputs/tables/baseline_gradient_boosting_metrics.csv\"\n)\n\nboost_metrics_df.to_csv(\n    BOOST_METRICS_PATH,\n    index=False\n)\n\nprint(\n    \"Saved:\",\n    BOOST_METRICS_PATH.resolve()\n)",
+        "execution_count": 14,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "boost_predictions = pd.DataFrame({\n    \"ID\": metadata_test[\"ID\"].values,\n    \"actual\": y_test.values,\n    \"predicted\": y_pred_boost,\n    \"probability_default\": y_prob_boost,\n    \"SEX\": A_test.values\n})\n\nBOOST_PRED_PATH = ROOT / Path(\n    \"outputs/tables/baseline_gradient_boosting_predictions.csv\"\n)\n\nboost_predictions.to_csv(\n    BOOST_PRED_PATH,\n    index=False\n)\n\nprint(\n    \"Saved:\",\n    BOOST_PRED_PATH.resolve()\n)\n\nboost_predictions.head()",
+        "execution_count": 15,
+        "output_types": [
+          "stream",
+          "execute_result"
+        ]
+      },
+      {
+        "type": "code",
+        "source": "save_pipeline(boost_model, \"gradient_boosting\", X_test, y_pred_boost, y_prob_boost)\n",
+        "execution_count": 16,
+        "output_types": [
+          "stream"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "notebooks/05_performance_evaluation.ipynb",
+    "bytes": 994009,
+    "sha256": "4eaf96d2e057c7151587216ee0a3c857f581ac4b9ca806081c8c2749f9bbc859",
+    "cells": [
+      {
+        "type": "markdown",
+        "source": "# 05 — Performance Evaluation\n\nContinue from the stabilized baseline. The existing 24,004/5,996 partition and\nboth fitted baseline pipelines are fixed. The holdout is locked for development\ndecisions; its earlier baseline-stage inspection is disclosed. No tuning,\npreprocessing change, resplit, calibration fitting or new threshold is performed.\nID and SEX remain metadata. Formal fairness and all later stages remain deferred.\n\nRun `python script_performance_evaluation.py` in the pinned environment to generate\nresults. This notebook verifies and displays the saved stage artifacts, without\nrefitting models. The script resolves paths from its location; this notebook finds\nthe project from the current directory or its parents.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "from pathlib import Path\nimport json\nimport sys\nimport pandas as pd\nimport numpy as np\nfrom IPython.display import display, Image, Markdown\n\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / \"src/performance_evaluation.py\").exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.baseline import sha256\nfrom src.performance_evaluation import TABLE_DIR, FIGURE_DIR, METRICS\n\npd.set_option(\"display.max_columns\", None)\npd.set_option(\"display.precision\", 6)\nmanifest = json.loads((TABLE_DIR / \"run_manifest.json\").read_text())\nfor category in (\"locked_input_hashes\", \"output_hashes\", \"source_hashes\"):\n    for name, expected in manifest[category].items():\n        assert sha256(ROOT / name) == expected, f\"Changed artifact: {name}\"\ndef read_table(name):\n    return pd.read_csv(TABLE_DIR / f\"{name}.csv\", float_precision=\"round_trip\")\nprint(\"Verified locked inputs, evaluation sources and result CSV hashes.\")\nprint(\"CV:\", manifest[\"cv\"])\nprint(\"Bootstrap:\", manifest[\"bootstrap\"])\n",
+        "execution_count": 1,
+        "output_types": [
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Training-only group-aware cross-validation\n\nFive-fold StratifiedGroupKFold, shuffled with seed 42, uses groups defined by exact\nequality of the 22 model predictors (excluding ID, SEX, target). The same folds\nserve both models. Each temporary model fits its entire preprocessing pipeline\ninside the fold, with unchanged baseline hyperparameters. No fold model overwrites\nthe fitted baseline artifacts. Fold summary SD uses ddof=1; it is not a CI.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "folds = read_table(\"cv_fold_metrics\")\ndisplay(read_table(\"cv_partition_summary\"))\ndisplay(folds[[\"model\", \"fold\", *METRICS]])\nsummary = read_table(\"cv_summary_metrics\")\ndisplay(summary.pivot(index=\"metric\", columns=\"model\", values=[\"mean\", \"std\", \"minimum\", \"maximum\"]))\nranking = folds.pivot(index=\"fold\", columns=\"model\", values=[\"ROC-AUC\", \"Average Precision (AP)\"])\nfor metric in [\"ROC-AUC\", \"Average Precision (AP)\"]:\n    wins = (ranking[metric][\"gradient_boosting\"] > ranking[metric][\"logistic\"]).sum()\n    print(f\"Boosting higher {metric}: {wins}/5 folds (descriptive only).\")\n",
+        "execution_count": 2,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data",
+          "stream"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Boosting leads ROC-AUC and AP in all five folds. Recall and precision vary more\nacross folds than accuracy or probability losses. Differences are descriptive;\nneither five-fold SD nor marginal holdout CIs provide a significance test.\nBoth models remain in the research design.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "oof = read_table(\"oof_predictions\")\ntraining = pd.read_csv(ROOT / \"data/processed/train_metadata.csv\")\nholdout_ids = set(pd.read_csv(ROOT / \"data/processed/test_metadata.csv\").ID)\nfor model, part in oof.groupby(\"model\"):\n    assert part.ID.is_unique and len(part) == len(training)\n    np.testing.assert_array_equal(part.ID, training.ID)\n    np.testing.assert_array_equal(part.SEX, training.SEX)\n    np.testing.assert_array_equal(part.actual, training.default)\n    assert not set(part.ID) & holdout_ids\n    assert part.groupby(\"duplicate_group_id\").fold.nunique().eq(1).all()\nprint(\"One OOF prediction per training ID per model; no holdout IDs or crossing groups.\")\ndisplay(oof.groupby(\"model\", sort=False).head(5))\ndisplay(read_table(\"oof_metrics\"))\ndisplay(Image(filename=str(FIGURE_DIR / \"oof_roc_precision_recall.png\")))\n",
+        "execution_count": 3,
+        "output_types": [
+          "stream",
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## OOF threshold trade-offs — candidates only\n\nThe grid uses 0.00–1.00 in 0.01 steps. Class 1 means probability > threshold;\nexact ties are class 0, consistent with the fixed baselines at 0.50. Precision/F1\nare zero when no cases are predicted positive. Threshold analysis has no holdout\ninputs. The 0.50 operating point remains in force.\n\nFor each target, the candidate is the greatest representable float below the score\nof the ceil(target × positive count)th highest OOF positive case. All ties are\nincluded, so recall may exceed the target. CSVs are read with round-trip float\nprecision because rounding a threshold at a score boundary can change a decision.\nCandidates are not thresholds selected for future use or validated on holdout.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "thresholds = read_table(\"threshold_tradeoffs\")\nassert set(thresholds.partition) == {\"training_oof\"}\ndisplay(Markdown(\"**Existing 0.50 — OOF training predictions**\"))\ndisplay(thresholds[thresholds.threshold == .50])\ndisplay(Markdown(\"**Selected grid rows; the CSV contains all 101 thresholds per model**\"))\ndisplay(thresholds[thresholds.threshold.round(2).isin([.50, .40, .30, .20])])\ncandidates = read_table(\"recall_target_candidates\")\ndisplay(candidates[[\"model\", \"recall_target\", \"threshold\", \"Recall\", \"Precision\", \"Specificity\", \"FPR\", \"Predicted-positive Rate\", \"status\"]])\ndisplay(Image(filename=str(FIGURE_DIR / \"oof_threshold_tradeoffs.png\")))\n",
+        "execution_count": 4,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data",
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "Lower thresholds gain recall at the cost of more false positives and more\nflagged records. At roughly 60% OOF recall, logistic needs a threshold near 0.209\nand boosting near 0.241; their FPRs are about 18.9% and 17.3%, respectively.\nAn operating objective and training-only validation protocol remain to be agreed.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "## Calibration assessment — no calibration fitting\n\nReliability uses ten equal-width bins over [0,1], left-closed/right-open with 1\nincluded in the final bin. Empty bins are retained in data and excluded from plotted\nmeans. ECE = sum(count/N × absolute(mean probability − observed frequency)).\nThis ECE depends on binning. Brier score is mean((p-y)^2); log loss uses natural logs\nwith sklearn numerical clipping. These losses also reflect discrimination and are\nnot pure measures of calibration. Bin counts show where estimates are sparse.\n[Calibration documentation](https://scikit-learn.org/stable/modules/calibration.html).",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "calibration = read_table(\"calibration_summary\")\ndisplay(calibration)\nbins = read_table(\"calibration_bins\")\ndisplay(bins[bins.partition == \"training_oof\"])\ndisplay(Image(filename=str(FIGURE_DIR / \"calibration_training_oof.png\")))\n",
+        "execution_count": 5,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "At this bin resolution, OOF calibration broadly follows the diagonal for both\nmodels. OOF ECE is about 0.0098 for logistic and 0.0101 for boosting, despite boosting's\nlower Brier score/log loss. Similar global means do not guarantee calibration at\nevery risk level; sparse high-risk bins are particularly uncertain. There is no\npre-specified calibration pass/fail tolerance and no calibrator has been fitted.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "## Locked holdout — existing fitted models, threshold 0.50 only\n\nThese predictions reproduce the stabilized model files and prediction CSVs.\nThe confusion matrix layout is [[TN, FP], [FN, TP]], with rows actual [0,1] and\ncolumns predicted [0,1]. Average Precision (AP) is sklearn average precision,\nnot trapezoidal PR-AUC. Both models remain available for later comparison.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "holdout = read_table(\"holdout_metrics\")\ndisplay(holdout[[\"model\", \"threshold\", \"records\", \"TN\", \"FP\", \"FN\", \"TP\", *METRICS]])\ndisplay(read_table(\"overall_performance_comparison\"))\ndisplay(Image(filename=str(FIGURE_DIR / \"calibration_locked_holdout.png\")))\n",
+        "execution_count": 6,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Group-bootstrap 95% confidence intervals\n\nUse 2,000 attempts and default_rng(42). Resample the number of distinct holdout\npredictor groups with replacement; a selected group's entire set of records is\nincluded, repeated together when drawn again. Integer group multiplicities are\nused as per-row sample weights. Sample record counts can vary with group sizes.\nIntervals use the 2.5th and 97.5th percentiles, linear quantile interpolation.\n\nThe two fixed models share resamples; no paired difference test, difference CI,\np-value or significance conclusion is implemented. Samples lacking either outcome\nclass are skipped and counted (none occurred here). These intervals condition on\nthe fitted models and observed holdout, excluding retraining and future-shift\nuncertainty.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "intervals = read_table(\"holdout_confidence_intervals\")\ndisplay(intervals[[\"model\", \"metric\", \"estimate\", \"ci_lower\", \"ci_upper\", \"valid_repetitions\"]])\nreplicates = read_table(\"holdout_bootstrap_replicates\")\ndisplay(replicates.groupby(\"model\").sample_records.agg([\"min\", \"mean\", \"max\"]))\nassert intervals.valid_repetitions.eq(2000).all()\nassert intervals.single_class_samples_skipped.eq(0).all()\n",
+        "execution_count": 7,
+        "output_types": [
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Findings, limitations and remaining decisions\n\n- Boosting's ROC-AUC/AP advantage is consistent across folds. It also has lower\n  probability losses, but neither model dominates every performance dimension.\n  Holdout classification at 0.50 remains close, with recall around 35%.\n- This is one five-fold assignment; fold training sets overlap. Pooled OOF metrics\n  need not equal fold means, and CV models train on less data than saved baselines.\n- Exact-group separation does not prove independence of all observations. The\n  holdout's earlier inspection stays disclosed. CIs are conditional, not a model\n  superiority test.\n- Candidate thresholds are characterized using their source OOF predictions.\n  Before selecting one, agree costs/recall constraints/acceptable false-positive\n  workload, whether a common threshold or common operating criterion is appropriate,\n  and a training-only confirmation or nested-validation method.\n- Decide separately whether any training-only calibration experiment is needed.\n  No new threshold, calibrator or model was selected. Fairness and later research\n  stages have not begun.\n\nSee [the Performance Evaluation report](../outputs/performance_evaluation_report.md)\nfor the full findings, output inventory and reproducible protocol.",
+        "execution_count": null,
+        "output_types": []
+      }
+    ]
+  },
+  {
+    "path": "notebooks/06_fairness_evaluation.ipynb",
+    "bytes": 547054,
+    "sha256": "2b466621a27b2171a24595f131cd8109e0c5fd9ed89244e5c162d11746f89715",
+    "cells": [
+      {
+        "type": "markdown",
+        "source": "# 06 — Fairness Evaluation: conventional metrics and actual SAFE\n\nThe repaired split, 5,996-row holdout, both fitted pipelines and all predictors\nremain fixed. No fitting, tuning, calibration or mitigation occurs here. Primary\nthreshold = 0.50. SEX=1 means male and SEX=2 female; ID and SEX are metadata only.\nPositive means **predicted default**, not credit approval. All signed gaps are\nfemale minus male. SAFE's unsigned parity output is explicitly distinguished.\n\nThis notebook verifies and displays the saved fairness outputs. To regenerate,\ninstall `requirements-fairness.txt` and run `python script_fairness_evaluation.py`.\nIt integrates unmodified installed safeaipackage 0.8.3, rather than a recreated SAFE\nformula. The dedicated report contains methods, limitations and the file inventory.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "from pathlib import Path\nimport sys\nimport json\nimport pandas as pd\nimport numpy as np\nfrom IPython.display import display, Image, Markdown\nROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'src/fairness_evaluation.py').exists())\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.baseline import sha256\nfrom src.fairness_evaluation import TABLE_DIR, FIGURE_DIR\nfrom src.safe_adapter import provenance\nmanifest = json.loads((TABLE_DIR / 'run_manifest.json').read_text())\nfor category in ['protected_artifact_hashes', 'source_hashes', 'output_hashes']:\n    for name, expected in manifest[category].items():\n        assert sha256(ROOT / name) == expected, f'Changed artifact: {name}'\nassert provenance()['source_hashes'] == manifest['safe_provenance']['source_hashes']\npd.set_option('display.max_columns', None)\npd.set_option('display.precision', 6)\ndef read_table(name):\n    return pd.read_csv(TABLE_DIR / f'{name}.csv', float_precision='round_trip')\nprint('Verified frozen baseline, prior Performance Evaluation, SAFE source and new result hashes.')\ndisplay(manifest['safe_provenance'])\n",
+        "execution_count": 1,
+        "output_types": [
+          "stream",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Protected groups and traceability\n\nCounts and observed default rates provide essential sample context. They do not\nestablish inherent risk differences. The training data are used only for descriptive\nassociations and SAFE group enumeration, not model fitting.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "display(read_table('group_summary'))\npredictions = read_table('audit_predictions')\nmetadata = pd.read_csv(ROOT / 'data/processed/test_metadata.csv')\nfor model, part in predictions.groupby('model', sort=False):\n    assert part.ID.is_unique and len(part) == 5996\n    np.testing.assert_array_equal(part.ID, metadata.ID)\n    np.testing.assert_array_equal(part.SEX, metadata.SEX)\n    np.testing.assert_array_equal(part.actual, metadata.default)\n    assert set(part.group) == {'male', 'female'}\ndisplay(predictions.groupby('model', sort=False).head(3))\n",
+        "execution_count": 2,
+        "output_types": [
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Fixed 0.50 confusion metrics\n\nMatrix rows are actual [0,1], columns predicted [0,1]: [[TN,FP],[FN,TP]].\nRates include selection/predicted-default rate, accuracy, balanced accuracy,\nprecision, recall/TPR, specificity/TNR, FPR, FNR, NPV and F1. Rates with undefined\ndenominators are missing rather than assigned misleading zeros.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "groups = read_table('group_metrics_threshold_050')\ndisplay(groups)\ndisplay(Image(filename=str(FIGURE_DIR / 'group_metrics_threshold_050.png')))\n",
+        "execution_count": 3,
+        "output_types": [
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Demographic parity, equal opportunity and equalized odds\n\nSelection-rate difference is female minus male. Demographic-parity difference\nuses max-minus-min (unsigned); its ratio is min/max. The separately labeled\nselection-rate ratio is female/male. No normative group mapping or legal rule is used.\nEqual opportunity here compares default-detection TPR. Equalized odds assesses\nboth TPR and FPR. A smaller numerical gap is closer sample parity for that measure,\nnot a declaration of overall fairness.\n[Metric definitions](https://fairlearn.org/main/user_guide/assessment/common_fairness_metrics.html).",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "gaps = read_table('fairness_gaps_threshold_050')\ndisplay(gaps)\nintervals = read_table('fairness_confidence_intervals')\nkey_metrics = ['selection_rate_difference', 'recall_difference', 'fpr_difference',\n               'precision_difference', 'specificity_difference', 'safe_rga_difference']\ndisplay(intervals[intervals.metric.isin(key_metrics)])\ndisplay(intervals[(intervals.scope != 'female_vs_male') & intervals.metric.isin(['selection_rate','recall','fpr','precision','safe_rga'])])\n",
+        "execution_count": 4,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Uncertainty\n\n2,000 whole-predictor-group bootstrap replicates, seed 42. Sample complete exact\n22-predictor groups with replacement, preserving groups that span SEX categories.\nBoth models use the same samples. Confusion metrics use row multiplicities; SAFE\nRGA is called on explicitly expanded sampled records. Intervals use 2.5th/97.5th\npercentiles, linear interpolation, with valid/undefined counts per metric.\n\nThe important signed TPR/FPR/selection/RGA intervals include zero. That does not\nprove equivalence or rule out material gaps. CIs are marginal and unadjusted for\nmultiple metrics; no model-comparison or causal-discrimination test is performed.\nAbsolute-gap CIs are nonnegative by construction and cannot establish disparity\nmerely from a positive lower endpoint. Retraining/future-shift uncertainty is excluded.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "replicates = read_table('bootstrap_replicates')\ndisplay(replicates.groupby(['model','scope']).sample_records.agg(['count','min','mean','max']))\ndisplay(intervals[['valid_repetitions','undefined_repetitions']].drop_duplicates())\n",
+        "execution_count": 5,
+        "output_types": [
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Exploratory holdout threshold sensitivity\n\nThis stage authorizes a descriptive 0.10–0.70 grid in 0.05 increments, without\nchoosing any operating threshold. This is an extension of reporting only: the\nholdout remains prohibited for optimization and model development. Class 1 means\nprobability > threshold, as in the fixed reference predictions. The table includes\noverall recall/precision/flagged rate, both groups' TPR/FPR/selection rates and gaps.\nNo optimum is identified and 0.50 remains the reference.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "sensitivity = read_table('threshold_fairness_sensitivity')\ncolumns = ['model','threshold','overall_recall','overall_precision','overall_selection_rate',\n           'male_recall','female_recall','recall_difference','male_fpr','female_fpr','fpr_difference',\n           'male_selection_rate','female_selection_rate','selection_rate_difference','selection_rate_ratio_female_to_male']\ndisplay(sensitivity[columns])\ndisplay(sensitivity.groupby('model')[['recall_difference','fpr_difference','selection_rate_difference']].agg(['min','max']))\ndisplay(Image(filename=str(FIGURE_DIR / 'fairness_gaps_vs_threshold.png')))\n",
+        "execution_count": 6,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "TPR-gap direction changes for both models across the grid. Logistic's FPR gap\nalso changes sign; boosting's remains negative. Boosting's selection gap crosses\nzero, while logistic's remains negative. Apparent disparity depends on the chosen\nthreshold and metric. No simultaneous uncertainty bands were fitted for these curves.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "## Actual SAFE package and pipeline adapter\n\nThe inspected upstream commit is `1e5f2a84d183c741fecaa682f2b9d496c142bd45`;\ninstalled core matches exactly and fairness/utils differ only in whitespace.\nThe installed distribution version is 0.8.3; it has no recorded install commit.\nThe upstream example uses gender 0/1 for its own dataset. Our 1/2 coding stays intact.\n\nSAFE receives aligned positional DataFrames containing the original predictors plus\nSEX. Its function resets indices, enumerates groups from training SEX frequencies\nand recomputes probabilities through sklearn's classifier detection. The read-only\nadapter advertises classifier tags and selects only the saved pipeline's 22 feature\nnames before delegation; ID/SEX never enter that predictor matrix. Full and subgroup\npredictions reproduce the saved scores. No fit method is allowed.\n\nThe actual package function returns a sentence containing max(group RGA) minus\nmin(group RGA). The raw sentence is retained. It does not assign privileged status.\nThe supplied yhat is checked, but subgroup scores are recomputed internally.\nThe wrapper does not modify or reproduce the package's metric formula.\n[SAFE reference](https://github.com/GolnooshBabaei/safeaipackage).",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "rga = read_table('safe_rga_results')\nparity = read_table('safe_rga_parity')\ndisplay(rga)\ndisplay(parity)\nprint('RGA and ROC-AUC numerically coincide on this binary audit:', np.allclose(rga.RGA, rga['ROC-AUC'], atol=1e-12, rtol=0))\ndisplay(Image(filename=str(FIGURE_DIR / 'safe_rga_parity.png')))\n",
+        "execution_count": 7,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "stream",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "RGA evaluates normalized ranking agreement and the SAFE framework extends to\nnonbinary outcomes. Its values happen to coincide with ROC-AUC here; that is reported\nas a result of the actual binary-outcome implementation, not assumed interchangeability\nin general. SAFE parity compares within-group ranking accuracy without a classification\nthreshold; it does not measure the fraction flagged or errors at one boundary.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "display(read_table('conventional_vs_safe_comparison'))\n",
+        "execution_count": 8,
+        "output_types": [
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "## Comparison of fairness frameworks\n\nBoosting has a smaller absolute SAFE RGA parity gap (about 0.00645 versus 0.00792),\nbut larger TPR/FPR absolute gaps at 0.50. Its selection-rate gap is smaller.\nLogistic has lower female ranking accuracy but higher female TPR at 0.50; for\nboosting, both female RGA and TPR are higher. These are descriptive point estimates\nwith uncertain signed gaps, not a ranking of overall fairness. The disagreement\nreflects different questions rather than a reason to force the frameworks to agree.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "markdown",
+        "source": "## Descriptive associations and unawareness limitation\n\nSEX exclusion is not proof of fairness. Training-only associations describe numeric\nstandardized mean differences and categorical Cramer's V, with no causal/proxy model,\nfeature removal or retraining. SMD uses female minus male means divided by the square\nroot of their average sample variances. Cramer's V uses uncorrected chi-square.\nRanks are kept separate for different measures; no p-value screening or significance\ncutoff is used. Financial skew is shown through medians and quartiles.",
+        "execution_count": null,
+        "output_types": []
+      },
+      {
+        "type": "code",
+        "source": "associations = read_table('proxy_descriptive_associations')\ndisplay(associations[associations.feature_type == 'numeric'].sort_values('association', ascending=False))\ndisplay(associations[associations.feature_type == 'categorical'].sort_values('association', ascending=False))\ndisplay(read_table('proxy_category_distributions'))\n",
+        "execution_count": 9,
+        "output_types": [
+          "display_data",
+          "display_data",
+          "display_data"
+        ]
+      },
+      {
+        "type": "markdown",
+        "source": "AGE shows the largest numeric mean difference (absolute SMD around 0.19).\nRepayment-status categories show the largest categorical associations (Cramer's V\naround 0.07–0.08). These descriptions do not establish prohibited proxy use or causal\ndiscrimination. A dedicated causal/proxy methodology would need separate design.\n\n## Readiness, limitations and decisions\n\nPotential later intersectional groups include SEX × age bands, education and marriage.\nBefore any fairness claims, check total/default/non-default and independent-group\ncounts per cell, define small-cell handling, and plan multiple-comparison treatment.\nNo formal intersectional experiment was conducted.\n\nThe historical holdout's earlier inspection remains disclosed. Results condition\non fixed models, observed groups and a historical Taiwanese sample. There is no\nagreed materiality tolerance, operational approval policy or causal identification.\nChoose the relevant harms, fairness concepts and practical tolerances before\ndeciding follow-up. Any later threshold choice needs training-only development;\nthis holdout sweep cannot select it. Decide whether a focused proxy/intersectional\nfollow-up or Explainability should come next. Both models and 0.50 remain in place.\nMitigation, SHAP/RGE, RGR, PSI and governance work have not begun.\n\n[Full fairness report and file inventory](../outputs/fairness_evaluation_report.md).",
+        "execution_count": null,
+        "output_types": []
+      }
+    ]
+  },
+  {
+    "path": "outputs/explainability_evaluation_report.md",
+    "bytes": 21544,
+    "sha256": "2cea9a9c5f34c6b618800bb55ccb71fd310dc49bbcd2db7cac443f0e97f03b66"
+  },
+  {
+    "path": "outputs/fairness_evaluation_report.md",
+    "bytes": 19735,
+    "sha256": "673e817e84475dd41ae589a6c47b23764381af3b6a4570f286d1c2e314a4f794"
+  },
+  {
+    "path": "outputs/performance_evaluation_report.md",
+    "bytes": 15446,
+    "sha256": "d3a10b924883afbc163a58feb128a82f878563d4487bd5ea4727bcaee4f993bd"
+  },
+  {
+    "path": "outputs/robustness_evaluation_report.md",
+    "bytes": 27117,
+    "sha256": "47edb8cfc89b3a3dfc52f1d4d470718ca0452227a6105588a0ff31e7daf496e6"
+  },
+  {
+    "path": "outputs/robustness_execution.log",
+    "bytes": 56490,
+    "sha256": "f315b43fae236329b4b976296e04ef8970aa0eb9826992ac406250ccb921343e"
+  },
+  {
+    "path": "outputs/stabilization_report.md",
+    "bytes": 9311,
+    "sha256": "77fb497e30031c887fdc88b5d9ef1e6315711894651163125346530020f1135b"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_local_explanations.png",
+    "bytes": 212320,
+    "sha256": "70053f59240f85d7d00b012bb940da8d5d3659f8e1470577b19764044c6e8707"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_local_explanations.svg",
+    "bytes": 139213,
+    "sha256": "f31a38c4fe5eda78a787a2eb113b68ec4e2a457c564105299c4e42cedfe622fc"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_bar.png",
+    "bytes": 97171,
+    "sha256": "5e828f128eafde5806f2e5c9a1a5db90d6a63624fff821d2d5a49b9d9688af1a"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_bar.svg",
+    "bytes": 73794,
+    "sha256": "59880978ffc8dacff21dabcb70461cdbcd93b62c7cbd0c8676e2582430ecb64f"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_beeswarm.png",
+    "bytes": 158356,
+    "sha256": "515489940c82f0c892180830b7fd86f54fb75ba23465153e3fdcf99411893a01"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_beeswarm.svg",
+    "bytes": 107320,
+    "sha256": "18b752e3d123bf191d11c9f43ddd1aa3d40cd863a319a70d9795752c9fbe791f"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_dependence.png",
+    "bytes": 209973,
+    "sha256": "d280507c735e90b33aae28e843046f889c5ddb7f3f75581c58f2efb92bff95bd"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_dependence.svg",
+    "bytes": 139159,
+    "sha256": "d55c1942de9db92f9112d1f8ee086a2f3e8bfdbb01cbab57f7c5d0310920c1b8"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_local_explanations.png",
+    "bytes": 211196,
+    "sha256": "40b3636d31dcfe2f253b01022e314f2fb4f9e851998a6347d658a48b0fe4163b"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_local_explanations.svg",
+    "bytes": 140003,
+    "sha256": "71d1c30683e05d0bd2b669d5b18d89d884211640f6b747f5b125d989e484795c"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_bar.png",
+    "bytes": 97503,
+    "sha256": "87f739b7a59b888fe14ad9f261a83941cb6a8557632c16f753a88bf84c42e6c6"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_bar.svg",
+    "bytes": 73529,
+    "sha256": "e2414e5325c2148cdf110484d54726215f69ec8949583c95089b3b2a12e45d1f"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_beeswarm.png",
+    "bytes": 104029,
+    "sha256": "75f00a529adf085a8425e96d7e4bf1be31c41558235214e65b492ca042c19601"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_beeswarm.svg",
+    "bytes": 75515,
+    "sha256": "355b92ccaa8228b18b7f78bec6325e8d631bee86fb0855d4e3a654c8efc0275e"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_dependence.png",
+    "bytes": 130228,
+    "sha256": "b53b576e1e5486bb76118c1bf3066bbbd5b6cfe2fe83157a015b9b5ca05e36b4"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_dependence.svg",
+    "bytes": 98881,
+    "sha256": "17eb2f69bd2bcbb924bd6aac2a16f0aa8061ac0dec1a6db9f5c1a22198811cce"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/sex_shap_importance.png",
+    "bytes": 80723,
+    "sha256": "100d1dada09343923936c1775d87034e02c1e5edf773a512b23db76e449cffa4"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/sex_shap_importance.svg",
+    "bytes": 70118,
+    "sha256": "75cdccb9242b48f72edae75b7e130ae644416c2bf5309d6461c737793f643692"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/shap_vs_rge_ranks.png",
+    "bytes": 77580,
+    "sha256": "fff0774124efc9fc43aff3427d6ae0e5de3ccf0c98bffdd1268495315f1700d6"
+  },
+  {
+    "path": "outputs/figures/explainability_evaluation/shap_vs_rge_ranks.svg",
+    "bytes": 54124,
+    "sha256": "8773c58856caf9bfd28ef16612992a312633d58d22d7b5f648179b246a0e2b20"
+  },
+  {
+    "path": "outputs/figures/fairness_evaluation/fairness_gaps_vs_threshold.png",
+    "bytes": 161266,
+    "sha256": "7373aaadd99213f71f7f7701db7d022665827e44bb89a0b26e07983090b7bac9"
+  },
+  {
+    "path": "outputs/figures/fairness_evaluation/fairness_gaps_vs_threshold.svg",
+    "bytes": 92076,
+    "sha256": "cf772430df05733fd212ca9b68cd392bf417b681954539cea84b0990c5055f0e"
+  },
+  {
+    "path": "outputs/figures/fairness_evaluation/group_metrics_threshold_050.png",
+    "bytes": 66136,
+    "sha256": "71b7a726e328422b208aa6070092422a6ef76d636a519c7920e73ec250527d7c"
+  },
+  {
+    "path": "outputs/figures/fairness_evaluation/group_metrics_threshold_050.svg",
+    "bytes": 70129,
+    "sha256": "5e837702b83cb87b68a0f8055f983efc3953f039331d642d6cd3cab246ca4550"
+  },
+  {
+    "path": "outputs/figures/fairness_evaluation/safe_rga_parity.png",
+    "bytes": 62052,
+    "sha256": "199f53b6cf47df04ca72fbe5a1fb52fa012eac84c586be71d80221b24fbb145a"
+  },
+  {
+    "path": "outputs/figures/fairness_evaluation/safe_rga_parity.svg",
+    "bytes": 50216,
+    "sha256": "fcf8bf73cec657953df30b6fe2809de784aa374e4d3d628580173f755dd7a298"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/calibration_locked_holdout.png",
+    "bytes": 176870,
+    "sha256": "fb72fc625a4fe7d256f77e375d301d1194d6ebf7e214edd54dc1261b6a644b02"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/calibration_locked_holdout.svg",
+    "bytes": 95298,
+    "sha256": "8b69f2c9d015862f1a4d9df7d534f9e8cf1c932d2d63f177c4684b381bde9a07"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/calibration_training_oof.png",
+    "bytes": 168699,
+    "sha256": "6b9d543aa3a12e8ae899bc7e88bafb8f163d5e2deeca2227b090732cbf1ff2b5"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/calibration_training_oof.svg",
+    "bytes": 93065,
+    "sha256": "cf15a265c4b355f030e565eb9bfaadb74343aa5fd9429b0d197de3d40411d631"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/oof_roc_precision_recall.png",
+    "bytes": 115626,
+    "sha256": "93a6e5546efd6f2dc5d2faf0fdfa75e051ccefd4d6589de1b1c11a9d687a3a02"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/oof_roc_precision_recall.svg",
+    "bytes": 322764,
+    "sha256": "40a68c6a66325e46332940291d1dfb2c2d3ce223262b165296d0629fb5bd7ca0"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/oof_threshold_tradeoffs.png",
+    "bytes": 202828,
+    "sha256": "d6c1fdc30cbf6e611fd8710828b5a3bde95bc3e667b426a1e00b0d6adaeee04c"
+  },
+  {
+    "path": "outputs/figures/performance_evaluation/oof_threshold_tradeoffs.svg",
+    "bytes": 83832,
+    "sha256": "1b243956d0b5f364cf25fea16b8545742ae3e741177d455fee421c3ee573eb5e"
+  },
+  {
+    "path": "outputs/figures/robustness_evaluation/feature_family_sensitivity.png",
+    "bytes": 183819,
+    "sha256": "5c619c9b3c43eb68c545179174e5a18b7c1a91d0d15bdf53bd40ec16c35a3f71"
+  },
+  {
+    "path": "outputs/figures/robustness_evaluation/feature_family_sensitivity.svg",
+    "bytes": 102899,
+    "sha256": "1efe609e372b04c5193900ffbd5d15f74631889e1e025ecefd048a8c7e011c02"
+  },
+  {
+    "path": "outputs/figures/robustness_evaluation/individual_rgr_primary_severity.png",
+    "bytes": 88642,
+    "sha256": "27c99d4f11411e52f8cfa48dc6920603ffcdc36aa16584174844fe6ba9ec3162"
+  },
+  {
+    "path": "outputs/figures/robustness_evaluation/individual_rgr_primary_severity.svg",
+    "bytes": 92647,
+    "sha256": "57a5bc53f21d7fdd06b469a9842a9f69b71d5073c88fbbc621266377ca686954"
+  },
+  {
+    "path": "outputs/figures/robustness_evaluation/joint_severity.png",
+    "bytes": 241050,
+    "sha256": "53ed553e88c12c573856fd9f7639c0d44d8181e84ea4d4a33b9e90146b1d7770"
+  },
+  {
+    "path": "outputs/figures/robustness_evaluation/joint_severity.svg",
+    "bytes": 149538,
+    "sha256": "099d21cc6207f242d08f630c4345c8f63c55de6855a2d14ebf667df991707df2"
+  },
+  {
+    "path": "outputs/previous_baseline/README.md",
+    "bytes": 332,
+    "sha256": "038ce9b8cd53407388800202fe0f8832c9636a77e663b66d043a0f37a054365f"
+  },
+  {
+    "path": "outputs/previous_baseline/baseline_gradient_boosting_metrics.csv",
+    "bytes": 204,
+    "sha256": "32b694ed9ac1e08d4f959904ba351612cd996b0d749f20204e53744eabc3f6fb",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": 7
+  },
+  {
+    "path": "outputs/previous_baseline/baseline_gradient_boosting_predictions.csv",
+    "bytes": 159821,
+    "sha256": "e2eb71ebd839481d5e3e61bcd72efb4f6a7c900c5f34024a379b4729ae70ac49",
+    "columns": [
+      "actual",
+      "predicted",
+      "probability_default",
+      "SEX"
+    ],
+    "rows": 6000
+  },
+  {
+    "path": "outputs/previous_baseline/baseline_logistic_metrics.csv",
+    "bytes": 217,
+    "sha256": "b3edc83f4df00da741af1f59870ccdb24e8f4064b362cf90fb310ec34cb79112",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": 7
+  },
+  {
+    "path": "outputs/previous_baseline/baseline_logistic_predictions.csv",
+    "bytes": 159859,
+    "sha256": "56ce88b63affdbddbb28b0a78e5f0b027e2e6a1f05c01fc1a2e0bb15fcd9bd4b",
+    "columns": [
+      "actual",
+      "predicted",
+      "probability_default",
+      "SEX"
+    ],
+    "rows": 6000
+  },
+  {
+    "path": "outputs/previous_baseline/test_metadata.csv",
+    "bytes": 63800,
+    "sha256": "4ec7142a861cef3360b749400c8238712788d3bed26e881305fe4d666efe090f",
+    "columns": [
+      "ID",
+      "SEX",
+      "actual"
+    ],
+    "rows": 6000
+  },
+  {
+    "path": "outputs/tables/baseline_gradient_boosting_metrics.csv",
+    "bytes": 232,
+    "sha256": "5ee2715261df8140691c17860a7677ae829fd614579e543d47066c8571c33e02",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": 7
+  },
+  {
+    "path": "outputs/tables/baseline_gradient_boosting_predictions.csv",
+    "bytes": 193547,
+    "sha256": "202e3f657fa5964e492fdfcda796b58622b7d67b2a885ad4b188572a9b93f302",
+    "columns": [
+      "ID",
+      "actual",
+      "predicted",
+      "probability_default",
+      "SEX"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/baseline_logistic_metrics.csv",
+    "bytes": 233,
+    "sha256": "09330f5cf94186ff6ec29f68d20e58e7d506e16450fd3a37c3ee41f484bbaf60",
+    "columns": [
+      "Metric",
+      "Value"
+    ],
+    "rows": 7
+  },
+  {
+    "path": "outputs/tables/baseline_logistic_predictions.csv",
+    "bytes": 193607,
+    "sha256": "cc3d3511ffbc2b9e58e1122a6ee1718c732d01ac5c032175b6bdfcf75610ed2a",
+    "columns": [
+      "ID",
+      "actual",
+      "predicted",
+      "probability_default",
+      "SEX"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/baseline_stabilization_comparison.csv",
+    "bytes": 1188,
+    "sha256": "50eb59454b90a521b8c1080392ffe90b29d0982721a3ff4c8933cf6d460e1a9a",
+    "columns": [
+      "Model",
+      "Metric",
+      "Before",
+      "After",
+      "Change"
+    ],
+    "rows": 14
+  },
+  {
+    "path": "outputs/tables/duplicate_audit.json",
+    "bytes": 1933,
+    "sha256": "b9ffb47d8e47d554c972d125babc46cb630f6f8d660336fb7be1044f2a1a70c1"
+  },
+  {
+    "path": "outputs/tables/duplicate_records.csv",
+    "bytes": 16121,
+    "sha256": "6af50d0efa731cc42e2217c47e16ed3fb7139ac6cd22f67b41f49d618aef92cb",
+    "columns": [
+      "ID",
+      "LIMIT_BAL",
+      "SEX",
+      "EDUCATION",
+      "MARRIAGE",
+      "AGE",
+      "PAY_0",
+      "PAY_2",
+      "PAY_3",
+      "PAY_4",
+      "PAY_5",
+      "PAY_6",
+      "BILL_AMT1",
+      "BILL_AMT2",
+      "BILL_AMT3",
+      "BILL_AMT4",
+      "BILL_AMT5",
+      "BILL_AMT6",
+      "PAY_AMT1",
+      "PAY_AMT2",
+      "PAY_AMT3",
+      "PAY_AMT4",
+      "PAY_AMT5",
+      "PAY_AMT6",
+      "default",
+      "original_split",
+      "duplicate_group_id",
+      "split",
+      "partition_order"
+    ],
+    "rows": 177
+  },
+  {
+    "path": "outputs/tables/split_changes.csv",
+    "bytes": 1181,
+    "sha256": "3c292700eba454f1c1aca264f77d8110970617600147884db1b470752a0626a0",
+    "columns": [
+      "ID",
+      "SEX",
+      "default",
+      "original_split",
+      "duplicate_group_id",
+      "split",
+      "partition_order"
+    ],
+    "rows": 34
+  },
+  {
+    "path": "outputs/tables/stabilization_verification.json",
+    "bytes": 385,
+    "sha256": "ae830883e860e576259a67606d88324288bb2e3605b671d3d91d2d5cf39e2cea"
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/audit_predictions.csv",
+    "bytes": 1273229,
+    "sha256": "134a4891a4d80a103f517e188bbbb861aeedb33542664b2b6dbb458d51d8699f",
+    "columns": [
+      "model",
+      "ID",
+      "SEX",
+      "actual",
+      "predicted",
+      "probability_default",
+      "margin",
+      "base_value",
+      "reconstructed_margin"
+    ],
+    "rows": 11992
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/background_metadata.csv",
+    "bytes": 3464,
+    "sha256": "965fdd595cc43f7c389262e2f42038d8630c44ee5dfc9cae10b7b384f3c226a3",
+    "columns": [
+      "ID",
+      "SEX",
+      "default",
+      "original_split",
+      "duplicate_group_id",
+      "split",
+      "partition_order"
+    ],
+    "rows": 100
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/categorical_shap_effects.csv",
+    "bytes": 35222,
+    "sha256": "0ad6fb85fbe2a6a1c1b0b818c0491985210f2cbe36ac066a8197f05a127f9bc7",
+    "columns": [
+      "model",
+      "feature",
+      "SEX",
+      "value",
+      "records",
+      "mean_signed_shap",
+      "min_shap",
+      "max_shap"
+    ],
+    "rows": 386
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/feature_mapping_gradient_boosting.csv",
+    "bytes": 1851,
+    "sha256": "08c6176f08dbbbccd6e660950ef328148569bb82e20e701827ced9aadcb4acca",
+    "columns": [
+      "transformed_feature",
+      "feature"
+    ],
+    "rows": 85
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/feature_mapping_logistic.csv",
+    "bytes": 1851,
+    "sha256": "08c6176f08dbbbccd6e660950ef328148569bb82e20e701827ced9aadcb4acca",
+    "columns": [
+      "transformed_feature",
+      "feature"
+    ],
+    "rows": 85
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/global_shap_importance_gradient_boosting.csv",
+    "bytes": 2932,
+    "sha256": "7fe62c1a2a54ed7c5b9dfd1f64b97af239d2798f17f0727f56985f3395b28e14",
+    "columns": [
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "feature",
+      "mean_abs_shap",
+      "mean_signed_shap",
+      "positive_fraction",
+      "importance_share",
+      "shap_rank"
+    ],
+    "rows": 22
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/global_shap_importance_logistic.csv",
+    "bytes": 2752,
+    "sha256": "dbb2e05c9b3957fb705ec621e47dfd03b3c4851ed98d7db6f56fdcb26c57f119",
+    "columns": [
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "feature",
+      "mean_abs_shap",
+      "mean_signed_shap",
+      "positive_fraction",
+      "importance_share",
+      "shap_rank"
+    ],
+    "rows": 22
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/group_summary.csv",
+    "bytes": 205,
+    "sha256": "d8bbd86d0c6aa13cf98eeb1f02efbc5f52d43db272c48aa66a5d3a949f7dad56",
+    "columns": [
+      "SEX",
+      "group",
+      "records",
+      "defaults",
+      "non_defaults",
+      "observed_default_rate",
+      "holdout_percentage"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/local_case_selection.csv",
+    "bytes": 251,
+    "sha256": "9ea64337fc213d3651ff633478b0552f8db26fa87873c10cd0f1955eac97f04f",
+    "columns": [
+      "selection_model",
+      "selection_outcome",
+      "ID",
+      "eligible_records"
+    ],
+    "rows": 8
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/local_shap_contributions.csv",
+    "bytes": 17124,
+    "sha256": "4848534e286f816c7b3001a3bf0595bb29a427c415fe62ce15fd2c67c406abc0",
+    "columns": [
+      "model",
+      "ID",
+      "SEX",
+      "actual",
+      "predicted",
+      "probability_default",
+      "base_value",
+      "feature",
+      "value",
+      "shap_value"
+    ],
+    "rows": 176
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/model_summary.csv",
+    "bytes": 456,
+    "sha256": "e409329e8989aafc23c2a2beb13afb56d4c37e7a260153cfd1a770d4fec58f8d",
+    "columns": [
+      "model",
+      "shap_rge_spearman",
+      "top1_shap_share",
+      "top3_shap_share",
+      "top5_shap_share",
+      "sex_rank_spearman",
+      "sex_importance_share_total_variation",
+      "total_mean_abs_shap"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/rge_model_comparison.csv",
+    "bytes": 1212,
+    "sha256": "158c5d926bf68b3c744c8d1c557ba732d95f3ae51944048cb91b3a8d359ae559",
+    "columns": [
+      "feature",
+      "gradient_boosting",
+      "logistic"
+    ],
+    "rows": 22
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "bytes": 19535,
+    "sha256": "9059693f1b75ac7d3df2df080c40208de864db240699f8d3534700c0fb3740cc"
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/safe_grouped_rge.csv",
+    "bytes": 839,
+    "sha256": "a4f2b5872f242d18a10ee47bff09a1bb6180247156476d8b528c397d29e2fc2e",
+    "columns": [
+      "model",
+      "group",
+      "features",
+      "RGE"
+    ],
+    "rows": 8
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/safe_replacement_values.csv",
+    "bytes": 970,
+    "sha256": "50eb603718fd3fa94bf8f77ccb5804e63a550b46deccc54f76ebae0ab7104910",
+    "columns": [
+      "feature",
+      "replacement",
+      "rule"
+    ],
+    "rows": 22
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/safe_rge_values.csv",
+    "bytes": 2117,
+    "sha256": "72a7fadc5016c20018a054e73a093ee246f4cab242d77318f184876069e57027",
+    "columns": [
+      "model",
+      "feature",
+      "RGE",
+      "rge_rank"
+    ],
+    "rows": 44
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/sex_shap_comparison.csv",
+    "bytes": 11275,
+    "sha256": "c0e41d3ba0658f18c8e466b8cddcde63159234882179b26d65066aee5fbbfe60",
+    "columns": [
+      "model",
+      "feature",
+      "mean_abs_shap_male",
+      "mean_signed_shap_male",
+      "importance_share_male",
+      "shap_rank_male",
+      "mean_abs_shap_female",
+      "mean_signed_shap_female",
+      "importance_share_female",
+      "shap_rank_female",
+      "mean_abs_shap_female_minus_male",
+      "mean_signed_shap_female_minus_male",
+      "importance_share_female_minus_male",
+      "shap_rank_female_minus_male",
+      "absolute_share_gap"
+    ],
+    "rows": 44
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_importance_by_sex.csv",
+    "bytes": 10868,
+    "sha256": "5a39e399eb8c3b94dfaa77d9aa4594544b654863f3c3e89e216f8d0ccd8230dc",
+    "columns": [
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "feature",
+      "mean_abs_shap",
+      "mean_signed_shap",
+      "positive_fraction",
+      "importance_share",
+      "shap_rank"
+    ],
+    "rows": 88
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_transformed_values_gradient_boosting.csv",
+    "bytes": 5300623,
+    "sha256": "153dfb885aa2bded42da21c83eee8e7377790ef7ce874f9d40b8bd442d289cee",
+    "columns": [
+      "ID",
+      "num__LIMIT_BAL",
+      "num__AGE",
+      "num__BILL_AMT1",
+      "num__BILL_AMT2",
+      "num__BILL_AMT3",
+      "num__BILL_AMT4",
+      "num__BILL_AMT5",
+      "num__BILL_AMT6",
+      "num__PAY_AMT1",
+      "num__PAY_AMT2",
+      "num__PAY_AMT3",
+      "num__PAY_AMT4",
+      "num__PAY_AMT5",
+      "num__PAY_AMT6",
+      "cat__EDUCATION_1",
+      "cat__EDUCATION_2",
+      "cat__EDUCATION_3",
+      "cat__EDUCATION_4",
+      "cat__MARRIAGE_1",
+      "cat__MARRIAGE_2",
+      "cat__MARRIAGE_3",
+      "cat__PAY_0_-2",
+      "cat__PAY_0_-1",
+      "cat__PAY_0_0",
+      "cat__PAY_0_1",
+      "cat__PAY_0_2",
+      "cat__PAY_0_3",
+      "cat__PAY_0_4",
+      "cat__PAY_0_5",
+      "cat__PAY_0_6",
+      "cat__PAY_0_7",
+      "cat__PAY_0_8",
+      "cat__PAY_2_-2",
+      "cat__PAY_2_-1",
+      "cat__PAY_2_0",
+      "cat__PAY_2_1",
+      "cat__PAY_2_2",
+      "cat__PAY_2_3",
+      "cat__PAY_2_4",
+      "cat__PAY_2_5",
+      "cat__PAY_2_6",
+      "cat__PAY_2_7",
+      "cat__PAY_2_8",
+      "cat__PAY_3_-2",
+      "cat__PAY_3_-1",
+      "cat__PAY_3_0",
+      "cat__PAY_3_1",
+      "cat__PAY_3_2",
+      "cat__PAY_3_3",
+      "cat__PAY_3_4",
+      "cat__PAY_3_5",
+      "cat__PAY_3_6",
+      "cat__PAY_3_7",
+      "cat__PAY_3_8",
+      "cat__PAY_4_-2",
+      "cat__PAY_4_-1",
+      "cat__PAY_4_0",
+      "cat__PAY_4_1",
+      "cat__PAY_4_2",
+      "cat__PAY_4_3",
+      "cat__PAY_4_4",
+      "cat__PAY_4_5",
+      "cat__PAY_4_6",
+      "cat__PAY_4_7",
+      "cat__PAY_4_8",
+      "cat__PAY_5_-2",
+      "cat__PAY_5_-1",
+      "cat__PAY_5_0",
+      "cat__PAY_5_2",
+      "cat__PAY_5_3",
+      "cat__PAY_5_4",
+      "cat__PAY_5_5",
+      "cat__PAY_5_6",
+      "cat__PAY_5_7",
+      "cat__PAY_5_8",
+      "cat__PAY_6_-2",
+      "cat__PAY_6_-1",
+      "cat__PAY_6_0",
+      "cat__PAY_6_2",
+      "cat__PAY_6_3",
+      "cat__PAY_6_4",
+      "cat__PAY_6_5",
+      "cat__PAY_6_6",
+      "cat__PAY_6_7",
+      "cat__PAY_6_8"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_transformed_values_logistic.csv",
+    "bytes": 7350152,
+    "sha256": "29eabfcacfbd46646b3af915efdc7e620bd2dab3824b12a98b6f648528ba9b38",
+    "columns": [
+      "ID",
+      "num__LIMIT_BAL",
+      "num__AGE",
+      "num__BILL_AMT1",
+      "num__BILL_AMT2",
+      "num__BILL_AMT3",
+      "num__BILL_AMT4",
+      "num__BILL_AMT5",
+      "num__BILL_AMT6",
+      "num__PAY_AMT1",
+      "num__PAY_AMT2",
+      "num__PAY_AMT3",
+      "num__PAY_AMT4",
+      "num__PAY_AMT5",
+      "num__PAY_AMT6",
+      "cat__EDUCATION_1",
+      "cat__EDUCATION_2",
+      "cat__EDUCATION_3",
+      "cat__EDUCATION_4",
+      "cat__MARRIAGE_1",
+      "cat__MARRIAGE_2",
+      "cat__MARRIAGE_3",
+      "cat__PAY_0_-2",
+      "cat__PAY_0_-1",
+      "cat__PAY_0_0",
+      "cat__PAY_0_1",
+      "cat__PAY_0_2",
+      "cat__PAY_0_3",
+      "cat__PAY_0_4",
+      "cat__PAY_0_5",
+      "cat__PAY_0_6",
+      "cat__PAY_0_7",
+      "cat__PAY_0_8",
+      "cat__PAY_2_-2",
+      "cat__PAY_2_-1",
+      "cat__PAY_2_0",
+      "cat__PAY_2_1",
+      "cat__PAY_2_2",
+      "cat__PAY_2_3",
+      "cat__PAY_2_4",
+      "cat__PAY_2_5",
+      "cat__PAY_2_6",
+      "cat__PAY_2_7",
+      "cat__PAY_2_8",
+      "cat__PAY_3_-2",
+      "cat__PAY_3_-1",
+      "cat__PAY_3_0",
+      "cat__PAY_3_1",
+      "cat__PAY_3_2",
+      "cat__PAY_3_3",
+      "cat__PAY_3_4",
+      "cat__PAY_3_5",
+      "cat__PAY_3_6",
+      "cat__PAY_3_7",
+      "cat__PAY_3_8",
+      "cat__PAY_4_-2",
+      "cat__PAY_4_-1",
+      "cat__PAY_4_0",
+      "cat__PAY_4_1",
+      "cat__PAY_4_2",
+      "cat__PAY_4_3",
+      "cat__PAY_4_4",
+      "cat__PAY_4_5",
+      "cat__PAY_4_6",
+      "cat__PAY_4_7",
+      "cat__PAY_4_8",
+      "cat__PAY_5_-2",
+      "cat__PAY_5_-1",
+      "cat__PAY_5_0",
+      "cat__PAY_5_2",
+      "cat__PAY_5_3",
+      "cat__PAY_5_4",
+      "cat__PAY_5_5",
+      "cat__PAY_5_6",
+      "cat__PAY_5_7",
+      "cat__PAY_5_8",
+      "cat__PAY_6_-2",
+      "cat__PAY_6_-1",
+      "cat__PAY_6_0",
+      "cat__PAY_6_2",
+      "cat__PAY_6_3",
+      "cat__PAY_6_4",
+      "cat__PAY_6_5",
+      "cat__PAY_6_6",
+      "cat__PAY_6_7",
+      "cat__PAY_6_8"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_validation.csv",
+    "bytes": 220,
+    "sha256": "e3a793fdb254068db913627f079d811cf1b3e571ec48b67d66b29649276d99f0",
+    "columns": [
+      "model",
+      "holdout_rows",
+      "original_features",
+      "transformed_features",
+      "max_margin_reconstruction_error",
+      "predictions_unchanged"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_values_gradient_boosting.csv",
+    "bytes": 3003137,
+    "sha256": "b7cef8bc416aa97fb0f002b956d42efec2c9137a06fabd4276c3fb92981291e0",
+    "columns": [
+      "ID",
+      "SEX",
+      "base_value",
+      "LIMIT_BAL",
+      "AGE",
+      "BILL_AMT1",
+      "BILL_AMT2",
+      "BILL_AMT3",
+      "BILL_AMT4",
+      "BILL_AMT5",
+      "BILL_AMT6",
+      "PAY_AMT1",
+      "PAY_AMT2",
+      "PAY_AMT3",
+      "PAY_AMT4",
+      "PAY_AMT5",
+      "PAY_AMT6",
+      "EDUCATION",
+      "MARRIAGE",
+      "PAY_0",
+      "PAY_2",
+      "PAY_3",
+      "PAY_4",
+      "PAY_5",
+      "PAY_6"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_values_logistic.csv",
+    "bytes": 3001903,
+    "sha256": "ffacee449cc6409926cedd57364a6a5aafb5d89ed90e9719ba4cf0c720dea6db",
+    "columns": [
+      "ID",
+      "SEX",
+      "base_value",
+      "LIMIT_BAL",
+      "AGE",
+      "BILL_AMT1",
+      "BILL_AMT2",
+      "BILL_AMT3",
+      "BILL_AMT4",
+      "BILL_AMT5",
+      "BILL_AMT6",
+      "PAY_AMT1",
+      "PAY_AMT2",
+      "PAY_AMT3",
+      "PAY_AMT4",
+      "PAY_AMT5",
+      "PAY_AMT6",
+      "EDUCATION",
+      "MARRIAGE",
+      "PAY_0",
+      "PAY_2",
+      "PAY_3",
+      "PAY_4",
+      "PAY_5",
+      "PAY_6"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/shap_vs_rge.csv",
+    "bytes": 6800,
+    "sha256": "aefb1c27959b6e27f0e781781807d65276da4050ee2e5403dd3caa97b123df6b",
+    "columns": [
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "feature",
+      "mean_abs_shap",
+      "mean_signed_shap",
+      "positive_fraction",
+      "importance_share",
+      "shap_rank",
+      "RGE",
+      "rge_rank",
+      "rge_rank_minus_shap_rank"
+    ],
+    "rows": 44
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/test_results.txt",
+    "bytes": 3036,
+    "sha256": "b16992ec843c313b1eec3381c91ee58a44b15e4621217f0a1fa6f34666548512"
+  },
+  {
+    "path": "outputs/tables/explainability_evaluation/verification.json",
+    "bytes": 582,
+    "sha256": "52eca08464f5cfb9c378b9bacc9c3a548f9dbc79036bfa28b8c1e0016a3e121a"
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/audit_predictions.csv",
+    "bytes": 690872,
+    "sha256": "9fd0269516689238e13890f777564c900b7867f714041927d4ee93e7e20181ac",
+    "columns": [
+      "ID",
+      "SEX",
+      "actual",
+      "duplicate_group_id",
+      "group",
+      "model",
+      "probability_default",
+      "predicted"
+    ],
+    "rows": 11992
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/bootstrap_replicates.csv",
+    "bytes": 4576982,
+    "sha256": "f5ae5c70afad70852b5d8cecc0393c54e9e0cf636469cbdfc71579d0370e4cae",
+    "columns": [
+      "model",
+      "repetition",
+      "scope",
+      "sample_records",
+      "selection_rate",
+      "accuracy",
+      "balanced_accuracy",
+      "precision",
+      "recall",
+      "specificity",
+      "fpr",
+      "fnr",
+      "npv",
+      "f1",
+      "safe_rga",
+      "selection_rate_difference",
+      "accuracy_difference",
+      "balanced_accuracy_difference",
+      "precision_difference",
+      "recall_difference",
+      "specificity_difference",
+      "fpr_difference",
+      "fnr_difference",
+      "npv_difference",
+      "f1_difference",
+      "selection_rate_absolute_gap",
+      "accuracy_absolute_gap",
+      "balanced_accuracy_absolute_gap",
+      "precision_absolute_gap",
+      "recall_absolute_gap",
+      "specificity_absolute_gap",
+      "fpr_absolute_gap",
+      "fnr_absolute_gap",
+      "npv_absolute_gap",
+      "f1_absolute_gap",
+      "selection_rate_ratio_female_to_male",
+      "demographic_parity_difference",
+      "demographic_parity_ratio_min_to_max",
+      "equal_opportunity_difference",
+      "equalized_odds_max_absolute_gap",
+      "safe_rga_difference",
+      "safe_rga_parity_absolute_gap"
+    ],
+    "rows": 12000
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv",
+    "bytes": 507,
+    "sha256": "71e0a57464e7d6784a04e1b90d77370405d939ccdba64ec51e49a6ba184714ce",
+    "columns": [
+      "model",
+      "selection_rate_difference",
+      "selection_rate_ratio_female_to_male",
+      "recall_difference",
+      "fpr_difference",
+      "equalized_odds_max_absolute_gap",
+      "safe_RGA_female_minus_male",
+      "SAFE_absolute_parity_gap"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/fairness_confidence_intervals.csv",
+    "bytes": 17861,
+    "sha256": "d422417c3f5df75b3344f519f13be9fd77766d88e75e6bc3f4204135dbaddef0",
+    "columns": [
+      "model",
+      "scope",
+      "metric",
+      "estimate",
+      "ci_lower",
+      "ci_upper",
+      "valid_repetitions",
+      "undefined_repetitions",
+      "confidence_level",
+      "method"
+    ],
+    "rows": 98
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/fairness_gaps_threshold_050.csv",
+    "bytes": 4259,
+    "sha256": "33b1cff00240f8d71a66ff2076038f6630a815e1df8069695a5c8f706b8a908a",
+    "columns": [
+      "model",
+      "threshold",
+      "metric",
+      "value",
+      "convention",
+      "parity_reference"
+    ],
+    "rows": 50
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/group_metrics_threshold_050.csv",
+    "bytes": 1292,
+    "sha256": "63351c7a0388a34aa9db9fee131210e2730ea85b44a4576a2cccccafa64a1a00",
+    "columns": [
+      "model",
+      "threshold",
+      "SEX",
+      "group",
+      "records",
+      "defaults",
+      "non_defaults",
+      "predicted_positives",
+      "predicted_negatives",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "selection_rate",
+      "accuracy",
+      "balanced_accuracy",
+      "precision",
+      "recall",
+      "specificity",
+      "fpr",
+      "fnr",
+      "npv",
+      "f1"
+    ],
+    "rows": 4
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/group_summary.csv",
+    "bytes": 203,
+    "sha256": "584798180521c687d5e4582439175990890c6bde63b44aa859e5769ec61a869e",
+    "columns": [
+      "SEX",
+      "group",
+      "records",
+      "defaults",
+      "non_defaults",
+      "observed_default_rate",
+      "holdout_percentage"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/proxy_category_distributions.csv",
+    "bytes": 5853,
+    "sha256": "7aa44b100bc39b4395e076a90c9c75b877a6162b018eb29db570dc15b08787a7",
+    "columns": [
+      "feature",
+      "category",
+      "SEX",
+      "group",
+      "records",
+      "within_group_fraction"
+    ],
+    "rows": 142
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/proxy_descriptive_associations.csv",
+    "bytes": 3489,
+    "sha256": "c11c8df292a0ac94df598189be2a9722a9450190e528ffc88f2fd7a0e2188818",
+    "columns": [
+      "feature",
+      "feature_type",
+      "partition",
+      "association_measure",
+      "association",
+      "signed_standardized_mean_difference_female_minus_male",
+      "male_mean",
+      "female_mean",
+      "male_median",
+      "female_median",
+      "male_q25",
+      "female_q25",
+      "male_q75",
+      "female_q75"
+    ],
+    "rows": 22
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "bytes": 10455,
+    "sha256": "dacf6e272c9884079a9e6a2e3d676c5aaaab14b64e10dcf8f7ec7e5708975dee"
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/safe_rga_parity.csv",
+    "bytes": 562,
+    "sha256": "df29604e9e5148d101a7fdbb16732227377d94e4b5aaef37fb32944186ef158c",
+    "columns": [
+      "model",
+      "male_RGA",
+      "female_RGA",
+      "female_minus_male",
+      "package_parity",
+      "raw_package_return",
+      "implementation",
+      "package_version"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/safe_rga_results.csv",
+    "bytes": 775,
+    "sha256": "f0725d1efc17ecb142fa8ce149198748f2a7052527d7c3300d9194a83be5d8de",
+    "columns": [
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "RGA",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "implementation",
+      "package_version"
+    ],
+    "rows": 6
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/threshold_fairness_sensitivity.csv",
+    "bytes": 20284,
+    "sha256": "632ea4400e3ad9f6440295755200e8af1f1d50e1ff82517406e9e3a987976104",
+    "columns": [
+      "model",
+      "threshold",
+      "analysis",
+      "overall_recall",
+      "overall_precision",
+      "overall_selection_rate",
+      "male_recall",
+      "male_fpr",
+      "male_selection_rate",
+      "female_recall",
+      "female_fpr",
+      "female_selection_rate",
+      "selection_rate_difference",
+      "accuracy_difference",
+      "balanced_accuracy_difference",
+      "precision_difference",
+      "recall_difference",
+      "specificity_difference",
+      "fpr_difference",
+      "fnr_difference",
+      "npv_difference",
+      "f1_difference",
+      "selection_rate_absolute_gap",
+      "accuracy_absolute_gap",
+      "balanced_accuracy_absolute_gap",
+      "precision_absolute_gap",
+      "recall_absolute_gap",
+      "specificity_absolute_gap",
+      "fpr_absolute_gap",
+      "fnr_absolute_gap",
+      "npv_absolute_gap",
+      "f1_absolute_gap",
+      "selection_rate_ratio_female_to_male",
+      "demographic_parity_difference",
+      "demographic_parity_ratio_min_to_max",
+      "equal_opportunity_difference",
+      "equalized_odds_max_absolute_gap"
+    ],
+    "rows": 26
+  },
+  {
+    "path": "outputs/tables/fairness_evaluation/verification.json",
+    "bytes": 192,
+    "sha256": "70747d2b1624a12d5e7a3b554b9b683f9b42b2c7700bd68df041e87c4803ac9f"
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/calibration_bins.csv",
+    "bytes": 5329,
+    "sha256": "283ef5104f3c1a1cd646c30c08703cb4e7dde90c40cb789a32389202e59ee93c",
+    "columns": [
+      "partition",
+      "model",
+      "bin",
+      "lower",
+      "upper",
+      "count",
+      "mean_probability",
+      "observed_frequency",
+      "absolute_gap",
+      "ece_contribution"
+    ],
+    "rows": 40
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/calibration_summary.csv",
+    "bytes": 630,
+    "sha256": "48b8e04e60a0dd1db9a2fc613d9bc2a74927ef95134ccb3a0248893aa9544bac",
+    "columns": [
+      "model",
+      "partition",
+      "records",
+      "mean_probability",
+      "observed_frequency",
+      "Brier Score",
+      "Log Loss",
+      "ECE_10_uniform_bins"
+    ],
+    "rows": 4
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/cv_fold_assignments.csv",
+    "bytes": 438286,
+    "sha256": "f00ff37d6ad4030b8d60226562b17646ae71403e413934ed1869da3065f13966",
+    "columns": [
+      "ID",
+      "SEX",
+      "default",
+      "duplicate_group_id",
+      "fold"
+    ],
+    "rows": 24004
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/cv_fold_metrics.csv",
+    "bytes": 3801,
+    "sha256": "8157fd4c7dab1e19492b83873d8cad4b4d6073bd010343e80979d546c2793243",
+    "columns": [
+      "model",
+      "fold",
+      "fit_records",
+      "validation_records",
+      "fit_groups",
+      "validation_groups",
+      "fit_default_rate",
+      "validation_default_rate",
+      "crossing_groups",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "rows": 10
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/cv_partition_summary.csv",
+    "bytes": 452,
+    "sha256": "9662b3378fb38a334aca9d481787d0e4450be8f0c895bc54f9531fac76b55e21",
+    "columns": [
+      "fold",
+      "fit_records",
+      "validation_records",
+      "fit_groups",
+      "validation_groups",
+      "fit_default_rate",
+      "validation_default_rate",
+      "crossing_groups"
+    ],
+    "rows": 5
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/cv_summary_metrics.csv",
+    "bytes": 2159,
+    "sha256": "082c297f1a7e3cf1eddd35176599f265c616dec175c946cc1e2a73c2af1a3479",
+    "columns": [
+      "model",
+      "metric",
+      "mean",
+      "std",
+      "minimum",
+      "maximum",
+      "folds"
+    ],
+    "rows": 20
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/holdout_bootstrap_replicates.csv",
+    "bytes": 858079,
+    "sha256": "f858a3c96fceced2ea8cb7731cf922ee2a5fe2b904d4376c9678c14e2fe1cf8a",
+    "columns": [
+      "model",
+      "repetition",
+      "sample_records",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "F1",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "rows": 4000
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/holdout_confidence_intervals.csv",
+    "bytes": 3052,
+    "sha256": "20e40ef12cb74f0ce7bcf5e1edd5624a0aff9968e83b57ac8623f1f487a971a9",
+    "columns": [
+      "model",
+      "metric",
+      "estimate",
+      "ci_lower",
+      "ci_upper",
+      "confidence_level",
+      "method",
+      "seed",
+      "attempted_repetitions",
+      "valid_repetitions",
+      "single_class_samples_skipped",
+      "holdout_groups"
+    ],
+    "rows": 20
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/holdout_metrics.csv",
+    "bytes": 819,
+    "sha256": "fb48e395d0ba80dcff05bbd8a29107b66239999387a9ccc98300651e197a2292",
+    "columns": [
+      "model",
+      "partition",
+      "threshold",
+      "records",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/holdout_predictions.csv",
+    "bytes": 796428,
+    "sha256": "7734948df795bbe5c38a6a5c0d80aecdfff9eb58bf27f524435e9d9ef3959934",
+    "columns": [
+      "ID",
+      "SEX",
+      "actual",
+      "duplicate_group_id",
+      "model",
+      "partition",
+      "probability_default",
+      "predicted"
+    ],
+    "rows": 11992
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/oof_metrics.csv",
+    "bytes": 821,
+    "sha256": "8b6f8b6862a9324e76bbdc4fb079133c8464b4fc6eeab1e9aae7a799df1b25d1",
+    "columns": [
+      "model",
+      "partition",
+      "threshold",
+      "records",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/oof_predictions.csv",
+    "bytes": 3187574,
+    "sha256": "07955571c98393705cfba051ad095c11196e3149c17442602e755c1941557cb7",
+    "columns": [
+      "ID",
+      "SEX",
+      "actual",
+      "duplicate_group_id",
+      "model",
+      "partition",
+      "fold",
+      "probability_default",
+      "predicted"
+    ],
+    "rows": 48008
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/overall_performance_comparison.csv",
+    "bytes": 1450,
+    "sha256": "7c5a3f18cc8641c27d8a60f751d377ec38297712046657eadaaaa5b8c1ae7678",
+    "columns": [
+      "model",
+      "partition",
+      "threshold",
+      "records",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "rows": 4
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/recall_target_candidates.csv",
+    "bytes": 2417,
+    "sha256": "cebec22b3d442a44b78402c53204f931922a0894dacbade2082de66b4bb8f1af",
+    "columns": [
+      "model",
+      "partition",
+      "recall_target",
+      "threshold",
+      "included_score_boundary",
+      "status",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1"
+    ],
+    "rows": 8
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/run_manifest.json",
+    "bytes": 6688,
+    "sha256": "17f2ee9abdf5e50a2ad561cf2f0558671d361898f748b6965daec5758e5751b4"
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/threshold_tradeoffs.csv",
+    "bytes": 45261,
+    "sha256": "7aa8c239c1ac7df4c0391d78983617c8111d09d194e3e0a25af5a93f6ca5ec9d",
+    "columns": [
+      "model",
+      "partition",
+      "threshold",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1"
+    ],
+    "rows": 202
+  },
+  {
+    "path": "outputs/tables/performance_evaluation/verification.json",
+    "bytes": 197,
+    "sha256": "3f1d3b32187c0d2f954ab81bc198a64e6ae02388a664e855f82fcc4b1550a74f"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/artifact_inspection.json",
+    "bytes": 1630,
+    "sha256": "9d4405bdce2c81763865593f1d0ee4f7047dee186bf65ac97eea64fe00549453"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/audit_predictions.csv",
+    "bytes": 784435,
+    "sha256": "989d63626e3f0c4aaad57b682084dd436b96e3a8797dedf331ac1406c9744aa0",
+    "columns": [
+      "ID",
+      "SEX",
+      "actual",
+      "duplicate_group_id",
+      "model",
+      "partition",
+      "probability_default",
+      "predicted"
+    ],
+    "rows": 11992
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/authentic_rgr.csv",
+    "bytes": 32020,
+    "sha256": "daebffe7b2f8c9bb2a5e941b23a3ca04c96b45c75e530a9e33d45dafef74a88d",
+    "columns": [
+      "scenario",
+      "model",
+      "kind",
+      "scope",
+      "p",
+      "RGR",
+      "undefined_reason",
+      "ordering",
+      "features"
+    ],
+    "rows": 242
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/baseline_by_sex.csv",
+    "bytes": 2679,
+    "sha256": "8a1211948f4bc8169be2119006c941c33fa7275855d8820ac5e253c6d7213a12",
+    "columns": [
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "default_rate",
+      "mean_probability",
+      "median_probability",
+      "fraction_within_0.05_of_threshold",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score",
+      "ECE_10_uniform_bins"
+    ],
+    "rows": 6
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/baseline_features_by_sex.csv",
+    "bytes": 2640,
+    "sha256": "2dfce4d0c9149dbab6e5cccf18517a1cd93431ab244d9f6fab8c610fe93ab91a",
+    "columns": [
+      "SEX",
+      "group",
+      "feature",
+      "records",
+      "mean",
+      "q25",
+      "median",
+      "q75"
+    ],
+    "rows": 44
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/baseline_metrics.csv",
+    "bytes": 816,
+    "sha256": "821e9f040199b97f2845425be36583947a7c293cfec90ba6c606abd2147c2db1",
+    "columns": [
+      "model",
+      "partition",
+      "threshold",
+      "records",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "rows": 2
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/baseline_reproduction.csv",
+    "bytes": 1047,
+    "sha256": "8ca7a83da4dd9e15d142fe23ef568bdc8a7e98bc1a87276c732ae322e4d5a2a1",
+    "columns": [
+      "model",
+      "artifact",
+      "rows",
+      "max_probability_error",
+      "probability_tolerance",
+      "ID_order_class_SEX_outcome_match",
+      "classes",
+      "class_rule"
+    ],
+    "rows": 8
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/bootstrap_replicates.csv",
+    "bytes": 6737412,
+    "sha256": "0b81b56012b87d44992e6c8182417bcb8857208281d31d0bdc02d5e8e98a13b6",
+    "columns": [
+      "scenario",
+      "SEX",
+      "model",
+      "bootstrap",
+      "sample_records",
+      "sample_defaults",
+      "exposure_rate",
+      "mean_absolute_movement",
+      "flip_rate",
+      "delta_ROC-AUC",
+      "delta_Average Precision (AP)",
+      "delta_Brier Score"
+    ],
+    "rows": 36000
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/calibration_bins.csv",
+    "bytes": 288085,
+    "sha256": "c43f354749bbff4d9afaac1d5f7547409c10236f88ee4b882fec0c83d9d6c43a",
+    "columns": [
+      "bin",
+      "lower",
+      "upper",
+      "count",
+      "mean_probability",
+      "observed_frequency",
+      "absolute_gap",
+      "ece_contribution",
+      "scenario",
+      "model",
+      "SEX",
+      "repetition"
+    ],
+    "rows": 1920
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/changed_record_movement.csv",
+    "bytes": 1730426,
+    "sha256": "cf69d15e04e62f52576f77ab6c3c0ddfed0a887f70eaff79d8692eeaa245e4c0",
+    "columns": [
+      "scenario",
+      "model",
+      "SEX",
+      "repetition",
+      "scope",
+      "records",
+      "mean_signed_movement",
+      "mean_absolute_movement",
+      "median_absolute_movement",
+      "p95_absolute_movement",
+      "Spearman",
+      "flip_rate",
+      "undefined_reason"
+    ],
+    "rows": 9006
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/conventional_diagnostics.csv",
+    "bytes": 9281694,
+    "sha256": "7afced1c6f3cea1f8c1a54d4e766edecad9158c34f13620cea0bcb101d17899c",
+    "columns": [
+      "scenario",
+      "layer",
+      "repetition",
+      "model",
+      "SEX",
+      "group",
+      "records",
+      "changed_records",
+      "input_exposure_rate",
+      "mean_signed_movement",
+      "mean_absolute_movement",
+      "median_absolute_movement",
+      "p95_absolute_movement",
+      "Spearman",
+      "flip_rate",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score",
+      "ECE_10_uniform_bins",
+      "baseline_TN",
+      "baseline_FP",
+      "baseline_FN",
+      "baseline_TP",
+      "baseline_Predicted-positive Rate",
+      "baseline_Accuracy",
+      "baseline_Balanced Accuracy",
+      "baseline_Precision",
+      "baseline_Recall",
+      "baseline_Specificity",
+      "baseline_FPR",
+      "baseline_FNR",
+      "baseline_F1",
+      "baseline_ROC-AUC",
+      "baseline_Average Precision (AP)",
+      "baseline_Log Loss",
+      "baseline_Brier Score",
+      "baseline_ECE_10_uniform_bins",
+      "delta_TN",
+      "delta_FP",
+      "delta_FN",
+      "delta_TP",
+      "delta_Predicted-positive Rate",
+      "delta_Accuracy",
+      "delta_Balanced Accuracy",
+      "delta_Precision",
+      "delta_Recall",
+      "delta_Specificity",
+      "delta_FPR",
+      "delta_FNR",
+      "delta_F1",
+      "delta_ROC-AUC",
+      "delta_Average Precision (AP)",
+      "delta_Log Loss",
+      "delta_Brier Score",
+      "delta_ECE_10_uniform_bins"
+    ],
+    "rows": 9006
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/dependency_check.txt",
+    "bytes": 31,
+    "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/diagnostic_summary.csv",
+    "bytes": 6387753,
+    "sha256": "4ff03338b83a751ef1fded4d57bb8d7d869e1e703d189c1e1f25bcb9c5e522ba",
+    "columns": [
+      "scenario",
+      "model",
+      "SEX",
+      "metric",
+      "mean",
+      "mc_sd",
+      "minimum",
+      "maximum",
+      "repetitions",
+      "valid_repetitions",
+      "undefined_count",
+      "mc_status"
+    ],
+    "rows": 42084
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/exposure_counts.csv",
+    "bytes": 1631901,
+    "sha256": "4e9bcb57f40685fc3f1fcbcd42e03d3757db524fe66e48f17e0359b9df82f111",
+    "columns": [
+      "scenario",
+      "layer",
+      "repetition",
+      "SEX",
+      "group",
+      "feature",
+      "records",
+      "eligible",
+      "selected",
+      "eligible_selected",
+      "changed",
+      "changed_cells",
+      "clipped",
+      "no_op",
+      "outside_support",
+      "selected_outside_support",
+      "special_state_selected",
+      "zero_scale",
+      "nominal_participation",
+      "changed_rate"
+    ],
+    "rows": 13281
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/exposure_summary.csv",
+    "bytes": 2076896,
+    "sha256": "d82e6e4f3a63dce1e80da131b4048f3be0917fb724397951afe60d805b44a89f",
+    "columns": [
+      "scenario",
+      "feature",
+      "SEX",
+      "metric",
+      "mean",
+      "mc_sd",
+      "minimum",
+      "maximum",
+      "repetitions",
+      "valid_repetitions",
+      "undefined_count",
+      "mc_status"
+    ],
+    "rows": 17853
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/first_final_run_figure_hashes.json",
+    "bytes": 2027,
+    "sha256": "2b8b3b95a2fa3f4cd2300240e18ef953c2761af620013083a7f5851b2b313310"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/grouped_rgr.csv",
+    "bytes": 10847,
+    "sha256": "698ff310ea430ddbf050c80283eb78080bda80e7d5a88aa843815a8f99dd262e",
+    "columns": [
+      "scenario",
+      "model",
+      "kind",
+      "scope",
+      "p",
+      "RGR",
+      "undefined_reason",
+      "ordering",
+      "features"
+    ],
+    "rows": 66
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/implementation_revision.json",
+    "bytes": 3623,
+    "sha256": "081b0d832f88391cbfb1bc2ac71689760dc9f0acbc3d46f5b487fe4ac3c9ce3b"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/individual_rgr.csv",
+    "bytes": 21240,
+    "sha256": "6cf05a108a2865465ce21ab30a573bd592ccaa4adb96f17fba16d2fdc8fb31c6",
+    "columns": [
+      "scenario",
+      "model",
+      "kind",
+      "scope",
+      "p",
+      "RGR",
+      "undefined_reason",
+      "ordering",
+      "features"
+    ],
+    "rows": 176
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/initial_prespecified_protocol.json",
+    "bytes": 337150,
+    "sha256": "8ea4040613ddddb0798f02ce0559293c7a3efad3adbeba0297ffe6911e7be998"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/paired_comparisons.csv",
+    "bytes": 3389281,
+    "sha256": "a9eccf3704ae96ad08b9c1ad04cd427e73bbb54ec4a885fe12a8cf9f903be406",
+    "columns": [
+      "scenario",
+      "repetition",
+      "SEX",
+      "model",
+      "mean_signed_movement",
+      "mean_absolute_movement",
+      "median_absolute_movement",
+      "p95_absolute_movement",
+      "Spearman",
+      "flip_rate",
+      "TN",
+      "FP",
+      "FN",
+      "TP",
+      "Predicted-positive Rate",
+      "Accuracy",
+      "Balanced Accuracy",
+      "Precision",
+      "Recall",
+      "Specificity",
+      "FPR",
+      "FNR",
+      "F1",
+      "ROC-AUC",
+      "Average Precision (AP)",
+      "Log Loss",
+      "Brier Score",
+      "ECE_10_uniform_bins",
+      "delta_TN",
+      "delta_FP",
+      "delta_FN",
+      "delta_TP",
+      "delta_Predicted-positive Rate",
+      "delta_Accuracy",
+      "delta_Balanced Accuracy",
+      "delta_Precision",
+      "delta_Recall",
+      "delta_Specificity",
+      "delta_FPR",
+      "delta_FNR",
+      "delta_F1",
+      "delta_ROC-AUC",
+      "delta_Average Precision (AP)",
+      "delta_Log Loss",
+      "delta_Brier Score",
+      "delta_ECE_10_uniform_bins"
+    ],
+    "rows": 4503
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/paired_summary.csv",
+    "bytes": 3258882,
+    "sha256": "97b152a7c70ea1468c557e6ef8a0f438bade1dd67fdfaf1d7809423ea81dcac9",
+    "columns": [
+      "scenario",
+      "model",
+      "SEX",
+      "metric",
+      "mean",
+      "mc_sd",
+      "minimum",
+      "maximum",
+      "repetitions",
+      "valid_repetitions",
+      "undefined_count",
+      "mc_status"
+    ],
+    "rows": 21042
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/permutation_record_comparison.csv",
+    "bytes": 593081,
+    "sha256": "4f82618ecd9c0f129048f48c97c465c686c3734d56c9f3c87827d1a614f7e2f6",
+    "columns": [
+      "ID",
+      "SEX",
+      "actual",
+      "canonical_changed",
+      "permuted_changed",
+      "logistic_canonical_probability",
+      "logistic_permuted_probability",
+      "gradient_boosting_canonical_probability",
+      "gradient_boosting_permuted_probability"
+    ],
+    "rows": 5996
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/prediction_cache.npz",
+    "bytes": 17987702,
+    "sha256": "943b18dc42181f6717249ed23322e4b7050df9cc6831377d8a30e8e56d5dd933"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/protocol.json",
+    "bytes": 337250,
+    "sha256": "f46212d17fbc6d49b3ffe84ce0f1e3da147804bf999a46d6d12cd137dbdb78da"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/protocol_rationale.md",
+    "bytes": 6054,
+    "sha256": "f2231f49d4799ba41925af11d113e2f00e515fb7728fbc3ff9dd0517658410f4"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/realization_registry.csv",
+    "bytes": 265448,
+    "sha256": "70c3f0504d10cc02b47b98230102c07d652f6a3712e6bb8b1091479653694a67",
+    "columns": [
+      "cache_key",
+      "scenario",
+      "repetition",
+      "layer",
+      "scope",
+      "kind",
+      "severity",
+      "level",
+      "input_sha256",
+      "models_share_exact_input",
+      "canonical_ID_order_restored",
+      "selected_records",
+      "changed_records",
+      "changed_cells"
+    ],
+    "rows": 1501
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/row_order_diagnostic.csv",
+    "bytes": 3712,
+    "sha256": "a6fc0fd6947a979a23311471444ce834e3414bc7b4bb266f6000d03f8dbc1f4f",
+    "columns": [
+      "model",
+      "SEX",
+      "metric",
+      "canonical",
+      "permuted",
+      "permuted_minus_canonical"
+    ],
+    "rows": 38
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "bytes": 32314,
+    "sha256": "7304f78c3b88446338184268070de94c78aef0c4792813e12c7093c04063ca12"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/safe_fixture_validation.csv",
+    "bytes": 719,
+    "sha256": "fd491f8709eb88376e0a302aed57bccba718e7684d2e7602b0b19f1c8e7d0c28",
+    "columns": [
+      "fixture",
+      "value",
+      "expected",
+      "status",
+      "reason"
+    ],
+    "rows": 13
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/safe_source_inspection.txt",
+    "bytes": 7385,
+    "sha256": "911a52d196c37713e3a4812fa3098b7f020f4143f7c603156e605b86c8b636cc"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/sampling_intervals.csv",
+    "bytes": 21942,
+    "sha256": "0150061df23427e25903a2b2a2e0386063e0064a0e5017a3c5ec09ec3d51a087",
+    "columns": [
+      "scenario",
+      "SEX",
+      "model",
+      "metric",
+      "estimate",
+      "ci_lower",
+      "ci_upper",
+      "attempted_replicates",
+      "valid_replicates",
+      "undefined_replicates",
+      "undefined_reason",
+      "method"
+    ],
+    "rows": 90
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/test_results.txt",
+    "bytes": 5085,
+    "sha256": "d071a782f641e029e3649d3ca390f866deb93d196914377d4afa47d2fcb888a1"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/undefined_results.csv",
+    "bytes": 56,
+    "sha256": "d08acbc8e8200a91bd8497a63af40b7fc3394cac4549da4d4f5863209699347c",
+    "columns": [
+      "scenario",
+      "repetition",
+      "model",
+      "SEX",
+      "scope",
+      "metric",
+      "reason",
+      "count"
+    ],
+    "rows": 0
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/verification.json",
+    "bytes": 5375,
+    "sha256": "26277d730b2ce2d6dd541777ce927189501d646e25736c8c98ee80c3dcc1fa06"
+  },
+  {
+    "path": "outputs/tables/robustness_evaluation/weighted_ranking_validation.csv",
+    "bytes": 409,
+    "sha256": "a72156faaba065bf386db04da0f4e03e266ae4db6d4e7427bdb6767c03e253d9",
+    "columns": [
+      "fixture",
+      "max_error"
+    ],
+    "rows": 20
+  },
+  {
+    "path": "src/baseline.py",
+    "bytes": 9547,
+    "sha256": "7883914e016388751a1402a25ec11037e2c4c4adb39faed17a60b62d6e623a08",
+    "definitions": [
+      "sha256",
+      "clean_data",
+      "split_metadata",
+      "duplicate_summary",
+      "prepare_data",
+      "load_split",
+      "build_model",
+      "save_pipeline"
+    ]
+  },
+  {
+    "path": "src/explainability_evaluation.py",
+    "bytes": 20731,
+    "sha256": "897450352c7959624daa28a32c21e169cee0815baa8ded1905a15c4373d132ec",
+    "definitions": [
+      "protected_hashes",
+      "validate_prior_stages",
+      "finite",
+      "dense",
+      "background_positions",
+      "transformed_mapping",
+      "explain_shap",
+      "safe_frames",
+      "evaluate_rge",
+      "importance",
+      "group_comparison",
+      "select_local_cases",
+      "run_explainability_evaluation",
+      "verify_completion"
+    ]
+  },
+  {
+    "path": "src/explainability_report.py",
+    "bytes": 25850,
+    "sha256": "79a734a0321eef329431595ece26838155d0bd4be31d8257cea6bdd1f264cc2a",
+    "definitions": [
+      "save",
+      "create_figures",
+      "markdown",
+      "write_report"
+    ]
+  },
+  {
+    "path": "src/fairness_evaluation.py",
+    "bytes": 17781,
+    "sha256": "d9282dfac3078682fe2761db2711e629c6237c7644d851040543ac29d64a285f",
+    "definitions": [
+      "metrics",
+      "gaps",
+      "group_summary",
+      "threshold_audit",
+      "fairness_bootstrap",
+      "confidence_intervals",
+      "proxy_descriptives",
+      "protected_hashes",
+      "run_fairness_evaluation"
+    ]
+  },
+  {
+    "path": "src/fairness_report.py",
+    "bytes": 20973,
+    "sha256": "9fc7f9ffbc52f38e5f4d78233ad4eab92de68e9fbc6c41fedeb55b659e3475a5",
+    "definitions": [
+      "make_plots",
+      "write_report"
+    ]
+  },
+  {
+    "path": "src/performance_evaluation.py",
+    "bytes": 19932,
+    "sha256": "b71a8adac06272b56bc83de85e8c56790d280ac20657ca166aa7495c5a8a1aa3",
+    "definitions": [
+      "predictor_groups",
+      "class_metrics",
+      "performance_metrics",
+      "training_folds",
+      "cross_validate_training",
+      "threshold_analysis",
+      "reliability_bins",
+      "calibration_assessment",
+      "evaluate_fixed_holdout",
+      "bootstrap_group_weights",
+      "group_bootstrap",
+      "locked_input_hashes",
+      "validate_fitted_baselines",
+      "run_performance_evaluation"
+    ]
+  },
+  {
+    "path": "src/performance_report.py",
+    "bytes": 19106,
+    "sha256": "730326b353d840e4d78b13907c8ad7e75488a7cfd595fe9054d463f03fcadd53",
+    "definitions": [
+      "markdown_table",
+      "make_plots",
+      "write_report"
+    ]
+  },
+  {
+    "path": "src/robustness_cache.py",
+    "bytes": 1374,
+    "sha256": "3de5809ea1a4ad88c4fbae163cbbb177c7a30256844d21ee9a809ef4edb6b3fa",
+    "definitions": [
+      "restore_probabilities",
+      "compact_cache"
+    ]
+  },
+  {
+    "path": "src/robustness_evaluation.py",
+    "bytes": 31671,
+    "sha256": "cf6620b886eab1394ff383219a5700a418ce2f4e6cd2c73a0feea556a9e329cc",
+    "definitions": [
+      "protected_hashes",
+      "write_json",
+      "frame_hash",
+      "validate_all_prior",
+      "baseline_reproduction",
+      "movement",
+      "outcome_metrics",
+      "exposure_rows",
+      "aggregate",
+      "run_robustness_evaluation",
+      "verify_completion"
+    ]
+  },
+  {
+    "path": "src/robustness_protocol.py",
+    "bytes": 18302,
+    "sha256": "06b6c75250ace2b4537fab077f3b26dd8182afba2c18ee510eb36a696ec64e48",
+    "definitions": [
+      "child_seed",
+      "semantic_rules",
+      "build_protocol",
+      "semantic_transform"
+    ]
+  },
+  {
+    "path": "src/robustness_report.py",
+    "bytes": 21672,
+    "sha256": "5fdb30509c60ebf9e4f6fd8fe3a13c601e69c4a05c155e3ba0463febe64aff51",
+    "definitions": [
+      "markdown",
+      "save_figure",
+      "make_figures",
+      "make_report"
+    ]
+  },
+  {
+    "path": "src/robustness_safe.py",
+    "bytes": 7475,
+    "sha256": "e6103df4ea613b44dc4e0942a453b762bae9514400ffa898d5a831102d97bac5",
+    "definitions": [
+      "RobustnessAdapter",
+      "source_identity",
+      "inspection_text",
+      "tail_participants",
+      "transform",
+      "authentic_call",
+      "FixtureClassifier",
+      "validate_fixtures"
+    ]
+  },
+  {
+    "path": "src/robustness_uncertainty.py",
+    "bytes": 7645,
+    "sha256": "df4b7cb89a1620830a9a9f46ce976db6ecd4225bdb723282810256debbf64f4a",
+    "definitions": [
+      "WeightedRanks",
+      "validate_weighted_ranks",
+      "focus_metrics",
+      "paired_bootstrap"
+    ]
+  },
+  {
+    "path": "src/safe_adapter.py",
+    "bytes": 4606,
+    "sha256": "52f47996593eb241879ff7cb058811f3000297bd00bb4ba04ed08739c9c0f235",
+    "definitions": [
+      "SafePipelineAdapter",
+      "provenance",
+      "evaluate_safe"
+    ]
+  },
+  {
+    "path": "tests/test_explainability_evaluation.py",
+    "bytes": 7309,
+    "sha256": "b6d805cc4e847502bf40c51efd320d7781ac21e597259936b00c711610f896ab",
+    "definitions": [
+      "ExplainabilityTests"
+    ]
+  },
+  {
+    "path": "tests/test_fairness_evaluation.py",
+    "bytes": 7935,
+    "sha256": "11b5ce7e51af4e10e64a4bb4ca8f1de946c8148468f83101a969a3e8c9b2b6e3",
+    "definitions": [
+      "FairnessMethodTests",
+      "FairnessArtifactTests"
+    ]
+  },
+  {
+    "path": "tests/test_performance_evaluation.py",
+    "bytes": 8608,
+    "sha256": "4db9658855795954bb27499f430669d6ce84bb832dc66d2b2c7ee7461804344b",
+    "definitions": [
+      "PerformanceMethodTests",
+      "PerformanceArtifactTests"
+    ]
+  },
+  {
+    "path": "tests/test_robustness_evaluation.py",
+    "bytes": 20463,
+    "sha256": "d24ec44944e44efee09bde066423fae0ebaa0c731d775cb17bcb3f14e0e7bf00",
+    "definitions": [
+      "RobustnessTests"
+    ]
+  },
+  {
+    "path": "tests/test_stabilization.py",
+    "bytes": 3991,
+    "sha256": "836634952e3f91c236823432fe8833994ad4245ad85103e790686a9ba56fe9de",
+    "definitions": [
+      "StabilizationTests"
+    ]
+  }
+]

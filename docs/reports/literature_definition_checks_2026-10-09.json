@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-09",
+  "scope": "definition checks using constructed numbers only; no credit experiments or replication",
+  "wasserstein_identity": {
+    "half_squared_cost_matrix": [
+      [
+        0.0,
+        0.5
+      ],
+      [
+        0.5,
+        0.0
+      ]
+    ],
+    "uniform_product_plan_cost": 0.25,
+    "optimal_half_squared_transport_cost": 0.0,
+    "standard_squared_wasserstein": 0.0,
+    "paired_mean_squared_change": 0.0
+  },
+  "prediction_permutation": {
+    "half_squared_cost_matrix": [
+      [
+        0.32000000000000006,
+        0.0
+      ],
+      [
+        0.0,
+        0.32000000000000006
+      ]
+    ],
+    "uniform_product_plan_cost": 0.16000000000000003,
+    "optimal_half_squared_transport_cost": 0.0,
+    "standard_squared_wasserstein": 0.0,
+    "paired_mean_squared_change": 0.6400000000000001
+  },
+  "paper_toy_values": {
+    "half_squared_cost_matrix": [
+      [
+        0.0,
+        2.0
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "uniform_product_plan_cost": 0.75,
+    "optimal_half_squared_transport_cost": 0.25,
+    "standard_squared_wasserstein": 0.5,
+    "paired_mean_squared_change": 0.5
+  },
+  "paired_brier_before": 0.009999999999999998,
+  "paired_brier_after": 0.81,
+  "integrated_arithmetic_tensor_mean": 0.6666666666666666,
+  "integrated_arithmetic_mean_of_curve_means": 0.6666666666666666,
+  "interpretation": "The printed uniform-coupling formula is not optimal transport in general. Correct marginal transport is permutation invariant; paired loss is not. Independent arithmetic cross-product aggregation cannot encode measured feature-removal/noise interactions."
+}

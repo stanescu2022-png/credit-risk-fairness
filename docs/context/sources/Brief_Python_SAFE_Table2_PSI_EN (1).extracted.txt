@@ -1,0 +1,100 @@
+Technical Brief — SAFE + Table 2 (Fairness) + PSI (Governance)
+Public dataset: “Default of Credit Card Clients” (UCI, id=350)
+For the colleague running the analysis in Python · methodology Giudici et al. (2024), §4.1 and Table 2
+
+1. What to deliver (summary)
+Train two credit-scoring models on a public dataset and evaluate them with the SAFE framework (safeaipackage), plus (a) reproduce the Table 2 fairness analysis (Gini + Kolmogorov–Smirnov on Shapley values, across gender groups) and (b) a governance indicator, the Population Stability Index (PSI), computed train-vs-test. Deliverables: the SAFE table (RGA, RGF, RGE, RGR), the Table-2-style tables, the PSI values per model, and the full script.
+2. The dataset
+Default of Credit Card Clients (Taiwan) — UCI.
+Page: https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients
+DOI: https://doi.org/10.24432/C55S3H · Licență: CC BY 4.0.
+30,000 clients, 23 attributes; binary target (default next month). Sensitive attributes: SEX (1 = male, 2 = female), AGE, EDUCATION, MARRIAGE.
+3. The two models
+Logistic regression — simple, transparent (white box).
+Gradient boosting — powerful, opaque (black box).
+4. Main steps (SAFE analysis)
+Install. pip install ucimlrepo safeaipackage scikit-learn pandas shap scipy numpy
+Load + prepare. fetch_ucirepo(id=350); encode SEX/EDUCATION/MARRIAGE; 70/30 split (X_train, X_test, y_train, y_test).
+Train the two models (m_log, m_boost) and generate the scores (default probabilities).
+SAFE metrics. RGA, RGF (with SEX), RGE, RGR, per model.
+Table 2 (Section 5) and PSI (Section 6).
+
+5. Reproducing Table 2 — Fairness
+For each variable, compare the Shapley values between gender groups (SEX == 1 vs. SEX == 2). Report F_k (Gini) and the p-value (Kolmogorov–Smirnov).
+The formulas
+Shapley (eq. 1): phi(f_hat(X_i)) =   SUM over X' subset of X\{X_k} of      [ |X'|!(K-|X'|-1)!/K! ] * [ f_hat(X'uX_k)_i - f_hat(X')_i ]v_.k = SUM_m v_mk ;  q_mk = v_mk / v_.kF_k  = Gini( q_masc,k , q_fem,k )D_k  = max_x | F_masc(x) - F_fem(x) | ;  p_k = probabilitatea KS
+Code (brief)
+import numpy as np, shapfrom scipy.stats import ks_2sampdef gini(v):    v=np.sort(np.array(v,float)); n=len(v)    if v.sum()==0: return 0.0    idx=np.arange(1,n+1)    return (2*np.sum(idx*v)/(n*v.sum()))-(n+1)/nmasc=X_test[X_test['SEX']==1]; fem=X_test[X_test['SEX']==2]# logistic: shap.LinearExplainer(m_log,X_train)# boosting: shap.TreeExplainer(m_boost)# per variabila k: v_m,v_f -> F_k=gini; D,p=ks_2samp(sh_m[:,k],sh_f[:,k])
+How to read it
+p_k > 0,05 → fair on variable k (no significant difference between genders).
+p_k < 0,05 → possible bias; F_k reports the magnitude of concentration.
+
+6. Governance indicator: Population Stability Index (PSI)
+6.1 What PSI measures, step by step
+PSI measures how much the distribution of model scores drifts between two samples. Here we compare the TRAINING set (reference) with the TEST set. The idea, step by step:
+The model produces a score (default probability) for every observation.
+We split the score range into bins (usually 10 deciles), defined on the training scores.
+We compare the proportion of scores in each bin, on training (E_i) versus test (A_i).
+If the proportions are similar, the distribution is stable (low PSI); if they differ a lot, there is drift (high PSI).
+6.2 PSI as a governance indicator
+In bank model-risk management practice, PSI is the standard model-monitoring metric: a significant drift triggers model revalidation and human oversight. PSI therefore acts as a measurable proxy for the Governance dimension (monitoring, oversight, accountability), which the SAFE framework does not cover directly. In this way, PSI extends SAFE with a fifth, governance-oriented facet.
+Honesty note (to include in the paper): governance is largely procedural; PSI measures one facet (stability/monitoring), not the whole of governance. State this explicitly as a proxy, not a complete measure of governance.
+6.3 The statistical formula
+PSI = SUM over bins i of ( A_i - E_i ) * ln( A_i / E_i )E_i = proportion of TRAINING (expected) scores in bin iA_i = proportion of TEST (actual) scores in bin iBins are defined from the TRAINING scores (10 deciles).Use the SAME bin edges for both distributions.
+6.4 The process, step by step
+Train each model (already done for SAFE).
+Generate the score (default probability) for TRAINING and for TEST.
+Define the bins from the training scores (10 deciles). Do NOT re-bin on test.
+Compute the proportions E_i and A_i for each bin.
+Apply the formula per bin and sum.
+Read against the thresholds; report one PSI per model (and, optionally, PSI per bin).
+Technical caution: a bin may have 0 observations in test, making ln(A_i/E_i) blow up; add a small floor (eps = 0.0001) to the proportions before the log.
+6.5 Python code
+import numpy as npdef population_stability_index(expected, actual, n_bins=10):    # bin edges from the reference (training) scores, by decile    q = np.linspace(0, 1, n_bins + 1)    edges = np.quantile(expected, q)    edges[0], edges[-1] = -np.inf, np.inf   # cover the tails    exp_c, _ = np.histogram(expected, bins=edges)    act_c, _ = np.histogram(actual,   bins=edges)    exp_p = exp_c / len(expected)    act_p = act_c / len(actual)    eps = 1e-4                              # avoid log/division by 0    exp_p = np.clip(exp_p, eps, None)    act_p = np.clip(act_p, eps, None)    return float(((act_p - exp_p) * np.log(act_p / exp_p)).sum())# scores = default probability (class 1)tr_log  = m_log.predict_proba(X_train)[:, 1]te_log  = m_log.predict_proba(X_test)[:, 1]tr_bst  = m_boost.predict_proba(X_train)[:, 1]te_bst  = m_boost.predict_proba(X_test)[:, 1]psi_log  = population_stability_index(tr_log, te_log)psi_bst  = population_stability_index(tr_bst, te_bst)print(f'PSI logistic regression: {psi_log:.4f}')print(f'PSI gradient boosting:  {psi_bst:.4f}')
+6.6 Interpretation
+PSI value
+
+Meaning (governance)
+PSI < 0,10
+stable
+Fără schimbare significantă; distribuție stableă.
+0,10 ≤ PSI < 0,25
+moderate
+Schimbare moderateă; de monitorizat.
+PSI ≥ 0,25
+significant
+Drift significant; necesită revizuire de guvernanță.
+
+Pentru un split train/test dintr-un set curat, valorile așteptate sunt mici (sub 0,10), pentru că antrenarea și testul provin din aceeași populație. Acest rezultat e așteptat și tot merită raportat: stableește comportamentul de bază al indicatorului și arată că modelele sunt stablee intern. Se poate raporta și PSI pe fiecare bin, pentru a arăta unde se concentrează driftul.
+6.7 Proof of mechanism vs. real application
+On the Taiwan data, PSI (train-vs-test) is a proof of mechanism: it shows the indicator works and integrates with the SAFE analysis, but it is NOT calendar-time drift. Real monitoring over periods requires longitudinal data (multiple periods). The Lendox dataset — which contains observation_date and outcome_date — is the one that enables PSI as real-time governance monitoring. State this explicitly in the paper.
+7. What I receive at the end
+The SAFE table: RGA, RGF, RGE, RGR for the two models.
+Two Table-2-style tables (per model): F_k and KS p-value across gender groups.
+The PSI values (train-vs-test) per model, plus optionally PSI per bin.
+The full script + any charts.
+8. Package, dataset and methodological citations
+safeaipackage (GitHub): https://github.com/GolnooshBabaei/safeaipackage
+safeaipackage (PyPI): https://pypi.org/project/safeaipackage/
+Giudici, P., Centurelli, M. & Turchetta, S. (2024). Artificial intelligence risk measurement. Expert Systems With Applications, 235, 121220.
+Babaei, G., Giudici, P. & Raffinetti, E. (2025). A Rank Graduation Box for SAFE AI. Expert Systems with Applications, 125239.
+Yeh, I. (2009). Default of Credit Card Clients [set de date]. UCI Machine Learning Repository. https://doi.org/10.24432/C55S3H
+
+9. References for governance and PSI (verified sources)
+Real, open sources obtained via live literature search. PSI is a practitioner metric (model risk management), thinly represented in indexed journals; the academic anchors are the drift and monitoring literature, plus the standard practitioner reference (to be confirmed).
+Governance, accountability and oversight in trustworthy AI
+Díaz-Rodríguez, N., Del Ser, J., Coeckelbergh, M., et al. (2023). Connecting the dots in trustworthy artificial intelligence: from AI principles, ethics, and key requirements to responsible AI systems and regulation. Information Fusion, 99, 101896. https://doi.org/10.1016/j.inffus.2023.101896
+Cheong, B. C. (2024). Transparency and accountability in AI systems: safeguarding wellbeing in the age of algorithmic decision-making. Frontiers in Human Dynamics, 6, 1421273. https://doi.org/10.3389/fhumd.2024.1421273
+Koene, A., Clifton, C., Hatada, Y., et al. (2019). A governance framework for algorithmic accountability and transparency. European Parliament (STOA). https://openalex.org/W3102619004
+Schwartz, R., Vassilev, A., Greene, K., et al. (2022). Towards a standard for identifying and managing bias in artificial intelligence (NIST SP 1270). https://doi.org/10.6028/nist.sp.1270
+Hacker, P., & Passoth, J.-H. (2022). Varieties of AI explanations under the law: from the GDPR to the AIA, and beyond. Lecture Notes in Computer Science. https://doi.org/10.1007/978-3-031-04083-2_17
+Bahlool, R., Hewahi, N. M., & Elmedany, W. (2026). Performance, fairness, and explainability in AI-based credit scoring: a systematic literature review. Journal of Risk and Financial Management, 19(2), 104. https://doi.org/10.3390/jrfm19020104
+Drift, stableitate și monitorizarea modelelor (ancoră pentru PSI)
+Gama, J., Žliobaitė, I., Bifet, A., et al. (2014). A survey on concept drift adaptation. ACM Computing Surveys, 46(4), Article 44. https://doi.org/10.1145/2523813
+Ziemba, P., Becker, J., & Becker, A. (2023). Framework for multi-criteria assessment of classification models for the purposes of credit scoring (includes consistency of results across time periods). Journal of Big Data, 10, 94. https://doi.org/10.1186/s40537-023-00768-7
+Standard practitioner reference for PSI (to be confirmed)
+Siddiqi, N. Credit Risk Scorecards: Developing and Implementing Intelligent Credit Scoring. Wiley. — the standard practitioner source for the PSI formula and thresholds (0.10 / 0.25). Confirm the edition and year before citing. (Alina: this is a book): Siddiqi, N. (2012). Credit risk scorecards: developing and implementing intelligent credit scoring (Vol. 3). John Wiley & Sons: https://books.google.ro/books?id=q-qoDQAAQBAJ&lpg=PR13&ots=JkHwvwyM_r&lr&hl=ro&pg=PR15#v=onepage&q&f=false
+
+Two neighbours are worth opening yourself, because they touch the edges of your idea:
+A strategic-AI framework that lists bias and drift monitoring and model risk management as governance controls (https://doi.org/10.51594/gjabr.v3i11.171). It names the ingredients you are using, drift monitoring as governance, but as a conceptual blueprint, not as a measurable indicator inside a trustworthiness framework. Your operationalisation via PSI is the gap it leaves open.
+The clinical TRIAGE framework, which integrates calibration, robustness, fairness, and temporal validation into one evaluation pipeline (https://doi.org/10.3390/diagnostics16050666). It shows the "bolt a stability check onto a trustworthiness framework" move exists in medicine, which you can cite as precedent for the approach while noting nobody has done it for SAFE in credit scoring.

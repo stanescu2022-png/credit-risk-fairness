@@ -1,0 +1,5 @@
+comparison,ci_lower,ci_upper,valid_draws,attempted_draws,status
+gbm_full minus lr_mle_full,,,0,2000,not_estimable
+gbm_selected minus lr_mle_selected,,,0,2000,not_estimable
+lr_mle_selected minus lr_mle_full,,,0,2000,not_estimable
+gbm_selected minus gbm_full,-0.03484874859525402,-0.018951522257263993,2000,2000,ok

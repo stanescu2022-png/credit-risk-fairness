@@ -1,0 +1,39 @@
+{
+  "stage": "selection",
+  "completed_at_utc": "2026-10-10T12:47:33.112555+00:00",
+  "protocol_sha256": "62e8ef9f4e2d71c2d83715cd00c963eb83fe2043beac68de12e0e3524c3ada77",
+  "source_hashes": {
+    "article_safe/artifacts.py": "a2ef0d9a8172b99c63879d7df209f4ccaca33ba0632e0e368b8adcbfd208ac7a",
+    "article_safe/data.py": "23a669f097090eb719ffad5bf479f77e0c7c0fd5109d2b811e0adf2d61d3f3b4",
+    "article_safe/explainability.py": "527a5eaefcc6d28aba87dcbcf34186dbfcb0404271e402efb1b6641a511db515",
+    "article_safe/inference.py": "3a86da1ba957481426c7f9ee614ecffd6b3a35e1580fa513561d31d6a0e91d14",
+    "article_safe/models.py": "d04de5880f82e47236218b86c38982dd9a4570ba7f969861c025dc772e33a380",
+    "article_safe/paths.py": "5871cf354693cef9b7707fecf079cef06625a4ce3e9ff9102813171b2dd1cfe8",
+    "article_safe/protocol.py": "67ffbb527f120f8b762e4eb631f166498114edea82c7bd3165a2f7d24ad80af0",
+    "article_safe/run.py": "6eec9fca7bfba6fe020486dcab4944340bb3d4403c7a4ad93dff375e66e11d7b",
+    "article_safe/selection.py": "7eebb54dd6f87ec50c8cc02636685e5aacde2827497ff8c16190475b6a204dab",
+    "article_safe/__init__.py": "7cf3e080588bbe32162a75b7d56c3dfc8c9c2a6524b04c91b31e92caa44ee339"
+  },
+  "output_hashes": {
+    "gbm_choice.json": "125d7a7d063f5a1ad2f225bfd27281327f4e0610cbd71a6e895c9d9528a2fd11",
+    "gbm_fitting_importance.csv": "58532923751296f482d81d8c11e1490cc42df4ff2fd0b54b1a7ba4da1f6ad236",
+    "gbm_fitting_shap.npz": "de36ed33495d75b26baae9585841042ce3886134a2289d4e2affdf9390de6df1",
+    "gbm_prefix_path.csv": "a3319a7b3ae09ec0ecc5ddf2038cd9223d3d299332c429d26d7d044e7cbe3292",
+    "gbm_selection_encoded_mapping.csv": "910ee19851c81954a92f9978b33ebf923258460d670f963a486d5d1ee665f19d",
+    "gbm_validation_predictions.csv": "315855be06fe88170ba3bd146b012bb866e3bfec5e4172106de3f1c560d05a6f",
+    "lr_choice.json": "103794b787211df5d65141a5b4f30b0012653aae765c7f7f29e6b6cf19e1aba2",
+    "lr_encoded_mapping.csv": "8c82e436bb936347c857dcf5e43f4e52ce57197ccb957e94fcca849fc378cb31",
+    "lr_fit_diagnostics.json": "e70fe66a07e6c7794ec736b02883f34ef3867e9c34b9fc264e7feed848fedae2",
+    "selected_subsets.json": "760b778f2a657851dc0211b1fa416097066d3c7ee9c15ba10e62363c61de03f6",
+    "selection_shap_background.csv": "13bc0762f5ccd9976dd0d6ff12d54a7c7402b470bc8859f232b7d866bc109279"
+  },
+  "holdout_evaluated": false,
+  "prior_artifact_checks": {
+    "checks": 410,
+    "failures": []
+  },
+  "selection_status": {
+    "lr_mle": "not_estimable",
+    "gbm": "complete"
+  }
+}

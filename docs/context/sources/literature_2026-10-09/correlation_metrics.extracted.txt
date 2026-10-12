@@ -1,0 +1,642 @@
+===== PDF PAGE 1 =====
+Article
+Correlation Metrics for Safe Artificial Intelligence
+GolnooshBabaei andPaoloGiudici*
+DepartmentofEconomicsandManagement,UniversityofPavia,27100Pavia,Italy;golnoosh.babaei@unipv.it
+* Correspondence:paolo.giudici@unipv.it
+Abstract
+ThereisagrowingneedtoprovideAIriskmanagementmodelsthatcanassesswhether
+AI applications are safe and trustworthy, to make them responsible. To date, there are
+afewresearchpapersonthistopic. Tofillthegap,inthispaperweextendtherecently
+proposedSAFEframework,acomprehensiveapproachtomeasureAIrisksacrossfour
+keydimensions: security,accuracy,fairness,andexplainability(SAFE).Wecontributeto
+theSAFEframeworkwithanoveluseofthecoefficientofdetermination(R2)toquantify
+deviationsfromidealbehaviornotonlyintermsofaccuracybutalsoforsecurity,fairness,
+andexplainability. Ourempiricalfindingsshowstheeffectivenessoftheproposal,which
+leadstoamoreprecisemeasurementofrisksofAIregressionapplications,whichinvolve
+thepredictionofcontinuousresponsevariables.
+Keywords: SAFEAImetrics;responsibleAI;coefficientofdetermination
+1. Introduction
+ArtificialIntelligence(AI)systemsareincreasinglydeployedindomainswheretheir
+decisions have significant societal, ethical, and economic consequences, ranging from
+healthcareandfinancetocriminaljusticeandeducation. Whiletheiradoptionpromises
+efficiencyandinnovation,growingevidenceshowsthatthesesystemscanalsointroduce
+substantialrisks,includingbiasedoutcomes,adversarialvulnerabilities,andpoorgener-
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1) alizationinreal-worldsettings. Assuch,thedemandforresponsibleAI—AIthatisnot
+(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)
+onlyperformantbutalsosecure,fair,androbust—hasbecomeacentralconcerninboth
+AcademicEditor:PasqualeCirillo academicandpolicy-makingcirclesFloridietal.(2018);Jobinetal.(2019).
+Received:18July2025 Indeed,thewidespreaduseofArtificialIntelligence(AI)requiresustodevelopad-
+Revised:5September2025 vancedstatisticalmethodsthatcanmeasureitsrisks,inlinewithrecentlyproposedregula-
+Accepted:9September2025
+tionsandstandardssuchastheEuropeanArtificialIntelligenceAct(EuropeanCommission
+Published:12September2025
+(2022)),theAmericanArtificialIntelligenceRiskManagementframework(UnitedStatesNa-
+Citation: Babaei,Golnoosh,and
+tionalInstituteofStandardsandTechnologies(2023)),theOECDframeworkfortheclassi-
+PaoloGiudici.2025.Correlation
+ficationofAISystems(OrganisationforEconomicCooperationandDevelopment(2022)),
+MetricsforSafeArtificialIntelligence.
+andtheISO/IEC23894internationalstandards(InternationalOrganizationforStandard-
+Risks13: 178. https://doi.org/
+10.3390/risks13090178 izationandInternationalElectrotechnicalCommission(2023)).
+Fromanorganizationalandmanagerialgovernanceviewpoint,themainrisksthatcan
+Copyright:©2025bytheauthors.
+arisefromtheapplicationofAIderivefromtheviolationoffourmainprinciples: accuracy,
+LicenseeMDPI,Basel,Switzerland.
+Thisarticleisanopenaccessarticle explainability,fairness,andsecurity.
+distributedunderthetermsand First, accuracy. AI applications are complex, and consume a great deal of energy
+conditionsoftheCreativeCommons and costs. Thus, their efficiency requires accurate results. Second, explainability. AI
+Attribution(CCBY)license
+applications typically have an intrinsic non-transparent (“black-box”) nature. This is a
+(https://creativecommons.org/
+probleminregulatedindustries,asauthoritiesaimedatmonitoringtherisksarisingfrom
+licenses/by/4.0/).
+Risks2025,13,178 https://doi.org/10.3390/risks13090178
+
+===== PDF PAGE 2 =====
+Risks2025,13,178 2of12
+theapplicationofAImaynotvalidatethem(see,e.g.,Brackeetal.2019). Third,security.
+CyberattacksanddatapoisoningnaturallyincreasewiththeincreaseinAIapplications.
+This is one of the most frequent risks related to the resilience and sustainability of AI
+applications. Fourth,fairness. TheapplicationofAImayposesocietalproblems,among
+whichfairnessandtheriskofdiscriminationisthemostrelevant.
+Indeed,alltherecentlyproposedregulationsandrecommendationsintroducecompli-
+ancerequirementsforthesefourprincipleswithinarisk-basedapproachtoAIapplications.
+Intheregulatorycontext,severalapplicationsofAIhavehighrisksand,therefore,require
+anappropriateriskmanagementmodel. Todevelopsuchamodel,weneedtoexpressthe
+regulatoryrequirementsintermsofstatisticalvariables,tobemeasuredbyappropriate
+statisticalmetrics.
+A growing body of work has proposed frameworks for measuring and mitigat-
+ing various AI-related risks. For example, frameworks such as FAIR (Fairness, Ac-
+countability,Interpretability,andResponsibility)andFAT(Fairness,Accountability,and
+Transparency) Barocas and Selbst (2018); Selbst et al. (2019) emphasize the ethical di-
+mensions of AI. Others have focused on specific aspects such as robustness to adver-
+sarial examples Goodfellow et al. (2015); Szegedy et al. (2014), secure learning against
+data poisoning Steinhardt et al. (2017), and algorithmic fairness across demographic
+groupsHardtetal.(2016);Kleinbergetal.(2016). However,theseframeworksoftencon-
+sider these dimensions in isolation, lacking a unified metric to compare and trade off
+betweenthem.
+A related line of research is to employ AI to measure risks. Papers in this stream
+ofresearchincludethosebyNaim(2022)andSundraetal.(2023),whoconsidertheap-
+plicationofAIinfinancialriskmanagement;Sachanetal.(2020);Bussmannetal.(2020);
+Moscatoetal.(2021); Liu et al. (2022) and Bücker et al. (2022), who employ AI to mea-
+sure credit risk; Giudici and Polinesi (2021) and Giudici and Abu-Hashish (2019), who
+employ AI to measure contagion risks in algorithmic trading and crypto exchanges;
+GaneshandKalpana(2022),whoreviewAImethodologiesforsupplychainriskmanage-
+ment,whereasFrostetal.(2019)andKuiperetal.(2021)dosoforfinancialintermediation;
+Ainslieetal.(2017);Melanconetal.(2021);Aldasoroetal.(2022)andGiudiciandRaffinetti
+(2021),whoemployAItomeasureITriskandcyberrisks;andAchakzaiandJuan(2022)
+andChenetal.(2018),whoemployAItodetectfinancialfraudsandmoneylaundering.
+The previously mentioned papers propose AI methodologies to measure different
+types of risks, often from a financial perspective. We instead propose a methodology
+to measure the “model” risks the AI itself generates, following the recently proposed
+SAFEAIriskmanagementframework(Babaeietal.(2025)),whichevaluatesAImodels
+alongfourfundamentaldimensions: security,accuracy,fairness,andexplainability. The
+SAFEframeworkismotivatedbytheneedforaholisticandquantitativeapproachtoAI
+riskassessment.
+WecontributetotheSAFEframeworkwithanoveluseofthecoefficientofdetermi-
+nation(R2)—traditionallyusedtomeasuremodelfitinregression—asageneral-purpose
+metrictoquantifydeviationsfromidealbehaviornotonlyintermsofaccuracybutalsofor
+security,fairness,andexplainability. ByextendingR2tocapturetheproportionofvariation
+ineachofthesedomains,weofferacoherentandinterpretabletooltocomparemodelsthat
+aimtopredictcontinuousresponses.
+The rest of the paper is structured as follows: Section 2 formalizes the SAFE AI
+dimensionsandextendstheR2metrictoeachofthem. Section3presentstheapplicationof
+ourproposaltoacasestudy,followedbyadiscussionoftheobtainedresultsinSection4.
+WeconcludeinSection5withasummaryofourcontribution.
+
+===== PDF PAGE 3 =====
+Risks2025,13,178 3of12
+2. ExtendingtheSAFEAIMetrics
+Thesecurity,accuracy,fairness,andexplainability(S.A.F.E.)AImetricsproposedin
+Babaei et al. (2025) are derived from the Lorenz curve. Their core is Rank Graduation
+Accuracy(RGA),whichisarank-basedmetrictoassesstheaccuracyofamodel,aclassifier
+oraregressor,asexplainedinGiudiciandRaffinetti(2025). Wenowbrieflyrecallthem.
+Consider Y∗ and Y∗∗, two statistical variables (continuous, ordinal or binary). To
+buildtheLorenzcurve,wecanutilizethesortedY∗ valuesinanon-decreasingorder. For
+i = 1,...,n, the Lorenz curve can be defined by the pairs (i/n,∑i y∗ /(ny¯∗)), where
+j=1 r∗
+j
+r∗ indicatesthenon-decreasingranksofY∗ and y¯∗ indicatesthemeanofY∗. Usingthe
+j
+samevariableY∗ butinanon-increasingorder,wecanbuildthedualLorenzcurve. For
+i = 1,...,n,thedualLorenzcurvecanbedefinedbythepairs(i/n,∑i y∗ /(ny¯∗)),
+j=1 r∗
+n+1−j
+wherer∗ indicatesthenon-increasingranksofY∗.
+n+1−j
+IftheY∗valuesaresortedaccordingtotheranksoftheY∗∗valuesinanon-decreasing
+order, we can define the concordance curve. For i = 1,...,n, the concordance curve is
+definedbythepairs(i/n,∑i
+j=1
+y
+r
+∗ ∗∗/(ny¯∗)),wherer
+i
+∗∗ indicatesthenon-decreasingranks
+j
+of Y∗∗. Regarding accuracy evaluation, Y∗ and Y∗∗ refer to the actual and predicted
+values,respectively. RGAistheratiooftheareabelowthelasttwocurves(dualLorenz
+curveandconcordancecurve)totheareabetweenthefirsttwocurves(Lorenzanddual
+Lorenzcurves).
+Babaei et al. (2025) extended the construction behind the RGA to different types
+ofcomparisonbetweenpairsofvariablesthatarisefromtheassessmentofMLmodels.
+ThecomparisonbetweenthepredictedY∗ andthepredictedY∗ whentheinputdataare
+modifiedleadtoaRankGraduationRobustness(RGR)measure,whichcanbeemployedto
+assesswhethertheoutputfromArtificialIntelligenceapplicationsisrobustundervariations
+inthedata,causedbyextremeevents,orbycyberattacks,whichmayalterthevaluesof
+theexplanatoryvariables. WeremarkthattheSAFEframeworkessentiallyequatessecurity
+withrobustnessandcanaccommodatealternativeredteamingscenarios,suchasprompt
+injectionorcoordinated-agentfailure.
+The comparison between the predicted values Y∗ of a machine learning model in-
+cludingandexcludingoneormoreexplanatoryvariablesleadstotheRankGraduation
+Explainability(RGE)measure,whichcanbeemployedtoassesstheinterpretabilityofthe
+AIoutput. ThecomparisonbetweenthepredictedY∗,conditionallyandunconditionallyto
+aprotectedattribute,suchasgenderorrace,leadstoaRankGraduationFairness(RGF)
+measure,whichcanbeemployedtoassessthebiasanddegreeofdiscriminationofAI.
+Theadvantageofthe RGdivergenceisthatitcanbeusedtoassess,inaconsistent
+way, theaccuracy, therobustness, theexplainabilityandthefairnessfordifferenttypes
+ofresponsevariables. Therefore,understandingauniqueformulaandconcept,wecan
+measurethementionedAIprinciplesandeasilyinterpretthem. Againsttheadvantages,
+theabovemetricshavethedisadvantageofreducingthecomparisonbetweendifferent
+modelstothecomparisonoftheranks. Iftwomodelshavethesamepredictiveranks,RGA
+isthesameifRGRandRGEarethesame. Similarly, iftwoperturbedmodelshavethe
+samepredictedranks,RGRisthesame. And,iftwosimplifiedmodels,withsomevariables
+removed,havethesamepredictedranks,RGEisthesame. Thismaynotbeidealwhen
+theresponsevariableiscontinuous. Anadditionaldisadvantage,forcontinuousresponse
+models,istheneedtoassumethattheresponseisnon-negative,implicitintheconstruction
+oftheLorenzcurve.
+Toovercomethepreviouslimitations,inthispaperweproposetoextendtheSAFEAI
+metricsbyemployingthecoefficientofdeterminationR2inregressionproblems,character-
+izedbyacontinuousresponse.
+
+===== PDF PAGE 4 =====
+Risks2025,13,178 4of12
+Inregressionanalysis,R2isawidelyusedmetricthatquantifiestheproportionofthe
+varianceinthedependentvariablethatisexplainedbytheindependentvariables. Givena
+setofnobservations{(x,y )}n ,andaregressionfunctionyˆ = f(x ),R2isdefinedas:
+i i i=1 i i
+∑n (y −yˆ )2
+R2 =1− i=1 i i (1)
+∑n (y −y¯)2
+i=1 i
+wherey¯ = 1 ∑n y isthemeanoftheobservedvalues.
+n i=1 i
+The numerator in Equation (1) represents the residual sum of squares (RSS), which
+capturestheerrorofthemodel. Thedenominator,knownasthetotalsumofsquares(TSS),
+quantifiesthetotalvarianceintheobserveddata.
+ThenotionofR2asameasurethatdescribesthepercentageofvariabilityofaresponse
+variable explained by a set of explanatory independent variables can be extended to a
+predictivecontext. Inthiscase,thenobservationsarepartitionedinatrainingsampleof
+n observations,onwhichtheregressionfunctionyˆ = f(x )isestimated(learned),anda
+1 i i
+testsamplen ,onwhichtheregressionfunctionisapplied,toderivepredictionswhichare
+2
+comparedtothegroundtruthvalues. Thus,R2becomes
+∑n2 (y −yˆ )2
+R2 =1− i=1 i i , (2)
+∑n2 (y −y¯)2
+i=1 i
+wherey¯ = 1 ∑n2 y isthemeanoftheobservedvaluesinthetestsample. Akeydifference
+n i=1 i
+betweentheR2inEquation(1)andthatinEquation(2)isthat,whileintheformercasethe
+“explainedvariance”∑n (y −yˆ )2issmallerthanthetotalvariance∑n (y −y¯)2,asthe
+i=1 i i i=1 i
+fittedanderrorvectorsareorthogonal,thismaynotbetrueinthelattercase.
+Weremarkthat(2)canbeextendedtoaclassificationproblem,inwhichtheresponse
+variableisbinary,resortingtotheBrierscore(see,e.g.,Rufibach2010). Tothatend,given
+thetrue0/1responses,y,whosemeanistheprobabilityof1, p,yˆ becomesthepredicted
+i i
+probabilityofa1responsefortheithindividual, pˆ . Formula(2)becomes:
+i
+∑n2 (y −pˆ )2
+R2 =1− i=1 i i , (3)
+∑n2 (y −p)2
+i=1 i
+Inthispaper,wewillemploythepredictiveR2 inEquation(2)notonlytomeasure
+predictiveaccuracy,butalsotomeasureotherprinciplesintheSAFEAIframeworksuchas
+security,explainability,andfairness.
+Concerningrobustness,whichisemployedasameasureofsecurityofAIapplications,
+wemeasuretheresilienceofamodelagainstmodificationstothedata. Consideryˆ andyˆ∗
+i i
+astheoriginalpredictedvaluesandpredictedvaluesaftermodifyingthedata. Equation(2)
+canberewrittenasfollowstomeasurerobustness:
+∑n2 (yˆ −yˆ∗)2
+R ∗2 =1− i=1 i i (4)
+∑n2 (yˆ −y¯)2
+i=1 i
+In terms of explainability, we measure the contribution of a variable to the model
+j
+predictions. Consideryˆ andyˆ astheoriginalpredictedvaluesandthepredictedvalues
+i i
+obtainedafterremovingavariablex fromthepredictorsforj =1,...,J. Equation(2)can
+j
+berewrittenasfollowstomeasuretheexplainabilityoftheJavailablevariables:
+Rj2 =1−
+∑
+i
+n
+=
+2
+1
+(yˆ
+i
+−yˆ
+i
+j)2
+(5)
+∑n2 (yˆ −y¯)2
+i=1 i
+
+===== PDF PAGE 5 =====
+Risks2025,13,178 5of12
+AvalueofRj2
+equaltozeroshowsasmallandnegligiblecontributionfortheconsid-
+eredvariablex .
+ThehigherRj2
+,themoreimportantthevariable.
+j
+Finally,thecomparisonbetweentheR2 valuesindifferentprotectedgroupsconsider-
+ingavariable(predictor)asaprotectedvariableleadstoafairnessmeasurementbasedon
+themodelparityconcept.
+Formally, let R2 and R2 be two predictive R2 values, calculated according to
+A B
+Equation (2) separately for all data that belong, respectively, to individuals in groups
+AandB. Forexample, AcanbeagroupoffemalesandBagroupofmales. Tomeasure
+fairnesswecanthencalculate
+R2 = |R2 −R2| (6)
+F A B
+AsmallvalueofR2 indicatesthatamodelachievessimilarR2valueswhenapplied
+F
+to different protected groups and, for this reason, we can consider it as a fair model.
+Differently,alargevalueofR2 in(6)indicatesthatthemodelhasadegreeofunfairness.
+F
+Weconcludethissectionwithanillustrationofthepracticalimportanceofourpro-
+posal,intermsoftheriskmanagementstandardestablishedbytheInternationalOrganiza-
+tionforStandardizationandInternationalElectrotechnicalCommission(2023),inTable1.
+TheTablelists,foreachriskmanagementrequirement,thecorrespondingactionbasedon
+theS.A.F.E.AIframeworkpresentedinthispaper.
+
+===== PDF PAGE 6 =====
+Risks2025,13,178 6of12
+Table1.ISO/IEC23894:2023AIRiskManagementcontrols,correspondingS.A.F.E.actions,andaccountabilityacrosslifecycle.
+ISO/IEC23894:2023
+ControlCategory S.A.F.E.Actions WhoMeasuresWhat WhenintheAILifecycle WhoEscalates/RollsBack
+RequirementActions
+Definescope,objectives,
+DefineAIapplicationsand,for Businessowners,risk
+boundaries,andstakeholders; Conception/ Governanceboardorproject
+ContextEstablishment eachofthem,responseand managers—definescope
+identifyintendeduseand projectinitiation. steeringcommittee.
+explanatoryvariables. andvariables.
+potentialmisuse.
+Identifyrisksfromdata,
+Datascientists,domain
+models,processes,deployment ForAIapplicationidentify Datacollectionand Riskmanagerwith
+RiskIdentification experts—maprisks
+environment,andmisuse whichS.A.F.E.metricapplies. modeldesign. complianceteam.
+andmetrics.
+scenariosacrosslifecycle.
+Calculatetheidentifiedmetrics,
+equatelikelihoodwiththeir
+Assesslikelihood,severity,and Datascientists,quantitative
+complementtoone,and Modeldevelopment ChiefRiskOfficer(CRO)or
+RiskAnalysis uncertaintyofrisks;consider riskanalysts—compute
+severitywiththequantityand andvalidation. equivalentoversightfunction.
+emergentandsystemicrisks. metrics.
+qualityof
+impactedstakeholders.
+Calculatethresholds,
+Compareriskstoacceptance
+usingappropriatestatistical Validationteam—apply Independentriskcommitteeor
+RiskEvaluation criteria;prioritizerisks Pre-deploymentvalidation.
+tests,suchasDieboldand thresholds,statisticaltesting. modelvalidationunit.
+fortreatment.
+Mariano(1995).
+Applymeasuressuchasdata
+qualityandgovernancechecks, Interpretdeviationfrom
+biasandfairnessanalysis, thresholdaspotentiallackof
+MLengineers,
+robustnesstesting, fairness,robustnessand Deploymentand AIethicsboard,compliance
+RiskTreatment auditors—monitorcontrolsand
+explainability,human security,explainabilityand operationalreadiness. lead,orITsecurityhead.
+implementsafeguards.
+oversight,securitysafeguards, humanoversightor
+fallbackandincident fallbackaccuracy.
+responsemechanisms.
+ContinuouslymonitorAI
+Updatemodel,metricsand Operations/
+performanceandrisks; Post-deployment,continuous Incidentresponsemanager,
+Monitoring comparisonwiththresholdas monitoringteam—track
+implementfeedbackloopsand operation. systemowner.
+newtrainingdataarrives. metricsovertime.
+updateriskassessments.
+Engagestakeholdersinrisk
+ReportS.A.F.E.metricsvalues, Riskmanagers,reporting
+decisions;ensuretransparency Throughoutlifecycle, Seniormanagement,external
+Communication incomparisonwiththresholds, officers—communicatemetrics
+andreportingofrisk periodicreviews. regulatorsifrequired.
+tostakeholders. andrisks.
+managementoutcomes.
+
+===== PDF PAGE 7 =====
+Risks2025,13,178 7of12
+3. Application
+TodemonstratethepracticalutilityoftheproposedextendedSAFEAImetrics,we
+apply them to the employee dataset, available from the stima R package.1 The dataset
+containsvariousfeaturesdescribingthecharacteristicsoftheemployeesofabank,including
+salary,joblevel,andexperience. Table2describesthevariablesavailableinthedataset.
+Table2.Theavailableexplanatoryvariablesintheemployeedataset.
+Variable Definition
+salary anumericvariable,usedasresponsevariable: currentsalaryinUSdollars
+age anumericvariable: ageinyears
+edu anumericvariable: educationallevelinyears
+startsal anumericvariable: beginningsalaryinUSdollars
+jobtime anumericvariable: monthssincehire
+prevexp anumericvariable: previousworkexperienceinmonths
+afactorvariable: minorityclassificationwithlevelsmin,indicatingminority,
+minority
+andno_min,nominority
+a factor variable: gender type with levels f, indicating female, and
+gender
+m,indicatingmale
+jobcat afactorvariable: typeofjobwithlevelsClerical,Custodial,andManager
+Weconsideraregressionproblem,wherethetargetvariableissalary_growth,which
+representstheactualnumericincreaseinanemployee’ssalaryoveraspecifiedperiod. The
+presenceofacontinuousresponseallowsustoassesstheeffectivenessofourextended
+SAFEAImetrics.Tothataim,wefitaregressionmodelusingtheavailablefeaturevariables,
+andevaluatethemodelusingourproposedR2-basedmetrics.
+Intermsofaccuracy,ourtrainedlinearregressorleadstoaR2valueequalto0.4023,
+which shows that about 40% of the variability of the response can be explained by the
+considered machine learning model. The RGA metric proposed in Babaei et al. (2025)
+turns out to be equal to 0.8925. The comparison between the predictive R2 and RGA
+emphasizesthatthecalibrationtask(predictingnumericalvalues)ismoredifficultthanthe
+discriminationtask(predictingranks).
+We proceed to determine explainability in terms of the proposed
+Rj2
+metric. The
+obtainedvaluesareinTable3.
+Table3.Rj2
+valuesrepresentingthecontributionsoftheexplanatoryvariablestotheregressionmodel.
+Variable
+Rj2
+edu 0.4523
+gender 0.1405
+prevexp 0.0392
+jobtime 0.0274
+minority 0.0207
+age 0.0001
+From Table 3, note that the most important variable to predict the rate of growth
+of salaries is the education level, followed by the years of previous experience and the
+timespentinthecompany. Noticethattheageisnotrelevant;itseffectislikelyabsorbed
+by the time spent in the company, highly correlated with it. Note also that gender has
+some importance, indicating some bias in salary growth. The other possible protected
+variable,minority,hasamuchlowerimportance. ForcomparisonwiththeSAFEmetricsin
+Babaeietal.(2025),Table4containstheRGEvaluesforthesamemodel.
+
+===== PDF PAGE 8 =====
+Risks2025,13,178 8of12
+Table4. RE (RankGraduationExplainability)valuesvaluesrepresentingthecontributionsofthe
+explanatoryvariablestotheregressionmodel.
+Variable RGE
+edu 0.0910
+gender 0.0256
+jobtime 0.0094
+prevexp 0.0069
+minority 0.0063
+age 0.0000
+LookingattheresultsreportedinTable4,wecanseethatthemostimportantvariable
+to predict the rate of growth of salaries is the education level, followed by gender, the
+timespentinthecompany,andthepreviousexperience. Overall,theresultsfromRGE
+areconsistentwiththosefromRj2
+withastrongereffectofgenderand,ingeneral,smaller
+valuesofexplainability.
+Wethenconsidermodelrobustness,consideringtheoriginalpredictedvaluesandthe
+predictionsobtainedperturbingtheinputvariables. Asperturbationtypeweconsidera
+permutationintheoriginaldata.Moreprecisely,weperturballinputvariablesbyswapping
+the5%topwiththe5%bottomobservations.
+Theresultoftherobustnessmetric, calculatedintermsofourproposed R∗2 statis-
+tics, is equal to 0.0389. This indicates that the model has a low degree of robustness,
+consistently with the limited sample size. Note that the application of the RGR metric
+in Babaeietal.(2025) leads to an RGR value of 0.7621. This is a higher value than that
+obtainedusingR∗2,consistentwiththefactthatstatisticsbasedonranksaremorerobust
+thanthosebasedonactualvalues.
+WeremarkthatR∗2israthergeneral,andcanbeappliedtodifferenttypesofperturba-
+tions,whichsimulatedifferenttypesofadversarialattack,forexamplewithinaredteaming
+framework,suchaspromptinjection,see,e.g.,Pathade(2025),orcoordinated-agentfailure,
+see,e.g.,ManheimandGarrabrant(2018). Tothisaim,itissufficienttoknowthedata,as
+modifiedbytheperturbation,andapplyR∗2tothecomparisonofthemodeloutputbefore
+andaftertheperturbation.
+WealsoremarkthatanimportantaspectoftheproposedR∗2statisticsisthat,being
+afunctionofameansquarederror,itiseasytoderiveteststatistics,suchasDieboldand
+Mariano’s(DieboldandMariano(1995)). ForanygiventypeIerrorprobabilitylevel(such
+as5%)anescalationthresholdvalue(suchas1.96)canbederivedand,thus,employedto
+escalateandpromptadeploymentaction.
+Finally,wehaveobtainedthatthemodelimparity,employinggenderasaprotected
+variable, is equal to 0.0277. Note that the application of the SAFE AI framework in
+Babaeietal.(2025) leads to a model imparity equal to 0.0462. Both the original SAFE
+metricandourextensionindicatealimiteddegreeofbias,inlinewiththesmallvalueofex-
+plainabilityofthegendervariableobtainedwithourproposedmetric(butnotusingRGE).
+Benchmarking
+For a further comparison of our extension with the original SAFE metrics, in this
+sectionweconsideraclassificationproblem,inwhichtheobjectiveistopredictwhetheran
+employee’ssalaryhasdoubled.
+We define a binary target variable, doubling_salary, which takes the value 1 if
+an employee’s salary has increased by a factor of two or more, and 0 otherwise. This
+classification problem can be evaluated using the classic SAFE AI framework, or more
+
+===== PDF PAGE 9 =====
+Risks2025,13,178 9of12
+traditionalmetrics,suchasaccuracy,theAreaUndertheCurve(AUC),theF1scoreand
+classicgroup-basedfairnessmeasures.
+Tothisaim,wetrainasimplebinaryclassifier,logisticregression,onthedataset. The
+resulting AUC, F1 score, and accuracy of the classifier are equal to 0.7523, 0.6763, and
+0.6831,respectively,allindicatingacceptable(butnotexcellent)levels.
+WenowconsidertheapplicationoftheclassicSAFEmetrics. RGAisequaltoAUC,in
+thiscase0.7523.
+Intermsofexplainability,weconsidertheoriginalpredictedvaluesandthepredictions
+afterremovingeachofthevariablestofindthecontributionsofthevariables,intermsof
+theRGEmetricinBabaeietal.(2025). Table5containstheresults.
+Table5. RGEvaluesastheexplanatoryscoresrepresentingthecontributionsoftheexplanatory
+variablestoaclassificationmodel.
+Variable RGE
+age 0.3329
+jobtime 0.1386
+prevexp 0.0009
+gender 0.0005
+edu 0.0001
+minority 0.0000
+Looking at the results in Table 6, note that the most important variables for the
+doublingofthesalaryaretheageofanemployeeandtheirtimespentinthecompany.
+Thisisquiteconsistentwithatraditionalcompany,asthebankwhosedataisconsideredin
+thispaper.
+Forcomparison,wenowconsidertheapplicationofourproposedRj2
+metrictoassess
+explainabilityfortheclassificationproblem. Table6containstheresults.
+Table 6. R∗2 values as the explanatory scores representing the contributions of the explanatory
+variablestoaclassificationmodel.
+Variable R∗2
+age 0.9992
+jobtime 0.3684
+prevexp 0.0091
+gender 0.0016
+edu 0.0008
+minority 0.000
+ComparingTable6withTable5,notethattheranksoftheR∗2valuesareconsistent
+withthoseoftheRGEvalues,withageandjobtimeasthemostimportantvariables.
+Intermsofrobustness,theapplicationoftheRGRmetricintheSAFEAIapproach
+leadstoavalueequalto0.7892. TheapplicationofourproposedR∗2valueleadstoavalue
+equalto0.0593. Bothresultsareinlinewiththoseobtainedfortheregressionproblem,
+withourmetricindicatinglowrobustness,consistentwiththerelativelysmallamountof
+dataconsidered.
+Finally, in terms of fairness, the RGE statistics leads to a model imparity equal to
+0.0317. Thesameimparity,calculatedwithourproposedR∗2statistics,isequalto0.0529.
+Bothcasesindicatelittlebias,consistentwiththatobtainedfortheregressionproblem.
+Overall,theresultsfromthebenchmarkingexerciseindicateoncemorethatthecali-
+brationtaskisdifferentfromthediscriminationtask. Whileinthelattertheexplainability
+
+===== PDF PAGE 10 =====
+Risks2025,13,178 10of12
+andfairnessmetricsgivesimilarresults,intheformercasetheydonot,andshowthatthe
+proposedR2 metricsaremoreprecisethantheRGmetricsinBabaeietal.(2025),asthey
+comparevaluesratherthantheirranks.
+4. Discussion
+TheobtainedresultsandempiricalfindingsindicatethattheproposedR∗2 safeAr-
+tificialIntelligencemetricsarewellsuitedtoevaluatemachinelearningmodelsaimedat
+predictingcontinuousresponsevariableswithinacalibrationframework.
+ThecomparisonwiththeRankGraduationmetricsofBabaeietal.(2025)showsthat
+our proposed metrics lead to values of accuracy, robustness and explainability that are
+consistentwiththenatureofthecalibrationproblem,moredifficultandlessrobustthan
+thediscriminationproblemconsideredinclassificationproblems,wheretheRGmetricsof
+Babaeietal.(2025)aremoreuseful.
+Tosummarize,theR∗2andtheRGmetricsshouldbeseenascomplementary. While
+thelatterareuniversal,andcanbeusedforalltypesofresponses,theformeraremore
+precise,butcanbeused,andshouldindeedbeused,whentheobjectiveofthestudyisthe
+predictionofpointvaluesandnotofranks.
+5. Conclusions
+We have presented a set of novel SAFE AI risk management metrics, based on a
+predictiveR2 measure. Themetricsextendthoseproposedusingtherank-basedmeasures
+inBabaeietal.(2025). Whilethelatteraremoregeneralthanthemetricsproposedinthis
+paper,astheycanbeappliedtoalltypesofvariables,themetricsconsideredhereapply
+onlytocontinuousresponsevariablesbutaremoreinformative,inthesamefashionasa
+pointpredictionismoreinformativethanacategoricalprediction.
+Wehavetestedourproposalonarealandwellknowndataset,concerningthegrowth
+ofthesalariesofasetofemployees. Ourresultsindicatethatthemodelhasamoderate
+accuracy,andalimitedrobustness,consistentwiththeconsideredsmallsamplesize. In
+termsofexplainability,topredictgrowthofthesalaryincontinuoustime,whatmatters
+most is the education level, the years of experience and the time spent in the company.
+Finally,themodelshowsareasonableleveloffairness.
+Thepotentialusersoftheproposedsolutionincludeallstakeholdersthatparticipate
+totheAIlifecycle: providers,deployers,users,consumersandauthoritiesthatcontroland
+monitorAIapplications. Wealsoremarkthattheproposedsolutionisquitegeneraland
+canbeappliedtoalternativeframeworks,notonlybasedontabulardata,butalsotextand
+otherunstructureddata.
+Indeed,themainlimitationofthisstudyisthatisfocusedontabulardata,andthe
+applicationtothefinancialsector. Furtherresearchworkshouldincludetheextensionof
+theworktounstructureddata,includinggenerativeAImodels,andtoothersectors,such
+ashealthcareandmanufacturing. Furtherworkmayalsoincludeextendingthesecurity
+metricstoincludesimulationscenariosbasedondifferenttypesofreadteaming.
+AuthorContributions: Conceptualization,G.B.andP.G.;methodology,P.G.;software,G.B.;vali-
+dation,P.G.;formalanalysis,G.B.;investigation,G.B.andP.G.;writing—originaldraftpreparation,
+G.B.;writing—reviewandediting,P.G.;supervision,P.G.Allauthorshavereadandagreedtothe
+publishedversionofthemanuscript.
+Funding:Thisstudywasfundedby:theEuropeanUnion-NextGenerationEU,intheframeworkof
+theGRINS-GrowingResilient,INclusiveandSustainable(GRINSPE00000018).
+
+===== PDF PAGE 11 =====
+Risks2025,13,178 11of12
+DataAvailabilityStatement:Publiclyavailabledatasetswereanalyzedinthisstudy.Thisdatacan
+befoundhere:https://examples.rpkg.net/packages/stima/reference/employee.ob(accessedon
+10September2025).
+Acknowledgments: TheauthorsthankthediscussantandtheparticipantsattheSAFEmachine
+learningworkshopinPaviaon19June2025,wherethepaperwaspresented,andwhereG.B.received
+theprizeforthebestpresentationfromtheMDPIjournalRisks.Theauthorsalsothanktheeditorand
+thethreeanonymousreviewersfortheirconstructiveandaccurateremarks.
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+References
+Achakzai,MuhammadAtifKhan,andPengJuan. Usingmachinelearningmeta-classifierstodetectfinancialfrauds. FinanceResearch
+Letters48:102915.[CrossRef]
+Ainslie,Russell,JohnMcCall,SidShakya,andGilbertOwusu.2017. Predictingservicelevelsusingneuralnetworks. InInternational
+ConferenceonInnovativeTechniquesandApplicationsofArtificialIntelligence.Berlin/Heidelberg:Springer,pp.411–416.[CrossRef]
+Aldasoro, Iñaki, LeonardoGambacorta, PaoloGiudici, andThomasLeach. 2022. Thedriversofcyberrisk. JournalofFinancial
+Stability60:100989.[CrossRef]
+Babaei,Golnoosh,PaoloGiudici,andEmanuelaRaffinetti.2025. ArankgraduationboxforsafeAI. ExpertSystemswithApplications
+259:125239.[CrossRef]
+Binns,Reuben.2018. Fairnessinmachinelearning:Lessonsfrompoliticalphilosophy. Paperpresentedat2018ConferenceonFairness,
+AccountabilityandTransparency,PMLR,NewYork,NY,USA,23–24February2018;pp.149–159.
+Bracke,Philippe,AnupamDatta,CarstenJung,andShayakSen.2019,August. MachineLearningExplainabilityinFinance:AnApplication
+toDefaultRiskAnalysis. WorkingPaper816.London:BankofEngland.[CrossRef]
+Bücker,Michael,GeroSzepannek,AlicjaGosiewska,andPrzemyslawBiecek.2022. Transparency,auditability,andexplainabilityof
+machinelearningmodelsincreditscoring. JournaloftheOperationalResearchSociety73:70–90.[CrossRef]
+Bussmann, Niklas, PaoloGiudici, DimitriMarinelli, andJochenPapenbrock. 2020. Explainablemachinelearningincreditrisk
+management. ComputationalEconomics57:2013–16.[CrossRef]
+Chen,Zhiyuan,LeDinhVanKhoa,EeNaTeoh,AmrilNazir,EttikanKandasamyKaruppiah,andKimSimLam. 2018. Machine
+learningtechniquesforanti-moneylaundering(aml)solutionsinsuspicioustransactiondetection: Areview. Knowledgeand
+InformationSystems57:245–85.[CrossRef]
+Diebold,FrancisX.,andRobertoS.Mariano.1995. Comparingpredictiveaccuracy. JournalofBusiness&EconomicStatistics13:253–63.
+[CrossRef]
+European Commission. 2022. Artificial Intelligence Act. Available online: https://artificialintelligenceact.eu (accessedon
+18August2025).
+Floridi,Luciano,JoshCowls,MonicaBeltrametti,RajaChatila,PatriceChazerand,VirginiaDignum,ChristophLuetge,RobertMadelin,
+UgoPagallo,FrancescaRossi,andetal. 2018. Ai4people—Anethicalframeworkforagoodaisociety: Opportunities,risks,
+principles,andrecommendations. MindsandMachines28:689–707.[CrossRef]
+Frost,J.,L.Gambacorta,Y.Huang,andP.Zbindnen.2019. Bigtechandthechangingstructureoffinancialintermediation. Economic
+Policy34:761–99.[CrossRef]
+Ganesh,A.Deiva.,andP.Kalpana. 2022. Futureofartificialintelligenceanditsinfluenceonsupplychainriskmanagement—A
+systematicreview. ComputersandIndustrialEngineering169:108206.[CrossRef]
+Giudici, Paolo, and Emanuela Raffinetti. 2021. Explainable ai in cyber risk management. Quality and Reliability Engineering
+International38:1318–26.[CrossRef]
+Giudici, Paolo, and Emanuela Raffinetti. 2025. RGA: a unified measure of predictive accuracy. Advances in Data Analysis and
+Classification19(1):67–93[CrossRef]
+Giudici, Paolo, and Gloria Polinesi. 2021. Crypto price discovery through correlation networks. Annals of Operations Research
+299:443–57.[CrossRef]
+Giudici,Paolo,andImanAbu-Hashish.2019. Whatdeterminesbitcoinexchangeprices?Anetworkvarapproach. FinanceResearch
+Letters28:309–18.[CrossRef]
+Goodfellow,IanJ.,JonathonShlens,andChristianSzegedy.2015. Explainingandharnessingadversarialexamples. Paperpresentedat
+InternationalConferenceonLearningRepresentations(ICLR),SanDiego,CA,USA,May7–9.
+Hardt,Moritz,EricPrice,andNatiSrebro. 2016. Equalityofopportunityinsupervisedlearning. AdvancesinNeuralInformation
+ProcessingSystems29:3315–23.
+InternationalOrganizationforStandardizationandInternationalElectrotechnicalCommission.2023. InformationTechnology—Artificial
+Intelligence—GuidanceonRiskManagement.ISO/IEC23894:2023.London:BritishStandardsInstitution.
+
+===== PDF PAGE 12 =====
+Risks2025,13,178 12of12
+Jobin,Anna,MarcelloIenca,andEffyVayena.2019. Thegloballandscapeofaiethicsguidelines. NatureMachineIntelligence1:389–99.
+[CrossRef]
+Kleinberg,Jon,SendhilMullainathan,andManishRaghavan.2016. Inherenttrade-offsinthefairdeterminationofriskscores. arXiv
+arXiv:1609.05807.[CrossRef]
+Kuiper,O.,M.VandenBerg,J.VanderBurgt,andS.Leijnen.2021. Exploringexplainableaiinthefinancialsector:Perspectivesof
+banksandsupervisoryauthorities. InArtificialIntelligenceandMachineLearning.Berlin/Heidelberg:Springer.[CrossRef]
+Liu,Wanan,HongFan,andMengXia.2022. Creditscoringbasedontree-enhancedgradientboostingdecisiontrees. ExpertSystems
+withApplications189:116034.[CrossRef]
+Manheim, David, and Scott Garrabrant. 2018. Multiparty dynamics and failure modes for machine learning systems. arXiv
+arXiv:1810.10862.
+Melançon, GabrielleGauthier, PhilippeGrangier, EricPrescott-Gagnon, EmmanuelSabourin, andLouis-MartinRousseau. 2021.
+Amachinelearning-basedsystemforpredictingservice-levelfailuresinsupplychains. InformsJournalonAppliedAnalytics
+51:200–12.[CrossRef]
+Moscato,Vincenzo,AntonioPicariello,andGiancarloSperlì. 2021. Abenchmarkofmachinelearningapproachesforcreditscore
+prediction. ExpertSystemswithApplications165:113986.[CrossRef]
+Naim,Arshi.2022. Roleofartificialintelligenceinbusinessriskmanagement. AmericanJournalofBusinessManagement,Economicsand
+Banking1:55–66.
+OrganisationforEconomicCooperationandDevelopment.2022. FrameworkfortheClassificationofAISystems. Availableonline:
+https://oecd.ai/en/ai-principles(accessedon18August2025).
+Pathade,Chetan.2025. Redteamingthemindofthemachine:Asystematicevaluationofpromptinjectionandjailbreakvulnerabilities
+inllms. arXivarXiv:2505.04806.[CrossRef]
+Rufibach,Kaspar.2010. Useofbrierscoretoassessbinarypredictions. JournalofClinicalEpidemiology63:938–39.[CrossRef]
+Sachan,Swati,Jian-BoYang,Dong-LingXu,DavidErasoBenavides,andYangLi.2020. Anexplainableaidecision-support-systemto
+automateloanunderwriting. ExpertSystemswithApplications144:113100.[CrossRef]
+Selbst,AndrewD,DanahBoyd,SorelleAFriedler,SureshVenkatasubramanian,andJanetVertesi.2019. Fairnessandabstractionin
+sociotechnicalsystems. PaperpresentedatConferenceonFairness,Accountability,andTransparency,RiodeJaneiro,Brazil,
+June3–6.pp.59–68.
+Steinhardt,Jacob,PangWeiKoh,andPercyLiang.2017. Certifieddefensesfordatapoisoningattacks. AdvancesinNeuralInformation
+ProcessingSystems30:3517–29.
+Sundra,B.M.,K.Sathiyamurthi,andG.Subramanian.2023. Criticalevaluationofapplyingmachinelearningapproachesforbetter
+handlingbankriskmanagementinthepost-modernera. ScandinavianJournalofInformationSystems35:1228–31.
+Szegedy,Christian,WojciechZaremba,IlyaSutskever,JoanBruna,DumitruErhan,IanGoodfellow,andRobFergus.2014. Intriguing
+propertiesofneuralnetworks. arXivarXiv:1312.6199.[CrossRef]
+United States National Institute of Standards and Technologies. 2023. Ai Risk Management Framework. Available online:
+https://www.nist.gov/itl/ai-risk-management-framework(accessedon18August2025).
+Disclaimer/Publisher’sNote: Thestatements, opinionsanddatacontainedinallpublicationsaresolelythoseoftheindividual
+author(s)andcontributor(s)andnotofMDPIand/ortheeditor(s).MDPIand/ortheeditor(s)disclaimresponsibilityforanyinjuryto
+peopleorpropertyresultingfromanyideas,methods,instructionsorproductsreferredtointhecontent.

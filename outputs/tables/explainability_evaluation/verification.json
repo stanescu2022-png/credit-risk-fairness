@@ -1,0 +1,19 @@
+{
+  "two_full_runs_csvs_byte_identical": true,
+  "csv_count": 23,
+  "protected_artifacts_unchanged": true,
+  "all_project_tests_passed": true,
+  "tests_passed": 19,
+  "pip_check_passed": true,
+  "test_log_sha256": "b16992ec843c313b1eec3381c91ee58a44b15e4621217f0a1fa6f34666548512",
+  "manifest_sha256": "9059693f1b75ac7d3df2df080c40208de864db240699f8d3534700c0fb3740cc",
+  "checks": [
+    "complete holdout",
+    "training-only background",
+    "SEX counts",
+    "finite outputs",
+    "SHAP additivity",
+    "actual SAFE calls",
+    "unchanged predictions"
+  ]
+}

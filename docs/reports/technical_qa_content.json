@@ -1,0 +1,492 @@
+[
+  {
+    "section": "Protocol",
+    "title": "Care este concluzia principală? Ce model câștigă?",
+    "short": "Boosting are AUC și AP mai mari, dar logistica este mai stabilă în scenariul semantic. Fairness depinde de indicator. Alegerea necesită costuri și toleranțe explicite, deci nu declarăm un câștigător general.",
+    "deep": "Comparăm două modele fixe pe un benchmark public, pe patru dimensiuni. Rankingul, erorile la prag, explicațiile și sensibilitatea răspund la întrebări diferite. Cadrul extins rămâne propunere. Nu avem o funcție de utilitate bancară care să transforme toate dimensiunile într-un verdict unic.",
+    "where": "Study & sources și cele patru secțiuni",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "winner conclusion best model trade-off"
+  },
+  {
+    "section": "Protocol",
+    "title": "Ce date folosim și ce înseamnă default?",
+    "short": "30.000 de înregistrări din UCI Taiwan, despre carduri de credit. Targetul este default în luna următoare. Holdout-ul are 5.996 de înregistrări, dintre care 1.320 cu default.",
+    "deep": "22 de predictori: LIMIT_BAL, AGE, facturi, plăți, stări de rambursare, EDUCATION și MARRIAGE. ID, SEX și targetul rămân metadate. Nu presupunem că eticheta benchmarkului este identică unei definiții bancare românești. Aplicarea pe date locale cere un protocol nou.",
+    "where": "Study & sources → Data and validation",
+    "source": "outputs/stabilization_report.md",
+    "priority": false,
+    "terms": "dataset label Taiwan UCI Romanian target"
+  },
+  {
+    "section": "Protocol",
+    "title": "Ce am reparat în împărțirea train / holdout?",
+    "short": "Unele rânduri aveau exact aceiași 22 de predictori în ambele seturi. Am păstrat toate rândurile și am mutat 34 de atribuiri, astfel încât fiecare grup de predictori identici să rămână într-un singur set.",
+    "deep": "Pornim de la split stratificat 80/20, seed 42. Grupul urmează partiția originală a membrului cu cel mai mic ID. Rezultatul: 24.004 training / 5.996 holdout, fără suprapunere exactă. Grupurile pot avea SEX sau outcome diferite. Predictorii identici nu dovedesc aceeași persoană și gruparea nu garantează eliminarea tuturor formelor de dependență.",
+    "where": "Study & sources → Data and validation",
+    "source": "outputs/stabilization_report.md",
+    "priority": true,
+    "terms": "leakage duplicates overlap split repair 34 24004 5996"
+  },
+  {
+    "section": "Protocol",
+    "title": "Holdout-ul este complet nevăzut?",
+    "short": "Nu istoric. Fusese inspectat în dezvoltarea inițială. Ulterior am blocat modelele și protocolul pentru analizele următoare și declarăm această limitare.",
+    "deep": "Blocarea prospectivă interzice ajustări pe baza holdout-ului, dar nu șterge explorarea anterioară. Rezultatele descriu benchmarkul și designul actual. O confirmare mai puternică ar necesita date suplimentare rezervate sau validare externă adecvată.",
+    "where": "Performance → nota despre holdout; Study & sources",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "unseen test set inspected locked confirmatory"
+  },
+  {
+    "section": "Protocol",
+    "title": "Ce modele și ce preprocesare avem?",
+    "short": "LogisticRegression și sklearn GradientBoostingClassifier, cu pipeline-uri salvate. StandardScaler pentru variabile numerice și OneHotEncoder pentru categorii. Aceleași 22 de intrări.",
+    "deep": "LR: max_iter=2000, random_state=42. GBM: setările sklearn existente, random_state=42. EDUCATION 0/5/6 devin 4, MARRIAGE 0 devine 3. Pipeline-urile sunt fixe. Nu revendicăm optimizarea tuturor configurațiilor posibile.",
+    "where": "Study & sources → Frozen comparison",
+    "source": "outputs/stabilization_report.md",
+    "priority": false,
+    "terms": "hyperparameters tuning scaler encoding LR GBM logistic regression gradient boosting"
+  },
+  {
+    "section": "Protocol",
+    "title": "Holdout versus Training CV: ce schimbă selectorul?",
+    "short": "Holdout evaluează modelele finale fixe pe cele 5.996 de rânduri. Training CV arată media a cinci evaluări făcute exclusiv în training, cu modele temporare.",
+    "deep": "StratifiedGroupKFold, 5 folduri, shuffle=True, seed 42. Predictorii identici stau împreună. Inclusiv preprocesarea se învață în fiecare fold numai din partea de antrenare. OOF: fiecare rând primește predicție când este în afara fitului respectiv. Media și SD între folduri nu sunt metrici pe predicții pooled și nici IC95%. Modelele finale nu se înlocuiesc.",
+    "where": "Performance → Evaluation sample",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "cross validation CV OOF folds standard deviation SD holdout"
+  },
+  {
+    "section": "Protocol",
+    "title": "De ce pragul 0,50? Putem să-l coborâm?",
+    "short": "0,50 este regula comună de referință, nu un prag bancar optim. Coborârea lui poate detecta mai multe default-uri, dar produce de regulă și mai multe alarme false.",
+    "deep": "Regula exactă: p(default)>0,50, egalitatea este clasa 0. Candidații de prag în training OOF și sweep-ul fairness exploratoriu nu au selectat un prag nou. O schimbare cere costuri explicite și selecție numai în training, urmată de evaluare conform unui protocol autorizat.",
+    "where": "Performance → confusion matrices și nota de prag",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "threshold operating point 0.5 50 recall costs tuning"
+  },
+  {
+    "section": "Performance",
+    "title": "Cum avem 81,8% accuracy, dar doar 35% recall?",
+    "short": "Majoritatea înregistrărilor nu au default. Modelul poate clasifica bine această majoritate și totuși să rateze multe default-uri. Recall privește exclusiv default-urile reale.",
+    "deep": "Accuracy=(TP+TN)/N. Recall=TP/(TP+FN). LR detectează 468 din 1.320 default-uri, GBM 464. Un model care ar spune mereu fără default ar avea aproximativ 78% accuracy și 0% recall. Accuracy singură ascunde performanța pe clasa de interes.",
+    "where": "Performance → Accuracy, Default recall și confusion matrices",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "accuracy imbalance majority baseline recall 82 35 65"
+  },
+  {
+    "section": "Performance",
+    "title": "Ce înseamnă ROC-AUC 0,757 / 0,778?",
+    "short": "Măsoară cât de bine sunt ordonate cazurile cu și fără default după scorul de risc. Boosting are estimarea mai mare pe acest set.",
+    "deep": "AUC este probabilitatea ca un default ales aleatoriu să primească scor mai mare decât un non-default, cu jumătate de credit pentru egalități. 0,5 corespunde rankingului aleatoriu, 1 separării perfecte. Nu este procentul de clienți clasificați corect, nu arată calibrarea și nu depinde de pragul nostru 0,50.",
+    "where": "Performance → Metric: ROC-AUC",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "discrimination ranking AUROC ROC AUC calibration"
+  },
+  {
+    "section": "Performance",
+    "title": "Ce este Average Precision? Este PR-AUC?",
+    "short": "AP rezumă precizia pe parcursul recuperării default-urilor la praguri diferite. Folosim sklearn average_precision_score, nu integrarea trapezoidală a curbei precision–recall.",
+    "deep": "AP=Σ(R_n−R_(n−1))P_n la pragurile din scoruri. LR 0,5270, GBM 0,5521. AP depinde de prevalența clasei pozitive, deci comparațiile între populații cer atenție. Nu înseamnă 55% accuracy și nu este precision la pragul 0,50.",
+    "where": "Performance → Metric: Average precision",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "AP PR AUC precision recall average_precision_score"
+  },
+  {
+    "section": "Performance",
+    "title": "Precision, recall, specificity și confusion matrix?",
+    "short": "Recall: câte default-uri detectăm. Precision: câte flaguri sunt default-uri reale. Specificity: câte non-default-uri nu sunt flaguite. Au numitori diferiți.",
+    "deep": "TP: default flaguit, FN: default ratat, FP: non-default flaguit, TN: non-default neflaguit. Precision=TP/(TP+FP), specificity=TN/(TN+FP), FPR=1−specificity, FNR=1−recall. LR: TN 4.437, FP 239, FN 852, TP 468. GBM: 4.439 / 237 / 856 / 464. Precision circa 66,2% ambele. Balanced accuracy=(recall+specificity)/2. F1 este media armonică precision–recall.",
+    "where": "Performance → Default precision / Specificity și confusion matrices",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": false,
+    "terms": "TP FP FN TN precision specificity FPR FNR balanced accuracy F1"
+  },
+  {
+    "section": "Performance",
+    "title": "Brier score și log loss: ce măsoară?",
+    "short": "Verifică probabilitățile, nu doar clasificarea. Brier măsoară eroarea pătratică față de outcome. Log loss penalizează puternic predicțiile greșite foarte sigure. Mai mic este mai bine.",
+    "deep": "Brier=mean((p−y)²). Log loss=−mean[y ln(p)+(1−y)ln(1−p)], cu clippingul numeric sklearn. LR / GBM: Brier 0,1382 / 0,1350, log loss 0,4409 / 0,4301. Scorurile reflectă calitatea generală a probabilităților, inclusiv discriminarea, nu sunt teste pure de calibrare.",
+    "where": "Performance → Brier score / Log loss",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": false,
+    "terms": "probability loss Brier logarithm logloss formula"
+  },
+  {
+    "section": "Performance",
+    "title": "Ce înseamnă calibrare și ECE?",
+    "short": "Dacă modelul estimează un risc de circa 20% pentru multe cazuri, verificăm dacă aproximativ 20% au default. ECE rezumă abaterile dintre probabilități și frecvențe pe intervale.",
+    "deep": "10 intervale egale pe [0,1]. ECE=Σ(n_b/N)|mean(p_b)−mean(y_b)|. Holdout LR 0,0140, GBM 0,0107, adică circa 1,40 / 1,07 pp abatere ponderată la acest binning. ECE depinde de discretizare și eșantion. Citim curbele cu numărul de rânduri pe bin. Media p apropiată de rata globală nu garantează calibrare la fiecare nivel. Nu am fitat un calibrator.",
+    "where": "Performance → panoul Calibration",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "ECE expected calibration error reliability bins Brier recalibration"
+  },
+  {
+    "section": "Performance",
+    "title": "Boosting este semnificativ statistic mai bun?",
+    "short": "Are estimări AUC/AP mai mari și le depășește în toate cinci foldurile. Nu am executat un test pereche al diferenței de performanță care să susțină un verdict de semnificație.",
+    "deep": "Intervalele marginale nu sunt intervalul diferenței. Suprapunerea lor nu înlocuiește analiza pereche. DeLong, Diebold–Mariano și MCS sunt propuse, fără execuție și fără adecvare deja validată. În robustețe avem separat intervale pereche pentru două scenarii primare.",
+    "where": "Performance → ROC-AUC / AP; Robustness → comparația pereche",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "significance significant hypothesis p value DeLong DM MCS paired"
+  },
+  {
+    "section": "Fairness",
+    "title": "SEX nu intră în model. De ce mai verificăm fairness?",
+    "short": "Excluderea sexului nu garantează rezultate similare între grupuri. Alte variabile pot fi asociate cu sexul, iar distribuțiile și ratele de default pot diferi.",
+    "deep": "SEX=1 male / 2 female, numai pentru audit. Holdout: 2.404 bărbați și 3.592 femei. Asocierile descriptive din training, inclusiv SMD și Cramér’s V, descriu relații fără a identifica proxy-uri cauzale sau discriminare. Nu avem intervenții contrafactuale sau mitigation.",
+    "where": "Fairness → group results; Study & sources",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": true,
+    "terms": "gender sex protected proxy exclusion bias SMD Cramer"
+  },
+  {
+    "section": "Fairness",
+    "title": "Ce sunt gapurile și ce înseamnă semnul?",
+    "short": "Diferențele semnate sunt femei minus bărbați. Plus la recall înseamnă detectare mai mare a default-urilor la femei. Minus la FPR înseamnă mai puține alarme false între non-default-urile feminine.",
+    "deep": "Recall gap LR +2,32 pp / GBM +3,35 pp. FPR gap −0,50 / −0,66 pp. pp înseamnă puncte procentuale: 36%−34%=2 pp, nu 2% relativ. Gapul SAFE absolut este unsigned. Pozitivul este flagul advers de default, nu aprobarea unui credit.",
+    "where": "Fairness → Default recall gap / False-positive rate gap",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": true,
+    "terms": "signed female minus male gap pp percentage points adverse positive"
+  },
+  {
+    "section": "Fairness",
+    "title": "Demographic parity, equal opportunity și equalized odds?",
+    "short": "Demographic parity compară rata de flagging. Equal opportunity compară recall pentru default. Equalized odds privește atât recall, cât și FPR.",
+    "deep": "Selection rate=P(flag=1|grup). Demographic parity difference este max−min, selection_rate_difference este semnat. Equalized odds max gap=max(|ΔTPR|,|ΔFPR|), cu ambele componente păstrate. Default observat: 23,17% male / 21,24% female. Ratele sunt ale eșantionului, nu caracteristici inerente ale grupurilor.",
+    "where": "Fairness → Metric și tabelele de grup",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": false,
+    "terms": "DP EO equal opportunity equalized odds TPR selection rate"
+  },
+  {
+    "section": "Fairness",
+    "title": "Cum interpretăm rapoartele de grup?",
+    "short": "Un raport aproape de 1 înseamnă rate observate apropiate pentru indicatorul respectiv. Trebuie citit numărătorul și numitorul.",
+    "deep": "Selection-rate ratio este female/male, demographic-parity ratio este min/max. Raportul flagurilor de default nu se interpretează automat ca raport de aprobări. Nu aplicăm regula 80% sau o limită legală. Prejudiciul și toleranța cer un context de decizie explicit.",
+    "where": "Fairness → tabele și definiții",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": false,
+    "terms": "ratio disparate impact DI 80 percent four fifths selection"
+  },
+  {
+    "section": "Fairness",
+    "title": "Ce măsoară SAFE RGA și SAFE parity?",
+    "short": "RGA evaluează ordonarea scorurilor în raport cu outcome-ul. SAFE parity compară RGA între grupuri, deci calitatea rankingului, nu ratele de eroare la pragul 0,50.",
+    "deep": "Implementarea autentică safeaipackage 0.8.3. Parity=max(RGA_grup)−min(RGA_grup). Pe acest target binar RGA coincide numeric cu AUC în toleranța verificată, fără a afirma identitate universală. Gap absolut LR 0,0079 / GBM 0,0065. Gap RGA female−male negativ LR, pozitiv GBM. RGA, RGE și RGR sunt indicatori diferiți.",
+    "where": "Fairness → SAFE ranking gap; Source evidence and definitions",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": true,
+    "terms": "SAFE RGA ranking accuracy parity max min AUC"
+  },
+  {
+    "section": "Fairness",
+    "title": "De ce SAFE favorizează boosting, iar erorile logistica?",
+    "short": "Rankingul pe întregul interval de scoruri poate fi mai apropiat între grupuri, dar erorile la un singur prag pot avea diferențe mai mari.",
+    "deep": "GBM are gap RGA absolut mai mic, dar gapuri absolute TPR/FPR mai mari la 0,50. Are și selection-rate gap mai mic. Sunt comparații punctuale. Fără toleranțe practice și teste între modele în etapa fairness, nu agregăm într-un verdict global.",
+    "where": "Fairness → comparați Recall, FPR și SAFE",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": false,
+    "terms": "contradiction fairness winner ranking threshold"
+  },
+  {
+    "section": "Fairness",
+    "title": "Intervalul include zero. Înseamnă că modelul este fair?",
+    "short": "Nu. Diferența semnată este compatibilă și cu zero la precizia acestei analize. Nu este o demonstrație a egalității sau echității.",
+    "deep": "Recall gap LR +2,32 pp, IC95% aproximativ [−2,90, 7,75] pp. Echivalența cere marjă justificată și o procedură adecvată, neimplementate. Limita inferioară a gapurilor absolute poate fi pozitivă prin construcție, deci nu inferăm semnificația din ea.",
+    "where": "Fairness → intervalele gapurilor semnate",
+    "source": "outputs/fairness_evaluation_report.md",
+    "priority": true,
+    "terms": "zero confidence interval equivalence non significant fair discrimination"
+  },
+  {
+    "section": "Explainability",
+    "title": "Ce este SHAP și în ce unități îl folosim?",
+    "short": "SHAP împarte scorul unei predicții în contribuții ale variabilelor față de o referință. Plus crește scorul de default, minus îl reduce. Contribuțiile sunt în log-odds.",
+    "deep": "Base value + ΣSHAP_j = decision_function(X). Probabilitatea=sigmoid(scor)=1/(1+exp(−scor)). SHAP 0,2 nu înseamnă automat +20 pp probabilitate. Referința definește comparația. SHAP descrie modelul, nu cauzele default-ului.",
+    "where": "Explainability → Global sau Local case",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": true,
+    "terms": "SHAP shapley log odds logodds sigmoid probability base value causal"
+  },
+  {
+    "section": "Explainability",
+    "title": "De ce background 100 și două explainere?",
+    "short": "Folosim aceeași referință din training pentru ambele modele. LinearExplainer corespunde structurii logistice, TreeExplainer structurii de arbori.",
+    "deep": "SHAP 0.51.0. Background: 100 rânduri training, selecție uniformă fără înlocuire, default_rng(42), training sortat după ID, fără stratificare SEX/outcome. LinearExplainer cu Independent masker; TreeExplainer interventional, model_output=raw. Explicăm toate cele 5.996 de rânduri holdout. 100 este alegere fixă de referință și cost, nu dovadă de stabilitate față de orice background. Maskingul independent poate rupe corelații.",
+    "where": "Explainability → definiții; raportul sursă",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": false,
+    "terms": "background masker interventional linear tree correlation seed 100"
+  },
+  {
+    "section": "Explainability",
+    "title": "22 de predictori sau 85 de coloane SHAP?",
+    "short": "One-hot encoding transformă cele 22 de intrări în 85 de coloane. SHAP se calculează pe acestea, apoi contribuțiile semnate ale categoriilor se însumează înapoi la predictorul original.",
+    "deep": "Însumăm înainte de calculul valorii absolute, păstrând additivitatea. Pentru boosting este agregarea encoded-feature SHAP, nu un joc de coaliții recalculat separat pe 22 de variabile brute. Maskingul poate genera combinații one-hot nevalide. Limitele sunt documentate.",
+    "where": "Explainability → Global; Source evidence and definitions",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": false,
+    "terms": "one hot encoded aggregation 22 85 original features coalition"
+  },
+  {
+    "section": "Explainability",
+    "title": "Ce înseamnă 54,2% versus 40,9%?",
+    "short": "Ponderea celor mai importante trei variabile în totalul importanței SHAP a fiecărui model. Logistica are contribuțiile mai concentrate în primele trei.",
+    "deep": "Importanță globală j=mean(|SHAP_j|). Ponderea împarte această medie la totalul pentru cele 22 de variabile. Top 3 LR: PAY_0, LIMIT_BAL, PAY_6. GBM: PAY_0, LIMIT_BAL, PAY_AMT1. Nu este explained variance, procent de predicții explicate sau pondere cauzală. Concentrarea nu dovedește singură explicații mai bune.",
+    "where": "Explainability → Global, top predictors",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": true,
+    "terms": "importance share concentration top3 54 41 explained variance PAY_0 LIMIT_BAL"
+  },
+  {
+    "section": "Explainability",
+    "title": "Ce este SAFE RGE și cum diferă de SHAP?",
+    "short": "RGE examinează efectul înlocuirii predictorilor cu referințe din training asupra rankingului. SHAP atribuie contribuții la scorurile individuale. Sunt complementare.",
+    "deep": "RGE autentic folosește referințe training medii/moduri, individual și pe grupuri, cu modele fixe. Înlocuirea poate rupe relațiile dintre variabile. Corelația rangurilor SHAP/RGE circa 0,918 LR / 0,927 GBM. Acordul nu reprezintă adevăr cauzal și nu garantează fiecare explicație locală.",
+    "where": "Explainability → Global, comparația RGE",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": false,
+    "terms": "SAFE RGE replacement reference ablation rank correlation"
+  },
+  {
+    "section": "Explainability",
+    "title": "Cum am ales cazurile locale? ID 2 ce arată?",
+    "short": "Cel mai mic ID din fiecare categorie TP/TN/FP/FN pentru fiecare model, apoi explicăm uniunea cu ambele. ID 2 este default real ratat de ambele.",
+    "deep": "Uniunea: ID 67 TP, 12 TN, 55 FP, 2 FN. ID 2: p≈0,2664 LR / 0,3869 GBM, sub prag. Regula fixă evită alegerea unor explicații spectaculoase. Cazurile sunt ilustrative, nu reprezentative și nu dovedesc superioritatea modelului.",
+    "where": "Explainability → Local case → ID 2",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": false,
+    "terms": "local case waterfall false negative ID2 cherry picking selection"
+  },
+  {
+    "section": "Explainability",
+    "title": "SHAP pe SEX demonstrează discriminare?",
+    "short": "Nu. Arată diferențe descriptive ale contribuțiilor și importanței variabilelor între grupurile acestui eșantion.",
+    "deep": "Corelații ale rangurilor male/female circa 0,986 LR / 0,985 GBM. Importance shares sunt normalizate în model și grup. Distribuțiile predictorilor/scorurilor pot explica diferențe. Nu avem formal KS/Gini din brief, intervale pentru explicații sau un design cauzal.",
+    "where": "Explainability → Group comparison",
+    "source": "outputs/explainability_evaluation_report.md",
+    "priority": false,
+    "terms": "group SHAP gender sex disparity Gini KS discrimination"
+  },
+  {
+    "section": "Robustness",
+    "title": "Ce înseamnă robustness în experimentul nostru?",
+    "short": "Modelele rămân fixe. Modificăm sintetic intrările și măsurăm schimbările scorurilor, rankingului, flagurilor și performanței față de outcome-ul observat.",
+    "deep": "Outcome-ul rămâne fix. Testăm sensibilitatea la coruperea informației, nu efectul cauzal al schimbării comportamentului unui client. Nu măsurăm frecvențe reale de erori, securitate adversarială sau fiabilitate viitoare. SAFE și semantic sunt mecanisme diferite.",
+    "where": "Robustness → What this measures și Scenario identity",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "stress sensitivity perturbation corruption fixed labels counterfactual"
+  },
+  {
+    "section": "Robustness",
+    "title": "SAFE p=0,05: de ce expunere 65%?",
+    "short": "p indică fracția fiecărei cozi folosite la schimburile dintre extreme, nu o modificare de 5% a valorilor. Reuniunea rândurilor afectate pe toate variabilele poate fi mult mai mare.",
+    "deep": "N=5.996: p=0,05 are 598 participări nominale per variabilă, circa 10%, iar ties pot reduce schimbările efective. Extremele diferă între variabile. Joint schimbă 3.906 rânduri, 65,14%. Schimburile păstrează marginalele, dar pot rupe relații și plauzibilitatea rândului. Cozile folosesc holdout-ul, conform operației native SAFE.",
+    "where": "Robustness → SAFE, all features, severity 0.05",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "tail swap p 5 65 exposure union opposite tails marginal"
+  },
+  {
+    "section": "Robustness",
+    "title": "Ce face semantic q=0,10?",
+    "short": "Selectăm 599 din 5.996 de rânduri și aplicăm modificări adaptate variabilelor, folosind referințe din training. Avem 30 de realizări aleatoare comune modelelor.",
+    "deep": "Bani: ±0,10 din IQR training, nu ±10% din valoarea clientului. AGE: ±1 an. Stări pozitive de întârziere: ±1 lună numai cu destinație suportată în training. −2/−1/0 rămân fixe. Categorii: frecvențe training condiționate pe altă categorie. Joint are o mască comună de rânduri. q=0,20 crește selecția și magnitudinea, deci este stres combinat.",
+    "where": "Robustness → Semantic, all features, primary severity; Scenario identity",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "q semantic IQR age delay categorical special states 599 30 repetitions"
+  },
+  {
+    "section": "Robustness",
+    "title": "Ce limite au modificările semantice?",
+    "short": "Sunt reguli de sensibilitate adaptate tipului variabilei, nu un model validat al erorilor bancare. Cazurile în care modificarea nu se poate aplica sunt raportate.",
+    "deep": "Plăți: minim 0. Limită credit: minim suport training. AGE: limite training. Facturile pot fi negative. Maximele monetare nu sunt plafonate. Rotunjim după precizia training. Destinațiile neacceptate și stările speciale nu sunt forțate. Parametrii și frecvențele provin din training. Nu pretindem plauzibilitate completă a clientului modificat.",
+    "where": "Robustness → Scenario identity / exposure; protocol sursă",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": false,
+    "terms": "clipping bounds rounding support eligibility no op realistic plausibility"
+  },
+  {
+    "section": "Robustness",
+    "title": "Ce este RGR? Este Spearman?",
+    "short": "RGR măsoară păstrarea ordonării folosind magnitudinile scorurilor originale și ordinea după corupere. Nu este simpla corelație Spearman.",
+    "deep": "SAFE apelează core.rga(probabilități originale, perturbate). Folosește min ranks, medii ale scorurilor originale la ties pe scorul perturbat și normalizare între ordonări extreme ale magnitudinilor originale. Ordine păstrată: 1; inversată: 0 în fixture-urile definite. Normalizarea este specifică modelului. Joint SAFE: 0,817 LR / 0,827 GBM. Numai puncte, fără IC.",
+    "where": "Robustness → Authentic SAFE RGR, Overall",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "SAFE RGR Spearman normalization ranking ties point estimates"
+  },
+  {
+    "section": "Robustness",
+    "title": "De ce semantic RGR este N/A și RGR numai Overall?",
+    "short": "Eticheta RGR este rezervată apelurilor autentice SAFE. Pentru semantic raportăm mișcare, Spearman, flips și modificările metricilor.",
+    "deep": "N/A nu este zero. Explorerul raportează RGR overall. Analizele SEX sunt subsetări ale coruperii globale, fără reformarea cozilor pe grup. Nu inventăm valori RGR de grup sau semantic.",
+    "where": "Robustness → RGR, Layer și Group",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": false,
+    "terms": "N A unavailable missing semantic overall male female RGR"
+  },
+  {
+    "section": "Robustness",
+    "title": "Mean |Δp| și flag flips: cum se citesc?",
+    "short": "Mean |Δp| este schimbarea absolută medie a probabilității. Flag flips este proporția care trece de partea cealaltă a pragului de 0,50.",
+    "deep": "Mean |Δp|=mean(|p_pert−p_base|) pe toate cele 5.996 de rânduri. 0,00827=0,827 pp, nu creștere relativă. Semantic LR / GBM: 0,51 / 0,83 pp și 0,79% / 1,30% flips. Flips poate include corectări și agravări, nu numai erori noi. Media numai pe rândurile schimbate are alt numitor și este salvată separat.",
+    "where": "Robustness → Mean absolute probability movement / Flag flip rate",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "movement delta probability pp flips denominator all records changed only"
+  },
+  {
+    "section": "Robustness",
+    "title": "Cum citim ΔAUC, ΔAP, ΔBrier și GBM−LR?",
+    "short": "Delta=perturbed−baseline. AUC/AP în scădere: negativ și nefavorabil. Brier în creștere: pozitiv și nefavorabil. Diferența pereche este GBM minus LR.",
+    "deep": "GBM−LR mean movement pozitiv: mișcare mai mare boosting. GBM−LR delta_AP negativ: degradare mai mare boosting. Semnul trebuie interpretat pe fiecare metrică. La semantic calculăm metricile separat pentru fiecare realizare și apoi mediem.",
+    "where": "Robustness → metricile delta și comparația pereche",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": false,
+    "terms": "delta perturbed baseline GBM minus LR Brier AP AUC sign"
+  },
+  {
+    "section": "Robustness",
+    "title": "Putem spune că logistica e mai robustă?",
+    "short": "În semantic primar, logistica are mișcare și flip rate mai mici, susținute de intervalele condiționate ale diferențelor. Nu este superioritate universală.",
+    "deep": "Semantic GBM−LR mean movement=0,00318, IC95% [0,00297,0,00340], adică 0,318 pp [0,297,0,340]. Joint SAFE: IC diferenței mișcării include zero, deși RGR punctual este mai mare GBM. Nu toate IC SAFE sunt inconcludente: diferența delta_AP are IC sub zero. Citim fiecare metrică. Mecanismele nu au stres echivalent.",
+    "where": "Robustness → scenariile joint primare și Paired GBM minus LR",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "robustness winner conditional significance paired semantic SAFE AP"
+  },
+  {
+    "section": "Robustness",
+    "title": "Câte scenarii și de ce 30 de repetări?",
+    "short": "167 de scenarii și 1.501 realizări salvate. Repetările semantice arată variația datorată alegerilor aleatoare de corupere.",
+    "deep": "SAFE: (22 variabile+8 grupuri)×4 niveluri=120, plus 1 diagnostic ordine. Semantic: (22+all features)×2=46, fiecare cu 30 realizări=1.380. Total realizări 121+1.380=1.501. Explorer: 166 canonice, diagnosticul sub joint SAFE primar. 30 de repetări nu sunt 30 de populații noi.",
+    "where": "Robustness → scope/severity; Study & sources",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": false,
+    "terms": "167 166 1501 realizations Monte Carlo scenarios grid"
+  },
+  {
+    "section": "Robustness",
+    "title": "De ce contează ordinea rândurilor în SAFE?",
+    "short": "Cu valori egale, sortarea stabilă poate selecta alți membri ai cozilor după reordonare. Ordinea canonică rămâne primară, permutarea este diagnostic separat.",
+    "deep": "Joint SAFE p=0,05, seed 20261008: permutare comună modelelor, realiniată la ID. 1.225 de rânduri diferă ca apartenență la reuniunea expusă. Nu alegem ordinea care avantajează modelul. Diagnosticăm sensibilitatea implementării la ties.",
+    "where": "Robustness → primary joint SAFE → Row-order diagnostic",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": false,
+    "terms": "row order ties stable sorting permutation 1225 canonical"
+  },
+  {
+    "section": "Uncertainty",
+    "title": "Cum construim intervalele bootstrap?",
+    "short": "Reextragem cu înlocuire grupuri întregi de predictori identici, de 2.000 de ori, și recalculăm indicatorul. Limitele sunt percentilele 2,5 și 97,5.",
+    "deep": "Seed 42. Membrii grupului rămân împreună inclusiv când SEX/outcome diferă. Modelele au aceleași draws, păstrând comparația pereche. Compoziția SEX variază în resample-uri. Nu împărțim grupurile pentru stratificare. Condiționăm pe gruparea observată și modele fixe.",
+    "where": "Performance/Fairness → intervale; Robustness → sampling",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": true,
+    "terms": "bootstrap resampling confidence CI percentile groups dependence sampling 2000"
+  },
+  {
+    "section": "Uncertainty",
+    "title": "Ce acoperă și ce nu acoperă intervalele?",
+    "short": "Variația prin reeşantionarea datelor observate, cu modele fixe. În robustețe condiționăm și pe coruperile salvate.",
+    "deep": "Nu reantrenăm modelele și nu reformăm cozile SAFE în bootstrap. Nu estimăm variabilitatea întregii antrenări sau a unei proceduri SAFE noi pe alte date. Nu includ drift viitor ori incertitudinea unei populații românești. 95% descrie procedura de interval, nu o garanție de performanță viitoare.",
+    "where": "Study & sources → Uncertainty and limits",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "conditional fixed model tails training uncertainty coverage future population"
+  },
+  {
+    "section": "Uncertainty",
+    "title": "SD, Monte Carlo și IC95% sunt același lucru?",
+    "short": "Nu. SD între folduri descrie variația CV. SD între 30 de coruperi descrie variația Monte Carlo. IC bootstrap descrie incertitudinea prin reeşantionarea datelor.",
+    "deep": "Semantic mean movement MC SD LR 0,00040 / GBM 0,00054 =0,040 / 0,054 pp. Nu sunt standard errors sau limite IC95%. Metricile neliniare se recalculează pe fiecare realizare în resample, apoi se mediază. Nu mediem probabilități înainte de AUC/AP și nu numărăm realizările ca noi clienți.",
+    "where": "Performance → Training CV; Robustness → semantic spread / sampling",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": true,
+    "terms": "MC SD standard deviation standard error confidence interval fold variability"
+  },
+  {
+    "section": "Uncertainty",
+    "title": "Aleatoric, epistemic și conformal: le avem?",
+    "short": "Avem calibrare descriptivă și intervale condiționate pentru indicatori. Decompoziția aleatorică/epistemică și conformal prediction nu sunt implementate.",
+    "deep": "Aleatoric: variația inerentă outcome-ului în condițiile informației. Epistemic: incertitudinea cunoașterii/modelului. Conformal: seturi de predicție cu proprietăți de acoperire sub condițiile metodei. Nu rezultă automat din bootstrap-ul metricilor. În PPT sunt propuse, cu status pending.",
+    "where": "Performance → Calibration; slide-uri 7–8 și anexa 10",
+    "source": "docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx",
+    "priority": true,
+    "terms": "aleatoric epistemic conformal prediction uncertainty calibration fifth axis"
+  },
+  {
+    "section": "Framework & evidence",
+    "title": "Ce este extra față de SAFE? Este nou?",
+    "short": "Completăm indicatorii nativi ai pachetului cu validare, metrici convenționale, calibrare, explicații și stres semantic. Nu afirmăm că toate lipsesc din literatura SAFE/KAIRI sau că inventăm statistici noi.",
+    "deep": "KAIRI include deja AUC și SHAP. Pachetul și articolul nu sunt aceeași listă de metode. Nu avem replicarea formală SHAP Gini/KS din brief. Contribuția actuală este comparația empirică documentată. Noutatea cadrului și maparea regulatorie nu sunt validate.",
+    "where": "Study & sources → Methodological references; slide-uri 7–8",
+    "source": "docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx",
+    "priority": true,
+    "terms": "novelty innovation extra SAFE KAIRI package paper contribution"
+  },
+  {
+    "section": "Framework & evidence",
+    "title": "Ce sunt DM, DeLong, KS, MCS, AOPC?",
+    "short": "Metode propuse pentru întrebări diferite, nu o listă executată. Adecvarea depinde de estimand și dependența din date.",
+    "deep": "Orientativ: DeLong compară AUC-uri corelate; DM diferențe de pierdere predictivă sub ipoteze adecvate; KS distribuții; MCS un set de modele compatibile cu performanța conform procedurii; AOPC schimbarea outputului la eliminarea succesivă a intrărilor importante. Nu avem execuțiile sau o baterie formal validată și nu alegem testul doar după numele scorului.",
+    "where": "Slide 8 și anexa 10; propunerea colegului",
+    "source": "docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx",
+    "priority": false,
+    "terms": "Diebold Mariano DeLong Kolmogorov Smirnov KS Model Confidence Set MCS AOPC tests"
+  },
+  {
+    "section": "Framework & evidence",
+    "title": "PSI, monitoring, mitigation și governance sunt gata?",
+    "short": "Nu. Cele patru etape empirice sunt complete în scopul stabilit. PSI, monitorizarea, mitigation și guvernanța operațională rămân deschise.",
+    "deep": "PSI pe un train/test random nu demonstrează stabilitate temporală. Pentru drift trebuie date și perioade relevante. Nu avem date românești livrate sau validare externă. Maparea EU AI Act/NIST/HLEG este propunere, nu certificare. Extinderea este amânată până la feedbackul profesorului.",
+    "where": "Study & sources → Still open",
+    "source": "docs/context/sources/Trustworthy-AI-Framework-Proposal_new.docx",
+    "priority": false,
+    "terms": "PSI stability drift temporal monitoring mitigation governance compliance EU AI Act NIST HLEG"
+  },
+  {
+    "section": "Framework & evidence",
+    "title": "Explorerul citește baza de date? Este hardcoded?",
+    "short": "Snapshot offline generat automat din tabele salvate. Deschiderea și schimbarea selectorilor nu accesează o bază de date și nu rulează modele.",
+    "deep": "Datele sunt încorporate în HTML. build_explorer.py citește CSV/protocol/verification pentru a reconstrui snapshotul. Registrul identifică 28 de surse. Exportul CSV salvează tabelul afișat. Valorile nu sunt introduse manual, dar nu se actualizează live la modificarea unui CSV.",
+    "where": "Study & sources → Embedded source registry; Download displayed table",
+    "source": "explorer/README.md",
+    "priority": false,
+    "terms": "database hardcoded embedded snapshot offline build explorer CSV refresh"
+  },
+  {
+    "section": "Framework & evidence",
+    "title": "SHA-256 și 30 de teste ce dovedesc?",
+    "short": "Hashurile identifică versiunea exactă a fișierelor. Testele și rerulările verifică implementarea și reproducibilitatea, fără a valida automat ipotezele științifice.",
+    "deep": "Verificarea salvată a robusteții: 30 de teste, 24 CSV-uri și cache identice în două execuții complete. Manifestele păstrează surse, versiuni și artefacte protejate. SHA-256 nu este criptare, parolă sau dovadă a corectitudinii metodologiei. Reproducibilitatea nu dovedește validitate externă.",
+    "where": "Source evidence and definitions; Study & sources → Completed evidence",
+    "source": "outputs/robustness_evaluation_report.md",
+    "priority": false,
+    "terms": "hash SHA256 reproducibility verification tests 30 24 cache manifest"
+  },
+  {
+    "section": "Framework & evidence",
+    "title": "Ce răspund dacă întrebarea depășește analiza?",
+    "short": "«Nu am implementat sau validat această parte încă. Pot spune ce avem măsurat și ce ar necesita o analiză separată.»",
+    "deep": "Răspunde: rezultat → procedură → limită. Nu inventa p-value, garanție sau prag de fairness. Pentru setări precise deschide protocolul/raportul. La o extensie propusă de profesor, notează estimandul, ipotezele și datele necesare înainte de a promite execuția.",
+    "where": "Study & sources și sursele fiecărei secțiuni",
+    "source": "outputs/performance_evaluation_report.md",
+    "priority": false,
+    "terms": "unknown question defense limitation answer professor"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "first": "gbm_full",
+    "second": "lr_mle_full",
+    "status": "model_not_estimable",
+    "difference": null,
+    "p_value": null,
+    "p_value_holm": null
+  },
+  {
+    "first": "gbm_selected",
+    "second": "lr_mle_selected",
+    "status": "model_not_estimable",
+    "difference": null,
+    "p_value": null,
+    "p_value_holm": null
+  },
+  {
+    "first": "lr_mle_selected",
+    "second": "lr_mle_full",
+    "status": "model_not_estimable",
+    "difference": null,
+    "p_value": null,
+    "p_value_holm": null
+  },
+  {
+    "first": "gbm_selected",
+    "second": "gbm_full",
+    "auc_a": 0.7511799453041968,
+    "auc_b": 0.778132290613578,
+    "difference": -0.026952345309381176,
+    "variance": 1.6174272840966072e-05,
+    "statistic": -6.7016876062862,
+    "p_value": 2.0602612270168146e-11,
+    "covariance": [
+      [
+        6.278497685302038e-05,
+        5.137531758759862e-05
+      ],
+      [
+        5.137531758759862e-05,
+        5.613993116314294e-05
+      ]
+    ],
+    "positives": 1320,
+    "negatives": 4676,
+    "status": "ok",
+    "variance_tolerance": 1.690024589836459e-18,
+    "difference_tolerance": 1.4210854715202004e-14,
+    "p_value_holm": 8.241044908067258e-11
+  }
+]

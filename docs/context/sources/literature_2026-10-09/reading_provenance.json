@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-09",
+  "purpose": "full-text literature review; no research rerun",
+  "sources": [
+    {
+      "key": "correlation_metrics",
+      "supplied_path": "C:\\Users\\Andrei\\Downloads\\risks-13-00178.pdf",
+      "archived_path": "docs\\context\\sources\\literature_2026-10-09\\risks-13-00178.pdf",
+      "sha256": "fbc50a6261d9a62dac64b4271263a508c0e8e91790d5319b53dd33c705cefb6f",
+      "bytes": 387457,
+      "pages": 12,
+      "extracted_text": "docs\\context\\sources\\literature_2026-10-09\\correlation_metrics.extracted.txt",
+      "text_characters": 35877
+    },
+    {
+      "key": "rank_graduation_box",
+      "supplied_path": "C:\\Users\\Andrei\\Downloads\\1-s2.0-S0957417424021067-main.pdf",
+      "archived_path": "docs\\context\\sources\\literature_2026-10-09\\1-s2.0-S0957417424021067-main.pdf",
+      "sha256": "f179b6d750825dd93f7f26fab2e82eba2149db4db449dc7a2f36e5b19352cf98",
+      "bytes": 734690,
+      "pages": 12,
+      "extracted_text": "docs\\context\\sources\\literature_2026-10-09\\rank_graduation_box.extracted.txt",
+      "text_characters": 61824
+    },
+    {
+      "key": "trustworthiness_review",
+      "supplied_path": "C:\\Users\\Andrei\\Downloads\\electronics-14-02717-v2.pdf",
+      "archived_path": "docs\\context\\sources\\literature_2026-10-09\\electronics-14-02717-v2.pdf",
+      "sha256": "de2546ecdde8a54a8cbc64f7fd3edb5738fc4c5702ef81ab66e267a4b6b31508",
+      "bytes": 1421313,
+      "pages": 49,
+      "extracted_text": "docs\\context\\sources\\literature_2026-10-09\\trustworthiness_review.extracted.txt",
+      "text_characters": 176349
+    },
+    {
+      "key": "wasserstein",
+      "supplied_path": "C:\\Users\\Andrei\\Downloads\\Evaluating SAFE AI principles using Wasserstein distance  a comparative study of Machine Learning models.pdf",
+      "archived_path": "docs\\context\\sources\\literature_2026-10-09\\Evaluating SAFE AI principles using Wasserstein distance  a comparative study of Machine Learning models.pdf",
+      "sha256": "d5f8c77906624f52ff03e13bba73bb11b4a046b2ad4918fc63b031d933558462",
+      "bytes": 2225434,
+      "pages": 22,
+      "extracted_text": "docs\\context\\sources\\literature_2026-10-09\\wasserstein.extracted.txt",
+      "text_characters": 51426
+    },
+    {
+      "key": "integrated_safe",
+      "supplied_path": "C:\\Users\\Andrei\\Downloads\\1-s2.0-S266682702500204X-main.pdf",
+      "archived_path": "docs\\context\\sources\\literature_2026-10-09\\1-s2.0-S266682702500204X-main.pdf",
+      "sha256": "fbc611acf0cf21463b8a63e7febc9d989b4ef651a2b0e08c7b0d9f4aa7814bc4",
+      "bytes": 3920804,
+      "pages": 13,
+      "extracted_text": "docs\\context\\sources\\literature_2026-10-09\\integrated_safe.extracted.txt",
+      "text_characters": 59856
+    }
+  ],
+  "evaluation_manifest_checks": 410,
+  "evaluation_hash_mismatches": []
+}

@@ -1,0 +1,9 @@
+model,artifact,rows,max_probability_error,probability_tolerance,ID_order_class_SEX_outcome_match,classes,class_rule
+logistic,outputs/tables/baseline_logistic_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+logistic,outputs/tables/performance_evaluation/holdout_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+logistic,outputs/tables/fairness_evaluation/audit_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+logistic,outputs/tables/explainability_evaluation/audit_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+gradient_boosting,outputs/tables/baseline_gradient_boosting_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+gradient_boosting,outputs/tables/performance_evaluation/holdout_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+gradient_boosting,outputs/tables/fairness_evaluation/audit_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0
+gradient_boosting,outputs/tables/explainability_evaluation/audit_predictions.csv,5996,0.0,1e-15,True,"[0,1]",p > .50; ties 0

@@ -1,0 +1,162 @@
+{
+  "fit_records": [
+    {
+      "model": "lr_mle_full",
+      "predictors": 22,
+      "features": [
+        "LIMIT_BAL",
+        "EDUCATION",
+        "MARRIAGE",
+        "AGE",
+        "PAY_0",
+        "PAY_2",
+        "PAY_3",
+        "PAY_4",
+        "PAY_5",
+        "PAY_6",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6"
+      ],
+      "status": "not_estimable",
+      "reason": "rank_deficient_design",
+      "records": 24004,
+      "design_columns": 78,
+      "design_rank": 76,
+      "regularized": false,
+      "warnings": [],
+      "attempts": []
+    },
+    {
+      "model": "lr_mle_selected",
+      "status": "not_estimable",
+      "reason": "training_selection_not_estimable",
+      "predictors": null
+    },
+    {
+      "model": "gbm_full",
+      "predictors": 22,
+      "features": [
+        "LIMIT_BAL",
+        "EDUCATION",
+        "MARRIAGE",
+        "AGE",
+        "PAY_0",
+        "PAY_2",
+        "PAY_3",
+        "PAY_4",
+        "PAY_5",
+        "PAY_6",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6"
+      ],
+      "status": "ok",
+      "reason": null,
+      "records": 24004,
+      "design_columns": 85,
+      "seconds": 7.870930500008399,
+      "classifier_parameters": {
+        "ccp_alpha": 0.0,
+        "criterion": "deprecated",
+        "init": null,
+        "learning_rate": 0.1,
+        "loss": "log_loss",
+        "max_depth": 3,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "n_estimators": 100,
+        "n_iter_no_change": null,
+        "random_state": 42,
+        "subsample": 1.0,
+        "tol": 0.0001,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "model": "gbm_selected",
+      "predictors": 3,
+      "features": [
+        "PAY_0",
+        "LIMIT_BAL",
+        "PAY_AMT1"
+      ],
+      "status": "ok",
+      "reason": null,
+      "records": 24004,
+      "design_columns": 13,
+      "seconds": 1.1596228000125848,
+      "classifier_parameters": {
+        "ccp_alpha": 0.0,
+        "criterion": "deprecated",
+        "init": null,
+        "learning_rate": 0.1,
+        "loss": "log_loss",
+        "max_depth": 3,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "n_estimators": 100,
+        "n_iter_no_change": null,
+        "random_state": 42,
+        "subsample": 1.0,
+        "tol": 0.0001,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "event": "selection_verified",
+      "time_utc": "2026-10-10T12:53:43.202672+00:00",
+      "selected_subsets_sha256": "760b778f2a657851dc0211b1fa416097066d3c7ee9c15ba10e62363c61de03f6"
+    },
+    {
+      "event": "final_refit_finished",
+      "model": "lr_mle_full",
+      "time_utc": "2026-10-10T12:53:43.436992+00:00",
+      "status": "not_estimable"
+    },
+    {
+      "event": "final_refit_finished",
+      "model": "gbm_full",
+      "time_utc": "2026-10-10T12:53:51.372612+00:00",
+      "status": "ok"
+    },
+    {
+      "event": "final_refit_finished",
+      "model": "gbm_selected",
+      "time_utc": "2026-10-10T12:53:52.544215+00:00",
+      "status": "ok"
+    }
+  ]
+}

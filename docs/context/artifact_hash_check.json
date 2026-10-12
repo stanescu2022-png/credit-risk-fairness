@@ -1,0 +1,2462 @@
+[
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\preparation_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\split_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\taiwan_credit_clean.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\train_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\raw\\default of credit card clients.xls",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_gradient_boosting.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_gradient_boosting_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_logistic.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_logistic_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_gradient_boosting_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_logistic_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\README.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\calibration_bins.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\calibration_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_fold_assignments.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_fold_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_partition_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_summary_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\oof_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\oof_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\overall_performance_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\recall_target_candidates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\run_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\threshold_tradeoffs.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_locked_holdout.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_locked_holdout.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_training_oof.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_training_oof.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_roc_precision_recall.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_roc_precision_recall.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_threshold_tradeoffs.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_threshold_tradeoffs.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\performance_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "requirements.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\README.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\audit_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\conventional_vs_safe_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\fairness_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\fairness_gaps_threshold_050.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\group_metrics_threshold_050.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\group_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\proxy_category_distributions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\proxy_descriptive_associations.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\run_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\safe_rga_parity.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\safe_rga_results.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\threshold_fairness_sensitivity.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\fairness_evaluation\\fairness_gaps_vs_threshold.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\fairness_evaluation\\fairness_gaps_vs_threshold.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\fairness_evaluation\\group_metrics_threshold_050.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\fairness_evaluation\\group_metrics_threshold_050.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\fairness_evaluation\\safe_rga_parity.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\fairness_evaluation\\safe_rga_parity.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\fairness_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "requirements-fairness.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/explainability_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/explainability_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "script_explainability_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "requirements-explainability.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "tests/test_explainability_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\audit_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\background_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\categorical_shap_effects.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\feature_mapping_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\feature_mapping_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\global_shap_importance_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\global_shap_importance_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\group_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\local_case_selection.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\local_shap_contributions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\model_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\rge_model_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\safe_grouped_rge.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\safe_replacement_values.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\safe_rge_values.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\sex_shap_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_importance_by_sex.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_transformed_values_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_transformed_values_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_validation.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_values_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_values_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\explainability_evaluation\\shap_vs_rge.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_local_explanations.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_local_explanations.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_shap_bar.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_shap_bar.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_shap_beeswarm.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_shap_beeswarm.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_shap_dependence.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\gradient_boosting_shap_dependence.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_local_explanations.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_local_explanations.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_shap_bar.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_shap_bar.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_shap_beeswarm.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_shap_beeswarm.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_shap_dependence.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\logistic_shap_dependence.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\sex_shap_importance.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\sex_shap_importance.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\shap_vs_rge_ranks.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\figures\\explainability_evaluation\\shap_vs_rge_ranks.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\explainability_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\preparation_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\split_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\taiwan_credit_clean.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\processed\\train_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data\\raw\\default of credit card clients.xls",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_gradient_boosting.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_gradient_boosting_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_logistic.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models\\baseline_logistic_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_gradient_boosting_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_logistic_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\README.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\previous_baseline\\test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\calibration_bins.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\calibration_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_fold_assignments.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_fold_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_partition_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_summary_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\oof_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\oof_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\overall_performance_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\recall_target_candidates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\run_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\threshold_tradeoffs.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_locked_holdout.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_locked_holdout.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_training_oof.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\calibration_training_oof.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_roc_precision_recall.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_roc_precision_recall.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_threshold_tradeoffs.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\figures\\performance_evaluation\\oof_threshold_tradeoffs.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs\\performance_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "requirements.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/fairness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/safe_adapter.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/fairness_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "script_fairness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "requirements-fairness.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\audit_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\conventional_vs_safe_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\fairness_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\fairness_gaps_threshold_050.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\group_metrics_threshold_050.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\group_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\proxy_category_distributions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\proxy_descriptive_associations.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\safe_rga_parity.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\safe_rga_results.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\fairness_evaluation\\threshold_fairness_sensitivity.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "data\\processed\\preparation_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "data\\processed\\split_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "data\\processed\\taiwan_credit_clean.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "data\\processed\\test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "data\\processed\\train_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "data\\raw\\default of credit card clients.xls",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "models\\baseline_gradient_boosting.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "models\\baseline_gradient_boosting_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "models\\baseline_logistic.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "models\\baseline_logistic_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\previous_baseline\\baseline_gradient_boosting_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\previous_baseline\\baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\previous_baseline\\baseline_logistic_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\previous_baseline\\baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\previous_baseline\\README.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\previous_baseline\\test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\tables\\baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "locked_input_hashes",
+    "path": "outputs\\tables\\baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/baseline.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/performance_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/performance_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "script_performance_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "requirements.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\calibration_bins.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\calibration_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_fold_assignments.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_fold_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_partition_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\cv_summary_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\holdout_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\oof_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\oof_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\overall_performance_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\recall_target_candidates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/performance_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs\\tables\\performance_evaluation\\threshold_tradeoffs.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "credit_risk_fairness_setup_steps.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/processed/preparation_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/processed/split_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/processed/taiwan_credit_clean.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/processed/test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/processed/train_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/raw/default of credit card clients.xls",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "data/README.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "doc ideeas.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models/baseline_gradient_boosting.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models/baseline_gradient_boosting_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models/baseline_logistic.joblib",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "models/baseline_logistic_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "notebooks/01_data_understanding.ipynb",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "notebooks/02_exploratory_analysis.ipynb",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "notebooks/03_baseline_model.ipynb",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "notebooks/04_gradient_boosting.ipynb",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "notebooks/05_performance_evaluation.ipynb",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "notebooks/06_fairness_evaluation.ipynb",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/explainability_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/fairness_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_local_explanations.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_local_explanations.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_bar.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_bar.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_beeswarm.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_beeswarm.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_dependence.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/gradient_boosting_shap_dependence.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_local_explanations.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_local_explanations.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_bar.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_bar.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_beeswarm.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_beeswarm.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_dependence.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/logistic_shap_dependence.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/sex_shap_importance.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/sex_shap_importance.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/shap_vs_rge_ranks.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/explainability_evaluation/shap_vs_rge_ranks.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/fairness_evaluation/fairness_gaps_vs_threshold.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/fairness_evaluation/fairness_gaps_vs_threshold.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/fairness_evaluation/group_metrics_threshold_050.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/fairness_evaluation/group_metrics_threshold_050.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/fairness_evaluation/safe_rga_parity.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/fairness_evaluation/safe_rga_parity.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/calibration_locked_holdout.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/calibration_locked_holdout.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/calibration_training_oof.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/calibration_training_oof.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/oof_roc_precision_recall.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/oof_roc_precision_recall.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/oof_threshold_tradeoffs.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/figures/performance_evaluation/oof_threshold_tradeoffs.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/performance_evaluation_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/previous_baseline/baseline_gradient_boosting_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/previous_baseline/baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/previous_baseline/baseline_logistic_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/previous_baseline/baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/previous_baseline/README.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/previous_baseline/test_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/stabilization_report.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/baseline_gradient_boosting_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/baseline_gradient_boosting_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/baseline_logistic_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/baseline_logistic_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/baseline_stabilization_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/duplicate_audit.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/duplicate_records.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/audit_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/background_metadata.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/categorical_shap_effects.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/feature_mapping_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/feature_mapping_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/global_shap_importance_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/global_shap_importance_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/group_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/local_case_selection.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/local_shap_contributions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/model_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/rge_model_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/run_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/safe_grouped_rge.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/safe_replacement_values.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/safe_rge_values.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/sex_shap_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_importance_by_sex.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_transformed_values_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_transformed_values_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_validation.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_values_gradient_boosting.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_values_logistic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/shap_vs_rge.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/test_results.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/explainability_evaluation/verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/audit_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/conventional_vs_safe_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/fairness_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/fairness_gaps_threshold_050.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/group_metrics_threshold_050.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/group_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/proxy_category_distributions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/proxy_descriptive_associations.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/run_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/safe_rga_parity.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/safe_rga_results.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/threshold_fairness_sensitivity.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/fairness_evaluation/verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/calibration_bins.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/calibration_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/cv_fold_assignments.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/cv_fold_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/cv_partition_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/cv_summary_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/holdout_bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/holdout_confidence_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/holdout_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/holdout_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/oof_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/oof_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/overall_performance_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/recall_target_candidates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/run_manifest.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/threshold_tradeoffs.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/performance_evaluation/verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/split_changes.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "outputs/tables/stabilization_verification.json",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "potential_issues.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "requirements-explainability.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "requirements-fairness.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "requirements.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "script_base_model.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "script_explainability_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "script_fairness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "script_gradient_boost.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "script_performance_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "script_prepare_data.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/baseline.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/explainability_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/explainability_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/fairness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/fairness_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/performance_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/performance_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "src/safe_adapter.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "tests/test_explainability_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "tests/test_fairness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "tests/test_performance_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "protected_artifact_hashes",
+    "path": "tests/test_stabilization.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/robustness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/robustness_protocol.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/robustness_safe.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/robustness_uncertainty.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/robustness_report.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "src/robustness_cache.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "script_robustness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "source_hashes",
+    "path": "tests/test_robustness_evaluation.py",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/audit_predictions.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/authentic_rgr.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/baseline_by_sex.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/baseline_features_by_sex.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/baseline_metrics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/baseline_reproduction.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/bootstrap_replicates.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/calibration_bins.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/changed_record_movement.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/conventional_diagnostics.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/diagnostic_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/exposure_counts.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/exposure_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/grouped_rgr.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/individual_rgr.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/paired_comparisons.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/paired_summary.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/permutation_record_comparison.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/realization_registry.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/row_order_diagnostic.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/safe_fixture_validation.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/sampling_intervals.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/undefined_results.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/weighted_ranking_validation.csv",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/prediction_cache.npz",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/protocol_rationale.md",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/tables/robustness_evaluation/safe_source_inspection.txt",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/figures/robustness_evaluation/feature_family_sensitivity.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/figures/robustness_evaluation/feature_family_sensitivity.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/figures/robustness_evaluation/individual_rgr_primary_severity.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/figures/robustness_evaluation/individual_rgr_primary_severity.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/figures/robustness_evaluation/joint_severity.png",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/figures/robustness_evaluation/joint_severity.svg",
+    "matches": true
+  },
+  {
+    "manifest": "outputs/tables/robustness_evaluation/run_manifest.json",
+    "category": "output_hashes",
+    "path": "outputs/robustness_evaluation_report.md",
+    "matches": true
+  }
+]

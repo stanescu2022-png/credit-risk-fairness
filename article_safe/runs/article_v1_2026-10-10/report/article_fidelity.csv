@@ -1,0 +1,13 @@
+component,anchor,method,status,convention
+accuracy,2.1 / Figure 1,paired two-sided DeLong AUC,article_procedure,
+lr_reduction,2.2 / 3.1,whole-predictor backward likelihood ratios; largest p first,article_procedure,removal order supplied by specification
+gbm_reduction,2.2 / 4.1,SHAP-ordered forward inclusion; first nonpositive or nonsignificant gain stops,explicit_interpretation,
+importance,2.3 / 4.1,mean absolute original-predictor SHAP in log-odds,explicit_interpretation,
+lr_parameter_inference,Figure 1 / 2.3,binomial GLM Wald z; cluster-covariance sensitivity,explicit_interpretation,
+gbm_explanation_test,2.3 / 4.1,observed outcome on SHAP OLS; coefficient t tests,explicit_interpretation,
+gini,2.4 / Table 2,concentration of nonnegative effect magnitudes; lower is more equal,explicit_interpretation,
+gbm_ks,2.4 / 4.1,female versus male individual signed-contribution distributions,explicit_interpretation,
+lr_coefficient_ks,Figure 1 / 3.1,,not_identifiable_from_article,
+lr_contribution_ks,supporting convention,KS on individual linear contributions,supporting_diagnostic,
+conditional_uncertainty,project sampling convention,paired whole-original-predictor-group bootstrap,supporting_diagnostic,
+overall_safe_score,not supplied by original article,,not_identifiable_from_article,

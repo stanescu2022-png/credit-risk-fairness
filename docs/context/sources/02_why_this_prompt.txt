@@ -1,0 +1,203 @@
+WHY THIS ROBUSTNESS PROMPT WAS DESIGNED THIS WAY
+Credit-risk fairness project | 7 October 2026
+
+The starting question
+
+We already have two fitted credit-default models and a locked evaluation
+split. This stage asks how sensitive their outputs are when the recorded
+inputs are corrupted. We want evidence about reliability that is distinct
+from predictive performance, fairness, explainability, and future monitoring.
+
+The prompt therefore protects the frozen experiment first, specifies the
+corruption design second, and asks for results only after both are verified.
+
+1. What the attached article supports, and what the package adds
+
+The attached article is:
+Paolo Giudici, Mattia Centurelli and Stefano Turchetta, "Artificial Intelligence
+risk measurement", Expert Systems With Applications 235 (2024), 121220.
+DOI: https://doi.org/10.1016/j.eswa.2023.121220
+Project attachment: 3. 1-s2.0-S0957417423017220-main.pdf
+
+Section 2.2 connects sustainability/robustness with resilience to extreme data
+arising from anomalous events or manipulation. Its proposed approach discusses
+model parsimony and variable selection. It is conceptual support for studying
+extreme-input sensitivity; it does not itself prescribe our exact tail-swap
+grid or semantic noise magnitudes. We are evaluating frozen models rather
+than implementing the article's model-selection procedure.
+
+The concrete RGR operation comes from safeaipackage's actual code. The upstream
+files inspected for these notes on 7 October 2026 were:
+https://github.com/GolnooshBabaei/safeaipackage
+https://raw.githubusercontent.com/GolnooshBabaei/safeaipackage/main/safeaipackage/check_robustness.py
+https://raw.githubusercontent.com/GolnooshBabaei/safeaipackage/main/safeaipackage/core.py
+https://raw.githubusercontent.com/GolnooshBabaei/safeaipackage/main/safeaipackage/util/utils.py
+
+Observed SHA-256 fingerprints of those three source files, respectively:
+check_robustness.py: db4f18543f0bd3c3625a723600f94a3643282ddc8434658938ddbf2d5a54444c
+core.py: 6accff4dde28895172d8a7f6e3bb971767801e0c474856f36700d9d2e72aea6e
+util/utils.py: 528a07ae7a6972fa6ef17556bfa1d803b6b16b21b2e8d852debc9b1dac912761
+
+These fingerprints identify the source inspected while drafting the notes.
+They are not verification of the user's locally installed version. The prompt
+requires Codex to inspect and record the repository dependency again.
+
+2. Why SAFE tail swapping is the primary experiment
+
+The project's evaluation is explicitly connected to SAFE. Running its genuine
+RGR implementation gives the robustness stage a clear methodological anchor.
+The inspected perturb function sorts a feature and swaps paired low/high tail
+values. compute_rgr_values applies this individually or to a group of features
+and calls rga with original predictions and perturbed predictions.
+
+The model helper uses classifier predict_proba column 1. That makes class
+ordering important: Codex must verify this corresponds to default=1. An
+adapter may be needed for interface compatibility, but it must never fit or
+change the model.
+
+RGR is not simply Spearman correlation. The core computes an ordering-based
+normalized concentration quantity with specific tie handling. Its values must
+be interpreted from the actual implementation. Constant original predictions
+can make the normalization undefined, which should be reported honestly.
+
+3. Why p=0.05 is primary, with 0.01/0.025/0.10 sensitivities
+
+The inspected package default is 0.05. Using that as the primary severity
+reduces an arbitrary choice and keeps the main experiment close to the API's
+default. The other three values are our prespecified sensitivity grid around
+that default. They are not proven real-world error frequencies or universally
+recommended SAFE severities.
+
+The crucial distinction is between severity p and rows actually changed.
+SAFE p=0.05 concerns both tails; it does not mean multiplying amounts by 1.05.
+In the inspected source, the number of pairs is the smaller of
+ceil(p*N) and N-ceil((1-p)*N). Twice that number gives nominal participants.
+Ties can mean some participating rows retain the same value.
+
+If N were 5,996, the nominal participants for our grid would be 118, 298, 598,
+and 1,198. This is an illustration, not a verified current repository count.
+The evaluation must compute actual counts, including changed values and the
+union of changed rows in joint scenarios. Joint perturbation can affect more
+rows than any single-feature swap because feature tails need not contain the
+same customers.
+
+We do not choose a severity because it gives an interesting model comparison.
+The grid is fixed before outcomes are evaluated.
+
+4. Why SAFE has an explicit holdout-input exception
+
+Semantic noise scales should come from the training data. Authentic SAFE,
+however, identifies tails in the evaluation inputs supplied to its function.
+Replacing those with training quantiles would change the operation.
+
+The allowed use of holdout inputs to define this prespecified transformation
+is different from using holdout outcomes to tune a model, threshold, or noise
+level. The prompt permits the former and forbids the latter. It also makes
+the transformation data-dependent, which matters when defining uncertainty.
+
+5. Why there is a second, semantic layer
+
+Extreme-tail exchanges are a useful stress design but do not represent every
+kind of input error. They can break relations between a customer's variables,
+and numeric ordering of nominal category codes is arbitrary. Supplementary
+tests make those limitations easier to assess without modifying SAFE itself.
+
+Our supplementary choices are:
+  - monetary fields: random signed changes of 10% or 20% of training IQR;
+  - age: random signed changes of one or two years;
+  - ordinary repayment delays: one or two valid ordered steps;
+  - education/marriage: substitution with a different valid training category;
+  - primary/stronger selected-record fractions: 10% and 20%.
+
+IQR is resistant to extreme values and puts noise in understandable raw units.
+A fraction of the individual amount would do nothing to zeros, particularly
+relevant for payment fields. The prompt specifies fixed signed changes so
+"10% IQR" cannot be reinterpreted as a Gaussian standard deviation, uniform
+interval, or another unspecified distribution.
+
+The selected-record fractions loosely align with SAFE's two-tail participation
+at p=0.05 and p=0.10. This is an organizational choice, not equivalence of
+stress intensity. SAFE exchanges extremes; semantic tests use smaller local
+changes. Joint semantic scenarios concentrate errors in a common selected
+subset and explicitly disclose that assumption.
+
+6. Why PAY_* and monetary constraints need special care
+
+Repayment status includes special states that may not form a simple equally
+spaced sequence of months. Numeric adjacency alone is insufficient. The
+updated prompt restricts ordered steps to confirmed ordinary delay levels and
+requires disclosure when special states remain untouched.
+
+Similarly, negative bill amounts can be legitimate credit balances; forcing
+them to zero would invent a cleaning rule. Payments require nonnegative
+constraints, credit limits need a documented valid lower bound, and age stays
+integer. Clipping and boundary cases reduce actual changes, so we count them.
+The prompt does not claim that marginal validity proves an entire synthetic
+record is financially coherent.
+
+7. Why we verify the baseline and preserve earlier artifacts
+
+Any new result is only comparable to earlier stages if preprocessing, feature
+order, row identity, class convention, frozen models, and split are unchanged.
+Reproducing saved predictions is a practical check of the whole loading path.
+Hashes help show that the robustness stage preserved existing evidence.
+
+Threshold candidates explored earlier are not automatically approved operating
+thresholds. The prompt requires actual prior threshold provenance, with 0.50
+only a clearly labelled descriptive convention when necessary.
+
+8. Why conventional metrics accompany RGR
+
+Rank-oriented robustness can coexist with sizeable probability movement or
+classification flips. A model can preserve ordering while moving scores
+across an operating threshold. Conversely, scores may move without many
+decisions changing. Movement, ranking, flips, discrimination, and probability
+losses describe different consequences of the same corruption.
+
+Observed outcomes remain fixed in these tests. Performance degradation therefore
+measures sensitivity to corrupted records, not what would truly happen if a
+customer changed payment behavior, age, or education.
+
+9. Why identical inputs and paired comparisons matter
+
+Both models must face the same customers, corruptions, and resamples. A paired
+comparison removes avoidable variation from different random draws and allows
+us to compare baseline-relative degradation fairly. It does not assume one
+model must be more robust because it has better baseline AUC.
+
+Thirty semantic repetitions and a fixed master seed are practical prespecified
+choices for this task; they are not SAFE requirements. Monte Carlo spread
+describes variation between synthetic draws. Sampling intervals describe a
+different uncertainty, conditional on the declared procedure and sampling unit.
+Repeated perturbations do not create additional independent customers.
+
+Duplicate/predictor groups can require cluster resampling, while SEX summaries
+require respect for subgroup composition. These are separate concerns. The
+prompt prevents naive row resampling or forced stratification that splits
+dependent clusters.
+
+For SAFE, bootstrapping a fixed perturbed table answers a different question
+from rerunning tail swaps in every resample. The prompt asks Codex to state
+the estimand rather than attach intervals without explaining their meaning.
+
+10. Why SEX results stay descriptive
+
+SEX is unchanged and outside the predictive feature set. We ask whether the
+same stress experiment produces different movement or degradation across
+groups. Tail exposure can differ across groups, so response differences can
+reflect who was changed as well as how the model responds.
+
+We therefore subset the globally perturbed records for the main subgroup
+summaries and count group exposure. We do not silently create a new within-
+group tail experiment or call the results proof of discrimination.
+
+11. Why drift/governance is excluded
+
+This stage corrupts observations already in the evaluation set. Drift asks
+whether the future population/environment differs from the reference period;
+governance asks when that change should trigger review. Mixing them would
+blur the research questions and increase implementation scope unnecessarily.
+
+These notes define the intended experiment. They contain no executed
+robustness findings, no verified current local model artifacts, and no claim
+that the perturbation rates represent measured operational errors.

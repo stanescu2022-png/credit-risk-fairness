@@ -1,0 +1,71 @@
+{
+  "package": "safeaipackage",
+  "version": "0.8.3",
+  "source_hashes": {
+    "core.py": "01dd57608a959cebaedfc25a6dbaaa0aaa1c15999ae141d42c350bd3bbb70db2",
+    "check_fairness.py": "aad33a6e14f59749b25bdd6023ec09e05ca5c15d034c333c00da74a031464f22",
+    "util/utils.py": "242312ba5ea2a9be4484611f206fe8907fd372aabc6c6c3b0fcca5ce44d5e17f"
+  },
+  "inspected_github_commit": "1e5f2a84d183c741fecaa682f2b9d496c142bd45",
+  "github_comparison": "core identical; fairness/utils differ only in whitespace/newline",
+  "installed_commit_metadata": null,
+  "implementation": "unmodified installed distribution",
+  "functions": [
+    "safeaipackage.core.rga",
+    "safeaipackage.check_fairness.compute_rga_parity"
+  ],
+  "parity_return": "string containing max(group RGA) - min(group RGA)",
+  "group_order": "training SEX value_counts order; no privileged/unprivileged assignment",
+  "yhat_behavior": "validated as input; subgroup probabilities recomputed through adapter",
+  "input_index_behavior": "package resets inputs; supply aligned positional order",
+  "repository": "https://github.com/GolnooshBabaei/safeaipackage",
+  "role": "reference and previously implemented native-metric baseline",
+  "installed_python_inventory": {
+    "__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": []
+    },
+    "check_explainability.py": {
+      "sha256": "aae9e33c566200f31f82685538bd0ee0fcddf7c0437cc032c1a1edb0313cba23",
+      "functions": [
+        "compute_rge_values"
+      ]
+    },
+    "check_fairness.py": {
+      "sha256": "aad33a6e14f59749b25bdd6023ec09e05ca5c15d034c333c00da74a031464f22",
+      "functions": [
+        "compute_rga_parity"
+      ]
+    },
+    "check_robustness.py": {
+      "sha256": "0bbb45f8de43a546732010e9f468c10d44c849a845f4cfb4397ae585a120c066",
+      "functions": [
+        "perturb",
+        "compute_rgr_values"
+      ]
+    },
+    "core.py": {
+      "sha256": "01dd57608a959cebaedfc25a6dbaaa0aaa1c15999ae141d42c350bd3bbb70db2",
+      "functions": [
+        "rga"
+      ]
+    },
+    "util/__init__.py": {
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "functions": []
+    },
+    "util/utils.py": {
+      "sha256": "242312ba5ea2a9be4484611f206fe8907fd372aabc6c6c3b0fcca5ce44d5e17f",
+      "functions": [
+        "manipulate_testdata",
+        "convert_to_dataframe",
+        "validate_variables",
+        "check_nan",
+        "find_yhat"
+      ]
+    }
+  },
+  "direct_metric_calls_in_this_checkpoint": false,
+  "article_procedures_supplied_by_installed_python_package": [],
+  "distinction": "Installed Python functions implement rank graduation; the article's DeLong/LR selection and Gini/KS require the separate specified procedures."
+}

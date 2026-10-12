@@ -1,0 +1,4 @@
+# Extend the saved environment without changing its earlier dependency locks.
+-r ../requirements-explainability.txt
+statsmodels==0.15.0
+patsy==1.0.3
