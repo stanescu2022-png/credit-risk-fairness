@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-26",
+  "base_commit": "1a1c136e4a9f1d3d8e4995d7148673358aad80e9",
+  "preservation_tag": "pre-cleanup-2026-10-26",
+  "initial_tracked_files": 554,
+  "unchanged_at_original_paths": 487,
+  "edited_documentation": [
+    ".gitignore",
+    "AGENTS.md",
+    "PROJECT_CONTEXT.md",
+    "README.md",
+    "explorer/README.md"
+  ],
+  "relocated": [
+    {
+      "from": "tmp/presentation_credit_risk/build_deck.mjs",
+      "to": "docs/presentations/2026-10-09/build_deck.mjs",
+      "byte_identical": false
+    },
+    {
+      "from": "tmp/presentation_credit_risk/check_technical_qa.cjs",
+      "to": "docs/presentations/2026-10-09/check_technical_qa.cjs",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/edit_english.mjs",
+      "to": "docs/presentations/2026-10-09/edit_english.mjs",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/english/check_content.py",
+      "to": "docs/presentations/2026-10-09/english/check_content.py",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/english/content.json",
+      "to": "docs/presentations/2026-10-09/english/content.json",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/english/validation.json",
+      "to": "docs/presentations/2026-10-09/english/validation.json",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/evidence.json",
+      "to": "docs/presentations/2026-10-09/evidence.json",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/inspect_edit.mjs",
+      "to": "docs/presentations/2026-10-09/inspect_edit.mjs",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/render_final.mjs",
+      "to": "docs/presentations/2026-10-09/render_final.mjs",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/speaker_notes.txt",
+      "to": "docs/presentations/2026-10-09/speaker_notes.txt",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/technical-qa-desktop.png",
+      "to": "docs/presentations/2026-10-09/technical-qa-desktop.png",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/technical-qa-mobile.png",
+      "to": "docs/presentations/2026-10-09/technical-qa-mobile.png",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/technical-qa-search.png",
+      "to": "docs/presentations/2026-10-09/technical-qa-search.png",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/technical-qa-validation.json",
+      "to": "docs/presentations/2026-10-09/technical-qa-validation.json",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/validation.json",
+      "to": "docs/presentations/2026-10-09/validation.json",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/validation_delivery.json",
+      "to": "docs/presentations/2026-10-09/validation_delivery.json",
+      "byte_identical": true
+    },
+    {
+      "from": "tmp/presentation_credit_risk/validation_final.json",
+      "to": "docs/presentations/2026-10-09/validation_final.json",
+      "byte_identical": true
+    }
+  ],
+  "deleted_disposable_files": [
+    "test.py",
+    "tmp/pdfs/article_comparison/article-3.png",
+    "tmp/pdfs/article_comparison/article-4.png",
+    "tmp/pdfs/article_comparison/article-5.png",
+    "tmp/pdfs/article_comparison/article-6.png",
+    "tmp/presentation_credit_risk/candidate.pptx",
+    "tmp/presentation_credit_risk/candidate.pptx.inspect.ndjson",
+    "tmp/presentation_credit_risk/credit_risk_profesor_09_octombrie_2026.pptx",
+    "tmp/presentation_credit_risk/credit_risk_profesor_09_octombrie_2026_final.pptx",
+    "tmp/presentation_credit_risk/english/candidate.pptx",
+    "tmp/presentation_credit_risk/english/candidate.pptx.inspect.ndjson",
+    "tmp/presentation_credit_risk/english/renders/slide-01.png",
+    "tmp/presentation_credit_risk/english/renders/slide-02.png",
+    "tmp/presentation_credit_risk/english/renders/slide-03.png",
+    "tmp/presentation_credit_risk/english/renders/slide-04.png",
+    "tmp/presentation_credit_risk/english/renders/slide-05.png",
+    "tmp/presentation_credit_risk/english/renders/slide-06.png",
+    "tmp/presentation_credit_risk/english/renders/slide-07.png",
+    "tmp/presentation_credit_risk/english/renders/slide-08.png",
+    "tmp/presentation_credit_risk/english/renders/slide-09.png",
+    "tmp/presentation_credit_risk/english/renders/slide-10.png",
+    "tmp/presentation_credit_risk/final-renders/slide-01.png",
+    "tmp/presentation_credit_risk/final-renders/slide-02.png",
+    "tmp/presentation_credit_risk/final-renders/slide-03.png",
+    "tmp/presentation_credit_risk/final-renders/slide-04.png",
+    "tmp/presentation_credit_risk/final-renders/slide-05.png",
+    "tmp/presentation_credit_risk/final-renders/slide-06.png",
+    "tmp/presentation_credit_risk/final-renders/slide-07.png",
+    "tmp/presentation_credit_risk/final-renders/slide-08.png",
+    "tmp/presentation_credit_risk/final-renders/slide-09.png",
+    "tmp/presentation_credit_risk/final-renders/slide-10.png",
+    "tmp/presentation_credit_risk/final-renders/slide-11.png",
+    "tmp/presentation_credit_risk/final-renders/slide-12.png",
+    "tmp/presentation_credit_risk/renders/slide-01.png",
+    "tmp/presentation_credit_risk/renders/slide-02.png",
+    "tmp/presentation_credit_risk/renders/slide-03.png",
+    "tmp/presentation_credit_risk/renders/slide-04.png",
+    "tmp/presentation_credit_risk/renders/slide-05.png",
+    "tmp/presentation_credit_risk/renders/slide-06.png",
+    "tmp/presentation_credit_risk/renders/slide-07.png",
+    "tmp/presentation_credit_risk/renders/slide-08.png",
+    "tmp/presentation_credit_risk/renders/slide-09.png",
+    "tmp/presentation_credit_risk/renders/slide-10.png",
+    "tmp/presentation_credit_risk/renders/slide-11.png",
+    "tmp/presentation_credit_risk/renders/slide-12.png"
+  ],
+  "checks": {
+    "original_manifest_references": {
+      "checks": 410,
+      "failures": []
+    },
+    "article_manifest_references": {
+      "article_v1_2026-10-10": 123,
+      "article_v1_reproduction_2026-10-10": 130
+    },
+    "additional_source_registries": {
+      "explorer/source_manifest.json": 28,
+      "docs/context/source_documents.json": 15
+    },
+    "literature_source_hashes": 5,
+    "referenced_literature_renders_retained": 14,
+    "decision_deck_copy_byte_identical": true,
+    "decision_deck_sha256": "28138bbb933e471448438f1a35c250e97b28cf8562a788fb00e586cabcf9bd3d",
+    "all_preexisting_scientific_files_unchanged": true,
+    "tests_run": false,
+    "research_stages_run": false,
+    "affected_markdown_files_checked": 6,
+    "local_markdown_links_checked": 70,
+    "broken_affected_links": 0,
+    "authoring_python_syntax": "pass",
+    "authoring_javascript_syntax_files": 5,
+    "git_diff_whitespace": "pass"
+  }
+}

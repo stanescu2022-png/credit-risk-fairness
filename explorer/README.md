@@ -12,7 +12,7 @@ Open credit-risk-explorer.html in Edge or Chrome. Copy that single file to anoth
 
 pp means percentage points. Percentage-point differences are not relative percentage changes. Downloads retain unrounded source estimates, with numeric rates expressed as proportions. The download button exports the active comparison table; supporting calibration and confusion-count displays are not part of that export. Local SHAP case exports include all displayed contributions.
 
-The file displays saved evidence; it does not score new clients, fit models, change thresholds, execute corruptions or rerun research. Synthetic perturbation outcomes are not causal counterfactuals. No overall trustworthiness score is calculated. The expanded framework remains deferred.
+The file displays saved evidence; it does not score new clients, fit models, change thresholds, execute corruptions or rerun research. Synthetic perturbation outcomes are not causal counterfactuals. No overall trustworthiness score is calculated. Its embedded status is a historical snapshot; the accepted future SAFE 2026 model-selection direction and unresolved design are in [current context](../PROJECT_CONTEXT.md).
 
 ## Rebuild from current saved outputs
 

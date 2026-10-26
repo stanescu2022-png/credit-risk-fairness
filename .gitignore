@@ -11,6 +11,9 @@ __pycache__/
 # Installed JavaScript dependencies; preserve project sources and artifacts.
 node_modules/
 
+# New scratch/render output; referenced historical literature renders stay tracked.
+/tmp/
+
 # Local editor and OS settings
 .vscode/
 .idea/
