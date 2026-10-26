@@ -1,0 +1,7680 @@
+{
+  "status": "defined",
+  "reason": null,
+  "path": [
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT6",
+      "removed_subset": [
+        "BILL_AMT6"
+      ],
+      "reversed_rge": 0.9996079317253097,
+      "original_rge": 0.0003920682746902937,
+      "reason": null,
+      "prediction_sha256": "120442e5cae743876a3c8e04207f24b521cdb015c196e563742e7fe8d0d825ca",
+      "tied_alternatives": [
+        "BILL_AMT6"
+      ]
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "AGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "reversed_rge": 0.9990529136675232,
+      "original_rge": 0.0009470863324767542,
+      "reason": null,
+      "prediction_sha256": "df3cb76c339356fe242261b0b9cede4cf9dcd3e3888663d42abba49b79d21b7b",
+      "tied_alternatives": [
+        "AGE"
+      ]
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "reversed_rge": 0.9984037414134528,
+      "original_rge": 0.0015962585865472168,
+      "reason": null,
+      "prediction_sha256": "7d5961283fea1d11fefdf6fb03a7f032f1f8fee370a31ea9b9adbcdb17e9788c",
+      "tied_alternatives": [
+        "PAY_AMT6"
+      ]
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "reversed_rge": 0.9976789472642087,
+      "original_rge": 0.002321052735791307,
+      "reason": null,
+      "prediction_sha256": "21580b042b5e0928a9c15b6332debbd46be8e6a60c601cf2255376bbcc88c8fd",
+      "tied_alternatives": [
+        "PAY_6"
+      ]
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "BILL_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "reversed_rge": 0.9969298030004135,
+      "original_rge": 0.0030701969995865497,
+      "reason": null,
+      "prediction_sha256": "eea37c106d217cef96a83c4c81380ed5a9f2b7bc9485e477922c90db197a3c78",
+      "tied_alternatives": [
+        "BILL_AMT2"
+      ]
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.9961351373881965,
+      "original_rge": 0.003864862611803521,
+      "reason": null,
+      "prediction_sha256": "4e3fc01fa7a5802b1308684be541a988d0e74928e481c716f0bbdfdaf4680fcf",
+      "tied_alternatives": [
+        "PAY_AMT4"
+      ]
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9953994858393436,
+      "original_rge": 0.004600514160656433,
+      "reason": null,
+      "prediction_sha256": "3a60a72c0db3b7f43f0ed6dbbd16078fd63f11e5ff4451391662fa6dc1190cf0",
+      "tied_alternatives": [
+        "BILL_AMT4"
+      ]
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9946467762472496,
+      "original_rge": 0.00535322375275038,
+      "reason": null,
+      "prediction_sha256": "742dd2293865cfbc6acb891dd27b240f98e10054620dd54d68e8ad8381596e60",
+      "tied_alternatives": [
+        "MARRIAGE"
+      ]
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9934890317055268,
+      "original_rge": 0.006510968294473174,
+      "reason": null,
+      "prediction_sha256": "c9fd54c7b5f1ec73514f6827334b08266f0dd0f743cc1474d27576d6e33de623",
+      "tied_alternatives": [
+        "PAY_AMT5"
+      ]
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9920546487530418,
+      "original_rge": 0.007945351246958166,
+      "reason": null,
+      "prediction_sha256": "829881896b99d50622c8e047ac425cfeac8baaee6e498faf8201cb5cb5bf1305",
+      "tied_alternatives": [
+        "EDUCATION"
+      ]
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9905775061704264,
+      "original_rge": 0.009422493829573608,
+      "reason": null,
+      "prediction_sha256": "fb0bc63a78ef572debc6d7145fc705e9849365a9b40b73bb9d0d31a23c9f8911",
+      "tied_alternatives": [
+        "BILL_AMT3"
+      ]
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9888995503795643,
+      "original_rge": 0.01110044962043566,
+      "reason": null,
+      "prediction_sha256": "882e9b0220702bb025132f216281d7886004de789e35d6a3d5fdc8a6386620fe",
+      "tied_alternatives": [
+        "BILL_AMT5"
+      ]
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9872327798136168,
+      "original_rge": 0.01276722018638321,
+      "reason": null,
+      "prediction_sha256": "077bfa8ac9b20b8f06445433150899a83f8a386437b5b8c741b8741f2d1ba9da",
+      "tied_alternatives": [
+        "PAY_AMT2"
+      ]
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9857785723361194,
+      "original_rge": 0.01422142766388057,
+      "reason": null,
+      "prediction_sha256": "28de722b9560030a8936cf1942457bf24b29500d64c93b6530d9bc30022b67a9",
+      "tied_alternatives": [
+        "PAY_4"
+      ]
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9816077941560017,
+      "original_rge": 0.018392205843998255,
+      "reason": null,
+      "prediction_sha256": "76b1b87fdbd22372f5fd8c47f48b06f6f125e2038f64d43372d424b27bdbc7ba",
+      "tied_alternatives": [
+        "PAY_2"
+      ]
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9754856069531966,
+      "original_rge": 0.024514393046803362,
+      "reason": null,
+      "prediction_sha256": "ebbc25137d8a98f231ab38f0e03265df9d48a114ee6f19ee84bea130b59c91d3",
+      "tied_alternatives": [
+        "PAY_AMT3"
+      ]
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9690136300440556,
+      "original_rge": 0.030986369955944393,
+      "reason": null,
+      "prediction_sha256": "8950a4d69c6762a08bdcfba03b36882f2c8007fd726ae63e4c26e8ab9b2c9482",
+      "tied_alternatives": [
+        "PAY_5"
+      ]
+    },
+    {
+      "step": 18,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9526812738088477,
+      "original_rge": 0.047318726191152294,
+      "reason": null,
+      "prediction_sha256": "2c7dfe39f925a63394262718fa200affa02ca5a612578bea48e29b37f5c632e3",
+      "tied_alternatives": [
+        "PAY_3"
+      ]
+    },
+    {
+      "step": 19,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9385759708842295,
+      "original_rge": 0.061424029115770495,
+      "reason": null,
+      "prediction_sha256": "cefa9b68e38406287583c159c46df4b813ad97ab739bedd3959aaac4c5bd1d84",
+      "tied_alternatives": [
+        "BILL_AMT1"
+      ]
+    },
+    {
+      "step": 20,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9255152362415255,
+      "original_rge": 0.07448476375847446,
+      "reason": null,
+      "prediction_sha256": "7922a98501dd8707a72e36f8d4d7f6638957c394384f3d6e0bd09dc3a20c3710",
+      "tied_alternatives": [
+        "LIMIT_BAL"
+      ]
+    },
+    {
+      "step": 21,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.8798488571044327,
+      "original_rge": 0.12015114289556728,
+      "reason": null,
+      "prediction_sha256": "33b1673f7995075b40bf745e916dc0de1bf62ad0d3646c90b5fa1a9141500751",
+      "tied_alternatives": [
+        "PAY_AMT1"
+      ]
+    },
+    {
+      "step": 22,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_AMT1"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_AMT1",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.49999999999999833,
+      "original_rge": 0.5000000000000017,
+      "reason": null,
+      "prediction_sha256": "9808e6fd051367ae0476ead11920a0110141f286b418902056a44d6032c7ea15",
+      "tied_alternatives": [
+        "PAY_0"
+      ]
+    }
+  ],
+  "alternatives": [
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9839258011918606,
+      "original_rge": 0.016074198808139428,
+      "reason": null,
+      "prediction_sha256": "b40ab3efe8e55e9192e6f77d00b48b0463a5b618b6d4118fb0b7789634f812cd"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9986290438391574,
+      "original_rge": 0.0013709561608425958,
+      "reason": null,
+      "prediction_sha256": "00ec3497c515f29e053bc4dc82afe2b17ba84e6e9f0dbf5733ab9488399fbc0d"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9993198615611294,
+      "original_rge": 0.0006801384388706033,
+      "reason": null,
+      "prediction_sha256": "8cf626b77535f809dd2aaeaf42e807bdb97cf1027e62dba94b6226ed6d838ddf"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "AGE",
+      "removed_subset": [
+        "AGE"
+      ],
+      "reversed_rge": 0.9993598739947235,
+      "original_rge": 0.0006401260052765201,
+      "reason": null,
+      "prediction_sha256": "732d45af920cd9e894ce67a053f4fc08cddff2007da02fba4885ea620950a787"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9399467256209244,
+      "original_rge": 0.060053274379075594,
+      "reason": null,
+      "prediction_sha256": "d884327f9d21793550b2279e2285038543e000d3049898e8ff394c4a53c729d3"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9952378784843445,
+      "original_rge": 0.004762121515655471,
+      "reason": null,
+      "prediction_sha256": "ede620ca01672e351f994005a8c764aa9b499f4e3a1f1bb4a5805f0e23dfbe31"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9973848235245166,
+      "original_rge": 0.0026151764754833717,
+      "reason": null,
+      "prediction_sha256": "f508a69bcfd426ca22480f731518a64af6cc8fc85bfb72be49754187854e3efd"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9985666363773387,
+      "original_rge": 0.0014333636226613322,
+      "reason": null,
+      "prediction_sha256": "eefb3f0166bd8953d4c0e466a19433807bce6095d282810c149bc009fe82b247"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9986652616230717,
+      "original_rge": 0.0013347383769283239,
+      "reason": null,
+      "prediction_sha256": "4986609cb12d3d0bbf57598a3d7ba93c126c46705aaa61041ec86220b36ff121"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_6",
+      "removed_subset": [
+        "PAY_6"
+      ],
+      "reversed_rge": 0.9992684725999447,
+      "original_rge": 0.0007315274000553318,
+      "reason": null,
+      "prediction_sha256": "0ce62fb250723b112f359d5e3c4b0fae73a37c6130556dc3bc48d160d71be29c"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9920639993503504,
+      "original_rge": 0.00793600064964961,
+      "reason": null,
+      "prediction_sha256": "b57d5121117a1318c56ee873bea720314d0fb586bf17290cdee9eba1d994cbdf"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT2",
+      "removed_subset": [
+        "BILL_AMT2"
+      ],
+      "reversed_rge": 0.9991916030986736,
+      "original_rge": 0.0008083969013263914,
+      "reason": null,
+      "prediction_sha256": "f01d15f2764e33b2a59b07923b3659df3cb1f82895a1dd121a8e7ae8a570f6a4"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.998549418578522,
+      "original_rge": 0.0014505814214780255,
+      "reason": null,
+      "prediction_sha256": "5bcf514e515bfad09dbca5c85d71aa50576d1d346b278a32e9bf5026cab561d6"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9989154039025614,
+      "original_rge": 0.001084596097438606,
+      "reason": null,
+      "prediction_sha256": "96e9d3d8d4ffcefb997bc7a49fe445bd85fc6be66be6ead33e9e872c1b2c5654"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9989434827023369,
+      "original_rge": 0.0010565172976630954,
+      "reason": null,
+      "prediction_sha256": "882a851057e10fa240e35b4c368191fc0f7b6e52a77a7a3978ad4a30f91ca7ca"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "BILL_AMT6",
+      "removed_subset": [
+        "BILL_AMT6"
+      ],
+      "reversed_rge": 0.9996079317253097,
+      "original_rge": 0.0003920682746902937,
+      "reason": null,
+      "prediction_sha256": "120442e5cae743876a3c8e04207f24b521cdb015c196e563742e7fe8d0d825ca"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9932342469065564,
+      "original_rge": 0.006765753093443627,
+      "reason": null,
+      "prediction_sha256": "06e9a6f60175963dcdd6824a73dd77107d3894e15ff2630e1199408b83488a05"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9959947244263262,
+      "original_rge": 0.0040052755736738055,
+      "reason": null,
+      "prediction_sha256": "ae667675614de51cf62e38ec1e8384b4604048d2d07a470b77d42f5dbb82f28a"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9955678635746772,
+      "original_rge": 0.004432136425322808,
+      "reason": null,
+      "prediction_sha256": "81d197d7a688745f123f5206f7d7c6481c9a3f7341d03df3a7460ae0827e13b2"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.99920475441942,
+      "original_rge": 0.000795245580579973,
+      "reason": null,
+      "prediction_sha256": "5af953a63d46c1cbc8ae252881849d3733e1d90c3187e46f0860c43a5131a019"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9991474320682638,
+      "original_rge": 0.000852567931736159,
+      "reason": null,
+      "prediction_sha256": "71b08fce9f00c0f9cd76a76dff830bb861ac362fe3f467ff09f48ddd5e8da573"
+    },
+    {
+      "step": 1,
+      "removed_before": [],
+      "alternative": "PAY_AMT6",
+      "removed_subset": [
+        "PAY_AMT6"
+      ],
+      "reversed_rge": 0.9992500063716121,
+      "original_rge": 0.0007499936283879016,
+      "reason": null,
+      "prediction_sha256": "fb9976892d31dc3cb219dcf717ed90625eefeac222fa37162b28170cf5a2e2fb"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9832048274873164,
+      "original_rge": 0.016795172512683587,
+      "reason": null,
+      "prediction_sha256": "7a994c44f0ef2677216199f3a463eb708d79bb9090f485ec98a975b0b01b5879"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9982087039008387,
+      "original_rge": 0.001791296099161288,
+      "reason": null,
+      "prediction_sha256": "c7729317dd02f51d4d469c66d6002ad4019a1af91d1d412cfa0f7698e34dd8f5"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9990375197144008,
+      "original_rge": 0.0009624802855991987,
+      "reason": null,
+      "prediction_sha256": "d2bac9890f6fc5fd56bdfa4b157eb7ee8599f06f0c36ae9a84d55df91d7643d4"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "AGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "reversed_rge": 0.9990529136675232,
+      "original_rge": 0.0009470863324767542,
+      "reason": null,
+      "prediction_sha256": "df3cb76c339356fe242261b0b9cede4cf9dcd3e3888663d42abba49b79d21b7b"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9382484907335391,
+      "original_rge": 0.06175150926646089,
+      "reason": null,
+      "prediction_sha256": "f855aa82c57afca07af6c016bb29db8cb5845289caba0f5561b82dc07bcec7b6"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9946755857356883,
+      "original_rge": 0.005324414264311739,
+      "reason": null,
+      "prediction_sha256": "96283123e20ce4ceccf95b44c5eefc7a7df9f42fecad03ca3df516a09de38163"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9968489378986404,
+      "original_rge": 0.003151062101359625,
+      "reason": null,
+      "prediction_sha256": "9c4db5edb8194c5071423f4935a23e7cc2e61e380be9c71504d916c4ccb32054"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9979796811642299,
+      "original_rge": 0.0020203188357701407,
+      "reason": null,
+      "prediction_sha256": "5c758d1a51de63964038a6d4a43a000774b66c166414c88f9bd6f79641c4a985"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9981143805483916,
+      "original_rge": 0.0018856194516083669,
+      "reason": null,
+      "prediction_sha256": "272d49d69f1738de2ce941397a931f6caa566d090af6b0070003140053158941"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_6"
+      ],
+      "reversed_rge": 0.9988364871668414,
+      "original_rge": 0.0011635128331586309,
+      "reason": null,
+      "prediction_sha256": "8c5cf45dc127d9ccc87ae628cf057d06216b61f0c043aee5e395aef80908ff28"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9923897440233099,
+      "original_rge": 0.007610255976690072,
+      "reason": null,
+      "prediction_sha256": "1439929d67bae646c0755323239d8485b45f914eeec6ad3044e5d692252657b7"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "BILL_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "BILL_AMT2"
+      ],
+      "reversed_rge": 0.9985662656826673,
+      "original_rge": 0.0014337343173327355,
+      "reason": null,
+      "prediction_sha256": "bedc05cfee013d79cb8f6ce717bdf0cb588b0b8ea6a1a9a756338a5e83848f97"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9980283271310887,
+      "original_rge": 0.0019716728689113117,
+      "reason": null,
+      "prediction_sha256": "ae2afca7cca4091b9b75a5c3b672961fad7790df909a70641268914e29a0b44f"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.998318169838177,
+      "original_rge": 0.0016818301618229947,
+      "reason": null,
+      "prediction_sha256": "3c8ee813aaa97c13c90950fdb05ce3936d0b0f9f22f17bde1aa8d5fe47f07276"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9982600297008342,
+      "original_rge": 0.0017399702991658383,
+      "reason": null,
+      "prediction_sha256": "3cdbaa3389ac70ccc6472cf49059c8361a8fa4551ebe0c76f6e92444e69a80ab"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9932171169835664,
+      "original_rge": 0.006782883016433594,
+      "reason": null,
+      "prediction_sha256": "60ded2133f7790ae1a39b26998145b7d911744d6f1953fa37ff61c4998d781ed"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9957638466553885,
+      "original_rge": 0.004236153344611471,
+      "reason": null,
+      "prediction_sha256": "a746e1236702ce02723d3b8b5a2f2914865c45d1e495fa9a910746f7becef391"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9953800846234341,
+      "original_rge": 0.0046199153765659196,
+      "reason": null,
+      "prediction_sha256": "e12a91b0fdc00a026d2ca83f693af32c3c3d67f09692e448e0a0be22939739a0"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.9989711340365613,
+      "original_rge": 0.0010288659634386521,
+      "reason": null,
+      "prediction_sha256": "d305b006e68788c03026b3469716bdfec60d5728d10b923aab5906f099453189"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.998935402540027,
+      "original_rge": 0.0010645974599730046,
+      "reason": null,
+      "prediction_sha256": "c4c605f3e0e47b07c6fb118a082d275527ade9b58a9ff1990fdfb5885fb0c11f"
+    },
+    {
+      "step": 2,
+      "removed_before": [
+        "BILL_AMT6"
+      ],
+      "alternative": "PAY_AMT6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "PAY_AMT6"
+      ],
+      "reversed_rge": 0.9990461028815258,
+      "original_rge": 0.0009538971184741563,
+      "reason": null,
+      "prediction_sha256": "e0d884b8915aa97f18c988f7a818c80a60f56b9458849f0d1c5a8d612ada9492"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.983319103637094,
+      "original_rge": 0.01668089636290604,
+      "reason": null,
+      "prediction_sha256": "e7c84e27c100f1586411b8b8a83439379298a27cdeba601376b3384601d694a2"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9976384039817283,
+      "original_rge": 0.0023615960182716833,
+      "reason": null,
+      "prediction_sha256": "eec467b311db104b1d0ecc0b06c43ffad4bf7bdb89eb8882e530edf3dc151225"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.998219420957819,
+      "original_rge": 0.0017805790421809853,
+      "reason": null,
+      "prediction_sha256": "cbeeb1525b4d97967232d72d1d43ca7d173d7d40c972857f8c00ef5b1e3fb0ac"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9384167849280833,
+      "original_rge": 0.061583215071916664,
+      "reason": null,
+      "prediction_sha256": "7ff3531fafc41d975179dbe745f2e9bf4e7612b11727a077e45f7763dd4f6bd4"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9945496746966568,
+      "original_rge": 0.0054503253033432175,
+      "reason": null,
+      "prediction_sha256": "d50b1ae818751aac4920e6e5e034735fb93f7f24fdc33e7373503d73fc7634e1"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9965236650589002,
+      "original_rge": 0.003476334941099779,
+      "reason": null,
+      "prediction_sha256": "b284c98f60a4dca62551034372118c66a88b830e6bf9c05fefc04180787c9f62"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9974338121332331,
+      "original_rge": 0.002566187866766878,
+      "reason": null,
+      "prediction_sha256": "f24b97b3397ce19748ca3e60df2a6e946b0d88617378f5478c67c69b59b7f614"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9976704570920292,
+      "original_rge": 0.0023295429079708274,
+      "reason": null,
+      "prediction_sha256": "d8756b3389425a5654b3b8a29fc06ef0b5eaf3863a0d7aa1c53149c2c8d3db27"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_6"
+      ],
+      "reversed_rge": 0.9982615373496142,
+      "original_rge": 0.001738462650385797,
+      "reason": null,
+      "prediction_sha256": "19e802a79f2aab7cf2fea4d040da8da7a6721ebc19179cdafbfb88c17ff35d6a"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9916277031161027,
+      "original_rge": 0.00837229688389729,
+      "reason": null,
+      "prediction_sha256": "757fff033b9a567ae4aff105d7016ec000a764624666b13800e1ab98c7d5b691"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "BILL_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "BILL_AMT2"
+      ],
+      "reversed_rge": 0.9980663698768449,
+      "original_rge": 0.0019336301231550612,
+      "reason": null,
+      "prediction_sha256": "248d9d4f4cf1e4188f1b6677cb017161c3eea2f4243887ffddd865ee186b4454"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9974480250257483,
+      "original_rge": 0.0025519749742517472,
+      "reason": null,
+      "prediction_sha256": "87d549e26635e1e052f6ac148ca521cc317df043da175f53253210d55d0f140b"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9978796667496374,
+      "original_rge": 0.0021203332503626493,
+      "reason": null,
+      "prediction_sha256": "0867cf6bd68db5ad7df51d2169246da2cee83933db97b1361c37f34e2df99e6d"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9976870459546501,
+      "original_rge": 0.002312954045349924,
+      "reason": null,
+      "prediction_sha256": "ae0eb279159fc8523feb7f63005cb436d9ab8ceb2b671d48688e92c0f2dfb628"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9919890817467498,
+      "original_rge": 0.008010918253250177,
+      "reason": null,
+      "prediction_sha256": "5412690ed92e8c9ceeb5a66ddf20d070cf3a156d6e8e89b3124d679f68ca66db"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9953281571337456,
+      "original_rge": 0.004671842866254439,
+      "reason": null,
+      "prediction_sha256": "0365202082ae68f9df6b3852dadabf915bd3e95578dee475747d55089d9576d1"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9941986626063382,
+      "original_rge": 0.005801337393661843,
+      "reason": null,
+      "prediction_sha256": "f86cb6ea02f06fa655b84184e23627e124b2d85cb09324fc2267baf1cc4499de"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.9982592149758474,
+      "original_rge": 0.0017407850241526468,
+      "reason": null,
+      "prediction_sha256": "91d8000f1a636158999921fb4af867be47dbb7ed7aa65ab0d49d229892730436"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9981584945211257,
+      "original_rge": 0.0018415054788742946,
+      "reason": null,
+      "prediction_sha256": "66e04238f80ed034585fbef942bda20ebb04abe8142a42a9a0b940298171e2a9"
+    },
+    {
+      "step": 3,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE"
+      ],
+      "alternative": "PAY_AMT6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "reversed_rge": 0.9984037414134528,
+      "original_rge": 0.0015962585865472168,
+      "reason": null,
+      "prediction_sha256": "7d5961283fea1d11fefdf6fb03a7f032f1f8fee370a31ea9b9adbcdb17e9788c"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9821052656150704,
+      "original_rge": 0.01789473438492961,
+      "reason": null,
+      "prediction_sha256": "39f061ece20ec5202947ee1fbb403a8ba69f9ab15eb018267f36f7558ffbae56"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9970275912918451,
+      "original_rge": 0.00297240870815485,
+      "reason": null,
+      "prediction_sha256": "9cb2e688f2a87feb081910c85d2231d22b823ed3e8691f998482509d87e144f8"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9975648894468016,
+      "original_rge": 0.0024351105531984496,
+      "reason": null,
+      "prediction_sha256": "7df868b1228dc3e35da7c89f1d5d4505aa1b764145745e168afa0081512e7ffc"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9381156960381225,
+      "original_rge": 0.061884303961877496,
+      "reason": null,
+      "prediction_sha256": "89382805ac0e80c13a43925fc4758da98e057f273cfdc44974d356a877aac9d6"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9942285172542089,
+      "original_rge": 0.00577148274579109,
+      "reason": null,
+      "prediction_sha256": "0b9f08f01c86dc690c8c41ab452790ba4df8739795e5680f34e8733d294f2297"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9958663846880522,
+      "original_rge": 0.00413361531194778,
+      "reason": null,
+      "prediction_sha256": "fff3626860cff976b38d7d6a7c9fb01ede398b980a59ce6749671a92c3872585"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9970208539344845,
+      "original_rge": 0.0029791460655155255,
+      "reason": null,
+      "prediction_sha256": "85a77b289769043e35fa0618ec2481b525687726a271eb199d8644fdf4c9a46c"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9971470544613072,
+      "original_rge": 0.0028529455386927527,
+      "reason": null,
+      "prediction_sha256": "f7c4d8f779c918b61ff0725aa98994900053c565dd86149a188aed332b32361b"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_6",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "reversed_rge": 0.9976789472642087,
+      "original_rge": 0.002321052735791307,
+      "reason": null,
+      "prediction_sha256": "21580b042b5e0928a9c15b6332debbd46be8e6a60c601cf2255376bbcc88c8fd"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9906949834716707,
+      "original_rge": 0.009305016528329269,
+      "reason": null,
+      "prediction_sha256": "a015e36563a4b14b9c7fcfe1d1dd9971da80375a6d62c3fc8994434b321c4434"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "BILL_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "BILL_AMT2"
+      ],
+      "reversed_rge": 0.9976405617093445,
+      "original_rge": 0.0023594382906555467,
+      "reason": null,
+      "prediction_sha256": "869ac5f9919c416d141e5cc80af1de5dc257238e6e118464cb1e009d5b1b971f"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9970325240019473,
+      "original_rge": 0.0029674759980526932,
+      "reason": null,
+      "prediction_sha256": "2d65b04ed72362450a140bb1b56de7abeea2f86a81f476f035c8e50e1ab4f305"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9974427758090678,
+      "original_rge": 0.0025572241909321836,
+      "reason": null,
+      "prediction_sha256": "61f531930fd97a6d634d73aaa2072b74f690d3a8064ae920b2c166f06369e7c0"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9970510459014179,
+      "original_rge": 0.0029489540985820906,
+      "reason": null,
+      "prediction_sha256": "58d1cdfae88daa4675658596e60c929c2133903bdc51a058ae075e81191b2435"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9902241068919939,
+      "original_rge": 0.009775893108006084,
+      "reason": null,
+      "prediction_sha256": "7348070c7e38e003cbe38223c3025b475a7a5c168150363458f7022dd2f1cdc7"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9940045349247971,
+      "original_rge": 0.005995465075202877,
+      "reason": null,
+      "prediction_sha256": "ef3710b218aa5270cc8b3ac9a9df66827121b28f14700c72f06c10d2ea082e8e"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9927800484910506,
+      "original_rge": 0.007219951508949385,
+      "reason": null,
+      "prediction_sha256": "9623bff9e982cf9c7d8fff1f2d9bbad5d619b98018410c6ef87c8ab82ee273e3"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.9972967562125556,
+      "original_rge": 0.002703243787444354,
+      "reason": null,
+      "prediction_sha256": "acec5a1de7f324afea30073099df39c101eb9bdf43bfaa3283bad3224483d71c"
+    },
+    {
+      "step": 4,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9970227686467028,
+      "original_rge": 0.002977231353297194,
+      "reason": null,
+      "prediction_sha256": "8c33487355b26805645e553dab8fd9cc2f230027360d8208c05bd841e0523a40"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9804382243825555,
+      "original_rge": 0.019561775617444543,
+      "reason": null,
+      "prediction_sha256": "509bb9746057b7c7207564e5632e6c16fdad49806ecd6476bb1cf982ca66887b"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9962945594487002,
+      "original_rge": 0.0037054405512998434,
+      "reason": null,
+      "prediction_sha256": "ed9a7bdf7837ece3d27ba84d4cd7b0cb8646a940cde9c4ebd1ead0ed1ffc3fea"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9967567188186985,
+      "original_rge": 0.0032432811813014606,
+      "reason": null,
+      "prediction_sha256": "60b11b6ff040d7d08a632f7e5ca4964f555479de8db48776fea99740f9ec7e3e"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9359690744869089,
+      "original_rge": 0.06403092551309109,
+      "reason": null,
+      "prediction_sha256": "94e964006d54667fbbd409a2dac69780bad6f368e8daa10091cceaf707e6ab2c"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9936202276892628,
+      "original_rge": 0.006379772310737164,
+      "reason": null,
+      "prediction_sha256": "e154ab19de285c0f37057b7e62043d980014ecb00606f8aa590c32eff7204e4d"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9947917929314918,
+      "original_rge": 0.005208207068508219,
+      "reason": null,
+      "prediction_sha256": "a619ae03a19111c3435256ce5720c4ca62f70ef1bef4397a208c656a57663319"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9960812500096828,
+      "original_rge": 0.003918749990317161,
+      "reason": null,
+      "prediction_sha256": "27c86570665bf6df96279223c64c4960b950d2dc6df320bfd76d7efcd351c18d"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9955820977573282,
+      "original_rge": 0.004417902242671801,
+      "reason": null,
+      "prediction_sha256": "575d8bd7b269965961b1f8496a7f86db03351b4137a3675a121261cec1a364f5"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.989666585450173,
+      "original_rge": 0.010333414549826947,
+      "reason": null,
+      "prediction_sha256": "af77625fbbf0fafe308564e4bacc3055758366331ffe088b5393088ac5fd3742"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "BILL_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "reversed_rge": 0.9969298030004135,
+      "original_rge": 0.0030701969995865497,
+      "reason": null,
+      "prediction_sha256": "eea37c106d217cef96a83c4c81380ed5a9f2b7bc9485e477922c90db197a3c78"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9962829211983381,
+      "original_rge": 0.003717078801661944,
+      "reason": null,
+      "prediction_sha256": "f86c96098042b2d5d0a5dcfcca1e6c69dac91d33ef49e58a204d8a3ba3c251e6"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9966453912980522,
+      "original_rge": 0.0033546087019478144,
+      "reason": null,
+      "prediction_sha256": "ab09b7c7fa5cd718f6ab5d70a31b60b657c17fae15cf4f82a50586c4a7282fb0"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9963877141542434,
+      "original_rge": 0.0036122858457565687,
+      "reason": null,
+      "prediction_sha256": "70420f8d46c7733c11c3edaf2cf49de8a9f2720a29356e53bae9e28c70b8f011"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9894907849068761,
+      "original_rge": 0.010509215093123858,
+      "reason": null,
+      "prediction_sha256": "6c1f3e15cf0f3efe8996f8a58cacdf4d2a325969e3b8e3e19ac5f742454689ad"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9929938852853316,
+      "original_rge": 0.007006114714668388,
+      "reason": null,
+      "prediction_sha256": "e4058288a16f144c618e8d6619c9f44fe12d053bb86daf8c86a92ee209ca07f1"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9918130980180686,
+      "original_rge": 0.008186901981931394,
+      "reason": null,
+      "prediction_sha256": "bb32ab3ea91e919dcdcbe83a71418a1b1d875e8a4f8127b6c76f6241128eaa6b"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.9967439318473814,
+      "original_rge": 0.0032560681526185853,
+      "reason": null,
+      "prediction_sha256": "3ab491c761507d341d7fd25261bb8c7b084b618abfc997c5a106cbe95a73ae51"
+    },
+    {
+      "step": 5,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9959515123272373,
+      "original_rge": 0.004048487672762668,
+      "reason": null,
+      "prediction_sha256": "b6e781e49314b435358038a6c1cee1c398aaa6154feeb4747bdefaa1badc14bc"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9805327499023758,
+      "original_rge": 0.019467250097624178,
+      "reason": null,
+      "prediction_sha256": "7702cd285a780f7fcc664ea2a55d4788bc345a12a57e12ac9b86451cec8b709e"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9955577448445211,
+      "original_rge": 0.004442255155478914,
+      "reason": null,
+      "prediction_sha256": "d283622db067700505fa909ed237ef7d40e986a237b6828a507d0e56c2f90448"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9960201856742444,
+      "original_rge": 0.00397981432575556,
+      "reason": null,
+      "prediction_sha256": "322bd9aa8f2f8f44d62aa33e81b2661cae4998ada65a0a8855a37da4d760bd63"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.933391164612561,
+      "original_rge": 0.066608835387439,
+      "reason": null,
+      "prediction_sha256": "e709b7155bb91ca61c3d8fa1880c1f7e48a5e44eef132b3b184d03b9aeec6c6f"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9921165432932383,
+      "original_rge": 0.007883456706761716,
+      "reason": null,
+      "prediction_sha256": "7a780c727e5bf9a2d71461de45cacfe37bb315b3bc031460454ea899cad51ba8"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9938551334656746,
+      "original_rge": 0.006144866534325444,
+      "reason": null,
+      "prediction_sha256": "f333e0023c48502c3a4928e2d1a5e1f7ad86db9502cb74134383d5b058e40ab2"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9952512406565113,
+      "original_rge": 0.004748759343488729,
+      "reason": null,
+      "prediction_sha256": "c50c62af09dac67b5d9f7b5a29a918284b7668a56b20ca675f0c813c09bfaa94"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9947884716731266,
+      "original_rge": 0.005211528326873438,
+      "reason": null,
+      "prediction_sha256": "ed840cd0d5ba836cf006e7c3593b0ab02c08230ba77817aeb1dd09a5b7916034"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9882588111690969,
+      "original_rge": 0.011741188830903138,
+      "reason": null,
+      "prediction_sha256": "db37f577cd44435382dc95ed32dd8017e3058e2ee9e69da78ed7cca5cfae7864"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9952805835491014,
+      "original_rge": 0.0047194164508985725,
+      "reason": null,
+      "prediction_sha256": "6608a4a8e3cc18f24064b5fc18aec7b9463e81f1bb4b93662a73c05a87f8903b"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9957680773029105,
+      "original_rge": 0.004231922697089496,
+      "reason": null,
+      "prediction_sha256": "0db986aa7ab6368686d4984d76bb7d6bab389bfb2ad6c74f6e9eb0d36a9ecd5a"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9953551936554274,
+      "original_rge": 0.0046448063445726495,
+      "reason": null,
+      "prediction_sha256": "52d612636bf08f331e5aeeed4506b533b92716c52a2615c566e9348295158d1a"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9908084011813634,
+      "original_rge": 0.009191598818636626,
+      "reason": null,
+      "prediction_sha256": "46eaeffb8618168401c65b685be7fbba5b2b51bb50ef3a72efe62fce2e42261a"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9927914761429487,
+      "original_rge": 0.0072085238570512855,
+      "reason": null,
+      "prediction_sha256": "4a3f2cb55c40cd0784a7649521b30e5c947c51b891e761232621440fee8c49ac"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9920943730981142,
+      "original_rge": 0.007905626901885787,
+      "reason": null,
+      "prediction_sha256": "051cf2367c6e4f5ab3b5b0f21d6e5008a5db96f4ed3dbc3fc64b474aa6e8d414"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "reversed_rge": 0.9961351373881965,
+      "original_rge": 0.003864862611803521,
+      "reason": null,
+      "prediction_sha256": "4e3fc01fa7a5802b1308684be541a988d0e74928e481c716f0bbdfdaf4680fcf"
+    },
+    {
+      "step": 6,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9954998160612283,
+      "original_rge": 0.004500183938771718,
+      "reason": null,
+      "prediction_sha256": "9cd3bd96b0b599bdb646be8b36dabd3d5846f7366410a442dbdf621edb227f01"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9804657348001311,
+      "original_rge": 0.019534265199868894,
+      "reason": null,
+      "prediction_sha256": "35e4f9b4a225e37db6c64decf5f502a62e0d7a01355d72e7c39c2b3450c99431"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.99478183707049,
+      "original_rge": 0.005218162929510051,
+      "reason": null,
+      "prediction_sha256": "94e71e84695db2aaba2e4d9c9f8e5870bdf728ec6fd9438c44d618d8bcb551e7"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.995168850684762,
+      "original_rge": 0.004831149315237981,
+      "reason": null,
+      "prediction_sha256": "fe490a8599d6c3b7ccb4694094d88d2b2ecf85ed0cc181b45fe33e50c4030127"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9334097836307189,
+      "original_rge": 0.06659021636928109,
+      "reason": null,
+      "prediction_sha256": "dfc215d1142ad4aba40761c0d9c5cb1b805185180ee3a755cf40055fa144c061"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9918418824269961,
+      "original_rge": 0.008158117573003887,
+      "reason": null,
+      "prediction_sha256": "5cd1b5728052902623357f0663793138af93a292bc4a4f1deadbd9447381a58a"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9933386996194429,
+      "original_rge": 0.0066613003805571225,
+      "reason": null,
+      "prediction_sha256": "a24e7bdde6ac2ead2779060d81fe35764461bda787ace5ce1809a3abfd4b8842"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9946368374937944,
+      "original_rge": 0.00536316250620561,
+      "reason": null,
+      "prediction_sha256": "bbd7d72bcd2b752412b358c26811eb93b2f1433c8a3180c9bcda73f95f47f24f"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9937329106012422,
+      "original_rge": 0.0062670893987577525,
+      "reason": null,
+      "prediction_sha256": "768074aa77bc975f7fb2c17137cf504e33b68b485b6a9e69cc7c22b9b940c7c3"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9861721730529978,
+      "original_rge": 0.013827826947002242,
+      "reason": null,
+      "prediction_sha256": "4e15b54e79f45a082bfe785282173e542617b64d43a4d8aad8bb2ce3f3d1bbbd"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9950288655228677,
+      "original_rge": 0.004971134477132266,
+      "reason": null,
+      "prediction_sha256": "d4b3524d7b3b48b2209b5e396e963b4a6a8c378fdc612348068afbbf0708c9f5"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "BILL_AMT4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "reversed_rge": 0.9953994858393436,
+      "original_rge": 0.004600514160656433,
+      "reason": null,
+      "prediction_sha256": "3a60a72c0db3b7f43f0ed6dbbd16078fd63f11e5ff4451391662fa6dc1190cf0"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9945018537361345,
+      "original_rge": 0.0054981462638654666,
+      "reason": null,
+      "prediction_sha256": "a311ebfacc6abeed7f64409110a8db466c0dc73ec42a9ad62d04c2fcce91f675"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9889442665544023,
+      "original_rge": 0.011055733445597737,
+      "reason": null,
+      "prediction_sha256": "b2a46e987049b2143abc29267b999c2152bb70fab81bec933ff26122e25d952b"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9913720242773877,
+      "original_rge": 0.008627975722612313,
+      "reason": null,
+      "prediction_sha256": "02eac07cb28467bec8976249d228b5c7bb1b6c1de5e0ce3faf9e6ba651e2da14"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.989659733212522,
+      "original_rge": 0.010340266787478014,
+      "reason": null,
+      "prediction_sha256": "e094a4506ffa2c3899b5796977cfa90f46d1c04127fe2b85b5e565ed99d7823e"
+    },
+    {
+      "step": 7,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9942051389201322,
+      "original_rge": 0.005794861079867819,
+      "reason": null,
+      "prediction_sha256": "185c9576c3ce6e7ef482775837e0e728981ad238459f3b96d10a394fd8674277"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.978753988049611,
+      "original_rge": 0.021246011950389,
+      "reason": null,
+      "prediction_sha256": "fd4ef7abcf67265adc2169be83e85f8d5ec645a7316273a72fea1c4057d06331"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9939492722891835,
+      "original_rge": 0.006050727710816495,
+      "reason": null,
+      "prediction_sha256": "b95b99bc09fdae46d0aa448670820753163d7870c752f2d2179c06dd88f15e46"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "MARRIAGE",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "reversed_rge": 0.9946467762472496,
+      "original_rge": 0.00535322375275038,
+      "reason": null,
+      "prediction_sha256": "742dd2293865cfbc6acb891dd27b240f98e10054620dd54d68e8ad8381596e60"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9304923873951249,
+      "original_rge": 0.06950761260487515,
+      "reason": null,
+      "prediction_sha256": "9cf1caf6cf0e6d431c706abc21e1aa9e9eb5a797d03ddec037f39477363ee174"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.989972589978156,
+      "original_rge": 0.010027410021844041,
+      "reason": null,
+      "prediction_sha256": "9966caf9d0a7431294d8d2e92dfb349ac8d3866ae5388086ab6add8bf20d8db6"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9921383434356463,
+      "original_rge": 0.00786165656435367,
+      "reason": null,
+      "prediction_sha256": "1cf6e93c42dbc734dc8cea97ce946af48487ce345bd6e7c8c4613f581f186702"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9934350312825089,
+      "original_rge": 0.006564968717491126,
+      "reason": null,
+      "prediction_sha256": "f237fcc8b63eba43e915745537961c463726d9b78ac59941e4056948ba2f8163"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9926133234635603,
+      "original_rge": 0.007386676536439651,
+      "reason": null,
+      "prediction_sha256": "aac4d37d004390ac5745d775809e752cb97b6b03f40402314a76ad9f4a2c899f"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9881994405279988,
+      "original_rge": 0.011800559472001204,
+      "reason": null,
+      "prediction_sha256": "18a20c0b5f0e8e6234b320fe5b651d8cf8acf03af048fac9e4e69055638d117a"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9935266820317112,
+      "original_rge": 0.006473317968288761,
+      "reason": null,
+      "prediction_sha256": "c4bf1582d1791a30f5188f8641abd256b1bb44c64074d01486dbbbd4becf64bd"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9938070034073909,
+      "original_rge": 0.006192996592609079,
+      "reason": null,
+      "prediction_sha256": "1bd4b8d811d0eaf8ccefe76a2ad8160aaab5bcaf88317ef62d35b3e0a3ebf02e"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9888465055577702,
+      "original_rge": 0.011153494442229794,
+      "reason": null,
+      "prediction_sha256": "68f4c01daf81dfbf0a9a0d0dee95dd9599d71da840d3cf267b18bea6fcf8e42d"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.991423182585774,
+      "original_rge": 0.008576817414226001,
+      "reason": null,
+      "prediction_sha256": "d98cffda7379d82ea0353083e26dc6e7b434acfa0cb92de9654e64772b6f455b"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9894734090804951,
+      "original_rge": 0.010526590919504919,
+      "reason": null,
+      "prediction_sha256": "2a13c768eada15beb2a39ffdf7619ea488cfc74f5cb345818bb62acf8cce05e5"
+    },
+    {
+      "step": 8,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9941248735520586,
+      "original_rge": 0.0058751264479414145,
+      "reason": null,
+      "prediction_sha256": "3a1b19fb8cccb61bc5a6d5ff7358a9b1ab8737a59adfc160639bfa7a8966d7ec"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9788512203278958,
+      "original_rge": 0.021148779672104157,
+      "reason": null,
+      "prediction_sha256": "a2bf723e4633ee843088916bfd6e260ab73452f522ee32a3db09869a41c797f7"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9931907854676862,
+      "original_rge": 0.0068092145323137565,
+      "reason": null,
+      "prediction_sha256": "2060d08e75e7fa717eacb7cca2307b93f9ee8a3aa922cf38605653dc87d820e0"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9307335863499825,
+      "original_rge": 0.06926641365001751,
+      "reason": null,
+      "prediction_sha256": "5bfbce1399347b2d72354ffec83b2191eb4a0a7ad5d75ddac44217db0192c5f1"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9893629023862128,
+      "original_rge": 0.010637097613787172,
+      "reason": null,
+      "prediction_sha256": "3c9ad15ae1b2ab0d07fcf202c97258326a5bc8b3521f21f791d557340c4d1159"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9916032611717382,
+      "original_rge": 0.008396738828261752,
+      "reason": null,
+      "prediction_sha256": "e0341fbd6ec5f2b38a836e5beaa44ba339d0fe143423824fc3ab293a0b2eb082"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9925802354013732,
+      "original_rge": 0.00741976459862681,
+      "reason": null,
+      "prediction_sha256": "24d069dad5d4262598d8618103d9f8dfc8bb50fb4eda9a9d94cfce9d4b34a8e3"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9918357698214302,
+      "original_rge": 0.00816423017856982,
+      "reason": null,
+      "prediction_sha256": "530849711774262c1e685483e4450171098801e9c6015e2b85225eebd2424982"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9874001719668586,
+      "original_rge": 0.012599828033141414,
+      "reason": null,
+      "prediction_sha256": "9143adec6b24a113b955b47fafe55065797f443db065b3cd31cef015af734b72"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.992681884515829,
+      "original_rge": 0.0073181154841710505,
+      "reason": null,
+      "prediction_sha256": "8c78567e9adfa4dd0232afa23c802184e5125a5e38d2e1dac90f0fc6ff649da8"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9930137170803249,
+      "original_rge": 0.006986282919675069,
+      "reason": null,
+      "prediction_sha256": "3a0a63350411ce808f66abea9ef4ebb29f6e088df5fd905b40aa483dfe7101d8"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9881313874340001,
+      "original_rge": 0.011868612565999914,
+      "reason": null,
+      "prediction_sha256": "e1925d1792a5d8f606dcb6a6390423194232e4b27c8f0cbfbbbcf6b6c24399c7"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9907037085650177,
+      "original_rge": 0.00929629143498234,
+      "reason": null,
+      "prediction_sha256": "b9c6d296fb4d156cdbadb27adcbe661e6804641effbda869d60cf9ee3b5ef9b1"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9880146435638437,
+      "original_rge": 0.01198535643615628,
+      "reason": null,
+      "prediction_sha256": "34a86b27ecfe1b7e51a331eebe69942626aa76d6fda9c73600ae2fdf2b7b39ea"
+    },
+    {
+      "step": 9,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE"
+      ],
+      "alternative": "PAY_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "reversed_rge": 0.9934890317055268,
+      "original_rge": 0.006510968294473174,
+      "reason": null,
+      "prediction_sha256": "c9fd54c7b5f1ec73514f6827334b08266f0dd0f743cc1474d27576d6e33de623"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9770468521456802,
+      "original_rge": 0.02295314785431979,
+      "reason": null,
+      "prediction_sha256": "5e0393aed2c95f4e138832e307399b8ef5affe7226194699332694b48321df49"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "EDUCATION",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "reversed_rge": 0.9920546487530418,
+      "original_rge": 0.007945351246958166,
+      "reason": null,
+      "prediction_sha256": "829881896b99d50622c8e047ac425cfeac8baaee6e498faf8201cb5cb5bf1305"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9309643531984375,
+      "original_rge": 0.06903564680156249,
+      "reason": null,
+      "prediction_sha256": "3987a9efb86ce444fa8a22cae1ec7a888507f7dd2b8ecd4d34a4dd64ab73dd35"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9886411750253483,
+      "original_rge": 0.011358824974651682,
+      "reason": null,
+      "prediction_sha256": "27bb23e02495af26bea5d3227d565c6bdc92db8cfa0b0897188407317cf344ba"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9905397000824924,
+      "original_rge": 0.00946029991750763,
+      "reason": null,
+      "prediction_sha256": "36c00de39d1169c19bc0e69a937a71d39b73574a00698547bdeb34385a218a7f"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9915944317841368,
+      "original_rge": 0.008405568215863246,
+      "reason": null,
+      "prediction_sha256": "e922f246bd30c7046e96ad2eefc242cb4ca4a5a6a9d5544af295358f1e67488f"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9907098346746115,
+      "original_rge": 0.00929016532538851,
+      "reason": null,
+      "prediction_sha256": "6af211120f60d25000ab5c863c94dbb500f65d4b643c408e4c74f87a406fdebb"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9859838527676031,
+      "original_rge": 0.014016147232396858,
+      "reason": null,
+      "prediction_sha256": "acbc5cb0e0fdd6007bfa53ac30ed862a98e51591d99cee74fffc2fef326b5c10"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9919142573409259,
+      "original_rge": 0.008085742659074135,
+      "reason": null,
+      "prediction_sha256": "206d71311808a46d2981c1b84390cb7e1d65891f01ce7c72394e16c25472d68f"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.991934519827022,
+      "original_rge": 0.008065480172978035,
+      "reason": null,
+      "prediction_sha256": "f37160c5989539338f649d8480c402eea6d0ee3d981167f2055d807e9cdbaddd"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9850327773873457,
+      "original_rge": 0.014967222612654263,
+      "reason": null,
+      "prediction_sha256": "d826a1a94a86b871acbbfe479f49069ef9cb0c949b742dee68466aa05793c357"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9883922420959672,
+      "original_rge": 0.01160775790403279,
+      "reason": null,
+      "prediction_sha256": "4580ee08b03090342ba3b32a999299dceffa5ad0aaff218aea75aff0e6107cf3"
+    },
+    {
+      "step": 10,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9850723805197479,
+      "original_rge": 0.014927619480252119,
+      "reason": null,
+      "prediction_sha256": "e68e6644e1b7483b96ec7f8fafce558a8fe5858166623c3e7a525b712fbafc81"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9754762912969481,
+      "original_rge": 0.024523708703051872,
+      "reason": null,
+      "prediction_sha256": "726c9b37b25041995cfb1a532ac3e59c34f00e06c5c9202ddf76f9bc1861a783"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9289009821550236,
+      "original_rge": 0.07109901784497641,
+      "reason": null,
+      "prediction_sha256": "b798140a879e5f7843717c15c7fd9d67445fc975659675c4b320bfbc4c5272af"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.987175656975242,
+      "original_rge": 0.01282434302475799,
+      "reason": null,
+      "prediction_sha256": "fd6bdd1d4068f83bfab3ca709f4b4010f4a7894783423fa569905e29e2051f53"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9890843857644533,
+      "original_rge": 0.010915614235546656,
+      "reason": null,
+      "prediction_sha256": "1315ba297e3d609d8d760437b2b74d5bc8d8b04a7f4ea151fe8de13603ae0c3f"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9901807639392388,
+      "original_rge": 0.009819236060761183,
+      "reason": null,
+      "prediction_sha256": "88e3b8801b1424ee349763063c9e97f23985bb0f3ee2fb0ebfadbf4aa6b4acc9"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9892476935955138,
+      "original_rge": 0.010752306404486212,
+      "reason": null,
+      "prediction_sha256": "65adcb1ccdce3124551bbd72b2f8aeac7028ab71892de7114276586ffad602b4"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9845684341841832,
+      "original_rge": 0.015431565815816839,
+      "reason": null,
+      "prediction_sha256": "8745bef5445a9e91b5a9b5ee9bb64b64dad0c12c9dff4eef48fecad4632798f8"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "BILL_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "reversed_rge": 0.9905775061704264,
+      "original_rge": 0.009422493829573608,
+      "reason": null,
+      "prediction_sha256": "fb0bc63a78ef572debc6d7145fc705e9849365a9b40b73bb9d0d31a23c9f8911"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9904719458048141,
+      "original_rge": 0.009528054195185875,
+      "reason": null,
+      "prediction_sha256": "b5f59295b2dfb39c283811e3b17092abb9434351b057a794d11df9f7a34e5449"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9833809420382582,
+      "original_rge": 0.01661905796174179,
+      "reason": null,
+      "prediction_sha256": "834488ec7e0363245ee85236db400cc9ca113438093da868f67d27de6f723fd8"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9868053162507703,
+      "original_rge": 0.013194683749229719,
+      "reason": null,
+      "prediction_sha256": "78e3ef895e23842de1e3c621d9380b71f76b1baf5ecf1f6bed907643d1cdcbad"
+    },
+    {
+      "step": 11,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9835773560945711,
+      "original_rge": 0.016422643905428913,
+      "reason": null,
+      "prediction_sha256": "9389cda39ac54bec0732e8179d84451c621100a33d4482b2148ed50549bf7e9f"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9734433591620852,
+      "original_rge": 0.026556640837914758,
+      "reason": null,
+      "prediction_sha256": "b506317ef5eeff83310e925cab88a538e4174e958a392d11e25ccb8c695b33e5"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9245281530455958,
+      "original_rge": 0.07547184695440423,
+      "reason": null,
+      "prediction_sha256": "7f4b6ba6ae994a02ae7ec9dba52e3d426c6918ea8979b55fb7d67b9e3821134f"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9851512305308125,
+      "original_rge": 0.01484876946918745,
+      "reason": null,
+      "prediction_sha256": "2fe58224468ca806f252928a5e10a96f8a69adb66629827f33ab5da05b3815db"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.987357537369689,
+      "original_rge": 0.012642462630310991,
+      "reason": null,
+      "prediction_sha256": "683639d53c60b4bae434eed5689511db1cb626642d99815aec75563dc879786a"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9881890366830899,
+      "original_rge": 0.011810963316910117,
+      "reason": null,
+      "prediction_sha256": "3777c1a271e678e3aab1fd46e773f0c6db6e74c79c7a19431561e62788fa558d"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9875066031455473,
+      "original_rge": 0.01249339685445272,
+      "reason": null,
+      "prediction_sha256": "8f945af51d4ee52196c3dd46c3ec6d2052f9ecb32ce113d97490abd87694a137"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.984447434047236,
+      "original_rge": 0.015552565952763997,
+      "reason": null,
+      "prediction_sha256": "40460a1e91c36ea95d5f21d56fa120dcd2e9f4cc16d56c117487ef9a5964d43e"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "BILL_AMT5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "reversed_rge": 0.9888995503795643,
+      "original_rge": 0.01110044962043566,
+      "reason": null,
+      "prediction_sha256": "882e9b0220702bb025132f216281d7886004de789e35d6a3d5fdc8a6386620fe"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9852104220018087,
+      "original_rge": 0.01478957799819125,
+      "reason": null,
+      "prediction_sha256": "114f83147b43304e3470210c9daffc084f1f4f9d78f2d04152e94eb9759ef343"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.987757364931618,
+      "original_rge": 0.012242635068381968,
+      "reason": null,
+      "prediction_sha256": "af8676b347ddc30a795d63d4804c4dc53510d45203913561ad09a29c3514b8f7"
+    },
+    {
+      "step": 12,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9855597740395889,
+      "original_rge": 0.014440225960411057,
+      "reason": null,
+      "prediction_sha256": "9d1566922fe7d4e1b4e6947c1251892aef0a683df6abaa7d043da2bca21acee1"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.973295161718058,
+      "original_rge": 0.026704838281942034,
+      "reason": null,
+      "prediction_sha256": "5647b3ae3f2089ed20650a686e9acd0d215a935fb09d5d481f062a8df71e53bd"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9229395298123138,
+      "original_rge": 0.07706047018768625,
+      "reason": null,
+      "prediction_sha256": "a2044f754a2bb1fbbe86d2c8ce0a84f71d7ba75006e24f56fcccfc2f9bc587ee"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9831805284056259,
+      "original_rge": 0.016819471594374136,
+      "reason": null,
+      "prediction_sha256": "7a91ab00f8ed48fea7852eb8a8c91ef3d3f07f1652773be68d55c7c4fa3db04b"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9856762505714122,
+      "original_rge": 0.014323749428587829,
+      "reason": null,
+      "prediction_sha256": "755125bfaa9148643fac1e5c398707409cca4dabe4ecd18f60fb02103cc10d04"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9865170416090514,
+      "original_rge": 0.013482958390948596,
+      "reason": null,
+      "prediction_sha256": "f660c518639ed18d437fc6d85422e47912e836523e4147bb07787ef3d7e8a421"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9858393377460721,
+      "original_rge": 0.01416066225392787,
+      "reason": null,
+      "prediction_sha256": "f1851f42573753fddf2c088f894df98baf37135b69ad59c21819b17ca1b3e6d5"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9825826913363892,
+      "original_rge": 0.017417308663610798,
+      "reason": null,
+      "prediction_sha256": "1494975f801c045bde9f5907bd0aa0c5caf84ff21f68ce33d2f281ace3472a94"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9839371616027035,
+      "original_rge": 0.016062838397296497,
+      "reason": null,
+      "prediction_sha256": "e8b04678aad627e4fea453f6fa16c986c0508697f3be89f9fb502c4db548b617"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_AMT2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "reversed_rge": 0.9872327798136168,
+      "original_rge": 0.01276722018638321,
+      "reason": null,
+      "prediction_sha256": "077bfa8ac9b20b8f06445433150899a83f8a386437b5b8c741b8741f2d1ba9da"
+    },
+    {
+      "step": 13,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9840992455536006,
+      "original_rge": 0.01590075444639938,
+      "reason": null,
+      "prediction_sha256": "c5b1395b56d021139864127e5b6051daf89763d51b5749c3b4b82b3118d6ea26"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9666299349410548,
+      "original_rge": 0.03337006505894524,
+      "reason": null,
+      "prediction_sha256": "1b2a046d6da50e3baa78143482142c4a9296d93d79722cff04805959b75a9861"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9247438630592322,
+      "original_rge": 0.07525613694076783,
+      "reason": null,
+      "prediction_sha256": "b6674a3e78db166c8bbf41a068cf56a9ad54af244038987cf26baaa07cca141b"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9832579035138751,
+      "original_rge": 0.016742096486124902,
+      "reason": null,
+      "prediction_sha256": "61bace81d4967815d34df9c9567362afbb29f123eb2d4d88b2013005f9fb8ccb"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9823691345178853,
+      "original_rge": 0.017630865482114677,
+      "reason": null,
+      "prediction_sha256": "2482663f0d11478e623ab11b40832ccaf0397fbaacd28f211a11459dd48d4dfe"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_4",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "reversed_rge": 0.9857785723361194,
+      "original_rge": 0.01422142766388057,
+      "reason": null,
+      "prediction_sha256": "28de722b9560030a8936cf1942457bf24b29500d64c93b6530d9bc30022b67a9"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9844335787579586,
+      "original_rge": 0.01556642124204144,
+      "reason": null,
+      "prediction_sha256": "b185bb35f7758973d7f7ed86a0994244a0eba2601046ee67acd07848b68a7925"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9802627130752533,
+      "original_rge": 0.019737286924746744,
+      "reason": null,
+      "prediction_sha256": "3aea6d5f67c0408cc4961170f3ff0c1d07f87b53e9606da10761a7d218a19978"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9762268644889577,
+      "original_rge": 0.02377313551104232,
+      "reason": null,
+      "prediction_sha256": "e6b153b86a5688af80571cdf355d375f0820605798a64f7e548ed2e780d97607"
+    },
+    {
+      "step": 14,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9800397817633824,
+      "original_rge": 0.019960218236617644,
+      "reason": null,
+      "prediction_sha256": "b5602d0dbca0716f81d52fcecce9eb0f5c31e79c032a360dd0e3976a324223e8"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9639639467491108,
+      "original_rge": 0.03603605325088921,
+      "reason": null,
+      "prediction_sha256": "ac7bdce12c1997e7c8562df8f08c40f0dace2cf9ea7d079bc1ed47151d6349a5"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.9224066058954606,
+      "original_rge": 0.07759339410453936,
+      "reason": null,
+      "prediction_sha256": "f9f1f6d8922a883020246453397ba1f375ffea3d8ab4c5d1fad5166dec99877a"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_2",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "reversed_rge": 0.9816077941560017,
+      "original_rge": 0.018392205843998255,
+      "reason": null,
+      "prediction_sha256": "76b1b87fdbd22372f5fd8c47f48b06f6f125e2038f64d43372d424b27bdbc7ba"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9788552914864634,
+      "original_rge": 0.02114470851353656,
+      "reason": null,
+      "prediction_sha256": "43e317cec678021a3f47e54641f56d547ea3c536acab664166e1dae90fde4e22"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9806362813822549,
+      "original_rge": 0.019363718617745107,
+      "reason": null,
+      "prediction_sha256": "7c5e84c208a0cd58a83822ffe444c18a2d5fa1f96a72d5e8f0a958427cac7204"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9790761549481116,
+      "original_rge": 0.02092384505188838,
+      "reason": null,
+      "prediction_sha256": "7d72814248b7ed5bc2d4a44590eb820b79213083baac93aed50ee3251d3a1b00"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9759453719985518,
+      "original_rge": 0.024054628001448197,
+      "reason": null,
+      "prediction_sha256": "722193dca9c67f3a96f027e75f582b2407eaf71d6485080d43ba40492ad3bd2d"
+    },
+    {
+      "step": 15,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9776416872769087,
+      "original_rge": 0.0223583127230913,
+      "reason": null,
+      "prediction_sha256": "ed1354cd4e8c8054750c36f7f498e56605a5dd151a4bad163d7463fee426ab3c"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9546095638578096,
+      "original_rge": 0.045390436142190405,
+      "reason": null,
+      "prediction_sha256": "a44be38b2bd905912fc1ccf5ff1935e1fdab82df02e22dcc1b9aaeac4eb17162"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.8869168992873022,
+      "original_rge": 0.11308310071269778,
+      "reason": null,
+      "prediction_sha256": "bc139a4ff243d040ae5b58d9c8c54a7852c35f36eeed23c492d1d6926d5b0eee"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9703912133953747,
+      "original_rge": 0.029608786604625292,
+      "reason": null,
+      "prediction_sha256": "1958332ccd9a349f99e39ade78eacc183eae93fccd8a371400b830bd339bb726"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9746376355309834,
+      "original_rge": 0.02536236446901663,
+      "reason": null,
+      "prediction_sha256": "6b8ec5012c68cf73967a25d1658df1c019f3d1f194097212865f1bd2b3c3cd36"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9737969121987965,
+      "original_rge": 0.026203087801203506,
+      "reason": null,
+      "prediction_sha256": "768344f0622e19d2d139d81ebd3148cd046e279681b55597b7ec45cb0bd3feb8"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9669144788106563,
+      "original_rge": 0.033085521189343714,
+      "reason": null,
+      "prediction_sha256": "b49b004703fe0683b390ab4a0e3c77b5f18240c8fefa9cebdbea1afb60f89685"
+    },
+    {
+      "step": 16,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2"
+      ],
+      "alternative": "PAY_AMT3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "reversed_rge": 0.9754856069531966,
+      "original_rge": 0.024514393046803362,
+      "reason": null,
+      "prediction_sha256": "ebbc25137d8a98f231ab38f0e03265df9d48a114ee6f19ee84bea130b59c91d3"
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9524259994397082,
+      "original_rge": 0.04757400056029182,
+      "reason": null,
+      "prediction_sha256": "1a7fda102a52312654d27968fa977f8dc62a5420e10bd23e9efda5a90366591f"
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.8838240177090064,
+      "original_rge": 0.11617598229099357,
+      "reason": null,
+      "prediction_sha256": "ac75edf4cf57adb775f5c3be8eed9e32dbaf0864a09f072d38f8fcacf266900a"
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9647988935422974,
+      "original_rge": 0.03520110645770258,
+      "reason": null,
+      "prediction_sha256": "0a2eabced5422729a06e1cb018d9e365e742e570806ab20557c79d04fa5d4e67"
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "PAY_5",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "reversed_rge": 0.9690136300440556,
+      "original_rge": 0.030986369955944393,
+      "reason": null,
+      "prediction_sha256": "8950a4d69c6762a08bdcfba03b36882f2c8007fd726ae63e4c26e8ab9b2c9482"
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9591588876836946,
+      "original_rge": 0.040841112316305384,
+      "reason": null,
+      "prediction_sha256": "5e847595f6f47fb8eb73e0d5aa8a9e5488af7701bc8e06362d63ebb9d73fe82d"
+    },
+    {
+      "step": 17,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9380607202154441,
+      "original_rge": 0.061939279784555934,
+      "reason": null,
+      "prediction_sha256": "3e0a907698e5ce0965ed2f164bc5ea8349f273e9b013acce0f2b3c0c187e3180"
+    },
+    {
+      "step": 18,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9411640714109336,
+      "original_rge": 0.05883592858906639,
+      "reason": null,
+      "prediction_sha256": "10c141087f48b54e70361774f5aca15c9ab3c2f6a7026519df004cf99fa65e16"
+    },
+    {
+      "step": 18,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.8582713769881343,
+      "original_rge": 0.14172862301186573,
+      "reason": null,
+      "prediction_sha256": "abc420cfd4ab59634acc3b0add7e01d632df1c53b71e7accb515d7e877977f13"
+    },
+    {
+      "step": 18,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "alternative": "PAY_3",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "reversed_rge": 0.9526812738088477,
+      "original_rge": 0.047318726191152294,
+      "reason": null,
+      "prediction_sha256": "2c7dfe39f925a63394262718fa200affa02ca5a612578bea48e29b37f5c632e3"
+    },
+    {
+      "step": 18,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9524700156497785,
+      "original_rge": 0.04752998435022149,
+      "reason": null,
+      "prediction_sha256": "93258fe7c44c0bf7592efb3d0a03c777f4b5ad6fe9889797152990b5018fd0db"
+    },
+    {
+      "step": 18,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9300105296035681,
+      "original_rge": 0.06998947039643189,
+      "reason": null,
+      "prediction_sha256": "610e8112406675902395fc1b01cb295fca50d6ddc1514a7b1d40de70b5483110"
+    },
+    {
+      "step": 19,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9082432372338247,
+      "original_rge": 0.09175676276617528,
+      "reason": null,
+      "prediction_sha256": "d076acd1b85668ace806dd3cc4277de827e6bc4a456a394e20038b6227296a70"
+    },
+    {
+      "step": 19,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.7686896867006405,
+      "original_rge": 0.23131031329935947,
+      "reason": null,
+      "prediction_sha256": "5ea1394fee0429802010ab7bdb5e41f4f6362212fff61aecd9f08dd334f2ef29"
+    },
+    {
+      "step": 19,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "alternative": "BILL_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1"
+      ],
+      "reversed_rge": 0.9385759708842295,
+      "original_rge": 0.061424029115770495,
+      "reason": null,
+      "prediction_sha256": "cefa9b68e38406287583c159c46df4b813ad97ab739bedd3959aaac4c5bd1d84"
+    },
+    {
+      "step": 19,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.9140142343067545,
+      "original_rge": 0.08598576569324545,
+      "reason": null,
+      "prediction_sha256": "f5c5b4af92d024b3cfce9b45d28483f3754f0940aeebb1421e5fab0fbd3cec2d"
+    },
+    {
+      "step": 20,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1"
+      ],
+      "alternative": "LIMIT_BAL",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL"
+      ],
+      "reversed_rge": 0.9255152362415255,
+      "original_rge": 0.07448476375847446,
+      "reason": null,
+      "prediction_sha256": "7922a98501dd8707a72e36f8d4d7f6638957c394384f3d6e0bd09dc3a20c3710"
+    },
+    {
+      "step": 20,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.7531705859428548,
+      "original_rge": 0.2468294140571452,
+      "reason": null,
+      "prediction_sha256": "297076aa5b39d578c30c9903e14fcb0ceb38eeaf87c557cddedc6e6b7c1de2a6"
+    },
+    {
+      "step": 20,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.8970906038307777,
+      "original_rge": 0.10290939616922234,
+      "reason": null,
+      "prediction_sha256": "eeee217fe81e6aabd2b4ad3e9653b40870f40243eaad252d7bb12a7c7aa1b2f5"
+    },
+    {
+      "step": 21,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.6939534061647152,
+      "original_rge": 0.30604659383528476,
+      "reason": null,
+      "prediction_sha256": "5241770ed9fc76d2f0c5283b2e01aefc226407ddadb7095a18812d571f329ae8"
+    },
+    {
+      "step": 21,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL"
+      ],
+      "alternative": "PAY_AMT1",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_AMT1"
+      ],
+      "reversed_rge": 0.8798488571044327,
+      "original_rge": 0.12015114289556728,
+      "reason": null,
+      "prediction_sha256": "33b1673f7995075b40bf745e916dc0de1bf62ad0d3646c90b5fa1a9141500751"
+    },
+    {
+      "step": 22,
+      "removed_before": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_AMT1"
+      ],
+      "alternative": "PAY_0",
+      "removed_subset": [
+        "BILL_AMT6",
+        "AGE",
+        "PAY_AMT6",
+        "PAY_6",
+        "BILL_AMT2",
+        "PAY_AMT4",
+        "BILL_AMT4",
+        "MARRIAGE",
+        "PAY_AMT5",
+        "EDUCATION",
+        "BILL_AMT3",
+        "BILL_AMT5",
+        "PAY_AMT2",
+        "PAY_4",
+        "PAY_2",
+        "PAY_AMT3",
+        "PAY_5",
+        "PAY_3",
+        "BILL_AMT1",
+        "LIMIT_BAL",
+        "PAY_AMT1",
+        "PAY_0"
+      ],
+      "reversed_rge": 0.49999999999999833,
+      "original_rge": 0.5000000000000017,
+      "reason": null,
+      "prediction_sha256": "9808e6fd051367ae0476ead11920a0110141f286b418902056a44d6032c7ea15"
+    }
+  ],
+  "values": [
+    0.9999999999999998,
+    0.9996079317253097,
+    0.9990529136675232,
+    0.9984037414134528,
+    0.9976789472642087,
+    0.9969298030004135,
+    0.9961351373881965,
+    0.9953994858393436,
+    0.9946467762472496,
+    0.9934890317055268,
+    0.9920546487530418,
+    0.9905775061704264,
+    0.9888995503795643,
+    0.9872327798136168,
+    0.9857785723361194,
+    0.9816077941560017,
+    0.9754856069531966,
+    0.9690136300440556,
+    0.9526812738088477,
+    0.9385759708842295,
+    0.9255152362415255,
+    0.8798488571044327,
+    0.49999999999999833
+  ],
+  "x": [
+    0.0,
+    0.045454545454545456,
+    0.09090909090909091,
+    0.13636363636363635,
+    0.18181818181818182,
+    0.2272727272727273,
+    0.2727272727272727,
+    0.3181818181818182,
+    0.36363636363636365,
+    0.4090909090909091,
+    0.4545454545454546,
+    0.5,
+    0.5454545454545454,
+    0.5909090909090909,
+    0.6363636363636364,
+    0.6818181818181819,
+    0.7272727272727273,
+    0.7727272727272727,
+    0.8181818181818182,
+    0.8636363636363636,
+    0.9090909090909092,
+    0.9545454545454546,
+    1.0
+  ]
+}

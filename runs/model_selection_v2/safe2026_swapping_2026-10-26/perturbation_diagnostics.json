@@ -1,0 +1,2440 @@
+[
+  {
+    "raw_strength": 0.0,
+    "normalized_strength": 0.0,
+    "tail_size_per_feature": 0,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "EDUCATION": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "MARRIAGE": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "AGE": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_0": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_2": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_3": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_4": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_5": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_6": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "BILL_AMT1": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "BILL_AMT2": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "BILL_AMT3": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "BILL_AMT4": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "BILL_AMT5": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "BILL_AMT6": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_AMT1": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_AMT2": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_AMT3": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_AMT4": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_AMT5": {
+        "paired_records": 0,
+        "changed_records": 0
+      },
+      "PAY_AMT6": {
+        "paired_records": 0,
+        "changed_records": 0
+      }
+    },
+    "records_with_any_change": 0,
+    "changed_cells": 0,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 328,
+      "records_with_categorical_combination_absent_from_original_selection": 0,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "d47eb19571a98f5713d03cdede5becb550f3d638e8360fd6c4a35f0aceb557f1"
+  },
+  {
+    "raw_strength": 0.022727272727272728,
+    "normalized_strength": 0.045454545454545456,
+    "tail_size_per_feature": 109,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "EDUCATION": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "MARRIAGE": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "AGE": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_0": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_2": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_3": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_4": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_5": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_6": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "BILL_AMT1": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "BILL_AMT2": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "BILL_AMT3": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "BILL_AMT4": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "BILL_AMT5": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "BILL_AMT6": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_AMT1": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_AMT2": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_AMT3": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_AMT4": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_AMT5": {
+        "paired_records": 218,
+        "changed_records": 218
+      },
+      "PAY_AMT6": {
+        "paired_records": 218,
+        "changed_records": 218
+      }
+    },
+    "records_with_any_change": 1853,
+    "changed_cells": 4796,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 645,
+      "records_with_categorical_combination_absent_from_original_selection": 541,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "cc2a70e8088b0be915b71fec3f4f58007424f11edcff1ae956352a03550b565f"
+  },
+  {
+    "raw_strength": 0.045454545454545456,
+    "normalized_strength": 0.09090909090909091,
+    "tail_size_per_feature": 218,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "EDUCATION": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "MARRIAGE": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "AGE": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_0": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_2": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_3": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_4": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_5": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_6": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "BILL_AMT1": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "BILL_AMT2": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "BILL_AMT3": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "BILL_AMT4": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "BILL_AMT5": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "BILL_AMT6": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_AMT1": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_AMT2": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_AMT3": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_AMT4": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_AMT5": {
+        "paired_records": 436,
+        "changed_records": 436
+      },
+      "PAY_AMT6": {
+        "paired_records": 436,
+        "changed_records": 436
+      }
+    },
+    "records_with_any_change": 2953,
+    "changed_cells": 9592,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 849,
+      "records_with_categorical_combination_absent_from_original_selection": 864,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "8f47436b07621cae10c3f77d03b4de245c9c32a48c5c3314ff24b48530193743"
+  },
+  {
+    "raw_strength": 0.06818181818181818,
+    "normalized_strength": 0.13636363636363635,
+    "tail_size_per_feature": 327,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "EDUCATION": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "MARRIAGE": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "AGE": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_0": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_2": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_3": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_4": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_5": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_6": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "BILL_AMT1": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "BILL_AMT2": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "BILL_AMT3": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "BILL_AMT4": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "BILL_AMT5": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "BILL_AMT6": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_AMT1": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_AMT2": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_AMT3": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_AMT4": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_AMT5": {
+        "paired_records": 654,
+        "changed_records": 654
+      },
+      "PAY_AMT6": {
+        "paired_records": 654,
+        "changed_records": 654
+      }
+    },
+    "records_with_any_change": 3720,
+    "changed_cells": 14388,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1053,
+      "records_with_categorical_combination_absent_from_original_selection": 1186,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "c5aac3f5eb526ff9e7cbfb71b8cbd4803d04afc9661e744cdf105e7538a287c8"
+  },
+  {
+    "raw_strength": 0.09090909090909091,
+    "normalized_strength": 0.18181818181818182,
+    "tail_size_per_feature": 436,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "EDUCATION": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "MARRIAGE": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "AGE": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_0": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_2": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_3": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_4": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_5": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_6": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "BILL_AMT1": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "BILL_AMT2": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "BILL_AMT3": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "BILL_AMT4": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "BILL_AMT5": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "BILL_AMT6": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_AMT1": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_AMT2": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_AMT3": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_AMT4": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_AMT5": {
+        "paired_records": 872,
+        "changed_records": 872
+      },
+      "PAY_AMT6": {
+        "paired_records": 872,
+        "changed_records": 872
+      }
+    },
+    "records_with_any_change": 4132,
+    "changed_cells": 19184,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1273,
+      "records_with_categorical_combination_absent_from_original_selection": 1473,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "2e5242cfe2d6650f0cdf4ff81299f67327089ac48d1f3f1981fb5726759e3640"
+  },
+  {
+    "raw_strength": 0.11363636363636365,
+    "normalized_strength": 0.2272727272727273,
+    "tail_size_per_feature": 545,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "EDUCATION": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "MARRIAGE": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "AGE": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_0": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_2": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_3": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_4": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_5": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_6": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "BILL_AMT1": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "BILL_AMT2": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "BILL_AMT3": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "BILL_AMT4": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "BILL_AMT5": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "BILL_AMT6": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_AMT1": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_AMT2": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_AMT3": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_AMT4": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_AMT5": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      },
+      "PAY_AMT6": {
+        "paired_records": 1090,
+        "changed_records": 1090
+      }
+    },
+    "records_with_any_change": 4365,
+    "changed_cells": 23980,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1341,
+      "records_with_categorical_combination_absent_from_original_selection": 1564,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "413adb4b41ddddc923069c017f35c17089c8389b0ba9b732b0d0f03570930957"
+  },
+  {
+    "raw_strength": 0.13636363636363635,
+    "normalized_strength": 0.2727272727272727,
+    "tail_size_per_feature": 654,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "EDUCATION": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "MARRIAGE": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "AGE": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_0": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_2": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_3": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_4": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_5": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_6": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "BILL_AMT1": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "BILL_AMT2": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "BILL_AMT3": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "BILL_AMT4": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "BILL_AMT5": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "BILL_AMT6": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_AMT1": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_AMT2": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_AMT3": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_AMT4": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_AMT5": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      },
+      "PAY_AMT6": {
+        "paired_records": 1308,
+        "changed_records": 1308
+      }
+    },
+    "records_with_any_change": 4531,
+    "changed_cells": 28776,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1381,
+      "records_with_categorical_combination_absent_from_original_selection": 1598,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "8fb356724ad316223c692fd20b0111e6ec0be844d3f49129fa86416185a8ce7d"
+  },
+  {
+    "raw_strength": 0.1590909090909091,
+    "normalized_strength": 0.3181818181818182,
+    "tail_size_per_feature": 763,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "EDUCATION": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "MARRIAGE": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "AGE": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_0": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_2": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_3": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_4": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_5": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_6": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "BILL_AMT1": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "BILL_AMT2": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "BILL_AMT3": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "BILL_AMT4": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "BILL_AMT5": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "BILL_AMT6": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_AMT1": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_AMT2": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_AMT3": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_AMT4": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_AMT5": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      },
+      "PAY_AMT6": {
+        "paired_records": 1526,
+        "changed_records": 1526
+      }
+    },
+    "records_with_any_change": 4638,
+    "changed_cells": 33572,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1460,
+      "records_with_categorical_combination_absent_from_original_selection": 1736,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "e1e99cee2f54db4f51c558af8bf96464db2a582c4e9527fc5167b961b28f0b3f"
+  },
+  {
+    "raw_strength": 0.18181818181818182,
+    "normalized_strength": 0.36363636363636365,
+    "tail_size_per_feature": 872,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "EDUCATION": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "MARRIAGE": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "AGE": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_0": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_2": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_3": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_4": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_5": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_6": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "BILL_AMT1": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "BILL_AMT2": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "BILL_AMT3": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "BILL_AMT4": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "BILL_AMT5": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "BILL_AMT6": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_AMT1": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_AMT2": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_AMT3": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_AMT4": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_AMT5": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      },
+      "PAY_AMT6": {
+        "paired_records": 1744,
+        "changed_records": 1744
+      }
+    },
+    "records_with_any_change": 4695,
+    "changed_cells": 38368,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1485,
+      "records_with_categorical_combination_absent_from_original_selection": 1856,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "c11ff5ff6d202572ae1f0db3d938cae57b1a4cf638f1d6cf98a7fcd65b884957"
+  },
+  {
+    "raw_strength": 0.20454545454545456,
+    "normalized_strength": 0.4090909090909091,
+    "tail_size_per_feature": 982,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "EDUCATION": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "MARRIAGE": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "AGE": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_0": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_2": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_3": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_4": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_5": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_6": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "BILL_AMT1": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "BILL_AMT2": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "BILL_AMT3": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "BILL_AMT4": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "BILL_AMT5": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "BILL_AMT6": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_AMT1": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_AMT2": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_AMT3": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_AMT4": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_AMT5": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      },
+      "PAY_AMT6": {
+        "paired_records": 1964,
+        "changed_records": 1964
+      }
+    },
+    "records_with_any_change": 4748,
+    "changed_cells": 43208,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1432,
+      "records_with_categorical_combination_absent_from_original_selection": 1946,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "c137d5e973812dc3db2acdf756600aefbc37b634128192f62cb8fc8a8582a58d"
+  },
+  {
+    "raw_strength": 0.2272727272727273,
+    "normalized_strength": 0.4545454545454546,
+    "tail_size_per_feature": 1091,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "EDUCATION": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "MARRIAGE": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "AGE": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_0": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_2": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_3": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_4": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_5": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_6": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "BILL_AMT1": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "BILL_AMT2": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "BILL_AMT3": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "BILL_AMT4": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "BILL_AMT5": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "BILL_AMT6": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_AMT1": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_AMT2": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_AMT3": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_AMT4": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_AMT5": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      },
+      "PAY_AMT6": {
+        "paired_records": 2182,
+        "changed_records": 2182
+      }
+    },
+    "records_with_any_change": 4767,
+    "changed_cells": 48004,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1440,
+      "records_with_categorical_combination_absent_from_original_selection": 2017,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "1db7a38e1af4cbb07fbfbf10fbd45d962a631a2c36901306f0dc152773379dc3"
+  },
+  {
+    "raw_strength": 0.25,
+    "normalized_strength": 0.5,
+    "tail_size_per_feature": 1200,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "EDUCATION": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "MARRIAGE": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "AGE": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_0": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_2": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_3": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_4": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_5": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_6": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "BILL_AMT1": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "BILL_AMT2": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "BILL_AMT3": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "BILL_AMT4": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "BILL_AMT5": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "BILL_AMT6": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_AMT1": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_AMT2": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_AMT3": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_AMT4": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_AMT5": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      },
+      "PAY_AMT6": {
+        "paired_records": 2400,
+        "changed_records": 2400
+      }
+    },
+    "records_with_any_change": 4780,
+    "changed_cells": 52800,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1452,
+      "records_with_categorical_combination_absent_from_original_selection": 1963,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "0c7a1435608bfa12f2d0a41ed8fafca3ffb6d8f068fd23d1d20122cd5a89f873"
+  },
+  {
+    "raw_strength": 0.2727272727272727,
+    "normalized_strength": 0.5454545454545454,
+    "tail_size_per_feature": 1309,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "EDUCATION": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "MARRIAGE": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "AGE": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_0": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_2": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_3": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_4": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_5": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_6": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "BILL_AMT1": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "BILL_AMT2": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "BILL_AMT3": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "BILL_AMT4": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "BILL_AMT5": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "BILL_AMT6": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_AMT1": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_AMT2": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_AMT3": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_AMT4": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_AMT5": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      },
+      "PAY_AMT6": {
+        "paired_records": 2618,
+        "changed_records": 2618
+      }
+    },
+    "records_with_any_change": 4796,
+    "changed_cells": 57596,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1484,
+      "records_with_categorical_combination_absent_from_original_selection": 1912,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "88dda8c17605bb4171216af3a21e68fb626ed84ff663ec7036f0facef65b7833"
+  },
+  {
+    "raw_strength": 0.29545454545454547,
+    "normalized_strength": 0.5909090909090909,
+    "tail_size_per_feature": 1418,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "EDUCATION": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "MARRIAGE": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "AGE": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_0": {
+        "paired_records": 2836,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_3": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_4": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_5": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_6": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "BILL_AMT1": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "BILL_AMT2": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "BILL_AMT3": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "BILL_AMT4": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "BILL_AMT5": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "BILL_AMT6": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_AMT1": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_AMT2": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_AMT3": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_AMT4": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_AMT5": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      },
+      "PAY_AMT6": {
+        "paired_records": 2836,
+        "changed_records": 2836
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 62220,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1457,
+      "records_with_categorical_combination_absent_from_original_selection": 1921,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "c82a3bb147f4c293453153ec066bb08cfd3140419ff836ae140d5ea0f4612868"
+  },
+  {
+    "raw_strength": 0.3181818181818182,
+    "normalized_strength": 0.6363636363636364,
+    "tail_size_per_feature": 1527,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "EDUCATION": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "MARRIAGE": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "AGE": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_0": {
+        "paired_records": 3054,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_3": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_4": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_5": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_6": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "BILL_AMT1": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "BILL_AMT2": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "BILL_AMT3": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "BILL_AMT4": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "BILL_AMT5": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "BILL_AMT6": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_AMT1": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_AMT2": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_AMT3": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_AMT4": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_AMT5": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      },
+      "PAY_AMT6": {
+        "paired_records": 3054,
+        "changed_records": 3054
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 66798,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1451,
+      "records_with_categorical_combination_absent_from_original_selection": 1920,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "2c12bf6e2980c1c745e49254fb7802f787a331c966d36b586eed4ba32ee54239"
+  },
+  {
+    "raw_strength": 0.34090909090909094,
+    "normalized_strength": 0.6818181818181819,
+    "tail_size_per_feature": 1636,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "EDUCATION": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "MARRIAGE": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "AGE": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_0": {
+        "paired_records": 3272,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 3272,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 3272,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 3272,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 3272,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "BILL_AMT1": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "BILL_AMT2": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "BILL_AMT3": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "BILL_AMT4": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "BILL_AMT5": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "BILL_AMT6": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_AMT1": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_AMT2": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_AMT3": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_AMT4": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_AMT5": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      },
+      "PAY_AMT6": {
+        "paired_records": 3272,
+        "changed_records": 3272
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 71054,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1448,
+      "records_with_categorical_combination_absent_from_original_selection": 1907,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "997d097608797dfe75eae7aa3c374a98c73cd5dc92e01fd87a69f8d017bd34d8"
+  },
+  {
+    "raw_strength": 0.36363636363636365,
+    "normalized_strength": 0.7272727272727273,
+    "tail_size_per_feature": 1745,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "EDUCATION": {
+        "paired_records": 3490,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "AGE": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_0": {
+        "paired_records": 3490,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 3490,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 3490,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 3490,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 3490,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 3490,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "BILL_AMT2": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "BILL_AMT3": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "BILL_AMT4": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "BILL_AMT5": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "BILL_AMT6": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_AMT1": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_AMT2": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_AMT3": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_AMT4": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_AMT5": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      },
+      "PAY_AMT6": {
+        "paired_records": 3490,
+        "changed_records": 3490
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 74530,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1441,
+      "records_with_categorical_combination_absent_from_original_selection": 1896,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "40579a439e4dd69252480b8d6dfe80e3c0d5a7202594665f1b96ac5239d494e1"
+  },
+  {
+    "raw_strength": 0.38636363636363635,
+    "normalized_strength": 0.7727272727272727,
+    "tail_size_per_feature": 1854,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "EDUCATION": {
+        "paired_records": 3708,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "AGE": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_0": {
+        "paired_records": 3708,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 3708,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 3708,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 3708,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 3708,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 3708,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "BILL_AMT2": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "BILL_AMT3": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "BILL_AMT4": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "BILL_AMT5": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "BILL_AMT6": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_AMT1": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_AMT2": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_AMT3": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_AMT4": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_AMT5": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      },
+      "PAY_AMT6": {
+        "paired_records": 3708,
+        "changed_records": 3708
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 77800,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1441,
+      "records_with_categorical_combination_absent_from_original_selection": 1886,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "cc3217e626a045f96c5c9c4ca10303671a596f23b4f5260ae319ad0179ef8db5"
+  },
+  {
+    "raw_strength": 0.4090909090909091,
+    "normalized_strength": 0.8181818181818182,
+    "tail_size_per_feature": 1964,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "EDUCATION": {
+        "paired_records": 3928,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "AGE": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_0": {
+        "paired_records": 3928,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 3928,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 3928,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 3928,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 3928,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 3928,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "BILL_AMT2": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "BILL_AMT3": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "BILL_AMT4": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "BILL_AMT5": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "BILL_AMT6": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_AMT1": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_AMT2": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_AMT3": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_AMT4": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_AMT5": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      },
+      "PAY_AMT6": {
+        "paired_records": 3928,
+        "changed_records": 3928
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 81100,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1440,
+      "records_with_categorical_combination_absent_from_original_selection": 1885,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "4db268a2140500f99922f5b4ee04beaad0fe24c6c47f84b60b96a2c8303c968e"
+  },
+  {
+    "raw_strength": 0.4318181818181818,
+    "normalized_strength": 0.8636363636363636,
+    "tail_size_per_feature": 2073,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "EDUCATION": {
+        "paired_records": 4146,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "AGE": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_0": {
+        "paired_records": 4146,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 4146,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 4146,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 4146,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 4146,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 4146,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "BILL_AMT2": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "BILL_AMT3": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "BILL_AMT4": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "BILL_AMT5": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "BILL_AMT6": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_AMT1": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_AMT2": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_AMT3": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_AMT4": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_AMT5": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      },
+      "PAY_AMT6": {
+        "paired_records": 4146,
+        "changed_records": 4146
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 84370,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1445,
+      "records_with_categorical_combination_absent_from_original_selection": 1872,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "55e49fe521fab7220187b39988bb4b3a2e9387c9ebae17a0a762bc5ddc2e1eb7"
+  },
+  {
+    "raw_strength": 0.4545454545454546,
+    "normalized_strength": 0.9090909090909092,
+    "tail_size_per_feature": 2182,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "EDUCATION": {
+        "paired_records": 4364,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "AGE": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_0": {
+        "paired_records": 4364,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 4364,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 4364,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 4364,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 4364,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 4364,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "BILL_AMT2": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "BILL_AMT3": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "BILL_AMT4": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "BILL_AMT5": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "BILL_AMT6": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_AMT1": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_AMT2": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_AMT3": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_AMT4": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_AMT5": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      },
+      "PAY_AMT6": {
+        "paired_records": 4364,
+        "changed_records": 4364
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 87640,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1450,
+      "records_with_categorical_combination_absent_from_original_selection": 1870,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "7c2e90f9dd715f35ca4bdf167c022bf2d703601290c32c39f34bf76c16ac2a5a"
+  },
+  {
+    "raw_strength": 0.4772727272727273,
+    "normalized_strength": 0.9545454545454546,
+    "tail_size_per_feature": 2291,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "EDUCATION": {
+        "paired_records": 4582,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 4582,
+        "changed_records": 4408
+      },
+      "AGE": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_0": {
+        "paired_records": 4582,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 4582,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 4582,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 4582,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 4582,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 4582,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "BILL_AMT2": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "BILL_AMT3": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "BILL_AMT4": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "BILL_AMT5": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "BILL_AMT6": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_AMT1": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_AMT2": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_AMT3": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_AMT4": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_AMT5": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      },
+      "PAY_AMT6": {
+        "paired_records": 4582,
+        "changed_records": 4582
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 90736,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1450,
+      "records_with_categorical_combination_absent_from_original_selection": 1870,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "61dc106adbd268c44ef13137095b3dd2fe1b842de9667b6c9116f866c7749df6"
+  },
+  {
+    "raw_strength": 0.5,
+    "normalized_strength": 1.0,
+    "tail_size_per_feature": 2400,
+    "per_feature": {
+      "LIMIT_BAL": {
+        "paired_records": 4800,
+        "changed_records": 4734
+      },
+      "EDUCATION": {
+        "paired_records": 4800,
+        "changed_records": 3370
+      },
+      "MARRIAGE": {
+        "paired_records": 4800,
+        "changed_records": 4408
+      },
+      "AGE": {
+        "paired_records": 4800,
+        "changed_records": 4684
+      },
+      "PAY_0": {
+        "paired_records": 4800,
+        "changed_records": 2664
+      },
+      "PAY_2": {
+        "paired_records": 4800,
+        "changed_records": 3140
+      },
+      "PAY_3": {
+        "paired_records": 4800,
+        "changed_records": 3188
+      },
+      "PAY_4": {
+        "paired_records": 4800,
+        "changed_records": 3218
+      },
+      "PAY_5": {
+        "paired_records": 4800,
+        "changed_records": 3220
+      },
+      "PAY_6": {
+        "paired_records": 4800,
+        "changed_records": 3380
+      },
+      "BILL_AMT1": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "BILL_AMT2": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "BILL_AMT3": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "BILL_AMT4": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "BILL_AMT5": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "BILL_AMT6": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "PAY_AMT1": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "PAY_AMT2": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "PAY_AMT3": {
+        "paired_records": 4800,
+        "changed_records": 4800
+      },
+      "PAY_AMT4": {
+        "paired_records": 4800,
+        "changed_records": 4738
+      },
+      "PAY_AMT5": {
+        "paired_records": 4800,
+        "changed_records": 4742
+      },
+      "PAY_AMT6": {
+        "paired_records": 4800,
+        "changed_records": 4792
+      }
+    },
+    "records_with_any_change": 4801,
+    "changed_cells": 93478,
+    "category_multisets_preserved": true,
+    "row_order_preserved": true,
+    "support": {
+      "records_with_categorical_combination_absent_from_fitting": 1450,
+      "records_with_categorical_combination_absent_from_original_selection": 1870,
+      "new_invalid_category_levels": 0,
+      "interpretation": "Empirical combination novelty, not a known-invalid-combination test."
+    },
+    "predictor_frame_sha256": "6f1569962fa5942f717e15ab4e3981977a75ec4052bf5562c627336ce69234ff"
+  }
+]

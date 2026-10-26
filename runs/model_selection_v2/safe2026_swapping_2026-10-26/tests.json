@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\research\\model_selection_v2\\safe2026_tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_cellwise_against_explicit_cartesian_product (test_safe2026.AggregationTests.test_cellwise_against_explicit_cartesian_product) ... ok\ntest_explicit_tied_selection_and_unrankability (test_safe2026.AggregationTests.test_explicit_tied_selection_and_unrankability) ... ok\ntest_presentation_arithmetic_example (test_safe2026.AggregationTests.test_presentation_arithmetic_example) ... ok\ntest_undefined_not_zero_and_no_nonfinite_substitution (test_safe2026.AggregationTests.test_undefined_not_zero_and_no_nonfinite_substitution) ... ok\ntest_fitting_only_references_and_whole_original_onehot_group (test_safe2026.PerturbationAndRemovalTests.test_fitting_only_references_and_whole_original_onehot_group) ... ok\ntest_greedy_choices_against_exhaustive_small_example (test_safe2026.PerturbationAndRemovalTests.test_greedy_choices_against_exhaustive_small_example) ... ok\ntest_greedy_ties_and_constant_reference (test_safe2026.PerturbationAndRemovalTests.test_greedy_ties_and_constant_reference) ... ok\ntest_invalid_swap_inputs (test_safe2026.PerturbationAndRemovalTests.test_invalid_swap_inputs) ... ok\ntest_nonmonotonic_empirical_curve_retained (test_safe2026.PerturbationAndRemovalTests.test_nonmonotonic_empirical_curve_retained) ... ok\ntest_swapping_coupled_and_id_permutation_invariant (test_safe2026.PerturbationAndRemovalTests.test_swapping_coupled_and_id_permutation_invariant) ... ok\ntest_zero_identity_and_tail_pairing (test_safe2026.PerturbationAndRemovalTests.test_zero_identity_and_tail_pairing) ... ok\ntest_binary_scalar_auc_with_ties_and_permutations (test_safe2026.RankTests.test_binary_scalar_auc_with_ties_and_permutations) ... ok\ntest_identity_reverse_tied_and_constant (test_safe2026.RankTests.test_identity_reverse_tied_and_constant) ... ok\ntest_nonfinite_negative_and_misaligned_rejected (test_safe2026.RankTests.test_nonfinite_negative_and_misaligned_rejected) ... ok\ntest_numerical_kernel_against_independent_rank_formula (test_safe2026.RankTests.test_numerical_kernel_against_independent_rank_formula) ... ok\ntest_one_class_rga_unavailable (test_safe2026.RankTests.test_one_class_rga_unavailable) ... ok\ntest_rga_contribution_accounting_and_area (test_safe2026.RankTests.test_rga_contribution_accounting_and_area) ... ok\ntest_rga_full_terms_are_independent_prefix_areas (test_safe2026.RankTests.test_rga_full_terms_are_independent_prefix_areas) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.181s\n\nOK\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\research\\model_selection_v2\\tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_cleaning_is_fixed_and_row_local (test_pilot.PilotTests.test_cleaning_is_fixed_and_row_local) ... ok\ntest_existing_destinations_and_files_protected (test_pilot.PilotTests.test_existing_destinations_and_files_protected) ... ok\ntest_fitting_only_preprocessing_mapping_and_unseen (test_pilot.PilotTests.test_fitting_only_preprocessing_mapping_and_unseen) ... ok\ntest_incomplete_and_tampered_runs_rejected (test_pilot.PilotTests.test_incomplete_and_tampered_runs_rejected) ... ok\ntest_interruption_is_marked_incomplete (test_pilot.PilotTests.test_interruption_is_marked_incomplete) ... ok\ntest_metadata_and_order_rejected (test_pilot.PilotTests.test_metadata_and_order_rejected) ... ok\ntest_metrics_against_independent_sklearn_functions (test_pilot.PilotTests.test_metrics_against_independent_sklearn_functions) ... ok\ntest_missing_and_nonfinite_rejected (test_pilot.PilotTests.test_missing_and_nonfinite_rejected) ... ok\ntest_original_group_leakage_rejected (test_pilot.PilotTests.test_original_group_leakage_rejected) ... ok\ntest_positive_column_is_looked_up (test_pilot.PilotTests.test_positive_column_is_looked_up) ... ok\ntest_probability_validation (test_pilot.PilotTests.test_probability_validation) ... ok\ntest_reload_prediction_alignment_and_metrics (test_pilot.PilotTests.test_reload_prediction_alignment_and_metrics) ... ok\ntest_saved_development_membership (test_pilot.PilotTests.test_saved_development_membership) ... ok\ntest_strict_threshold_tie (test_pilot.PilotTests.test_strict_threshold_tie) ... ok\ntest_undefined_metrics_are_explicit (test_pilot.PilotTests.test_undefined_metrics_are_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.258s\n\nOK\n"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "created_date": "2026-10-26",
+  "purpose": "Plain-language offline research results summary",
+  "research_recomputed": false,
+  "individual_record_data_embedded": false,
+  "input_hashes": {
+    "article_safe/runs/article_v1_2026-10-10/report/model_profiles.csv": "c21714c05b362be9ac41332320ee5f77873d71707a2d6a3c5cc554a80db41daa",
+    "article_safe/runs/article_v1_2026-10-10/report/results.md": "0dc51f634d29eb71b774c3605c6f72df11da1887fef2c865853c21254b6b69d0",
+    "outputs/explainability_evaluation_report.md": "2cea9a9c5f34c6b618800bb55ccb71fd310dc49bbcd2db7cac443f0e97f03b66",
+    "outputs/fairness_evaluation_report.md": "673e817e84475dd41ae589a6c47b23764381af3b6a4570f286d1c2e314a4f794",
+    "outputs/robustness_evaluation_report.md": "47edb8cfc89b3a3dfc52f1d4d470718ca0452227a6105588a0ff31e7daf496e6",
+    "outputs/tables/fairness_evaluation/fairness_gaps_threshold_050.csv": "33b1cff00240f8d71a66ff2076038f6630a815e1df8069695a5c8f706b8a908a",
+    "outputs/tables/performance_evaluation/holdout_metrics.csv": "fb48e395d0ba80dcff05bbd8a29107b66239999387a9ccc98300651e197a2292",
+    "PROJECT_CONTEXT.md": "36784db23f98a348e0d59624440b3ca57af4feeb7e674ed6d51aa32481a04779",
+    "research/model_selection_v2/safe2026_specification.md": "c231a00e3286afe9d29a8727167ecb3098bfc5eb9e6c576c93ec60a74f33fae7",
+    "runs/model_selection_v2/pilot_candidates_2026-10-26/diagnostics/selection_metrics.csv": "aae6aea1f5cbdb8e596d654c8a99245bfa478c2f775c6fd9129f9cb9d2b7b19d",
+    "runs/model_selection_v2/pilot_candidates_2026-10-26/protocol.json": "6655f8a3bba96e9bae4dc9a63d3753b68decc93c6541711f5e6f8f6eed6dca7d",
+    "runs/model_selection_v2/pilot_candidates_2026-10-26/VERIFIED.json": "f6e1207444190659cff23b8e4ceb48ec19ec47b52680172153c332eb383b4105",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/component_areas.csv": "2f402876f776cbcfd071838c95d063f74fc5576ab28ae1143fccfaa1079685f0",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/curves/decision_tree.json": "7610be843e0e40cd3d5b7fed699c6864041248bb0f0c024acd362fa62af5d2f8",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/curves/gradient_boosting.json": "61517e575b5a9a77f31af07fafd1fd6f902f7699c6ba1d9c16158a0812c02ac0",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/curves/logistic.json": "09a2450377ae06770eb3dee451b5120d062ba3ead16791f00e03e8e9d733e18f",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/curves/random_forest.json": "f35cb6be68daabb2160f4da11495398be66182ab49f8d47c78278fffae627fb4",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/independent_verification.json": "a976bcb6bc3274fedaaf9dd77256a3f9a799f8ae7a5be2598388eed22e391661",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/integrated_scores.json": "13563b1e148ebf110b03146b627403cba74fd61c86974ef0fbc16a9eebea301d",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/perturbation_diagnostics.json": "257180ee91ca499b2c8740de76758f668cba5ca040e5f223a9a8c448ef29e1f7",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/protocol.json": "8710341c37ceada567fe479785ad86573a3c2acf9f80e05bb12bf6b03d250fb6",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/rankings.json": "c1b3e97757f67501d1f142e5ad34a5ba159d8af8626b75dcc315248452fb3e5d",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/removal/decision_tree.json": "acf4cba8e7244f4536069a26ac26975f0c73f74d63d7ba957642cd92878765f0",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/removal/gradient_boosting.json": "5d9fe43c2e931ebda5569ae7051038bac85ec506c696bbcd964618e8713a77a9",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/removal/logistic.json": "a2fe492214b06cb2db86dfabf2c430159ef671a78468a1b0f4b3b59f059cd16d",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/removal/random_forest.json": "afbd891003a3e25a704649e0a484fa5092fd7f73f78fe924182cf5966bfca37b",
+    "runs/model_selection_v2/safe2026_swapping_2026-10-26/VERIFIED.json": "0a17953c58a6882b34bf9212c1038af1de1bd8383ca7ee8cebb0a20e7e141823"
+  },
+  "authoring_hashes": {
+    "docs/authoring/research_progress_2026-10-26/build_page.py": "35483addb3c29086d9be248b8b7acb16a9a48bddb811e5798f536c361e6ca4f2",
+    "docs/authoring/research_progress_2026-10-26/page.template.html": "12441d969742ac1e5fee344ac952138648e9a90f99311ce9245eb3368bb7cef7"
+  },
+  "output_sha256": "2f9cd0f8e067566d1a28ad930d6441806f238b0c16db153e096a724bd3b79b31",
+  "protected_files_checked": 586,
+  "protected_file_hashes_unchanged": true
+}

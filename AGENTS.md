@@ -14,8 +14,12 @@ and executed results. Keep startup documents short.
 The accepted direction is a future model-selection comparison: published integrated
 SAFE 2026 and our developing method receive the same candidates, initially LR,
 Decision Tree, Random Forest and Gradient Boosting, and their choices receive an
-independently specified evaluation. The extension, SAFE variant, model settings,
-tuning budget, judge, resampling and confirmation dataset remain open. This
+independently specified evaluation. Four fixed pilot candidates and a selection-set
+SAFE swapping assessment are now verified separately; see PROJECT_CONTEXT.md and
+research/model_selection_v2/safe2026_specification.md. SAFE v1 uses user-approved
+fixed-model mean/mode masking and additive RGA contributions; Gaussian is deferred
+and exact TOPSIS unsupported. The extension, judge, future tuning/refit policy,
+resampling and confirmation dataset remain open. This
 supersedes the older blanket hold on pursuing the study, without authorizing every
 historical SAFE/KAIRI extension. Cleanup implemented no new research.
 

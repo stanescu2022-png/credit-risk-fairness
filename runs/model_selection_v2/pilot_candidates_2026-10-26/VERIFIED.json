@@ -1,0 +1,28 @@
+{
+  "status": "verified",
+  "verified_at_utc": "2026-10-26T10:02:26.744156+00:00",
+  "artifact_hashes": {
+    "development_assignments.csv": "bc8993d37ce07979a34bd6757aa061a3947515b56669178d0ed8be78d5418588",
+    "protocol.json": "6655f8a3bba96e9bae4dc9a63d3753b68decc93c6541711f5e6f8f6eed6dca7d",
+    "run_manifest.json": "395a69de1f0b28e88439d12d847d2358a2da3e612b92a0fb09b717d0b41cc338",
+    "RUN_STARTED.json": "c564dc9b77c95a188c410a3771df6d1b7cbe0f8c0b6d4704718bf23eea10c0bd",
+    "verification_report.md": "babbbb1b879f528099b1422858396c6e1057330269546d520536f998f517366e",
+    "diagnostics/data_audit.json": "a86b4fa3adce790689c901756ee94eb5082c8692669244acee89a4e0c42ba9e1",
+    "diagnostics/decision_tree.json": "d39c20abacdc9bc727092e442f136adfa8f17cb581a7623c37c5ffa8f9f33ecc",
+    "diagnostics/focused_tests.json": "bcce603c952d84f97f2784612aa16f880d11a3261b11f58f803b529bb2ff084e",
+    "diagnostics/gradient_boosting.json": "972642866bdd41f00c9281eba7fffb1543accff0c849e86ffb91de9262816089",
+    "diagnostics/logistic.json": "ae4f37ccf190322bd7275c54c02c8c9ebcd192b33c51c229a630e19a07cfc7da",
+    "diagnostics/preservation.json": "c662a7aa54063d9af5d74dd4488ffd4bfe431cbc4232090cc86516be7103929b",
+    "diagnostics/random_forest.json": "9d862231a1815e1e8648864a95c4c0b42c39956711f4135eb4631a344dba67b9",
+    "diagnostics/selection_metrics.csv": "aae6aea1f5cbdb8e596d654c8a99245bfa478c2f775c6fd9129f9cb9d2b7b19d",
+    "diagnostics/selection_metrics.json": "25ee49130d360a99068577be94456fb692269032c884d30f5c917cdf0fff0852",
+    "models/decision_tree.joblib": "9f8fe37683e5d5b890e54682db0298308dd0fe3f5013b7937a8830b511894cc4",
+    "models/gradient_boosting.joblib": "63d657015f0b0a6e2921715503cca31d1fc58cc4d082f6017a15a5d45e5d017c",
+    "models/logistic.joblib": "84aee7de5c61eabe1294ebd3cedb973687f9aae6db56d29a5d0117499f74ea2e",
+    "models/random_forest.joblib": "3812d61e5b1ea3e9f4ac0d692be649603b57aa56d3af98e14f24a7b3d7034926",
+    "predictions/decision_tree.csv": "dfc4f136e1bb851855decfc29438e4785a4e64dfc7a96ece53d12c069a1638d9",
+    "predictions/gradient_boosting.csv": "fbe81825f3327627e50e02d780095c41da53fb03180ace0ed65b0b41660b46d8",
+    "predictions/logistic.csv": "b860a693e0bdf8eb1a7418531612249ca2a791dd237cd7edbcaab2b02c42d57a",
+    "predictions/random_forest.csv": "896fde182e7bd66a909ad87d9a8a885ef8b2e0da8bde60d435a16e719a38678d"
+  }
+}

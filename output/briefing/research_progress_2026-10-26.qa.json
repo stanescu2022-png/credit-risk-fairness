@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-26",
+  "page_sha256": "2f9cd0f8e067566d1a28ad930d6441806f238b0c16db153e096a724bd3b79b31",
+  "preview_sha256": "74c3ccfb8883438e909b3ae2085cb549d892e93f750687b2b5494249682b0b33",
+  "checks": {
+    "source_hashes_match": true,
+    "local_links_resolve": true,
+    "unique_HTML_IDs": true,
+    "no_external_assets": true,
+    "browser_errors": [],
+    "browser_interactions_checked": [
+      "navigation",
+      "metric selector",
+      "component tabs",
+      "curve slider and endpoints",
+      "score disclosure",
+      "removal path selector"
+    ],
+    "visual_review": "Opening view, results chart and SAFE preservation chart checked in a narrow browser panel.",
+    "candidate_and_SAFE_run_completion": "verified",
+    "existing_research_recomputed": false,
+    "protected_files_unchanged_during_build": 586
+  },
+  "limit": "The browser preview used HTTP on loopback; direct file-URL navigation is unavailable in the browser tool. The HTML uses inline scripts/data/styles and needs no server or network assets."
+}

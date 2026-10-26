@@ -8,7 +8,9 @@ sources for a future model-selection comparison with integrated SAFE 2026.
 Original performance, fairness, explainability and robustness are complete.
 The 2024 adaptation is complete with its unpenalized LR unavailable; both
 independent article runs are retained. The future comparison is accepted as a
-direction, with methodology still to be specified. PSI/stability, monitoring,
+direction; four fixed pilot candidates and their selection-set SAFE swapping
+assessment were verified on 26 October. Our developing method and independent
+judge remain to be specified. PSI/stability, monitoring,
 mitigation and governance remain deferred.
 
 ## Read saved evidence
@@ -16,9 +18,12 @@ mitigation and governance remain deferred.
 | Need | Entry point |
 | --- | --- |
 | Direction, decisions, open questions | [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) |
+| Plain-language results page | [Interactive offline HTML](output/briefing/research_progress_2026-10-26.html): research story, data roles, results and SAFE curves |
 | Agent safeguards | [AGENTS.md](AGENTS.md) |
 | Original findings | [Performance](outputs/performance_evaluation_report.md), [fairness](outputs/fairness_evaluation_report.md), [explainability](outputs/explainability_evaluation_report.md), [robustness](outputs/robustness_evaluation_report.md) |
 | 2024 article branch and LR limitation | [Package guide](article_safe/README.md), [saved results](article_safe/runs/article_v1_2026-10-10/report/results.md) |
+| New fixed-candidate pilot | [Implementation and commands](research/model_selection_v2/README.md), [exploratory selection diagnostics and verification](runs/model_selection_v2/pilot_candidates_2026-10-26/verification_report.md) |
+| Integrated SAFE 2026 application | [Guide](research/model_selection_v2/safe2026_README.md), [resolved specification/fidelity](research/model_selection_v2/safe2026_specification.md), [selection-set scores](runs/model_selection_v2/safe2026_swapping_2026-10-26/report.md) |
 | Offline interactive results | [Explorer](explorer/credit-risk-explorer.html), [guide](explorer/README.md) |
 | Literature, earlier plans, presentation sources | [Historical index](docs/archive/README.md) |
 
@@ -35,6 +40,9 @@ server or environment. Its dated research-status text describes that snapshot.
 - `models/`, `outputs/`: frozen pipelines, predictions, reports, tables, figures,
   caches and manifests; `outputs/previous_baseline/` preserves the earlier split.
 - `article_safe/`: separate 2024 adaptation, tests, completed runs and milestones.
+- `research/model_selection_v2/`: separate four-candidate pilot implementation/tests;
+  `runs/model_selection_v2/`: new versioned models, selection predictions,
+  diagnostics, protocols and verification records. Historical outputs stay in place.
 - `docs/`: literature sources, historical plans/reports, presentation authoring
   sources and compact archive navigation.
 - `output/`: presentation/PDF/briefing deliverables and historical diagrams.

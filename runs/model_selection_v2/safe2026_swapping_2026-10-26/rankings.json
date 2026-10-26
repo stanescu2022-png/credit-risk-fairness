@@ -1,0 +1,137 @@
+{
+  "arithmetic": {
+    "rows": [
+      {
+        "candidate_id": "logistic",
+        "score": 0.651987231063688,
+        "rank": 1,
+        "tied_ids": [
+          "logistic"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "random_forest",
+        "score": 0.623086446518824,
+        "rank": 2,
+        "tied_ids": [
+          "random_forest"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "decision_tree",
+        "score": 0.6207599387323856,
+        "rank": 3,
+        "tied_ids": [
+          "decision_tree"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "gradient_boosting",
+        "score": 0.6038957518118869,
+        "rank": 4,
+        "tied_ids": [
+          "gradient_boosting"
+        ],
+        "status": "ranked"
+      }
+    ],
+    "selected_id": "logistic",
+    "tied_selected_ids": [
+      "logistic"
+    ],
+    "status": "selected"
+  },
+  "geometric": {
+    "rows": [
+      {
+        "candidate_id": "logistic",
+        "score": 0.5479504317746461,
+        "rank": 1,
+        "tied_ids": [
+          "logistic"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "random_forest",
+        "score": 0.5178511418715227,
+        "rank": 2,
+        "tied_ids": [
+          "random_forest"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "decision_tree",
+        "score": 0.511989624223899,
+        "rank": 3,
+        "tied_ids": [
+          "decision_tree"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "gradient_boosting",
+        "score": 0.4902710147145493,
+        "rank": 4,
+        "tied_ids": [
+          "gradient_boosting"
+        ],
+        "status": "ranked"
+      }
+    ],
+    "selected_id": "logistic",
+    "tied_selected_ids": [
+      "logistic"
+    ],
+    "status": "selected"
+  },
+  "quadratic": {
+    "rows": [
+      {
+        "candidate_id": "logistic",
+        "score": 0.7123135980002849,
+        "rank": 1,
+        "tied_ids": [
+          "logistic"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "random_forest",
+        "score": 0.6895973561808085,
+        "rank": 2,
+        "tied_ids": [
+          "random_forest"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "decision_tree",
+        "score": 0.6890873437107696,
+        "rank": 3,
+        "tied_ids": [
+          "decision_tree"
+        ],
+        "status": "ranked"
+      },
+      {
+        "candidate_id": "gradient_boosting",
+        "score": 0.6814640232098214,
+        "rank": 4,
+        "tied_ids": [
+          "gradient_boosting"
+        ],
+        "status": "ranked"
+      }
+    ],
+    "selected_id": "logistic",
+    "tied_selected_ids": [
+      "logistic"
+    ],
+    "status": "selected"
+  }
+}

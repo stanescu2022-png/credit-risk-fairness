@@ -1,0 +1,602 @@
+{
+  "fitting_only_preprocessing_verified": true,
+  "fitting_records_seen": 19203,
+  "transformed_columns": [
+    "num__LIMIT_BAL",
+    "num__AGE",
+    "num__BILL_AMT1",
+    "num__BILL_AMT2",
+    "num__BILL_AMT3",
+    "num__BILL_AMT4",
+    "num__BILL_AMT5",
+    "num__BILL_AMT6",
+    "num__PAY_AMT1",
+    "num__PAY_AMT2",
+    "num__PAY_AMT3",
+    "num__PAY_AMT4",
+    "num__PAY_AMT5",
+    "num__PAY_AMT6",
+    "cat__EDUCATION_1",
+    "cat__EDUCATION_2",
+    "cat__EDUCATION_3",
+    "cat__EDUCATION_4",
+    "cat__MARRIAGE_1",
+    "cat__MARRIAGE_2",
+    "cat__MARRIAGE_3",
+    "cat__PAY_0_-2",
+    "cat__PAY_0_-1",
+    "cat__PAY_0_0",
+    "cat__PAY_0_1",
+    "cat__PAY_0_2",
+    "cat__PAY_0_3",
+    "cat__PAY_0_4",
+    "cat__PAY_0_5",
+    "cat__PAY_0_6",
+    "cat__PAY_0_7",
+    "cat__PAY_0_8",
+    "cat__PAY_2_-2",
+    "cat__PAY_2_-1",
+    "cat__PAY_2_0",
+    "cat__PAY_2_1",
+    "cat__PAY_2_2",
+    "cat__PAY_2_3",
+    "cat__PAY_2_4",
+    "cat__PAY_2_5",
+    "cat__PAY_2_6",
+    "cat__PAY_2_7",
+    "cat__PAY_2_8",
+    "cat__PAY_3_-2",
+    "cat__PAY_3_-1",
+    "cat__PAY_3_0",
+    "cat__PAY_3_1",
+    "cat__PAY_3_2",
+    "cat__PAY_3_3",
+    "cat__PAY_3_4",
+    "cat__PAY_3_5",
+    "cat__PAY_3_6",
+    "cat__PAY_3_7",
+    "cat__PAY_3_8",
+    "cat__PAY_4_-2",
+    "cat__PAY_4_-1",
+    "cat__PAY_4_0",
+    "cat__PAY_4_1",
+    "cat__PAY_4_2",
+    "cat__PAY_4_3",
+    "cat__PAY_4_4",
+    "cat__PAY_4_5",
+    "cat__PAY_4_6",
+    "cat__PAY_4_7",
+    "cat__PAY_4_8",
+    "cat__PAY_5_-2",
+    "cat__PAY_5_-1",
+    "cat__PAY_5_0",
+    "cat__PAY_5_2",
+    "cat__PAY_5_3",
+    "cat__PAY_5_4",
+    "cat__PAY_5_5",
+    "cat__PAY_5_6",
+    "cat__PAY_5_7",
+    "cat__PAY_5_8",
+    "cat__PAY_6_-2",
+    "cat__PAY_6_-1",
+    "cat__PAY_6_0",
+    "cat__PAY_6_2",
+    "cat__PAY_6_3",
+    "cat__PAY_6_4",
+    "cat__PAY_6_5",
+    "cat__PAY_6_6",
+    "cat__PAY_6_7",
+    "cat__PAY_6_8"
+  ],
+  "original_predictor_to_transformed_columns": {
+    "LIMIT_BAL": [
+      {
+        "index": 0,
+        "column": "num__LIMIT_BAL"
+      }
+    ],
+    "AGE": [
+      {
+        "index": 1,
+        "column": "num__AGE"
+      }
+    ],
+    "BILL_AMT1": [
+      {
+        "index": 2,
+        "column": "num__BILL_AMT1"
+      }
+    ],
+    "BILL_AMT2": [
+      {
+        "index": 3,
+        "column": "num__BILL_AMT2"
+      }
+    ],
+    "BILL_AMT3": [
+      {
+        "index": 4,
+        "column": "num__BILL_AMT3"
+      }
+    ],
+    "BILL_AMT4": [
+      {
+        "index": 5,
+        "column": "num__BILL_AMT4"
+      }
+    ],
+    "BILL_AMT5": [
+      {
+        "index": 6,
+        "column": "num__BILL_AMT5"
+      }
+    ],
+    "BILL_AMT6": [
+      {
+        "index": 7,
+        "column": "num__BILL_AMT6"
+      }
+    ],
+    "PAY_AMT1": [
+      {
+        "index": 8,
+        "column": "num__PAY_AMT1"
+      }
+    ],
+    "PAY_AMT2": [
+      {
+        "index": 9,
+        "column": "num__PAY_AMT2"
+      }
+    ],
+    "PAY_AMT3": [
+      {
+        "index": 10,
+        "column": "num__PAY_AMT3"
+      }
+    ],
+    "PAY_AMT4": [
+      {
+        "index": 11,
+        "column": "num__PAY_AMT4"
+      }
+    ],
+    "PAY_AMT5": [
+      {
+        "index": 12,
+        "column": "num__PAY_AMT5"
+      }
+    ],
+    "PAY_AMT6": [
+      {
+        "index": 13,
+        "column": "num__PAY_AMT6"
+      }
+    ],
+    "EDUCATION": [
+      {
+        "index": 14,
+        "column": "cat__EDUCATION_1",
+        "category": 1
+      },
+      {
+        "index": 15,
+        "column": "cat__EDUCATION_2",
+        "category": 2
+      },
+      {
+        "index": 16,
+        "column": "cat__EDUCATION_3",
+        "category": 3
+      },
+      {
+        "index": 17,
+        "column": "cat__EDUCATION_4",
+        "category": 4
+      }
+    ],
+    "MARRIAGE": [
+      {
+        "index": 18,
+        "column": "cat__MARRIAGE_1",
+        "category": 1
+      },
+      {
+        "index": 19,
+        "column": "cat__MARRIAGE_2",
+        "category": 2
+      },
+      {
+        "index": 20,
+        "column": "cat__MARRIAGE_3",
+        "category": 3
+      }
+    ],
+    "PAY_0": [
+      {
+        "index": 21,
+        "column": "cat__PAY_0_-2",
+        "category": -2
+      },
+      {
+        "index": 22,
+        "column": "cat__PAY_0_-1",
+        "category": -1
+      },
+      {
+        "index": 23,
+        "column": "cat__PAY_0_0",
+        "category": 0
+      },
+      {
+        "index": 24,
+        "column": "cat__PAY_0_1",
+        "category": 1
+      },
+      {
+        "index": 25,
+        "column": "cat__PAY_0_2",
+        "category": 2
+      },
+      {
+        "index": 26,
+        "column": "cat__PAY_0_3",
+        "category": 3
+      },
+      {
+        "index": 27,
+        "column": "cat__PAY_0_4",
+        "category": 4
+      },
+      {
+        "index": 28,
+        "column": "cat__PAY_0_5",
+        "category": 5
+      },
+      {
+        "index": 29,
+        "column": "cat__PAY_0_6",
+        "category": 6
+      },
+      {
+        "index": 30,
+        "column": "cat__PAY_0_7",
+        "category": 7
+      },
+      {
+        "index": 31,
+        "column": "cat__PAY_0_8",
+        "category": 8
+      }
+    ],
+    "PAY_2": [
+      {
+        "index": 32,
+        "column": "cat__PAY_2_-2",
+        "category": -2
+      },
+      {
+        "index": 33,
+        "column": "cat__PAY_2_-1",
+        "category": -1
+      },
+      {
+        "index": 34,
+        "column": "cat__PAY_2_0",
+        "category": 0
+      },
+      {
+        "index": 35,
+        "column": "cat__PAY_2_1",
+        "category": 1
+      },
+      {
+        "index": 36,
+        "column": "cat__PAY_2_2",
+        "category": 2
+      },
+      {
+        "index": 37,
+        "column": "cat__PAY_2_3",
+        "category": 3
+      },
+      {
+        "index": 38,
+        "column": "cat__PAY_2_4",
+        "category": 4
+      },
+      {
+        "index": 39,
+        "column": "cat__PAY_2_5",
+        "category": 5
+      },
+      {
+        "index": 40,
+        "column": "cat__PAY_2_6",
+        "category": 6
+      },
+      {
+        "index": 41,
+        "column": "cat__PAY_2_7",
+        "category": 7
+      },
+      {
+        "index": 42,
+        "column": "cat__PAY_2_8",
+        "category": 8
+      }
+    ],
+    "PAY_3": [
+      {
+        "index": 43,
+        "column": "cat__PAY_3_-2",
+        "category": -2
+      },
+      {
+        "index": 44,
+        "column": "cat__PAY_3_-1",
+        "category": -1
+      },
+      {
+        "index": 45,
+        "column": "cat__PAY_3_0",
+        "category": 0
+      },
+      {
+        "index": 46,
+        "column": "cat__PAY_3_1",
+        "category": 1
+      },
+      {
+        "index": 47,
+        "column": "cat__PAY_3_2",
+        "category": 2
+      },
+      {
+        "index": 48,
+        "column": "cat__PAY_3_3",
+        "category": 3
+      },
+      {
+        "index": 49,
+        "column": "cat__PAY_3_4",
+        "category": 4
+      },
+      {
+        "index": 50,
+        "column": "cat__PAY_3_5",
+        "category": 5
+      },
+      {
+        "index": 51,
+        "column": "cat__PAY_3_6",
+        "category": 6
+      },
+      {
+        "index": 52,
+        "column": "cat__PAY_3_7",
+        "category": 7
+      },
+      {
+        "index": 53,
+        "column": "cat__PAY_3_8",
+        "category": 8
+      }
+    ],
+    "PAY_4": [
+      {
+        "index": 54,
+        "column": "cat__PAY_4_-2",
+        "category": -2
+      },
+      {
+        "index": 55,
+        "column": "cat__PAY_4_-1",
+        "category": -1
+      },
+      {
+        "index": 56,
+        "column": "cat__PAY_4_0",
+        "category": 0
+      },
+      {
+        "index": 57,
+        "column": "cat__PAY_4_1",
+        "category": 1
+      },
+      {
+        "index": 58,
+        "column": "cat__PAY_4_2",
+        "category": 2
+      },
+      {
+        "index": 59,
+        "column": "cat__PAY_4_3",
+        "category": 3
+      },
+      {
+        "index": 60,
+        "column": "cat__PAY_4_4",
+        "category": 4
+      },
+      {
+        "index": 61,
+        "column": "cat__PAY_4_5",
+        "category": 5
+      },
+      {
+        "index": 62,
+        "column": "cat__PAY_4_6",
+        "category": 6
+      },
+      {
+        "index": 63,
+        "column": "cat__PAY_4_7",
+        "category": 7
+      },
+      {
+        "index": 64,
+        "column": "cat__PAY_4_8",
+        "category": 8
+      }
+    ],
+    "PAY_5": [
+      {
+        "index": 65,
+        "column": "cat__PAY_5_-2",
+        "category": -2
+      },
+      {
+        "index": 66,
+        "column": "cat__PAY_5_-1",
+        "category": -1
+      },
+      {
+        "index": 67,
+        "column": "cat__PAY_5_0",
+        "category": 0
+      },
+      {
+        "index": 68,
+        "column": "cat__PAY_5_2",
+        "category": 2
+      },
+      {
+        "index": 69,
+        "column": "cat__PAY_5_3",
+        "category": 3
+      },
+      {
+        "index": 70,
+        "column": "cat__PAY_5_4",
+        "category": 4
+      },
+      {
+        "index": 71,
+        "column": "cat__PAY_5_5",
+        "category": 5
+      },
+      {
+        "index": 72,
+        "column": "cat__PAY_5_6",
+        "category": 6
+      },
+      {
+        "index": 73,
+        "column": "cat__PAY_5_7",
+        "category": 7
+      },
+      {
+        "index": 74,
+        "column": "cat__PAY_5_8",
+        "category": 8
+      }
+    ],
+    "PAY_6": [
+      {
+        "index": 75,
+        "column": "cat__PAY_6_-2",
+        "category": -2
+      },
+      {
+        "index": 76,
+        "column": "cat__PAY_6_-1",
+        "category": -1
+      },
+      {
+        "index": 77,
+        "column": "cat__PAY_6_0",
+        "category": 0
+      },
+      {
+        "index": 78,
+        "column": "cat__PAY_6_2",
+        "category": 2
+      },
+      {
+        "index": 79,
+        "column": "cat__PAY_6_3",
+        "category": 3
+      },
+      {
+        "index": 80,
+        "column": "cat__PAY_6_4",
+        "category": 4
+      },
+      {
+        "index": 81,
+        "column": "cat__PAY_6_5",
+        "category": 5
+      },
+      {
+        "index": 82,
+        "column": "cat__PAY_6_6",
+        "category": 6
+      },
+      {
+        "index": 83,
+        "column": "cat__PAY_6_7",
+        "category": 7
+      },
+      {
+        "index": 84,
+        "column": "cat__PAY_6_8",
+        "category": 8
+      }
+    ]
+  },
+  "unseen_selection_categories": {
+    "EDUCATION": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "MARRIAGE": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "PAY_0": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "PAY_2": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "PAY_3": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "PAY_4": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "PAY_5": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    },
+    "PAY_6": {
+      "records": 0,
+      "levels": [],
+      "level_counts": {}
+    }
+  },
+  "transformed_inputs_finite": true,
+  "classes_": [
+    0,
+    1
+  ],
+  "positive_probability_column": 1,
+  "fit_warnings": [],
+  "convergence_warning": false,
+  "n_iter_": [
+    71
+  ],
+  "fitting_time_seconds": 0.22678829999995287
+}

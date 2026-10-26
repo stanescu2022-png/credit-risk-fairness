@@ -1,0 +1,13 @@
+aggregation,perturbation,candidate_id,score,rank,tied_ids,status
+arithmetic,percentile_swap,logistic,0.651987231063688,1,logistic,ranked
+arithmetic,percentile_swap,random_forest,0.623086446518824,2,random_forest,ranked
+arithmetic,percentile_swap,decision_tree,0.6207599387323856,3,decision_tree,ranked
+arithmetic,percentile_swap,gradient_boosting,0.6038957518118869,4,gradient_boosting,ranked
+geometric,percentile_swap,logistic,0.5479504317746461,1,logistic,ranked
+geometric,percentile_swap,random_forest,0.5178511418715227,2,random_forest,ranked
+geometric,percentile_swap,decision_tree,0.511989624223899,3,decision_tree,ranked
+geometric,percentile_swap,gradient_boosting,0.4902710147145493,4,gradient_boosting,ranked
+quadratic,percentile_swap,logistic,0.7123135980002849,1,logistic,ranked
+quadratic,percentile_swap,random_forest,0.6895973561808085,2,random_forest,ranked
+quadratic,percentile_swap,decision_tree,0.6890873437107696,3,decision_tree,ranked
+quadratic,percentile_swap,gradient_boosting,0.6814640232098214,4,gradient_boosting,ranked

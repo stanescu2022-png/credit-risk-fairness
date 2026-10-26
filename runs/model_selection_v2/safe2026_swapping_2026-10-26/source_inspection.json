@@ -1,0 +1,94 @@
+{
+  "paper_sha256": "fbc611acf0cf21463b8a63e7febc9d989b4ef651a2b0e08c7b0d9f4aa7814bc4",
+  "paper_available_online": "2025-12-15",
+  "package": "safe-ai-metrics",
+  "version": "0.2.0",
+  "released": "2026-06-10",
+  "source_url": "https://pypi.org/project/safe-ai-metrics/0.2.0/",
+  "wheel_sha256": "454d724b448a941345b94016d90e048b7d7c15fda0f18feb48434832ac9e6303",
+  "installed": false,
+  "claim_that_package_generated_paper_tables": false,
+  "numerical_counterexamples": [
+    {
+      "fixture": "reversed_binary",
+      "reference": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "ordering": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "equation_4_with_average_ties": 0.0,
+      "independent_roc_auc": 0.0,
+      "later_package_binary_rga": 0.5
+    },
+    {
+      "fixture": "binary_tie",
+      "reference": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "ordering": [
+        0.1,
+        0.2,
+        0.2,
+        0.4
+      ],
+      "equation_4_with_average_ties": 0.875,
+      "independent_roc_auc": 0.875,
+      "later_package_binary_rga": 1.0
+    },
+    {
+      "fixture": "constant_comparison_row_order_A",
+      "reference": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "ordering": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "equation_4_with_average_ties": 0.5,
+      "independent_roc_auc": 0.5,
+      "later_package_binary_rga": 1.0
+    },
+    {
+      "fixture": "constant_comparison_row_order_B",
+      "reference": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ordering": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "equation_4_with_average_ties": 0.5,
+      "independent_roc_auc": 0.5,
+      "later_package_binary_rga": 0.5
+    }
+  ],
+  "differences": [
+    "weighted absolute CvM scalar differs from paper Eq.4",
+    "stable score sorting can depend on row order within ties",
+    "local-slice partials are rescaled and undefined slices replaced",
+    "perfect-reference area normalization defaults on",
+    "greedy fixed-model masking, zero or input-mean references",
+    "optional RGA rescaling of E/R curves and nonfinite-to-zero",
+    "no percentile-swap implementation identified in inspected rgr.py"
+  ]
+}

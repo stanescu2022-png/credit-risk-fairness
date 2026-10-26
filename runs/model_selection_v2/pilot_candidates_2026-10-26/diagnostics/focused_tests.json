@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research/model_selection_v2/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_cleaning_is_fixed_and_row_local (test_pilot.PilotTests.test_cleaning_is_fixed_and_row_local) ... ok\ntest_existing_destinations_and_files_protected (test_pilot.PilotTests.test_existing_destinations_and_files_protected) ... ok\ntest_fitting_only_preprocessing_mapping_and_unseen (test_pilot.PilotTests.test_fitting_only_preprocessing_mapping_and_unseen) ... ok\ntest_incomplete_and_tampered_runs_rejected (test_pilot.PilotTests.test_incomplete_and_tampered_runs_rejected) ... ok\ntest_interruption_is_marked_incomplete (test_pilot.PilotTests.test_interruption_is_marked_incomplete) ... ok\ntest_metadata_and_order_rejected (test_pilot.PilotTests.test_metadata_and_order_rejected) ... ok\ntest_metrics_against_independent_sklearn_functions (test_pilot.PilotTests.test_metrics_against_independent_sklearn_functions) ... ok\ntest_missing_and_nonfinite_rejected (test_pilot.PilotTests.test_missing_and_nonfinite_rejected) ... ok\ntest_original_group_leakage_rejected (test_pilot.PilotTests.test_original_group_leakage_rejected) ... ok\ntest_positive_column_is_looked_up (test_pilot.PilotTests.test_positive_column_is_looked_up) ... ok\ntest_probability_validation (test_pilot.PilotTests.test_probability_validation) ... ok\ntest_reload_prediction_alignment_and_metrics (test_pilot.PilotTests.test_reload_prediction_alignment_and_metrics) ... ok\ntest_saved_development_membership (test_pilot.PilotTests.test_saved_development_membership) ... ok\ntest_strict_threshold_tie (test_pilot.PilotTests.test_strict_threshold_tie) ... ok\ntest_undefined_metrics_are_explicit (test_pilot.PilotTests.test_undefined_metrics_are_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.228s\n\nOK\n"
+}

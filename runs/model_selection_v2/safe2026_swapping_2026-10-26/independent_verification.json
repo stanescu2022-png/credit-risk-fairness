@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "independent_kernel": "scipy average ranks / rank-weighted Eq.4 expression",
+  "saved_rgr_rge_scores_reconstructed": 184,
+  "integrated_scores_reconstructed": 12,
+  "full_greedy_alternatives_checked": 1012,
+  "absolute_tolerance": 1e-12,
+  "all_prediction_IDs_and_bounds": true,
+  "areas_recomputed": true
+}
