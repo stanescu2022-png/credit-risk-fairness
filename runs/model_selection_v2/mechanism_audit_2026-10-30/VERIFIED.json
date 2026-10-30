@@ -1,0 +1,9 @@
+{
+  "status": "verified",
+  "artifact_hashes": {
+    "audit.json": "627e5667d683ccf6d4e587c8c3b1580888b8eaf874d43fa9a90eb7d1b3ddcecf",
+    "focused_tests.json": "eed0c27a2991d65bb0c628d20d9cdde3a136c80d74be30f4c376b14fd56807a2",
+    "protocol.json": "0e8e724b49f54b738f539fd223c7b6feeaca43d17966c9aa552f4d2bdf848301",
+    "report.md": "bf0fce60c45b9b1f47cda9e1e7e0912d1dd4167bc54dd158860d2eec39d3da45"
+  }
+}

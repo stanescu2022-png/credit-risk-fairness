@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "saved_prediction_scenarios_checked": 80,
+  "point_coordinates_checked": 48,
+  "direct_weighted_bootstrap_loss_cells_checked": 480,
+  "direct_record_repetition_bootstrap_draws": [
+    0,
+    1000,
+    1999
+  ],
+  "all_saved_draw_maxima_absolute_gaps_pair_relations_and_coordinate_intervals_checked": true,
+  "all_saved_draw_frontiers_principal_stability_loss_and_interaction_intervals_checked": true,
+  "reconstruction_atol": 1e-12,
+  "tolerance_scope": "numerical reconstruction only; no dominance margin",
+  "original_data_or_models_read": false,
+  "outputs_regenerated": false
+}

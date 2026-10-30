@@ -1,0 +1,106 @@
+{
+  "logistic": {
+    "rates": {
+      "female": {
+        "tpr": 0.3349206349206349,
+        "fpr": 0.04440574662603396,
+        "tp": 211,
+        "fp": 102,
+        "positive_denominator": 630,
+        "negative_denominator": 2297
+      },
+      "male": {
+        "tpr": 0.40415704387990764,
+        "fpr": 0.05065926439972242,
+        "tp": 175,
+        "fp": 73,
+        "positive_denominator": 433,
+        "negative_denominator": 1441
+      }
+    },
+    "decision_rule": "p > .5; ties class 0",
+    "signed_direction": "female minus male",
+    "tpr_gap_signed": -0.06923640895927274,
+    "tpr_gap_absolute": 0.06923640895927274,
+    "fpr_gap_signed": -0.006253517773688461,
+    "fpr_gap_absolute": 0.006253517773688461
+  },
+  "decision_tree": {
+    "rates": {
+      "female": {
+        "tpr": 0.33015873015873015,
+        "fpr": 0.04397039616891598,
+        "tp": 208,
+        "fp": 101,
+        "positive_denominator": 630,
+        "negative_denominator": 2297
+      },
+      "male": {
+        "tpr": 0.3556581986143187,
+        "fpr": 0.047883414295628035,
+        "tp": 154,
+        "fp": 69,
+        "positive_denominator": 433,
+        "negative_denominator": 1441
+      }
+    },
+    "decision_rule": "p > .5; ties class 0",
+    "signed_direction": "female minus male",
+    "tpr_gap_signed": -0.025499468455588536,
+    "tpr_gap_absolute": 0.025499468455588536,
+    "fpr_gap_signed": -0.003913018126712055,
+    "fpr_gap_absolute": 0.003913018126712055
+  },
+  "random_forest": {
+    "rates": {
+      "female": {
+        "tpr": 0.3349206349206349,
+        "fpr": 0.045276447540269917,
+        "tp": 211,
+        "fp": 104,
+        "positive_denominator": 630,
+        "negative_denominator": 2297
+      },
+      "male": {
+        "tpr": 0.3833718244803695,
+        "fpr": 0.056210964607911175,
+        "tp": 166,
+        "fp": 81,
+        "positive_denominator": 433,
+        "negative_denominator": 1441
+      }
+    },
+    "decision_rule": "p > .5; ties class 0",
+    "signed_direction": "female minus male",
+    "tpr_gap_signed": -0.0484511895597346,
+    "tpr_gap_absolute": 0.0484511895597346,
+    "fpr_gap_signed": -0.010934517067641258,
+    "fpr_gap_absolute": 0.010934517067641258
+  },
+  "gradient_boosting": {
+    "rates": {
+      "female": {
+        "tpr": 0.34285714285714286,
+        "fpr": 0.04484109708315194,
+        "tp": 216,
+        "fp": 103,
+        "positive_denominator": 630,
+        "negative_denominator": 2297
+      },
+      "male": {
+        "tpr": 0.40415704387990764,
+        "fpr": 0.049271339347675226,
+        "tp": 175,
+        "fp": 71,
+        "positive_denominator": 433,
+        "negative_denominator": 1441
+      }
+    },
+    "decision_rule": "p > .5; ties class 0",
+    "signed_direction": "female minus male",
+    "tpr_gap_signed": -0.06129990102276478,
+    "tpr_gap_absolute": 0.06129990102276478,
+    "fpr_gap_signed": -0.004430242264523286,
+    "fpr_gap_absolute": 0.004430242264523286
+  }
+}

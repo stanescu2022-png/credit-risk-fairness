@@ -1,0 +1,4439 @@
+{
+  "scope": "exploratory added-outcome-layer resampling conditional on fixed saved SAFE scores; not complete selector uncertainty",
+  "joint_confidence_certification": false,
+  "draws": 2000,
+  "candidate_loss_intervals": {
+    "logistic": {
+      "clean": {
+        "brier": {
+          "lower": 0.12964111335663728,
+          "upper": 0.1431074527759351,
+          "median": 0.13622334159243926,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4188324037406163,
+          "upper": 0.45238947363712195,
+          "median": 0.43509647902859405,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__mask_only": {
+        "brier": {
+          "lower": 0.13885506596130423,
+          "upper": 0.1526150713961044,
+          "median": 0.14545863472343176,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4441078316266219,
+          "upper": 0.4794712045361975,
+          "median": 0.461298046264296,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__corruption_only": {
+        "brier": {
+          "lower": 0.12985430088609876,
+          "upper": 0.14334470939787486,
+          "median": 0.1364067318729512,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41937215645810716,
+          "upper": 0.4530487025030549,
+          "median": 0.4356876337571913,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__joint": {
+        "brier": {
+          "lower": 0.13897352178840364,
+          "upper": 0.15275164820525386,
+          "median": 0.14559465336815167,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.445212139893986,
+          "upper": 0.48057304793971634,
+          "median": 0.4622896274646134,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__mask_only": {
+        "brier": {
+          "lower": 0.12970210924823633,
+          "upper": 0.14310182824430964,
+          "median": 0.13622783263974703,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41897039233836664,
+          "upper": 0.4524804258776744,
+          "median": 0.4352029510806836,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__corruption_only": {
+        "brier": {
+          "lower": 0.13161673760571072,
+          "upper": 0.14489641729051358,
+          "median": 0.1380876489069781,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.422871161427688,
+          "upper": 0.4568131210608878,
+          "median": 0.43927345777969407,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__joint": {
+        "brier": {
+          "lower": 0.13172565071806489,
+          "upper": 0.1449562567789728,
+          "median": 0.13814483802554545,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.42309015350147616,
+          "upper": 0.45695269180409065,
+          "median": 0.4394255096009173,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__mask_only": {
+        "brier": {
+          "lower": 0.12975097070159494,
+          "upper": 0.1432647236750733,
+          "median": 0.13634994941076056,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41923901530791946,
+          "upper": 0.45290867459319856,
+          "median": 0.4354466375420646,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__corruption_only": {
+        "brier": {
+          "lower": 0.13157278331801164,
+          "upper": 0.14485772568589414,
+          "median": 0.13805539394605237,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4228196983506529,
+          "upper": 0.45694027104240037,
+          "median": 0.43932731727295926,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__joint": {
+        "brier": {
+          "lower": 0.13168140441962348,
+          "upper": 0.14497352986442838,
+          "median": 0.1382075828311089,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4232220343432558,
+          "upper": 0.45749786373827567,
+          "median": 0.43981116655214714,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    },
+    "decision_tree": {
+      "clean": {
+        "brier": {
+          "lower": 0.13332779779636866,
+          "upper": 0.14753347879560524,
+          "median": 0.14014270948566182,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4310076088763216,
+          "upper": 0.46733483853474855,
+          "median": 0.44829820800361087,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__mask_only": {
+        "brier": {
+          "lower": 0.1414062833706455,
+          "upper": 0.1554838220140085,
+          "median": 0.14821880245245728,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4530503041814093,
+          "upper": 0.4887805377012464,
+          "median": 0.47033151402521917,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__corruption_only": {
+        "brier": {
+          "lower": 0.1335399568281185,
+          "upper": 0.14765731817135433,
+          "median": 0.14029529470648597,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.43143788017795387,
+          "upper": 0.46754885845071953,
+          "median": 0.44874538567959155,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__joint": {
+        "brier": {
+          "lower": 0.14171921862971276,
+          "upper": 0.15574440872514056,
+          "median": 0.14846418939443473,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.45396899396310364,
+          "upper": 0.4899315956663766,
+          "median": 0.47137556388606205,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__mask_only": {
+        "brier": {
+          "lower": 0.13325415152900047,
+          "upper": 0.1475249987041752,
+          "median": 0.14004947219878958,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.43068334931571906,
+          "upper": 0.46684519655784207,
+          "median": 0.44796536638704415,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__corruption_only": {
+        "brier": {
+          "lower": 0.13689775410862437,
+          "upper": 0.15092118725429363,
+          "median": 0.14374603756359727,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4406345569654992,
+          "upper": 0.4766135965577056,
+          "median": 0.4581745931855928,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__joint": {
+        "brier": {
+          "lower": 0.13700815004614578,
+          "upper": 0.1510225328925479,
+          "median": 0.14386659984154598,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4408629903981762,
+          "upper": 0.47678832601566756,
+          "median": 0.45835606455659716,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__mask_only": {
+        "brier": {
+          "lower": 0.13416515397625076,
+          "upper": 0.14833647567764763,
+          "median": 0.1410418854282824,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.43360589134134553,
+          "upper": 0.47000875022018335,
+          "median": 0.4510669545742716,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__corruption_only": {
+        "brier": {
+          "lower": 0.1368396644266723,
+          "upper": 0.15089548163971456,
+          "median": 0.14359401304301955,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4400439024106177,
+          "upper": 0.4762441908255455,
+          "median": 0.45752221075975735,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__joint": {
+        "brier": {
+          "lower": 0.13726169601620414,
+          "upper": 0.15147074200025046,
+          "median": 0.14416902813114385,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4418549668124664,
+          "upper": 0.47853642440095234,
+          "median": 0.4596860989679755,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    },
+    "random_forest": {
+      "clean": {
+        "brier": {
+          "lower": 0.12887805357168228,
+          "upper": 0.14191482044335937,
+          "median": 0.13522097711601344,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41246218837394905,
+          "upper": 0.44570163529887075,
+          "median": 0.428540628292538,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__mask_only": {
+        "brier": {
+          "lower": 0.13565731458711172,
+          "upper": 0.1486583317970762,
+          "median": 0.14197475399074883,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4297065604249842,
+          "upper": 0.4631551865741803,
+          "median": 0.4458041669617614,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__corruption_only": {
+        "brier": {
+          "lower": 0.12933201405931985,
+          "upper": 0.14225951521384125,
+          "median": 0.13567355914496393,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4143865914757414,
+          "upper": 0.44708966241235065,
+          "median": 0.43036516828497157,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__joint": {
+        "brier": {
+          "lower": 0.1360002855550577,
+          "upper": 0.1490056156618403,
+          "median": 0.1423296489776591,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.43117527380734544,
+          "upper": 0.46429307547968895,
+          "median": 0.4470811397705836,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__mask_only": {
+        "brier": {
+          "lower": 0.12929736544431944,
+          "upper": 0.1421497661675335,
+          "median": 0.1355659290067213,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41400814606588393,
+          "upper": 0.44702983050647616,
+          "median": 0.4298591467666344,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__corruption_only": {
+        "brier": {
+          "lower": 0.1303953157585066,
+          "upper": 0.14331386272728783,
+          "median": 0.1367102539538518,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41646858828685024,
+          "upper": 0.4492600008292011,
+          "median": 0.4323244719989343,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__joint": {
+        "brier": {
+          "lower": 0.1306875801520236,
+          "upper": 0.14349872920134896,
+          "median": 0.13691039383498965,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4171681269873443,
+          "upper": 0.45027951949967,
+          "median": 0.4331256301107964,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__mask_only": {
+        "brier": {
+          "lower": 0.12980275147044112,
+          "upper": 0.1431572693507097,
+          "median": 0.1363490394162986,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41487857830581326,
+          "upper": 0.4499235822453417,
+          "median": 0.43210787404929496,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__corruption_only": {
+        "brier": {
+          "lower": 0.13054383756684734,
+          "upper": 0.14339507564929374,
+          "median": 0.1368120393669134,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41677944984533233,
+          "upper": 0.44942226644553407,
+          "median": 0.43241798003492943,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__joint": {
+        "brier": {
+          "lower": 0.1320041009106271,
+          "upper": 0.1454004534035288,
+          "median": 0.1384828915952106,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4206225615303143,
+          "upper": 0.455485982239313,
+          "median": 0.43773899669256244,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    },
+    "gradient_boosting": {
+      "clean": {
+        "brier": {
+          "lower": 0.12779019268826414,
+          "upper": 0.14107772718268052,
+          "median": 0.13431830917255466,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41113951685168093,
+          "upper": 0.4448345949219988,
+          "median": 0.42754818824216834,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__mask_only": {
+        "brier": {
+          "lower": 0.13562911422203838,
+          "upper": 0.14891894462625985,
+          "median": 0.1421028973664101,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4314600568804043,
+          "upper": 0.46542123320481227,
+          "median": 0.4480144456437122,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__corruption_only": {
+        "brier": {
+          "lower": 0.12881705517537673,
+          "upper": 0.14206621820747162,
+          "median": 0.13532927931293906,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4139051323453087,
+          "upper": 0.4477585127535636,
+          "median": 0.4305163459371933,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "repayment__joint": {
+        "brier": {
+          "lower": 0.1364603917199895,
+          "upper": 0.14979933036907495,
+          "median": 0.14297432720290748,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4347964606855945,
+          "upper": 0.46903392714225967,
+          "median": 0.4514875294465104,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__mask_only": {
+        "brier": {
+          "lower": 0.12801564679818128,
+          "upper": 0.1413023921507753,
+          "median": 0.1345343902481264,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41151607536472273,
+          "upper": 0.44569875112279417,
+          "median": 0.4281358386415574,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__corruption_only": {
+        "brier": {
+          "lower": 0.12992406694250355,
+          "upper": 0.14319197021000943,
+          "median": 0.13638216985107804,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.41613978825053716,
+          "upper": 0.449341122696937,
+          "median": 0.43241260090571165,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing__joint": {
+        "brier": {
+          "lower": 0.13020361408337447,
+          "upper": 0.14345609099350357,
+          "median": 0.13666598061430182,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4169020729144356,
+          "upper": 0.4503703111144898,
+          "median": 0.4332623770551792,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__mask_only": {
+        "brier": {
+          "lower": 0.12949811994933255,
+          "upper": 0.14333063227706017,
+          "median": 0.13629986551210288,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4172890071434664,
+          "upper": 0.45312645620198017,
+          "median": 0.434719748660371,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__corruption_only": {
+        "brier": {
+          "lower": 0.1302366953320538,
+          "upper": 0.14362090438172956,
+          "median": 0.1367739136701525,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.4169934326307674,
+          "upper": 0.45098841834578857,
+          "median": 0.43368156696201143,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment__joint": {
+        "brier": {
+          "lower": 0.13166784413650853,
+          "upper": 0.14551990019036481,
+          "median": 0.13847374260744405,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.42332980906044326,
+          "upper": 0.45929708955623866,
+          "median": 0.44092027760909436,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    }
+  },
+  "candidate_interaction_intervals": {
+    "logistic": {
+      "repayment": {
+        "brier": {
+          "lower": -0.00011783406709423919,
+          "upper": 1.5903839377529617e-05,
+          "median": -4.667359716382935e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.00027880295925789553,
+          "upper": 0.0006487163129043058,
+          "median": 0.0004657968141265345,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing": {
+        "brier": {
+          "lower": 3.448983047104476e-05,
+          "upper": 8.41315975180369e-05,
+          "median": 5.944670021981735e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 4.846611600635847e-05,
+          "upper": 0.00015290844690299396,
+          "median": 9.750983693054827e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment": {
+        "brier": {
+          "lower": -2.2358286616549344e-05,
+          "upper": 4.9394742177216014e-05,
+          "median": 1.5095477611692942e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 4.0414469639485365e-05,
+          "upper": 0.00015406331897905302,
+          "median": 9.694551360278636e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    },
+    "decision_tree": {
+      "repayment": {
+        "brier": {
+          "lower": -8.349909828424956e-05,
+          "upper": 0.00036832429013915685,
+          "median": 0.00013132259232033483,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": -7.223929010799452e-07,
+          "upper": 0.0015206417528950038,
+          "median": 0.0007317663522713458,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing": {
+        "brier": {
+          "lower": 6.426021938946563e-05,
+          "upper": 0.00033001133940994753,
+          "median": 0.00020056503935514391,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.00022189490866181548,
+          "upper": 0.0009576775351308906,
+          "median": 0.0005947291054181347,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment": {
+        "brier": {
+          "lower": -0.0006933107885519485,
+          "upper": -7.20585153037531e-05,
+          "median": -0.000384059674208001,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": -0.0013899335260287027,
+          "upper": 0.00018675123974209104,
+          "median": -0.0006018927897862014,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    },
+    "random_forest": {
+      "repayment": {
+        "brier": {
+          "lower": -0.0003490500759848247,
+          "upper": 0.00014248343779513573,
+          "median": -9.704371910727871e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": -0.0012672832478079015,
+          "upper": 0.00020643305713395204,
+          "median": -0.0005094855222737837,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing": {
+        "brier": {
+          "lower": -0.0003219614081961406,
+          "upper": 6.911763871362409e-05,
+          "median": -0.0001308223002944725,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": -0.001061253431207107,
+          "upper": 8.706922251295682e-05,
+          "median": -0.000497101343608447,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment": {
+        "brier": {
+          "lower": 0.00033981639015917347,
+          "upper": 0.0008001577089256715,
+          "median": 0.0005690745983074202,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.0009108603343181198,
+          "upper": 0.002392788588487768,
+          "median": 0.0016526934279948169,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    },
+    "gradient_boosting": {
+      "repayment": {
+        "brier": {
+          "lower": -0.0002745139536447755,
+          "upper": 1.6330983238680512e-05,
+          "median": -0.0001202085612560383,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": 0.0002201666095427976,
+          "upper": 0.0009237038782362993,
+          "median": 0.0005898907903377493,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "billing": {
+        "brier": {
+          "lower": -2.0288167411765948e-05,
+          "upper": 0.0002318116857293842,
+          "median": 0.00010203681161431721,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": -7.8409341693772e-06,
+          "upper": 0.0006322554735043256,
+          "median": 0.00031282315504641,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      },
+      "payment": {
+        "brier": {
+          "lower": -0.0005176306119150008,
+          "upper": -6.85477546437999e-05,
+          "median": -0.0002924931447295387,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        },
+        "log_loss": {
+          "lower": -0.0005226822331749495,
+          "upper": 0.0005674209022797872,
+          "median": 4.42510848890354e-05,
+          "valid_draws": 2000,
+          "undefined_draws": 0,
+          "total_draws": 2000,
+          "percentile_bounds": [
+            2.5,
+            97.5
+          ],
+          "percentile_method": "numpy linear",
+          "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+        }
+      }
+    }
+  },
+  "paired_fixed_candidate_intervals": {
+    "decision_tree_minus_logistic": {
+      "direction": {
+        "later": "decision_tree",
+        "earlier": "logistic"
+      },
+      "loss_intervals": {
+        "clean": {
+          "brier": {
+            "lower": 0.001868956236555455,
+            "upper": 0.006117757526823043,
+            "median": 0.003936352943885529,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.006965737840637596,
+            "upper": 0.019824678141963387,
+            "median": 0.013399066486288358,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__mask_only": {
+          "brier": {
+            "lower": 0.001026466805210649,
+            "upper": 0.004551480463126733,
+            "median": 0.002737295287555147,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.0036698832506697073,
+            "upper": 0.014763311453992345,
+            "median": 0.009027935381468899,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__corruption_only": {
+          "brier": {
+            "lower": 0.0019180383897213064,
+            "upper": 0.0059281787457447456,
+            "median": 0.003890195524151624,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.007160068891547517,
+            "upper": 0.019112405093390065,
+            "median": 0.013136509458853501,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__joint": {
+          "brier": {
+            "lower": 0.0011742457969816295,
+            "upper": 0.004623910419054968,
+            "median": 0.0028517787213182544,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.0037324965318122254,
+            "upper": 0.014531571539434983,
+            "median": 0.009065697974409426,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__mask_only": {
+          "brier": {
+            "lower": 0.001796399110471171,
+            "upper": 0.006001274622207056,
+            "median": 0.0038544257560062245,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.006677968530494115,
+            "upper": 0.019253013408459335,
+            "median": 0.01293328306476857,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__corruption_only": {
+          "brier": {
+            "lower": 0.003676330085605843,
+            "upper": 0.007672304436106394,
+            "median": 0.005673457426941822,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.012824664449386014,
+            "upper": 0.024957355319598067,
+            "median": 0.018884383196827143,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__joint": {
+          "brier": {
+            "lower": 0.0037205733626078296,
+            "upper": 0.007774947868454387,
+            "median": 0.005716982831009923,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.012997519034871287,
+            "upper": 0.025044855629277447,
+            "median": 0.018920724585996557,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__mask_only": {
+          "brier": {
+            "lower": 0.002755281460980443,
+            "upper": 0.006786298090734905,
+            "median": 0.004735665725403251,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.009581341310566406,
+            "upper": 0.021873332904897777,
+            "median": 0.01575101913939736,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__corruption_only": {
+          "brier": {
+            "lower": 0.0036311749880765473,
+            "upper": 0.007585789689901631,
+            "median": 0.00560016078928946,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.012205541840009658,
+            "upper": 0.024380671820583375,
+            "median": 0.018304867219716497,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__joint": {
+          "brier": {
+            "lower": 0.0040217623195656655,
+            "upper": 0.007908582129931504,
+            "median": 0.0059738722302097175,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.014106218597471342,
+            "upper": 0.02585745557055634,
+            "median": 0.019988170047560705,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      },
+      "interaction_difference_intervals": {
+        "repayment": {
+          "brier": {
+            "lower": -4.716066115348153e-05,
+            "upper": 0.00042422656947239436,
+            "median": 0.00017798978426637746,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0004906246964216501,
+            "upper": 0.001060604737793648,
+            "median": 0.0002636567710484483,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing": {
+          "brier": {
+            "lower": -5.050933158522167e-07,
+            "upper": 0.00027309672693320565,
+            "median": 0.0001410359041797843,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.0001287075500493215,
+            "upper": 0.0008667071698659378,
+            "median": 0.0004927508837445638,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment": {
+          "brier": {
+            "lower": -0.0007145975850162467,
+            "upper": -8.630241781569032e-05,
+            "median": -0.0003996573241639434,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0014932151960294724,
+            "upper": 9.450059457949615e-05,
+            "median": -0.0007011070821885679,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      }
+    },
+    "random_forest_minus_logistic": {
+      "direction": {
+        "later": "random_forest",
+        "earlier": "logistic"
+      },
+      "loss_intervals": {
+        "clean": {
+          "brier": {
+            "lower": -0.002714361760889741,
+            "upper": 0.0008535966751451265,
+            "median": -0.0009101290255341121,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.011864331495654006,
+            "upper": -0.0011210702642913974,
+            "median": -0.0064583749162186455,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__mask_only": {
+          "brier": {
+            "lower": -0.0050783583847111005,
+            "upper": -0.0019045098681404657,
+            "median": -0.0034880923886898285,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.020481367871055207,
+            "upper": -0.010390374105385618,
+            "median": -0.015316433119975048,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__corruption_only": {
+          "brier": {
+            "lower": -0.0023336999190351794,
+            "upper": 0.0009488313894829483,
+            "median": -0.0006542169562148703,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.010124444197174062,
+            "upper": -0.00015012060696043916,
+            "median": -0.005232680217455182,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__joint": {
+          "brier": {
+            "lower": -0.004821774366390168,
+            "upper": -0.0017630675939987726,
+            "median": -0.003274340632710898,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.01993129235070543,
+            "upper": -0.010313795443282798,
+            "median": -0.015078230045553087,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__mask_only": {
+          "brier": {
+            "lower": -0.0022944721836949144,
+            "upper": 0.001089098805626671,
+            "median": -0.0005970178731257714,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.010281047675252074,
+            "upper": -0.00017618445818963076,
+            "median": -0.005199566607542422,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__corruption_only": {
+          "brier": {
+            "lower": -0.0029779681567022056,
+            "upper": 0.0003376700937621691,
+            "median": -0.0013111086194599608,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.012131693626266139,
+            "upper": -0.0020021484271300475,
+            "median": -0.0068839709617598,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__joint": {
+          "brier": {
+            "lower": -0.0027874419487004887,
+            "upper": 0.0004233102083499843,
+            "median": -0.0011882829646983478,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.011165270494377634,
+            "upper": -0.001429886423413327,
+            "median": -0.006256292034721972,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__mask_only": {
+          "brier": {
+            "lower": -0.0015328364731308191,
+            "upper": 0.0017223682036687168,
+            "median": 9.254478136948296e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.008317735305603651,
+            "upper": 0.0017234279950996806,
+            "median": -0.0032490645715417266,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__corruption_only": {
+          "brier": {
+            "lower": -0.002862421736972938,
+            "upper": 0.00041148863152481926,
+            "median": -0.0011755274583990921,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.01157703267172833,
+            "upper": -0.0016568444446592335,
+            "median": -0.006658653589480312,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__joint": {
+          "brier": {
+            "lower": -0.0012531595380702628,
+            "upper": 0.0019987668505047937,
+            "median": 0.0003818613619451655,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.006771689580831087,
+            "upper": 0.0028256358355649505,
+            "median": -0.0018895332614170535,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      },
+      "interaction_difference_intervals": {
+        "repayment": {
+          "brier": {
+            "lower": -0.00030413162272659584,
+            "upper": 0.00020054024419429714,
+            "median": -4.989595440252348e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0017286327429067174,
+            "upper": -0.00022938880054034828,
+            "median": -0.0009717855114843854,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing": {
+          "brier": {
+            "lower": -0.00037844003311549577,
+            "upper": 4.250984209729725e-06,
+            "median": -0.00019135204422604524,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0011566489740221398,
+            "upper": -1.7793918892782164e-05,
+            "median": -0.000596502208040306,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment": {
+          "brier": {
+            "lower": 0.0003234125616788347,
+            "upper": 0.0007924919027119827,
+            "median": 0.0005555967160403713,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.0008172941956259755,
+            "upper": 0.002273833654336783,
+            "median": 0.0015545376635780483,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      }
+    },
+    "gradient_boosting_minus_logistic": {
+      "direction": {
+        "later": "gradient_boosting",
+        "earlier": "logistic"
+      },
+      "loss_intervals": {
+        "clean": {
+          "brier": {
+            "lower": -0.003192892540307793,
+            "upper": -0.00043441710912319576,
+            "median": -0.0018694684226255726,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.011610248305717944,
+            "upper": -0.0032834885458951782,
+            "median": -0.007475694723272364,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__mask_only": {
+          "brier": {
+            "lower": -0.004551504223360658,
+            "upper": -0.0020200962507951666,
+            "median": -0.003337723081185212,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.017136004289718707,
+            "upper": -0.008930920530484304,
+            "median": -0.013165749247519454,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__corruption_only": {
+          "brier": {
+            "lower": -0.0023473283857109147,
+            "upper": 0.00027840937542649113,
+            "median": -0.001040719190543049,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.009143836287612696,
+            "upper": -0.0010361444518059244,
+            "median": -0.005142512495061868,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__joint": {
+          "brier": {
+            "lower": -0.0037638050723272343,
+            "upper": -0.001320053315273939,
+            "median": -0.0025920296132693615,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.014511505285576862,
+            "upper": -0.006629360614054484,
+            "median": -0.010663178128163836,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__mask_only": {
+          "brier": {
+            "lower": -0.0029865416548244617,
+            "upper": -0.00034929135223064423,
+            "median": -0.0016774295346797669,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.011024515433642683,
+            "upper": -0.002827531635935028,
+            "median": -0.006973602048637895,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__corruption_only": {
+          "brier": {
+            "lower": -0.0030015094111265996,
+            "upper": -0.0003637954558882895,
+            "median": -0.001691290639139989,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.010888160755988419,
+            "upper": -0.0029027989613215504,
+            "median": -0.006887412143757321,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__joint": {
+          "brier": {
+            "lower": -0.0027359541043371523,
+            "upper": -0.00018713489398692625,
+            "median": -0.0014626642042954857,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.010070390112729134,
+            "upper": -0.0022341448753940125,
+            "median": -0.006157602398797146,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__mask_only": {
+          "brier": {
+            "lower": -0.0012610368710766907,
+            "upper": 0.0012795033622775445,
+            "median": -1.654923213877113e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.004699362681068217,
+            "upper": 0.0032562011707440532,
+            "median": -0.0006937702271023749,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__corruption_only": {
+          "brier": {
+            "lower": -0.0025306942476500316,
+            "upper": 8.777581989606893e-05,
+            "median": -0.00124833399074957,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.009596069315853998,
+            "upper": -0.0015351009187415724,
+            "median": -0.005638107389939501,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__joint": {
+          "brier": {
+            "lower": -0.0010037591326778213,
+            "upper": 0.0015905132737492962,
+            "median": 0.0003103629268257774,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.002782217437201186,
+            "upper": 0.005146897082170184,
+            "median": 0.00115385852393185,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      },
+      "interaction_difference_intervals": {
+        "repayment": {
+          "brier": {
+            "lower": -0.0002275978545387372,
+            "upper": 7.215112056916581e-05,
+            "median": -7.295718376834626e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0002661168368701644,
+            "upper": 0.0004907743277528573,
+            "median": 0.00011516167290068213,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing": {
+          "brier": {
+            "lower": -7.864507121876224e-05,
+            "upper": 0.0001676932147200986,
+            "median": 4.284113941531442e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.00010035125184992139,
+            "upper": 0.000527161837337733,
+            "median": 0.00021545397844302538,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment": {
+          "brier": {
+            "lower": -0.0005281420342968662,
+            "upper": -8.569057642221564e-05,
+            "median": -0.00030653506699013233,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0006238508649989719,
+            "upper": 0.0004712448550094753,
+            "median": -5.195564583748702e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      }
+    },
+    "random_forest_minus_decision_tree": {
+      "direction": {
+        "later": "random_forest",
+        "earlier": "decision_tree"
+      },
+      "loss_intervals": {
+        "clean": {
+          "brier": {
+            "lower": -0.007042571421474547,
+            "upper": -0.0026729527065039913,
+            "median": -0.0048837077921623645,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.026188791188208247,
+            "upper": -0.01349125403795179,
+            "median": -0.01980053808540644,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__mask_only": {
+          "brier": {
+            "lower": -0.008043854507374913,
+            "upper": -0.00435628112098378,
+            "median": -0.006219419544993762,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.029970414787740415,
+            "upper": -0.01858341540393521,
+            "median": -0.024407486564009484,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__corruption_only": {
+          "brier": {
+            "lower": -0.006576992889564355,
+            "upper": -0.002508141037522819,
+            "median": -0.004555512116417748,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.02427220290578628,
+            "upper": -0.012461453460025558,
+            "median": -0.018290286068054884,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__joint": {
+          "brier": {
+            "lower": -0.007913452067924303,
+            "upper": -0.004298157081331696,
+            "median": -0.006123993056809593,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.029570757222549315,
+            "upper": -0.01856075695339317,
+            "median": -0.024107163160801887,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__mask_only": {
+          "brier": {
+            "lower": -0.006549278962900984,
+            "upper": -0.002367226724773733,
+            "median": -0.0044618290608775535,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.02424594582126475,
+            "upper": -0.01204434203225811,
+            "median": -0.018029318573942243,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__corruption_only": {
+          "brier": {
+            "lower": -0.008831975912555832,
+            "upper": -0.005018275267801466,
+            "median": -0.006958055554551548,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.031592315628328066,
+            "upper": -0.020117152831277033,
+            "median": -0.02576984162069923,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__joint": {
+          "brier": {
+            "lower": -0.008755059127101568,
+            "upper": -0.0049409619705002425,
+            "median": -0.006868223569118995,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.03093442564478766,
+            "upper": -0.019461321629920515,
+            "median": -0.025117994629162615,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__mask_only": {
+          "brier": {
+            "lower": -0.006639299457955697,
+            "upper": -0.0026654114889253086,
+            "median": -0.0046252211875266735,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.024877641873113886,
+            "upper": -0.013082680026739592,
+            "median": -0.018899839553668918,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__corruption_only": {
+          "brier": {
+            "lower": -0.008704297297474012,
+            "upper": -0.0048008987129011145,
+            "median": -0.00676927785135531,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.030717904039936135,
+            "upper": -0.019126210260753063,
+            "median": -0.024962629097039696,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__joint": {
+          "brier": {
+            "lower": -0.007408585917248521,
+            "upper": -0.0037381772706380164,
+            "median": -0.005563936109606468,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.027107739245154184,
+            "upper": -0.01646971796680878,
+            "median": -0.02175695918162282,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      },
+      "interaction_difference_intervals": {
+        "repayment": {
+          "brier": {
+            "lower": -0.0005380132873134657,
+            "upper": 8.038303469304045e-05,
+            "median": -0.00022594518290951215,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0022461704996138655,
+            "upper": -0.00025129304490750147,
+            "median": -0.0012327297314997931,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing": {
+          "brier": {
+            "lower": -0.0005526707052875828,
+            "upper": -8.592440534328786e-05,
+            "median": -0.0003291396180664513,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0017551989906889318,
+            "upper": -0.000400455882521758,
+            "median": -0.001082663628922148,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment": {
+          "brier": {
+            "lower": 0.000593461913899887,
+            "upper": 0.0013338287197825933,
+            "median": 0.0009599175631521545,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.0012347017106178304,
+            "upper": 0.0033153018463830896,
+            "median": 0.0022705375022860352,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      }
+    },
+    "gradient_boosting_minus_decision_tree": {
+      "direction": {
+        "later": "gradient_boosting",
+        "earlier": "decision_tree"
+      },
+      "loss_intervals": {
+        "clean": {
+          "brier": {
+            "lower": -0.007868734378545817,
+            "upper": -0.003923103546315949,
+            "median": -0.00580579346298557,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.026704395685144038,
+            "upper": -0.015355264197322473,
+            "median": -0.02076990571199261,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__mask_only": {
+          "brier": {
+            "lower": -0.007817393794401311,
+            "upper": -0.004438261514570258,
+            "median": -0.006073948434454288,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.027284673680091888,
+            "upper": -0.01736391096898331,
+            "median": -0.022189417024468944,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__corruption_only": {
+          "brier": {
+            "lower": -0.006836715753393984,
+            "upper": -0.003149410951807565,
+            "median": -0.00492155658084116,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.02373953132534984,
+            "upper": -0.013139057451462747,
+            "median": -0.018185457359547352,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__joint": {
+          "brier": {
+            "lower": -0.0071346749992636325,
+            "upper": -0.003863337297903342,
+            "median": -0.005431380957904894,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.02466169749553765,
+            "upper": -0.015014575888848958,
+            "median": -0.019736228410376616,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__mask_only": {
+          "brier": {
+            "lower": -0.007502131853377762,
+            "upper": -0.003663970090220485,
+            "median": -0.005525769226132571,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.025412029039608337,
+            "upper": -0.01470650064612589,
+            "median": -0.019797061969326873,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__corruption_only": {
+          "brier": {
+            "lower": -0.009176590045966358,
+            "upper": -0.0056484517933509,
+            "median": -0.007339922570501742,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.031015045148865036,
+            "upper": -0.0206598872755215,
+            "median": -0.02569717865925991,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__joint": {
+          "brier": {
+            "lower": -0.00891304914734624,
+            "upper": -0.005509943768023938,
+            "median": -0.007154018179777247,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.03028222361611059,
+            "upper": -0.020256965779699616,
+            "median": -0.024963039282769578,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__mask_only": {
+          "brier": {
+            "lower": -0.0065497494430446475,
+            "upper": -0.0030696718735545134,
+            "median": -0.004735061314095096,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.021775134205212505,
+            "upper": -0.01146830642116584,
+            "median": -0.01633776868296577,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__corruption_only": {
+          "brier": {
+            "lower": -0.008625962051873451,
+            "upper": -0.004996527119760673,
+            "median": -0.006814070010020906,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.029321734381353565,
+            "upper": -0.018691846690390628,
+            "median": -0.023840179464245576,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__joint": {
+          "brier": {
+            "lower": -0.007290812747835032,
+            "upper": -0.004036523863459959,
+            "median": -0.005628246889916963,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.02366363109139123,
+            "upper": -0.013972400978375137,
+            "median": -0.018724951170169146,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      },
+      "interaction_difference_intervals": {
+        "repayment": {
+          "brier": {
+            "lower": -0.0005017981510074751,
+            "upper": -1.0394537964193707e-05,
+            "median": -0.0002521904236666844,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0009084652444204006,
+            "upper": 0.0005783204062882541,
+            "median": -0.0001370477602692377,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing": {
+          "brier": {
+            "lower": -0.0002752405559712859,
+            "upper": 8.356328695239945e-05,
+            "median": -9.457660493403242e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0007310348886008747,
+            "upper": 0.00018141073281009962,
+            "median": -0.00027875879665878456,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment": {
+          "brier": {
+            "lower": -0.0003070419913593581,
+            "upper": 0.0004950309126669564,
+            "median": 9.400380966820276e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0004054494372463913,
+            "upper": 0.0016568017930266832,
+            "median": 0.0006452010905461936,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      }
+    },
+    "gradient_boosting_minus_random_forest": {
+      "direction": {
+        "later": "gradient_boosting",
+        "earlier": "random_forest"
+      },
+      "loss_intervals": {
+        "clean": {
+          "brier": {
+            "lower": -0.002240622444123025,
+            "upper": 0.0002899342325935504,
+            "median": -0.0009450405563664332,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.004541040921646454,
+            "upper": 0.0025933490296925358,
+            "median": -0.0009837579374643024,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__mask_only": {
+          "brier": {
+            "lower": -0.0009432336579844109,
+            "upper": 0.001185417751273214,
+            "median": 0.0001562670464334004,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0010801445292624168,
+            "upper": 0.005383011858686203,
+            "median": 0.0021944288011602198,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__corruption_only": {
+          "brier": {
+            "lower": -0.0015627158774681516,
+            "upper": 0.0007159736842353135,
+            "median": -0.00039934010143098664,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0032427317798879806,
+            "upper": 0.0033557415760356517,
+            "median": 0.00012474882582938496,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "repayment__joint": {
+          "brier": {
+            "lower": -0.00039185100975545824,
+            "upper": 0.0016822462546988654,
+            "median": 0.0006821619172510673,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.0012722028228431494,
+            "upper": 0.0074514341389259504,
+            "median": 0.004405189740316534,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__mask_only": {
+          "brier": {
+            "lower": -0.0022995236019834977,
+            "upper": 5.6537710247901546e-05,
+            "median": -0.0010763705702533793,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.005087288764526623,
+            "upper": 0.0015373924869099605,
+            "median": -0.0017433346378361025,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__corruption_only": {
+          "brier": {
+            "lower": -0.0015037007676942347,
+            "upper": 0.0007124088940637083,
+            "median": -0.0003585361718937141,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0031574346595021783,
+            "upper": 0.0032688092394954175,
+            "median": 9.635401190077886e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing__joint": {
+          "brier": {
+            "lower": -0.0013864024141992614,
+            "upper": 0.0007639306576880288,
+            "median": -0.0002736318680537364,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0030728737769008196,
+            "upper": 0.0031516506225332847,
+            "median": 9.81244856735064e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__mask_only": {
+          "brier": {
+            "lower": -0.0012668786561662788,
+            "upper": 0.001019804523719217,
+            "median": -8.595134236745461e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0007940455188755746,
+            "upper": 0.0059044105806877285,
+            "median": 0.0026624331819146696,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__corruption_only": {
+          "brier": {
+            "lower": -0.0012307857445713701,
+            "upper": 0.0010477879039666824,
+            "median": -3.8100582411063066e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.002103965351176125,
+            "upper": 0.004300174658819325,
+            "median": 0.0011441724976278267,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment__joint": {
+          "brier": {
+            "lower": -0.0012174787241081397,
+            "upper": 0.001015947977111084,
+            "median": -4.181748112511152e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.0002468910435182214,
+            "upper": 0.006231769752367043,
+            "median": 0.0031335544971655693,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      },
+      "interaction_difference_intervals": {
+        "repayment": {
+          "brier": {
+            "lower": -0.0002613026418626964,
+            "upper": 0.00023230767835326002,
+            "median": -2.9194897242193485e-05,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.00040576728727318714,
+            "upper": 0.0018054163896664198,
+            "median": 0.0010823638457396756,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "billing": {
+          "brier": {
+            "lower": 1.1814642466882048e-05,
+            "upper": 0.0004328590575272027,
+            "median": 0.0002363373778625083,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": 0.00017386621605406107,
+            "upper": 0.0013961080506707758,
+            "median": 0.0008183249534887138,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        },
+        "payment": {
+          "brier": {
+            "lower": -0.001165491198028007,
+            "upper": -0.0005655375859928071,
+            "median": -0.000865698152456143,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          },
+          "log_loss": {
+            "lower": -0.002491501121850177,
+            "upper": -0.0007700610778064305,
+            "median": -0.0016098208490421262,
+            "valid_draws": 2000,
+            "undefined_draws": 0,
+            "total_draws": 2000,
+            "percentile_bounds": [
+              2.5,
+              97.5
+            ],
+            "percentile_method": "numpy linear",
+            "scope": "marginal conditional fixed-prediction interval; not joint confidence certification"
+          }
+        }
+      }
+    }
+  },
+  "selector_frequencies": {
+    "safe_arithmetic": {
+      "selected_counts": {
+        "logistic": 2000,
+        "decision_tree": 0,
+        "random_forest": 0,
+        "gradient_boosting": 0
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 2000,
+        "decision_tree": 0,
+        "random_forest": 0,
+        "gradient_boosting": 0
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 0.0,
+        "random_forest": 0.0,
+        "gradient_boosting": 0.0
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "safe_geometric": {
+      "selected_counts": {
+        "logistic": 2000,
+        "decision_tree": 0,
+        "random_forest": 0,
+        "gradient_boosting": 0
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 2000,
+        "decision_tree": 0,
+        "random_forest": 0,
+        "gradient_boosting": 0
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 0.0,
+        "random_forest": 0.0,
+        "gradient_boosting": 0.0
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "safe_quadratic": {
+      "selected_counts": {
+        "logistic": 2000,
+        "decision_tree": 0,
+        "random_forest": 0,
+        "gradient_boosting": 0
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 2000,
+        "decision_tree": 0,
+        "random_forest": 0,
+        "gradient_boosting": 0
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 0.0,
+        "random_forest": 0.0,
+        "gradient_boosting": 0.0
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "clean_brier": {
+      "selected_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 135,
+        "gradient_boosting": 1858
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 135,
+        "gradient_boosting": 1858
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.0675,
+        "gradient_boosting": 0.929
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "clean_logloss": {
+      "selected_counts": {
+        "logistic": 0,
+        "decision_tree": 0,
+        "random_forest": 626,
+        "gradient_boosting": 1374
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 0,
+        "decision_tree": 0,
+        "random_forest": 626,
+        "gradient_boosting": 1374
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0,
+        "decision_tree": 0.0,
+        "random_forest": 0.313,
+        "gradient_boosting": 0.687
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "worst_brier": {
+      "selected_counts": {
+        "logistic": 0,
+        "decision_tree": 0,
+        "random_forest": 1773,
+        "gradient_boosting": 227
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 0,
+        "decision_tree": 0,
+        "random_forest": 1773,
+        "gradient_boosting": 227
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0,
+        "decision_tree": 0.0,
+        "random_forest": 0.8865,
+        "gradient_boosting": 0.1135
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "worst_logloss": {
+      "selected_counts": {
+        "logistic": 0,
+        "decision_tree": 0,
+        "random_forest": 1991,
+        "gradient_boosting": 9
+      },
+      "retained_counts": {
+        "logistic": 2000,
+        "decision_tree": 2000,
+        "random_forest": 2000,
+        "gradient_boosting": 2000
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 0,
+        "decision_tree": 0,
+        "random_forest": 1991,
+        "gradient_boosting": 9
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0,
+        "decision_tree": 0.0,
+        "random_forest": 0.9955,
+        "gradient_boosting": 0.0045
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 1.0,
+        "decision_tree": 1.0,
+        "random_forest": 1.0,
+        "gradient_boosting": 1.0
+      },
+      "total_draws": 2000
+    },
+    "screened_safe_clean": {
+      "selected_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 624,
+        "gradient_boosting": 1369
+      },
+      "retained_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 626,
+        "gradient_boosting": 1865
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 624,
+        "gradient_boosting": 1369
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.312,
+        "gradient_boosting": 0.6845
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.313,
+        "gradient_boosting": 0.9325
+      },
+      "total_draws": 2000
+    },
+    "screened_safe_marginal": {
+      "selected_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 1800,
+        "gradient_boosting": 193
+      },
+      "retained_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 1807,
+        "gradient_boosting": 1865
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 1800,
+        "gradient_boosting": 193
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.9,
+        "gradient_boosting": 0.0965
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.9035,
+        "gradient_boosting": 0.9325
+      },
+      "total_draws": 2000
+    },
+    "screened_safe_outcome_v0": {
+      "selected_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 1984,
+        "gradient_boosting": 9
+      },
+      "retained_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 1991,
+        "gradient_boosting": 1865
+      },
+      "tied_choice_membership_counts": {
+        "logistic": 7,
+        "decision_tree": 0,
+        "random_forest": 1984,
+        "gradient_boosting": 9
+      },
+      "multiple_choice_tie_draws": 0,
+      "valid_draws": 2000,
+      "unresolved_draws": 0,
+      "selection_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.992,
+        "gradient_boosting": 0.0045
+      },
+      "retention_fraction_valid_draws": {
+        "logistic": 0.0035,
+        "decision_tree": 0.0,
+        "random_forest": 0.9955,
+        "gradient_boosting": 0.9325
+      },
+      "total_draws": 2000
+    }
+  },
+  "retention_definition": "Pareto-retained for screened selectors; complete supplied pool for unscreened baselines",
+  "choice_tie_definition": "all exact minimum-loss ties or declared 1e-12 SAFE-score ties counted; selected ID uses fixed pilot order",
+  "maximizer_membership_counts": {
+    "logistic": {
+      "marginal_max_brier": {
+        "repayment__mask_only": 2000
+      },
+      "marginal_max_logloss": {
+        "repayment__mask_only": 2000
+      },
+      "joint_max_brier": {
+        "repayment__joint": 2000
+      },
+      "joint_max_logloss": {
+        "repayment__joint": 2000
+      },
+      "worst_max_brier": {
+        "repayment__joint": 1998,
+        "repayment__mask_only": 2
+      },
+      "worst_max_logloss": {
+        "repayment__joint": 2000
+      }
+    },
+    "decision_tree": {
+      "marginal_max_brier": {
+        "repayment__mask_only": 2000
+      },
+      "marginal_max_logloss": {
+        "repayment__mask_only": 2000
+      },
+      "joint_max_brier": {
+        "repayment__joint": 2000
+      },
+      "joint_max_logloss": {
+        "repayment__joint": 2000
+      },
+      "worst_max_brier": {
+        "repayment__joint": 1999,
+        "repayment__mask_only": 1
+      },
+      "worst_max_logloss": {
+        "repayment__joint": 1999,
+        "repayment__mask_only": 1
+      }
+    },
+    "random_forest": {
+      "marginal_max_brier": {
+        "repayment__mask_only": 2000
+      },
+      "marginal_max_logloss": {
+        "repayment__mask_only": 2000
+      },
+      "joint_max_brier": {
+        "repayment__joint": 2000
+      },
+      "joint_max_logloss": {
+        "repayment__joint": 2000
+      },
+      "worst_max_brier": {
+        "repayment__joint": 2000
+      },
+      "worst_max_logloss": {
+        "repayment__joint": 2000
+      }
+    },
+    "gradient_boosting": {
+      "marginal_max_brier": {
+        "repayment__mask_only": 2000
+      },
+      "marginal_max_logloss": {
+        "repayment__mask_only": 2000
+      },
+      "joint_max_brier": {
+        "repayment__joint": 2000
+      },
+      "joint_max_logloss": {
+        "repayment__joint": 2000
+      },
+      "worst_max_brier": {
+        "repayment__joint": 2000
+      },
+      "worst_max_logloss": {
+        "repayment__joint": 2000
+      }
+    }
+  },
+  "maximizer_counts_note": "all exact maximizers counted; tied memberships can sum above draw count",
+  "monte_carlo_repetition_spread": "reported separately; no repetition resampling",
+  "safe_scores_held_fixed": true
+}

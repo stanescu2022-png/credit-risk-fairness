@@ -1,0 +1,170 @@
+{
+  "logistic": {
+    "clean": {
+      "brier": 0.13625993075841297,
+      "log_loss": 0.43521846395078573
+    },
+    "repayment__mask_only": {
+      "brier": 0.1455407504877103,
+      "log_loss": 0.4614126824332984
+    },
+    "repayment__corruption_only": {
+      "brier": 0.13644970481017027,
+      "log_loss": 0.43578457147737637
+    },
+    "repayment__joint": {
+      "brier": 0.145683568425641,
+      "log_loss": 0.4624460142215317
+    },
+    "billing__mask_only": {
+      "brier": 0.13626948668643218,
+      "log_loss": 0.43529049542973414
+    },
+    "billing__corruption_only": {
+      "brier": 0.13812320946591414,
+      "log_loss": 0.4394240507051885
+    },
+    "billing__joint": {
+      "brier": 0.13819186263656938,
+      "log_loss": 0.43959388837702235
+    },
+    "payment__mask_only": {
+      "brier": 0.13637985495560181,
+      "log_loss": 0.4356078688442833
+    },
+    "payment__corruption_only": {
+      "brier": 0.13809750663520834,
+      "log_loss": 0.4394256179145379
+    },
+    "payment__joint": {
+      "brier": 0.13823156568909944,
+      "log_loss": 0.43991165665968396
+    }
+  },
+  "decision_tree": {
+    "clean": {
+      "brier": 0.14023773960286842,
+      "log_loss": 0.448615114876292
+    },
+    "repayment__mask_only": {
+      "brier": 0.14828937389901406,
+      "log_loss": 0.4705005111897206
+    },
+    "repayment__corruption_only": {
+      "brier": 0.14036761431423278,
+      "log_loss": 0.4489341107244941
+    },
+    "repayment__joint": {
+      "brier": 0.1485552989463104,
+      "log_loss": 0.47156699237523053
+    },
+    "billing__mask_only": {
+      "brier": 0.14015112252485884,
+      "log_loss": 0.4482136645945615
+    },
+    "billing__corruption_only": {
+      "brier": 0.14379122579904713,
+      "log_loss": 0.45832082706499444
+    },
+    "billing__joint": {
+      "brier": 0.14390664109047158,
+      "log_loss": 0.4585179009494644
+    },
+    "payment__mask_only": {
+      "brier": 0.14112242505404393,
+      "log_loss": 0.4513332071443088
+    },
+    "payment__corruption_only": {
+      "brier": 0.1436960703436215,
+      "log_loss": 0.4577372953623049
+    },
+    "payment__joint": {
+      "brier": 0.14419875353150083,
+      "log_loss": 0.4598611389113449
+    }
+  },
+  "random_forest": {
+    "clean": {
+      "brier": 0.135344966824631,
+      "log_loss": 0.4286988350212488
+    },
+    "repayment__mask_only": {
+      "brier": 0.1420536766486804,
+      "log_loss": 0.44601593926239513
+    },
+    "repayment__corruption_only": {
+      "brier": 0.13580049990486795,
+      "log_loss": 0.43054399968798585
+    },
+    "repayment__joint": {
+      "brier": 0.1424107795655849,
+      "log_loss": 0.44734893720758967
+    },
+    "billing__mask_only": {
+      "brier": 0.13567625023501095,
+      "log_loss": 0.4300692997578631
+    },
+    "billing__corruption_only": {
+      "brier": 0.13680414937711982,
+      "log_loss": 0.43242690016357027
+    },
+    "billing__joint": {
+      "brier": 0.13700523159531774,
+      "log_loss": 0.43330191331511997
+    },
+    "payment__mask_only": {
+      "brier": 0.13647226760010572,
+      "log_loss": 0.43230651453977814
+    },
+    "payment__corruption_only": {
+      "brier": 0.13690778932599945,
+      "log_loss": 0.432702997752958
+    },
+    "payment__joint": {
+      "brier": 0.13860701647171708,
+      "log_loss": 0.4379670270381617
+    }
+  },
+  "gradient_boosting": {
+    "clean": {
+      "brier": 0.13438786890377788,
+      "log_loss": 0.42771128565665084
+    },
+    "repayment__mask_only": {
+      "brier": 0.14219375715827212,
+      "log_loss": 0.4482197041707924
+    },
+    "repayment__corruption_only": {
+      "brier": 0.13540237646600878,
+      "log_loss": 0.43066045774301265
+    },
+    "repayment__joint": {
+      "brier": 0.14308749684620364,
+      "log_loss": 0.4517645465084413
+    },
+    "billing__mask_only": {
+      "brier": 0.13458134796424878,
+      "log_loss": 0.4282889930658552
+    },
+    "billing__corruption_only": {
+      "brier": 0.13642377252126817,
+      "log_loss": 0.43250537369947967
+    },
+    "billing__joint": {
+      "brier": 0.13672130315824993,
+      "log_loss": 0.43339809323278056
+    },
+    "payment__mask_only": {
+      "brier": 0.13636838230457843,
+      "log_loss": 0.4349137447403085
+    },
+    "payment__corruption_only": {
+      "brier": 0.13684645799189582,
+      "log_loss": 0.4338049301560621
+    },
+    "payment__joint": {
+      "brier": 0.13853367992482926,
+      "log_loss": 0.44104874010214307
+    }
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "status": "verified",
+  "date_utc": "2026-10-30T14:10:55.327966+00:00",
+  "source_receipt_sha256": "24b81cdd9971d0d28eebeb2a76f0df818c2bdeada5f9168c0b340980842fa30e",
+  "analysis_source_sha256": "714ea42be74568add11c3586842568735ae62382f2261938563267a7a045b9ec",
+  "correction_specification_sha256": "bc30fbdc30effc5564b4a8e13d93a84b6812d6c6c4f3bcc373c7fdc5cd9e49f2",
+  "zero_severity_raw_rgr": {
+    "logistic": 1.0,
+    "decision_tree": 0.9999999999999956,
+    "random_forest": 0.9999999999999999,
+    "gradient_boosting": 0.9999999999999998
+  },
+  "scope": "Only descriptive pair-order labels corrected for exact self-comparison ties; raw scores/losses/means unchanged",
+  "corrected_pair_order_comparisons": {
+    "decision_tree_minus_logistic": {
+      "brier": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "opposition",
+          "opposition",
+          "agreement",
+          "opposition",
+          "opposition",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition"
+        ],
+        "counts": {
+          "agreement": 7,
+          "opposition": 15,
+          "tie_in_at_least_one_measure": 1
+        }
+      },
+      "log_loss": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "opposition",
+          "agreement",
+          "opposition",
+          "opposition",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition"
+        ],
+        "counts": {
+          "agreement": 7,
+          "opposition": 15,
+          "tie_in_at_least_one_measure": 1
+        }
+      }
+    },
+    "random_forest_minus_logistic": {
+      "brier": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition"
+        ],
+        "counts": {
+          "agreement": 5,
+          "opposition": 17,
+          "tie_in_at_least_one_measure": 1
+        }
+      },
+      "log_loss": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition"
+        ],
+        "counts": {
+          "agreement": 5,
+          "opposition": 17,
+          "tie_in_at_least_one_measure": 1
+        }
+      }
+    },
+    "gradient_boosting_minus_logistic": {
+      "brier": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 21,
+          "opposition": 1,
+          "tie_in_at_least_one_measure": 1
+        }
+      },
+      "log_loss": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 21,
+          "opposition": 1,
+          "tie_in_at_least_one_measure": 1
+        }
+      }
+    },
+    "random_forest_minus_decision_tree": {
+      "brier": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition"
+        ],
+        "counts": {
+          "agreement": 9,
+          "opposition": 13,
+          "tie_in_at_least_one_measure": 1
+        }
+      },
+      "log_loss": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "opposition",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 12,
+          "opposition": 10,
+          "tie_in_at_least_one_measure": 1
+        }
+      }
+    },
+    "gradient_boosting_minus_decision_tree": {
+      "brier": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "opposition",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 21,
+          "opposition": 1,
+          "tie_in_at_least_one_measure": 1
+        }
+      },
+      "log_loss": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 22,
+          "opposition": 0,
+          "tie_in_at_least_one_measure": 1
+        }
+      }
+    },
+    "gradient_boosting_minus_random_forest": {
+      "brier": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 22,
+          "opposition": 0,
+          "tie_in_at_least_one_measure": 1
+        }
+      },
+      "log_loss": {
+        "by_node": [
+          "tie_in_at_least_one_measure",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement",
+          "agreement"
+        ],
+        "counts": {
+          "agreement": 22,
+          "opposition": 0,
+          "tie_in_at_least_one_measure": 1
+        }
+      }
+    }
+  }
+}

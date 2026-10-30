@@ -1,0 +1,7 @@
+{
+  "status": "verified",
+  "artifact_hashes": {
+    "specification.md": "bc30fbdc30effc5564b4a8e13d93a84b6812d6c6c4f3bcc373c7fdc5cd9e49f2",
+    "results.json": "55aa35a6d0a6a4783aab5c29bd5074b1064604fe87fdc19e0db9590b8aef2999"
+  }
+}

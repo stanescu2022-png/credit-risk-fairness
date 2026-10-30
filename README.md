@@ -9,8 +9,19 @@ Original performance, fairness, explainability and robustness are complete.
 The 2024 adaptation is complete with its unpenalized LR unavailable; both
 independent article runs are retained. The future comparison is accepted as a
 direction; four fixed pilot candidates and their selection-set SAFE swapping
-assessment were verified on 26 October. Our developing method and independent
-judge remain to be specified. PSI/stability, monitoring,
+assessment were verified on 26 October. On 30 October, Pareto comparison was
+accepted as the provisional judge direction; the primary evaluation stays open.
+A [publication-oriented research agenda](research/model_selection_v2/research_agenda_2026-10-30.md)
+now includes a verified mechanism audit, tested judge utilities and
+[verified selection exploration](research/model_selection_v2/selection_findings_2026-10-30.md).
+The outcome screen selects RF, but so do its marginal-only ablation and the
+simpler worst-LogLoss rule; distinct added value is not established. The
+[predeclared judge v1](research/model_selection_v2/judge_v1_specification.md) is now
+implemented, frozen, executed and independently verified. Its
+[findings](research/model_selection_v2/judge_findings_2026-10-30.md) show a
+probability-loss/disparity trade-off, not Pareto superiority. Independent
+validation and publication readiness remain open.
+PSI/stability, monitoring,
 mitigation and governance remain deferred.
 
 ## Read saved evidence

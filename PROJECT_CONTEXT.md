@@ -1,6 +1,9 @@
 # Credit-risk current context
 
-Updated **26 October 2026**. Read this at startup, then only task-relevant evidence.
+Updated **30 October 2026**. Read this at startup, then only task-relevant evidence.
+**Exploratory study completed and verified.** See the
+[current checkpoint](research/model_selection_v2/RESUME.md) and
+[judge findings](research/model_selection_v2/judge_findings_2026-10-30.md).
 Latest user instructions override older plans. [README](README.md) covers setup
 and command effects; [AGENTS](AGENTS.md) covers safeguards;
 [historical index](docs/archive/README.md) routes older material.
@@ -40,16 +43,50 @@ sensitivity rankings agree. Raw curves, areas and uniformly sampled means stay
 distinct. Gaussian was explicitly deferred by the user; exact TOPSIS remains
 unsupported. No auxiliary fitting, primary refitting or holdout assessment.
 
-**Next decisions:** specify our developing method and the independent judge.
-Provisional judge options remain performance-first, minimum requirements followed
-by performance, or a multidimensional/Pareto comparison; practical margins/gates
-remain to be justified before formal evaluation.
-**Brier is proposed as primary**, not accepted as final. LogLoss may be secondary
-or co-primary; an independent explainability criterion remains open. Also specify
-our exact extension, any future candidate
-revision/tuning or refit policy, resampling and a confirmation dataset. Taiwan has already informed
-development and cannot be called an untouched confirmation set. Romanian credit
-data were requested but are not available here.
+**Accepted direction, 30 October:** pursue a publication-oriented contribution
+autonomously under a persistent goal. Root leads planning/evaluation;
+**gpt-6.1-sol high** implements delegated work. Improvement is a hypothesis:
+preserve negative/inconclusive findings, never tune on the historical holdout or
+revise the judge to favor a selector, and separate exploration, protocol freezing
+and independent validation. Superiority requires evidence not used to develop
+the claim. See the [research agenda](research/model_selection_v2/research_agenda_2026-10-30.md).
+
+**Executed, 30 October:** [synthetic mechanism audit](runs/model_selection_v2/mechanism_audit_2026-10-30/report.md),
+15 tests independently rerun by root, supports positive-affine output invariance
+of our integrated SAFE operationalization despite differing probability losses.
+Nonlinear monotone invariance is refuted. A separate response-table example
+shows marginal responses do not identify joint loss. No empirical predictions,
+fits or new holdout assessment. These are mechanism findings, not superiority.
+[Literature update](research/model_selection_v2/literature_update_2026-10-30.md)
+records existing probability-sensitive SAFE, newer integrated-score uncertainty,
+and Pareto risk-control work; novelty remains unestablished.
+
+**Executed, 30 October:** [selection exploration v1 findings](research/model_selection_v2/selection_findings_2026-10-30.md),
+26 synthetic tests independently passed and saved outputs independently reconstructed.
+The outcome screen chooses **RF**, versus SAFE's **logistic** and clean-loss
+selection's **GBM**. Marginal-only screening and simple worst-LogLoss also choose
+RF: no distinct point-selection benefit from the joint/full combination is shown.
+All baselines, negative findings and conditional uncertainty are preserved.
+[Generic judge utilities](research/model_selection_v2/judge_core/README.md) are
+implemented with 30 synthetic tests independently rerun by root. The
+[selection-only exploration v1 protocol](research/model_selection_v2/exploration_v1_specification.md)
+was specified before new scenario predictions and is now executed/verified.
+**Executed, 30 October:** [judge v1 findings](research/model_selection_v2/judge_findings_2026-10-30.md).
+The predeclared six-coordinate judge and all method choices were frozen before
+new historical evaluation. All 23 judge tests independently passed; the 5,996-row
+assessment and independent reconstruction of all 2,000 group draws are verified.
+RF has lower clean/stressed probability losses than SAFE's logistic, but larger
+observed sex gaps; gap differences remain uncertain. The principal comparison is
+**incomparable**, and all four candidates are on the reference Pareto frontier.
+GBM has lower reference probability-loss point estimates than RF. No distinct
+full-method benefit or independent superiority is established.
+**Pareto comparison is accepted for now; primary evaluation
+remains undecided.** The [earlier judge proposal](research/model_selection_v2/judge_proposal_2026-10-30.md)
+is a provisional measurement menu superseded by that specification for v1.
+**Next research stage:** [independent-validation handoff](research/model_selection_v2/validation_handoff_2026-10-30.md).
+Practical margins, independent explainability assessment, future tuning/refitting,
+full-procedure resampling and confirmation data remain open. Taiwan is historically inspected exploratory evidence;
+Romanian credit data are unavailable here.
 
 This direction supersedes the older blanket hold on pursuing the comparison.
 It does not authorize implementing every older SAFE/KAIRI indicator or test.
@@ -61,7 +98,7 @@ No new study, refit, category pooling or LR repair was executed during cleanup.
 | --- | --- |
 | Original LR/GBM study | Data/EDA, frozen pipelines, performance, fairness, explainability and robustness complete by 8 October |
 | Separate 2024 article adaptation | Four work packages complete and independently reproduced on 10 October; GBM works; unpenalized article LR unavailable |
-| Integrated SAFE 2026 selection comparison | Four frozen candidates and supported swapping/mean-based SAFE application verified; developing method and independent judge unimplemented |
+| Integrated SAFE 2026 selection comparison | Four candidates, SAFE, selection exploration and frozen judge v1 assessment verified; observed trade-offs, no distinct full-method benefit or superiority established |
 
 The original study uses native SAFE metrics plus conventional metrics, SHAP,
 semantic stresses and uncertainty. That collection is not a new overall
@@ -177,6 +214,8 @@ them. No deterministic monthly update rule is established.
 | 26 Oct 2026 | Executed: simplified navigation, archived useful authoring sources, removed disposable files; no research changes | [Cleanup record](docs/archive/README.md); tag `pre-cleanup-2026-10-26` at `1a1c136` |
 | 26 Oct 2026 | Accepted/executed: bounded fixed-candidate pilot, saved fitting/selection roles, no holdout assessment/SAFE/judge/tuning; primary candidates frozen | [Protocol](runs/model_selection_v2/pilot_candidates_2026-10-26/protocol.json), [verification](runs/model_selection_v2/pilot_candidates_2026-10-26/verification_report.md) |
 | 26 Oct 2026 | Accepted/executed: Taiwan SAFE swapping assessment with additive RGA, fixed-model mean/mode masking and primary arithmetic selector; Gaussian deferred, TOPSIS unsupported; logistic selected conditionally | [Specification/fidelity](research/model_selection_v2/safe2026_specification.md), [scores and verification](runs/model_selection_v2/safe2026_swapping_2026-10-26/report.md) |
+| 30 Oct 2026 | Accepted: Pareto judge direction for now, primary evaluation open. Proposed: metric panel, preserved data roles, stress and conditional uncertainty; documentation only | [Judge proposal](research/model_selection_v2/judge_proposal_2026-10-30.md) |
+| 30 Oct 2026 | Accepted: autonomous publication-oriented research goal, Sol high implementation, root planning/evaluation; explicit exploration/validation separation. Executed: isolated synthetic audit and targeted literature review | [Research agenda](research/model_selection_v2/research_agenda_2026-10-30.md), [audit](runs/model_selection_v2/mechanism_audit_2026-10-30/report.md) |
 
 ## Detail only when needed
 

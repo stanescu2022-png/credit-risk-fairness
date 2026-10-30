@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\Andrei\\Desktop\\credit-risk-fairness\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research/model_selection_v2/mechanism_audit",
+    "-p",
+    "test_audit.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_binary_reference_is_pairwise_auc (test_audit.ExactReferenceTests.test_binary_reference_is_pairwise_auc) ... ok\ntest_exact_affine_pairwise_cancellation_beyond_float_boundary (test_audit.ExactReferenceTests.test_exact_affine_pairwise_cancellation_beyond_float_boundary) ... ok\ntest_exhaustive_small_orderings_and_reference_ties (test_audit.ExactReferenceTests.test_exhaustive_small_orderings_and_reference_ties) ... ok\ntest_hand_calculated_weighted_pairs (test_audit.ExactReferenceTests.test_hand_calculated_weighted_pairs) ... ok\ntest_identical_separate_responses_and_distinct_joint_losses (test_audit.JointInformationTests.test_identical_separate_responses_and_distinct_joint_losses) ... ok\ntest_affine_curves_every_greedy_alternative_and_all_means (test_audit.OperationalMechanismTests.test_affine_curves_every_greedy_alternative_and_all_means) ... ok\ntest_constant_comparison_is_half_with_nonconstant_reference (test_audit.OperationalMechanismTests.test_constant_comparison_is_half_with_nonconstant_reference) ... ok\ntest_constant_reference_and_float_collapse_are_undefined (test_audit.OperationalMechanismTests.test_constant_reference_and_float_collapse_are_undefined) ... ok\ntest_direct_probability_losses_cross_checked_against_sklearn (test_audit.OperationalMechanismTests.test_direct_probability_losses_cross_checked_against_sklearn) ... ok\ntest_full_audit_does_not_call_empirical_access_or_fitting (test_audit.OperationalMechanismTests.test_full_audit_does_not_call_empirical_access_or_fitting) ... ok\ntest_independent_cartesian_aggregate_on_hand_values (test_audit.OperationalMechanismTests.test_independent_cartesian_aggregate_on_hand_values) ... ok\ntest_near_constant_remains_nonconstant_and_preserves_exact_ties (test_audit.OperationalMechanismTests.test_near_constant_remains_nonconstant_and_preserves_exact_ties) ... ok\ntest_nonlinear_monotone_negative_control (test_audit.OperationalMechanismTests.test_nonlinear_monotone_negative_control) ... ok\ntest_tie_expectation_accuracy_reference_is_row_permutation_invariant (test_audit.OperationalMechanismTests.test_tie_expectation_accuracy_reference_is_row_permutation_invariant) ... ok\ntest_transform_validation_rejects_outside_probability_range (test_audit.OperationalMechanismTests.test_transform_validation_rejects_outside_probability_range) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.489s\n\nOK\n"
+}

@@ -1,0 +1,26 @@
+{
+  "logistic": {
+    "status": "defined",
+    "arithmetic": 0.651987231063688,
+    "geometric": 0.5479504317746461,
+    "quadratic": 0.7123135980002849
+  },
+  "decision_tree": {
+    "status": "defined",
+    "arithmetic": 0.6207599387323856,
+    "geometric": 0.511989624223899,
+    "quadratic": 0.6890873437107696
+  },
+  "random_forest": {
+    "status": "defined",
+    "arithmetic": 0.623086446518824,
+    "geometric": 0.5178511418715227,
+    "quadratic": 0.6895973561808085
+  },
+  "gradient_boosting": {
+    "status": "defined",
+    "arithmetic": 0.6038957518118869,
+    "geometric": 0.4902710147145493,
+    "quadratic": 0.6814640232098214
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "verified_at_utc": "2026-10-30T14:08:40.470390+00:00",
+  "artifact_hashes": {
+    "all_node_profiles.csv": "498f6b827d95debb8128ccc24574791ae138a434fe6b15b5e84876ff052a15ba",
+    "protocol.json": "4b7d4f50286378ad835ae53dc46e0dee7082d5d6b2346cf629225fb376c4b92c",
+    "results.json": "946774c3b5cc5c92e6062f547d2cc77c1a901645def70f2a63f0df5474f767d9",
+    "specification.md": "cf20d9638f7f1f3a3118d88128d6a8dfdd085cc5ee1f74d08ff74a27bca33c08",
+    "verification.json": "4375f47b1aef199916e8399b09b6ea968cd8e3d52a9f45ce924e18c0c2782ddb"
+  }
+}

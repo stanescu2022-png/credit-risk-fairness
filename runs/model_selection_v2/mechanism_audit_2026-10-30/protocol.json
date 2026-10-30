@@ -1,0 +1,23 @@
+{
+  "protocol": "research/model_selection_v2/mechanism_audit/PROTOCOL.md",
+  "protocol_version": "synthetic_affine_mechanism_v1",
+  "date": "2026-10-30",
+  "source_hashes": {
+    "research/model_selection_v2/mechanism_audit/__init__.py": "3e8421cde95aa7aa1535d376461e3dd5f96ff511f7ac0c24f5ef41540eca6f92",
+    "research/model_selection_v2/mechanism_audit/audit.py": "0a46ca72307ca0f193b2244a277c38e694029f33607f38f4f02b9c7ab56668be",
+    "research/model_selection_v2/mechanism_audit/joint_information.py": "a27d108636775caeee9538d4a728768b8dc15f55479bb04c85df21b78c905725",
+    "research/model_selection_v2/mechanism_audit/PROTOCOL.md": "0d25e799e5e53e9af88c0b9d82a8581fb66ab88ca5811b73134301c20cae6401",
+    "research/model_selection_v2/mechanism_audit/test_audit.py": "e4026bd0768b2f08e10833a7a28ca64b7168fd314fc523d87a6dd4d846398c7d",
+    "research/model_selection_v2/pilot.py": "e68b9e0f74fdaf9adc9ae5b7167d3f1c780732f1f6e95f43390124ba0dfdda1c",
+    "research/model_selection_v2/safe2026.py": "763f2b14e21f0e95a529349251f28b043e3494803fc823e176dcdface29de730",
+    "research/model_selection_v2/safe2026_specification.md": "c231a00e3286afe9d29a8727167ecb3098bfc5eb9e6c576c93ec60a74f33fae7"
+  },
+  "python": "3.11.9",
+  "versions": {
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.0"
+  },
+  "data_loaders_executed": [],
+  "empirical_predictions_computed": false,
+  "existing_implementation_source_hashes_unchanged": true
+}

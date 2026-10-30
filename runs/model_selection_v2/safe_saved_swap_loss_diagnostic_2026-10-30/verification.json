@@ -1,0 +1,6 @@
+{
+  "saved_predictions_and_IDs_checked": true,
+  "all_92_node_losses_checked_with_sklearn": true,
+  "all_zero_severity_losses_match_verified_exploration": true,
+  "source_artifacts_preserved": true
+}

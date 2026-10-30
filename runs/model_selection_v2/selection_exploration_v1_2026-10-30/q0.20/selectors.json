@@ -1,0 +1,351 @@
+{
+  "risk_vectors": {
+    "logistic": {
+      "clean_brier": 0.13625993075841297,
+      "clean_logloss": 0.43521846395078573,
+      "marginal_max_brier": 0.1455407504877103,
+      "marginal_max_logloss": 0.4614126824332984,
+      "joint_max_brier": 0.145683568425641,
+      "joint_max_logloss": 0.4624460142215317
+    },
+    "decision_tree": {
+      "clean_brier": 0.14023773960286842,
+      "clean_logloss": 0.448615114876292,
+      "marginal_max_brier": 0.14828937389901406,
+      "marginal_max_logloss": 0.4705005111897206,
+      "joint_max_brier": 0.1485552989463104,
+      "joint_max_logloss": 0.47156699237523053
+    },
+    "random_forest": {
+      "clean_brier": 0.135344966824631,
+      "clean_logloss": 0.4286988350212488,
+      "marginal_max_brier": 0.1420536766486804,
+      "marginal_max_logloss": 0.44601593926239513,
+      "joint_max_brier": 0.1424107795655849,
+      "joint_max_logloss": 0.44734893720758967
+    },
+    "gradient_boosting": {
+      "clean_brier": 0.13438786890377788,
+      "clean_logloss": 0.42771128565665084,
+      "marginal_max_brier": 0.14219375715827212,
+      "marginal_max_logloss": 0.4482197041707924,
+      "joint_max_brier": 0.14308749684620364,
+      "joint_max_logloss": 0.4517645465084413
+    }
+  },
+  "maxima": {
+    "logistic": {
+      "marginal_max_brier": {
+        "value": 0.1455407504877103,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "marginal_max_logloss": {
+        "value": 0.4614126824332984,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "joint_max_brier": {
+        "value": 0.145683568425641,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "joint_max_logloss": {
+        "value": 0.4624460142215317,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_brier": {
+        "value": 0.145683568425641,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_logloss": {
+        "value": 0.4624460142215317,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      }
+    },
+    "decision_tree": {
+      "marginal_max_brier": {
+        "value": 0.14828937389901406,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "marginal_max_logloss": {
+        "value": 0.4705005111897206,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "joint_max_brier": {
+        "value": 0.1485552989463104,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "joint_max_logloss": {
+        "value": 0.47156699237523053,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_brier": {
+        "value": 0.1485552989463104,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_logloss": {
+        "value": 0.47156699237523053,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      }
+    },
+    "random_forest": {
+      "marginal_max_brier": {
+        "value": 0.1420536766486804,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "marginal_max_logloss": {
+        "value": 0.44601593926239513,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "joint_max_brier": {
+        "value": 0.1424107795655849,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "joint_max_logloss": {
+        "value": 0.44734893720758967,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_brier": {
+        "value": 0.1424107795655849,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_logloss": {
+        "value": 0.44734893720758967,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      }
+    },
+    "gradient_boosting": {
+      "marginal_max_brier": {
+        "value": 0.14219375715827212,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "marginal_max_logloss": {
+        "value": 0.4482197041707924,
+        "attaining_scenarios": [
+          "repayment__mask_only"
+        ],
+        "status": "defined"
+      },
+      "joint_max_brier": {
+        "value": 0.14308749684620364,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "joint_max_logloss": {
+        "value": 0.4517645465084413,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_brier": {
+        "value": 0.14308749684620364,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      },
+      "worst_max_logloss": {
+        "value": 0.4517645465084413,
+        "attaining_scenarios": [
+          "repayment__joint"
+        ],
+        "status": "defined"
+      }
+    }
+  },
+  "decisions": {
+    "safe_arithmetic": {
+      "status": "selected",
+      "selected_id": "logistic",
+      "tied_ids": [
+        "logistic"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "safe_geometric": {
+      "status": "selected",
+      "selected_id": "logistic",
+      "tied_ids": [
+        "logistic"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "safe_quadratic": {
+      "status": "selected",
+      "selected_id": "logistic",
+      "tied_ids": [
+        "logistic"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "clean_brier": {
+      "status": "selected",
+      "selected_id": "gradient_boosting",
+      "tied_ids": [
+        "gradient_boosting"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "worst_brier": {
+      "status": "selected",
+      "selected_id": "random_forest",
+      "tied_ids": [
+        "random_forest"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "clean_logloss": {
+      "status": "selected",
+      "selected_id": "gradient_boosting",
+      "tied_ids": [
+        "gradient_boosting"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "worst_logloss": {
+      "status": "selected",
+      "selected_id": "random_forest",
+      "tied_ids": [
+        "random_forest"
+      ],
+      "retained_ids": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "screened_safe_clean": {
+      "status": "selected",
+      "selected_id": "gradient_boosting",
+      "tied_ids": [
+        "gradient_boosting"
+      ],
+      "retained_ids": [
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "screened_safe_marginal": {
+      "status": "selected",
+      "selected_id": "random_forest",
+      "tied_ids": [
+        "random_forest"
+      ],
+      "retained_ids": [
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    },
+    "screened_safe_outcome_v0": {
+      "status": "selected",
+      "selected_id": "random_forest",
+      "tied_ids": [
+        "random_forest"
+      ],
+      "retained_ids": [
+        "random_forest",
+        "gradient_boosting"
+      ],
+      "reason": null
+    }
+  },
+  "primary_evaluation": null,
+  "scope": "exploratory fixed-pool selector definitions; no independent superiority evidence"
+}

@@ -1,0 +1,109 @@
+{
+  "status": "verified",
+  "date_utc": "2026-10-30T19:42:47.277517+00:00",
+  "source_receipt_sha256": "e1257828d8e0e1e780da53d9f5866e6c2f69388432ea4e90224cda671751af21",
+  "review_source_sha256": "76053863f1d0b1ca6b131e6696273faae75afd4b2f3eed1e1d8d0679b8ef9201",
+  "maximum_absolute_reconstruction_difference": 2.7755575615628914e-16,
+  "reconstruction_tolerance": 3e-14,
+  "tolerance_scope": "reproduction only; comparisons use unrounded values",
+  "all_2000_loss_and_signed_absolute_gap_draws_rebuilt_from_predictions": true,
+  "all_candidate_pair_and_principal_loss_coordinate_interaction_intervals_checked": true,
+  "all_full_vector_relations_and_frontiers_rebuilt": true,
+  "fitting_or_model_prediction": false,
+  "results": {
+    "q0.10": {
+      "point_coordinates": {
+        "logistic": {
+          "clean_brier": 0.13817667372589937,
+          "clean_logloss": 0.4411587888816695,
+          "absolute_tpr_gap": 0.022268706866733656,
+          "absolute_fpr_gap": 0.006632137600300701,
+          "worst_joint_brier": 0.14252876152669036,
+          "worst_joint_logloss": 0.453942001446988
+        },
+        "decision_tree": {
+          "clean_brier": 0.1408558650086467,
+          "clean_logloss": 0.449885628831056,
+          "absolute_tpr_gap": 0.02235812052490521,
+          "absolute_fpr_gap": 0.006023544145895544,
+          "worst_joint_brier": 0.14438978695299304,
+          "worst_joint_logloss": 0.45953215615323567
+        },
+        "random_forest": {
+          "clean_brier": 0.13625001073752308,
+          "clean_logloss": 0.43464815807260343,
+          "absolute_tpr_gap": 0.025518187443969387,
+          "absolute_fpr_gap": 0.00771497463332723,
+          "worst_joint_brier": 0.13954092630896212,
+          "worst_joint_logloss": 0.4431476237701612
+        },
+        "gradient_boosting": {
+          "clean_brier": 0.13545282017591403,
+          "clean_logloss": 0.43130398270369147,
+          "absolute_tpr_gap": 0.030419467706374936,
+          "absolute_fpr_gap": 0.008587483299564054,
+          "worst_joint_brier": 0.13934558851629641,
+          "worst_joint_logloss": 0.4420633952038256
+        }
+      },
+      "principal_relation": "incomparable",
+      "principal_bootstrap_relation_counts": {
+        "incomparable": 1618,
+        "left_dominates": 382
+      },
+      "point_frontier": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ]
+    },
+    "q0.20": {
+      "point_coordinates": {
+        "logistic": {
+          "clean_brier": 0.13817667372589937,
+          "clean_logloss": 0.4411587888816695,
+          "absolute_tpr_gap": 0.022268706866733656,
+          "absolute_fpr_gap": 0.006632137600300701,
+          "worst_joint_brier": 0.14666245108110837,
+          "worst_joint_logloss": 0.4661886762402205
+        },
+        "decision_tree": {
+          "clean_brier": 0.1408558650086467,
+          "clean_logloss": 0.449885628831056,
+          "absolute_tpr_gap": 0.02235812052490521,
+          "absolute_fpr_gap": 0.006023544145895544,
+          "worst_joint_brier": 0.14839372075727947,
+          "worst_joint_logloss": 0.47114449760894783
+        },
+        "random_forest": {
+          "clean_brier": 0.13625001073752308,
+          "clean_logloss": 0.43464815807260343,
+          "absolute_tpr_gap": 0.025518187443969387,
+          "absolute_fpr_gap": 0.00771497463332723,
+          "worst_joint_brier": 0.1427262463100711,
+          "worst_joint_logloss": 0.45147761413183846
+        },
+        "gradient_boosting": {
+          "clean_brier": 0.13545282017591403,
+          "clean_logloss": 0.43130398270369147,
+          "absolute_tpr_gap": 0.030419467706374936,
+          "absolute_fpr_gap": 0.008587483299564054,
+          "worst_joint_brier": 0.14313402600582378,
+          "worst_joint_logloss": 0.45281089819216397
+        }
+      },
+      "principal_relation": "incomparable",
+      "principal_bootstrap_relation_counts": {
+        "incomparable": 1618,
+        "left_dominates": 382
+      },
+      "point_frontier": [
+        "logistic",
+        "decision_tree",
+        "random_forest",
+        "gradient_boosting"
+      ]
+    }
+  }
+}

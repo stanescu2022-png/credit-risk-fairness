@@ -1,0 +1,245 @@
+{
+  "status": "verified",
+  "scope": "Independent saved-prediction reconstruction; no model prediction, fitting or holdout access",
+  "source_run_receipt_sha256": "6c9ec5083b0df751073b6ae46b8714838f559b2f536bd75ee6159cfd677350a3",
+  "review_source_sha256": "e5f635b3243750913b04926790c93172678aae27e5ecf7db8782d33d658fdb83",
+  "protected_files_checked": 623,
+  "groups": 4783,
+  "bootstrap_draws": 2000,
+  "maximum_reconstruction_absolute_error": 6.38378239159465e-15,
+  "reconstruction_tolerance": 2e-14,
+  "tolerance_scope": "Numerical reproduction only; selector/Pareto rules remain exact",
+  "checks": [
+    "artifact/source/preservation hashes",
+    "all predictions/IDs/shapes/endpoints",
+    "all scenario/repetition losses and MC SD",
+    "all point risk vectors and ten choices/ties/retained sets",
+    "bootstrap multiplicities and grouping",
+    "all candidate/pair loss and factorial-contrast intervals",
+    "all bootstrap selected/retained/tie-membership counts",
+    "all 540 registry identity/exposure partitions",
+    "72 saved full-frame reuse audit records"
+  ],
+  "results": {
+    "q0.10": {
+      "choices": {
+        "safe_arithmetic": "logistic",
+        "safe_geometric": "logistic",
+        "safe_quadratic": "logistic",
+        "clean_brier": "gradient_boosting",
+        "worst_brier": "gradient_boosting",
+        "clean_logloss": "gradient_boosting",
+        "worst_logloss": "random_forest",
+        "screened_safe_clean": "gradient_boosting",
+        "screened_safe_marginal": "random_forest",
+        "screened_safe_outcome_v0": "random_forest"
+      },
+      "risk_vectors": {
+        "logistic": {
+          "clean_brier": 0.13625993075841297,
+          "clean_logloss": 0.43521846395078573,
+          "marginal_max_brier": 0.14081541230868727,
+          "marginal_max_logloss": 0.44799981321049437,
+          "joint_max_brier": 0.14086309817668344,
+          "joint_max_logloss": 0.44838618803911
+        },
+        "decision_tree": {
+          "clean_brier": 0.14023773960286842,
+          "clean_logloss": 0.448615114876292,
+          "marginal_max_brier": 0.14420961067459864,
+          "marginal_max_logloss": 0.4593736781783589,
+          "joint_max_brier": 0.1441720184102959,
+          "joint_max_logloss": 0.4592240006214853
+        },
+        "random_forest": {
+          "clean_brier": 0.135344966824631,
+          "clean_logloss": 0.4286988350212488,
+          "marginal_max_brier": 0.13860754317481275,
+          "marginal_max_logloss": 0.43707177745108744,
+          "joint_max_brier": 0.13874818616768533,
+          "joint_max_logloss": 0.4375730309536921
+        },
+        "gradient_boosting": {
+          "clean_brier": 0.13438786890377788,
+          "clean_logloss": 0.42771128565665084,
+          "marginal_max_brier": 0.13819685430417672,
+          "marginal_max_logloss": 0.4376409001979502,
+          "joint_max_brier": 0.13850461406057488,
+          "joint_max_logloss": 0.4388423514320836
+        }
+      },
+      "bootstrap_selected_counts": {
+        "safe_arithmetic": {
+          "logistic": 2000,
+          "decision_tree": 0,
+          "random_forest": 0,
+          "gradient_boosting": 0
+        },
+        "safe_geometric": {
+          "logistic": 2000,
+          "decision_tree": 0,
+          "random_forest": 0,
+          "gradient_boosting": 0
+        },
+        "safe_quadratic": {
+          "logistic": 2000,
+          "decision_tree": 0,
+          "random_forest": 0,
+          "gradient_boosting": 0
+        },
+        "clean_brier": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 135,
+          "gradient_boosting": 1858
+        },
+        "worst_brier": {
+          "logistic": 0,
+          "decision_tree": 0,
+          "random_forest": 698,
+          "gradient_boosting": 1302
+        },
+        "clean_logloss": {
+          "logistic": 0,
+          "decision_tree": 0,
+          "random_forest": 626,
+          "gradient_boosting": 1374
+        },
+        "worst_logloss": {
+          "logistic": 0,
+          "decision_tree": 0,
+          "random_forest": 1549,
+          "gradient_boosting": 451
+        },
+        "screened_safe_clean": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 624,
+          "gradient_boosting": 1369
+        },
+        "screened_safe_marginal": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 1234,
+          "gradient_boosting": 759
+        },
+        "screened_safe_outcome_v0": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 1542,
+          "gradient_boosting": 451
+        }
+      }
+    },
+    "q0.20": {
+      "choices": {
+        "safe_arithmetic": "logistic",
+        "safe_geometric": "logistic",
+        "safe_quadratic": "logistic",
+        "clean_brier": "gradient_boosting",
+        "worst_brier": "random_forest",
+        "clean_logloss": "gradient_boosting",
+        "worst_logloss": "random_forest",
+        "screened_safe_clean": "gradient_boosting",
+        "screened_safe_marginal": "random_forest",
+        "screened_safe_outcome_v0": "random_forest"
+      },
+      "risk_vectors": {
+        "logistic": {
+          "clean_brier": 0.13625993075841297,
+          "clean_logloss": 0.43521846395078573,
+          "marginal_max_brier": 0.1455407504877103,
+          "marginal_max_logloss": 0.4614126824332984,
+          "joint_max_brier": 0.145683568425641,
+          "joint_max_logloss": 0.4624460142215317
+        },
+        "decision_tree": {
+          "clean_brier": 0.14023773960286842,
+          "clean_logloss": 0.448615114876292,
+          "marginal_max_brier": 0.14828937389901406,
+          "marginal_max_logloss": 0.4705005111897206,
+          "joint_max_brier": 0.1485552989463104,
+          "joint_max_logloss": 0.47156699237523053
+        },
+        "random_forest": {
+          "clean_brier": 0.135344966824631,
+          "clean_logloss": 0.4286988350212488,
+          "marginal_max_brier": 0.1420536766486804,
+          "marginal_max_logloss": 0.44601593926239513,
+          "joint_max_brier": 0.1424107795655849,
+          "joint_max_logloss": 0.44734893720758967
+        },
+        "gradient_boosting": {
+          "clean_brier": 0.13438786890377788,
+          "clean_logloss": 0.42771128565665084,
+          "marginal_max_brier": 0.14219375715827212,
+          "marginal_max_logloss": 0.4482197041707924,
+          "joint_max_brier": 0.14308749684620364,
+          "joint_max_logloss": 0.4517645465084413
+        }
+      },
+      "bootstrap_selected_counts": {
+        "safe_arithmetic": {
+          "logistic": 2000,
+          "decision_tree": 0,
+          "random_forest": 0,
+          "gradient_boosting": 0
+        },
+        "safe_geometric": {
+          "logistic": 2000,
+          "decision_tree": 0,
+          "random_forest": 0,
+          "gradient_boosting": 0
+        },
+        "safe_quadratic": {
+          "logistic": 2000,
+          "decision_tree": 0,
+          "random_forest": 0,
+          "gradient_boosting": 0
+        },
+        "clean_brier": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 135,
+          "gradient_boosting": 1858
+        },
+        "worst_brier": {
+          "logistic": 0,
+          "decision_tree": 0,
+          "random_forest": 1773,
+          "gradient_boosting": 227
+        },
+        "clean_logloss": {
+          "logistic": 0,
+          "decision_tree": 0,
+          "random_forest": 626,
+          "gradient_boosting": 1374
+        },
+        "worst_logloss": {
+          "logistic": 0,
+          "decision_tree": 0,
+          "random_forest": 1991,
+          "gradient_boosting": 9
+        },
+        "screened_safe_clean": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 624,
+          "gradient_boosting": 1369
+        },
+        "screened_safe_marginal": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 1800,
+          "gradient_boosting": 193
+        },
+        "screened_safe_outcome_v0": {
+          "logistic": 7,
+          "decision_tree": 0,
+          "random_forest": 1984,
+          "gradient_boosting": 9
+        }
+      }
+    }
+  }
+}

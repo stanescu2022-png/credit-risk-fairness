@@ -1,0 +1,107 @@
+{
+  "judge_version": "judge_v1",
+  "method_version": "screened_safe_outcome_v0",
+  "primary_evaluation": null,
+  "role": "historical_evaluation",
+  "evidence": "historically inspected out-of-sample exploration; not pristine validation",
+  "candidate_order": [
+    "logistic",
+    "decision_tree",
+    "random_forest",
+    "gradient_boosting"
+  ],
+  "method_ids": [
+    "safe_arithmetic",
+    "safe_geometric",
+    "safe_quadratic",
+    "clean_brier",
+    "clean_logloss",
+    "worst_brier",
+    "worst_logloss",
+    "screened_safe_clean",
+    "screened_safe_marginal",
+    "screened_safe_outcome_v0"
+  ],
+  "coordinates": [
+    "clean_brier",
+    "clean_logloss",
+    "absolute_tpr_gap",
+    "absolute_fpr_gap",
+    "worst_joint_brier",
+    "worst_joint_logloss"
+  ],
+  "directions": {
+    "clean_brier": "min",
+    "clean_logloss": "min",
+    "absolute_tpr_gap": "min",
+    "absolute_fpr_gap": "min",
+    "worst_joint_brier": "min",
+    "worst_joint_logloss": "min"
+  },
+  "reference_q": 0.1,
+  "sensitivity_q": 0.2,
+  "selected_ids_for_both_severities": "frozen q=.10 development choices",
+  "q20_development_choices": "diagnostic only, cannot replace reference identities",
+  "families": {
+    "repayment": [
+      "PAY_0",
+      "PAY_2",
+      "PAY_3",
+      "PAY_4",
+      "PAY_5",
+      "PAY_6"
+    ],
+    "billing": [
+      "BILL_AMT1",
+      "BILL_AMT2",
+      "BILL_AMT3",
+      "BILL_AMT4",
+      "BILL_AMT5",
+      "BILL_AMT6"
+    ],
+    "payment": [
+      "PAY_AMT1",
+      "PAY_AMT2",
+      "PAY_AMT3",
+      "PAY_AMT4",
+      "PAY_AMT5",
+      "PAY_AMT6"
+    ]
+  },
+  "conditions": {
+    "10": "mask_only",
+    "01": "corruption_only",
+    "11": "joint"
+  },
+  "repetitions": 30,
+  "master_seed": 20261007,
+  "scope": "judge_v1:<family>",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 42,
+  "percentile_bounds": [
+    2.5,
+    97.5
+  ],
+  "bootstrap": "fixed choices, models and saved scenarios; no reselection or complete-procedure uncertainty",
+  "principal_contrast": "screened_safe_outcome_v0 choice minus safe_arithmetic choice",
+  "fixed_pairs": "later pilot-order candidate minus earlier; preserves GBM-minus-LR",
+  "prediction_reuse_audit": "repetition 1, every family/q/condition/candidate",
+  "audit_atol": 1e-15,
+  "logloss_epsilon": 2.220446049250313e-16,
+  "brier_clipping": false,
+  "decision_rule": "p > .5; ties class 0",
+  "signed_gap": "female minus male",
+  "dominance_tolerance": null,
+  "fitting_refit_tuning_calibration": false,
+  "freeze_sha256": "f33f95c503b73bd32dc4126ea0ea7646822aec2e07386af37c5604db6059becc",
+  "environment": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.1",
+    "threadpoolctl": "3.6.0"
+  }
+}
