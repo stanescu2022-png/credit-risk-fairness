@@ -21,16 +21,17 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def verify_freeze():
-    ref = f"refs/tags/{TAG}"
+def verify_freeze(commit=None):
+    ref = commit or f"refs/tags/{TAG}"
     tagged = subprocess.check_output(["git", "show", f"{ref}:{PUBLIC}"], cwd=ROOT)
     if tagged != (ROOT / PUBLIC).read_bytes():
-        raise ValueError("Local public manifest differs from the tagged manifest")
+        raise ValueError("Local public manifest differs from the registered commit")
     manifest = json.loads(tagged)
     if digest(ROOT / PRIVATE) != manifest["private_manifest_sha256"]:
-        raise ValueError("Private protocol and timing manifest differs from the registration")
+        raise ValueError("Local timing evidence manifest differs from the registration")
     private_files = json.loads((ROOT / PRIVATE).read_bytes())
-    for name, expected in {**manifest["code_sha256"], **private_files}.items():
+    for name, expected in {**manifest["code_sha256"], **manifest.get("documents_sha256", {}),
+                           **private_files}.items():
         if digest(ROOT / name) != expected:
             raise ValueError(f"Registered input changed: {name}")
     commit = subprocess.check_output(["git", "rev-parse", ref + "^{commit}"], cwd=ROOT, text=True).strip()
@@ -106,8 +107,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("stage", choices=("check", "brazil", "synthetic"))
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--commit", help="Verify a specific commit before tagging (check only)")
     args = parser.parse_args()
-    freeze = verify_freeze()
+    if args.commit and args.stage != "check":
+        parser.error("--commit is only available for check")
+    freeze = verify_freeze(args.commit)
     from ..synthetic_lean import run as synthetic
     timing = ROOT / "runs/model_selection_v2/synthetic_lean_timing_01"
     if args.stage == "check":

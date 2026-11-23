@@ -454,10 +454,13 @@ def _accepted_timing(path):
     receipt = _read_json(folder / "timing.json")
     expected = _configuration()
     if _hash(folder / "COMPLETE.json") == ORIGINAL_TIMING_RECEIPT:
-        # The registered amendment changed only this driver among timing dependencies.
+        # Keep the authenticated timing receipt tied to its original driver and amendment.
         original_sources = dict(expected["source_sha256"])
         original_sources["research/model_selection_v2/synthetic_lean/run.py"] = (
             "8f7c4ac6f43fe94938e401bf818068b9bbd1f1b53b4578b38209720af9cc043b"
+        )
+        original_sources["docs/frozen_inputs/2026-11-17_v2/version2_amendments.md"] = (
+            "ba2b756c92da2d666cf9c5a51c3da393e09bf027b41f92ea114b3dfd5a0455a2"
         )
         expected = dict(expected, source_sha256=original_sources)
     if receipt["configuration"] != expected:

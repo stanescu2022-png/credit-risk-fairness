@@ -1,8 +1,8 @@
 {
   "tag": "prereg-v2-2026-11",
-  "private_manifest_sha256": "004e4a5848d715a88e722b271fde3222de28741fdf7795ab4e50ff34f60eeead",
+  "private_manifest_sha256": "2f1168fc2eeba9e9ba4f9c0dcd823c05ff15c872aeedccd5cccf886f39041c3f",
   "code_sha256": {
-    ".gitignore": "b092cec3e128e66b1e2d924d231b56d1f03a032506d4a6f3d282bdb557b202f9",
+    ".gitignore": "c8892779491e0555002a0306734d2885345e5c142e9f07590bcef813d65be945",
     "article_safe/__init__.py": "7cf3e080588bbe32162a75b7d56c3dfc8c9c2a6524b04c91b31e92caa44ee339",
     "article_safe/data.py": "23a669f097090eb719ffad5bf479f77e0c7c0fd5109d2b811e0adf2d61d3f3b4",
     "article_safe/protocol.py": "67ffbb527f120f8b762e4eb631f166498114edea82c7bd3165a2f7d24ad80af0",
@@ -28,7 +28,7 @@
     "research/model_selection_v2/confirmation_v2_jobs/names.py": "a7fe67893a43c2b2e9656b8846e46e58381f8c1ea7f6478429a3e09de4193813",
     "research/model_selection_v2/confirmation_v2_jobs/offline.py": "58df6cb3ecdfa69cadfe8e0d631287091e4bb3d45c7836ec10b52801416d17d4",
     "research/model_selection_v2/confirmation_v2_jobs/parallel.py": "ab965689becbc97ace1a8742518b6a6d4409cb858ccb7df21aef0089a209b57c",
-    "research/model_selection_v2/confirmation_v2_jobs/registered.py": "88e9a874fe2dd287cc0c60266f80e80607408f67393c1c8116104d19f7877711",
+    "research/model_selection_v2/confirmation_v2_jobs/registered.py": "a20326df0e71e32eca2f6edccb658a802d777a812a7c6464d5e128f4305d1ce4",
     "research/model_selection_v2/confirmation_v2_jobs/section_6_5.py": "a68d8d5460041d47d48083208baed208722390aed96a08458b8b075d29914f50",
     "research/model_selection_v2/confirmation_v2_jobs/selection.py": "791a65c9ccc255164588ec8930afe9ad7bdaa0115d7b33151e5c0ebbfe9d840c",
     "research/model_selection_v2/confirmation_v2_jobs/test_jobs.py": "b11934157d5d3f36de91e8d796cbc7096942ccec2cfe99d13e7d2fc339e4438b",
@@ -38,7 +38,7 @@
     "research/model_selection_v2/judge_core/metrics.py": "6d521a78b36df06bea29f7364f27b729e707468f0c08e78f7e4748dbaa8f4b97",
     "research/model_selection_v2/judge_core/pareto.py": "3565e204eefe52d53b8a040d4bb9a6e3954e56fa2ce736c315c2acd8d0fb7a09",
     "research/model_selection_v2/judge_core/tables.py": "7491f4fdf5c64e8c00b943fac9ed946f478a93636f91bbaedc9d6353863ec14e",
-    "research/model_selection_v2/launch_registered.ps1": "2d1c593f57b37ea6c205565f3805b90ba299d7ab79e690cd568d9a73fb71b64e",
+    "research/model_selection_v2/launch_registered.ps1": "3e2de6e9b67b36adb6b6115729082f31d871d32aafb151b7ad0e9739232ead1d",
     "research/model_selection_v2/pilot.py": "e68b9e0f74fdaf9adc9ae5b7167d3f1c780732f1f6e95f43390124ba0dfdda1c",
     "research/model_selection_v2/safe2026.py": "763f2b14e21f0e95a529349251f28b043e3494803fc823e176dcdface29de730",
     "research/model_selection_v2/selection_exploration_v1/__init__.py": "f5572fb614f3a3b77749b546bfd868cce14c5a1d87cac55dfdd5e29c2ae2f5a4",
@@ -55,7 +55,7 @@
     "research/model_selection_v2/synthetic_lean/control.py": "db18fc018f935d7946e130222c973eb11326e874d3045894e1bf6755aa345c16",
     "research/model_selection_v2/synthetic_lean/generators.py": "04a49a628f296375a5c3843131e46b5d97107d9d5c64fc11d7f40af954a88fa8",
     "research/model_selection_v2/synthetic_lean/pipeline.py": "95ff9c1718541c877f467088fcb9104cd123bbef3eab6b12509f9dd23dd13ea1",
-    "research/model_selection_v2/synthetic_lean/run.py": "8a168eb4a4ed3ecc317d6255fb8f9d0d9fe09b3bcd6f32ebfb07bf0c5f8f68cf",
+    "research/model_selection_v2/synthetic_lean/run.py": "a00e0faf969cc81a4c39c78e970924fbd800c45a0a829a8ae7747d0d05b0aae0",
     "research/model_selection_v2/synthetic_lean/summaries.py": "e5354fcad39745496d18051632c5c8b48cd7263bc12d9735db6af89af0639269",
     "research/model_selection_v2/synthetic_lean/test_generators.py": "b50593c3c4d874bd1b0d3dd86a87de34e7be5ea08a866857d7725f25e728c809",
     "research/model_selection_v2/synthetic_lean/test_pipeline.py": "952f631dac5f540da498733292753b1924fe710117bc6714a8a5670b2373fb9f",
@@ -65,5 +65,17 @@
     "src/performance_evaluation.py": "b71a8adac06272b56bc83de85e8c56790d280ac20657ca166aa7495c5a8a1aa3",
     "src/performance_report.py": "730326b353d840e4d78b13907c8ad7e75488a7cfd595fe9054d463f03fcadd53",
     "src/robustness_protocol.py": "06b6c75250ace2b4537fab077f3b26dd8182afba2c18ee510eb36a696ec64e48"
+  },
+  "documents_sha256": {
+    "docs/frozen_inputs/2026-11-17_v2/version2_amendments.md": "76617177e00517386e9c79c11ca104acaf136f47d996e673da37411c3a777189",
+    "docs/frozen_inputs/2026-11-18_v2_1/section_6_5.md": "8ba5a30e9a2e09010235c4a9f99de723f7e3ce1173cd954e06373b2c41d4ca19",
+    "docs/frozen_inputs/2026-11-23_prereg/brazil_addendum_form_v2_CANDIDATE_ORIGIN_COMPLETED.md": "344f21c4ff366347d40c401dbf35ddf331b3b3916d3f2bb2200d78227f40799b",
+    "docs/frozen_inputs/2026-11-23_prereg/dataset_addendum_template.md": "a8868830c0fe750801834e08ace61b20eb6c77b5a6d636702acfc186909192b8",
+    "docs/frozen_inputs/2026-11-23_prereg/generators_spec.md": "253e754360d8b96849cf4e1e01ddbbfecbdf7d709cd242d55b34257d8dd97eaa",
+    "docs/frozen_inputs/2026-11-23_prereg/protocol.md": "4b0c99a1480feeb5fe8359b04ba84bb70b2970fcb6a5de9fd932e79225b49ac4",
+    "docs/frozen_inputs/2026-11-23_prereg/registration.md": "ee26e8148164045441d5b168293eabe6c4f345b11cda9b48bf35dfe499a9fa59",
+    "docs/frozen_inputs/2026-11-23_prereg/section_6_5.md": "f01d8d3397a0efc7b9b968b88100c682581159bb4a2a27c03cda06b97326f7da",
+    "docs/frozen_inputs/2026-11-23_prereg/step1_specification.md": "aeb48599c83efa753a1ddaaa41882b1a2941a50419bbb12c8163ec6043684b57",
+    "docs/frozen_inputs/2026-11-23_prereg/version2_amendments.md": "76617177e00517386e9c79c11ca104acaf136f47d996e673da37411c3a777189"
   }
 }

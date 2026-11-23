@@ -31,7 +31,7 @@ Thumbs.db
 # continue from the frozen evaluation artifacts without rebuilding them.
 # The raw Brazil PAKDD 2010 release stays local.
 /data/raw/brazil_pakdd2010/
-/docs/frozen_inputs/2026-11-23_prereg/
+/docs/frozen_inputs/2026-11-23_prereg/private_manifest.json
 /synthetic_review_and_section_6_5_2026-11-18/
 /runs/model_selection_v2/brazil_registered*/
 /runs/model_selection_v2/synthetic_registered*/
